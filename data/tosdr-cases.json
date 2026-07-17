@@ -1,0 +1,2672 @@
+[
+  {
+    "id": 175,
+    "weight": 50,
+    "title": "You can delete your content from this service",
+    "description": "You can ask the service to remove your content at any time, and it's deleted within a reasonable time.",
+    "updated_at": "2021-02-27T14:23:56.238878",
+    "created_at": "2018-01-16T15:26:09.452580",
+    "topic_id": 45,
+    "classification": "good"
+  },
+  {
+    "id": 130,
+    "weight": 50,
+    "title": "A license is kept on user-generated content even after you close your account",
+    "description": "The service may still use your content and display it after you stopped using it by closing your account. The case applies to terms requiring users to grant them a perpetual license over that content.\r\n",
+    "updated_at": "2021-05-06T08:26:06.196896",
+    "created_at": "2018-01-16T15:26:08.388050",
+    "topic_id": 30,
+    "classification": "bad"
+  },
+  {
+    "id": 237,
+    "weight": 0,
+    "title": "You agree to comply with the law of the service's country",
+    "description": "By using the service, you agree to comply with the applicable laws of the service's jurisdiction, regardless of your location.",
+    "updated_at": "2021-05-06T08:35:07.855459",
+    "created_at": "2018-07-22T09:09:08.496243",
+    "topic_id": 28,
+    "classification": "neutral"
+  },
+  {
+    "id": 138,
+    "weight": 10,
+    "title": "Instructions are provided on how to submit a copyright claim",
+    "description": "If content that you own is copied or made accessible through the service in a way that constitutes an intellectual property right infringement, you can report it following the instructions given in the agreements. ",
+    "updated_at": "2021-05-06T08:26:25.934688",
+    "created_at": "2018-01-16T15:26:08.602556",
+    "topic_id": 30,
+    "classification": "neutral"
+  },
+  {
+    "id": 122,
+    "weight": 0,
+    "title": "The terms may be changed at any time, but you will receive notification of the changes",
+    "description": "The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.",
+    "updated_at": "2021-05-07T16:23:11.148598",
+    "created_at": "2018-01-16T15:26:08.192931",
+    "topic_id": 46,
+    "classification": "neutral"
+  },
+  {
+    "id": 276,
+    "weight": 40,
+    "title": "The service can intervene in user disputes",
+    "description": "If you have a dispute with another user on this service, they can review the issue and intervene. However, they don't have an obligation to do so.\r\n\r\n",
+    "updated_at": "2018-08-16T14:20:48.892529",
+    "created_at": "2018-08-16T14:20:48.892529",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 235,
+    "weight": 0,
+    "title": "none",
+    "description": "Do not select this case, because points with this case will not show up on tosdr.org",
+    "updated_at": "2019-04-01T07:00:21.112429",
+    "created_at": "2018-07-11T09:35:12.069597",
+    "topic_id": 53,
+    "classification": "neutral"
+  },
+  {
+    "id": 229,
+    "weight": 10,
+    "title": "You cannot distribute or disclose your account to third parties",
+    "description": "In this context third-parties refers to anyone including friends, family, or company ",
+    "updated_at": "2020-10-19T20:27:50.912521",
+    "created_at": "2018-01-16T15:26:10.661374",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 179,
+    "weight": 50,
+    "title": "This service takes credit for your content",
+    "description": "",
+    "updated_at": "2018-07-19T05:51:47.534373",
+    "created_at": "2018-01-16T15:26:09.544495",
+    "topic_id": 27,
+    "classification": "bad"
+  },
+  {
+    "id": 154,
+    "weight": 0,
+    "title": "This service cannot be held responsible for disputes that you may have with other users",
+    "description": "You are responsible for the interactions and the disputes that may occur with other users of the Service. In the event of a dispute, you release the Service from all claims resulting from it.",
+    "updated_at": "2021-02-28T12:00:09.055205",
+    "created_at": "2018-01-16T15:26:09.027329",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 149,
+    "weight": 10,
+    "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+    "description": "",
+    "updated_at": "2021-05-31T20:20:11.273529",
+    "created_at": "2018-01-16T15:26:08.856023",
+    "topic_id": 31,
+    "classification": "bad"
+  },
+  {
+    "id": 134,
+    "weight": 50,
+    "title": "Your content can be licensed to third parties",
+    "description": "By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.",
+    "updated_at": "2021-06-05T18:04:47.563378",
+    "created_at": "2018-01-16T15:26:08.502469",
+    "topic_id": 30,
+    "classification": "bad"
+  },
+  {
+    "id": 155,
+    "weight": 20,
+    "title": "If you are the target of a copyright holder's take down notice, this service gives you the opportunity to defend yourself",
+    "description": "You have the right to send a counter-notice to the service if you believe the content that was removed wasn't infringing any copyright.",
+    "updated_at": "2021-04-17T01:16:56.851765",
+    "created_at": "2018-01-16T15:26:09.056127",
+    "topic_id": 30,
+    "classification": "good"
+  },
+  {
+    "id": 280,
+    "weight": 10,
+    "title": "You agree not to use the service for illegal purposes",
+    "description": "The user agrees not to commit any unlawful acts through the use of the website, including the posting of illegal content or messaging.",
+    "updated_at": "2021-05-06T08:43:36.925216",
+    "created_at": "2018-08-24T00:28:50.493125",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 147,
+    "weight": 35,
+    "title": "Defend, indemnify, hold harmless; survives termination",
+    "description": "",
+    "updated_at": "2023-04-03T18:55:50.439674",
+    "created_at": "2018-01-16T15:26:08.818002",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 139,
+    "weight": 50,
+    "title": "Your content can be distributed through any media known now or in the future",
+    "description": "",
+    "updated_at": "2023-04-03T18:57:28.753748",
+    "created_at": "2018-01-16T15:26:08.619073",
+    "topic_id": 30,
+    "classification": "neutral"
+  },
+  {
+    "id": 226,
+    "weight": 15,
+    "title": "Information is provided about security practices",
+    "description": "It's important to know what security measures are taken to protect your data from unauthorized access. This case applies to the Agreements that precisely explain their security practices.",
+    "updated_at": "2021-05-06T08:01:23.191463",
+    "created_at": "2018-01-16T15:26:10.587540",
+    "topic_id": 50,
+    "classification": "good"
+  },
+  {
+    "id": 168,
+    "weight": 0,
+    "title": "[DEPRECATED] The service is not transparent regarding government requests or inquiries that may involve your data",
+    "description": "Weight was 30.",
+    "updated_at": "2026-04-04T07:26:24.428621",
+    "created_at": "2018-01-16T15:26:09.284499",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 238,
+    "weight": 0,
+    "title": "[DEPRECATED] You agree not to submit illegal content",
+    "description": "",
+    "updated_at": "2026-02-27T21:18:15.003549",
+    "created_at": "2018-07-22T09:13:18.812569",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 173,
+    "weight": 0,
+    "title": "[DEPRECATED] This service retains rights to your content even after you stop using your account",
+    "description": "Weight used to be 25.",
+    "updated_at": "2026-04-09T18:17:02.437768",
+    "created_at": "2018-01-16T15:26:09.415729",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 136,
+    "weight": 50,
+    "title": "The copyright license that you grant this service is limited to the parties that make up the service's broader platform",
+    "description": "",
+    "updated_at": "2026-04-04T07:23:11.452810",
+    "created_at": "2018-01-16T15:26:08.563886",
+    "topic_id": 30,
+    "classification": "neutral"
+  },
+  {
+    "id": 169,
+    "weight": 0,
+    "title": "[DEPRECATED] The service is transparent regarding government requests or inquiries that may involve your data",
+    "description": "Weight was 30.",
+    "updated_at": "2026-04-04T07:24:58.096225",
+    "created_at": "2018-01-16T15:26:09.320369",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 129,
+    "weight": 60,
+    "title": "You may be tracked on other websites",
+    "description": "The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n",
+    "updated_at": "2026-04-22T21:47:52.645107",
+    "created_at": "2018-01-16T15:26:08.370367",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 408,
+    "weight": 10,
+    "title": "This service informs you that its Terms of Service does not apply to third-party services",
+    "description": "The service states that whenever it links to third party websites or applications, its Terms of Service does not apply. Those third party websites or applications hosted or operated by other organizations may have their Terms of Service.",
+    "updated_at": "2026-04-24T03:39:24.766507",
+    "created_at": "2021-02-27T09:40:23.541271",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 224,
+    "weight": 30,
+    "title": "You cannot opt out of receiving promotional communications",
+    "description": "This applies to cases where opting out of promotional communications requires sending a written letter by mail or is otherwise more complicated and time consuming than necessary.",
+    "updated_at": "2026-07-05T19:01:28.781387",
+    "created_at": "2018-01-16T15:26:10.556183",
+    "topic_id": 34,
+    "classification": "bad"
+  },
+  {
+    "id": 162,
+    "weight": 50,
+    "title": "No refunds will be issued",
+    "description": "Payments are final and can't be refunded unless required by law.",
+    "updated_at": "2026-07-12T04:13:22.723906",
+    "created_at": "2018-01-16T15:26:09.166124",
+    "topic_id": 54,
+    "classification": "neutral"
+  },
+  {
+    "id": 214,
+    "weight": 20,
+    "title": "You must provide your legal name, pseudonyms are not allowed",
+    "description": "You must provide your legal name and pseudonyms aren't allowed. This case doesn't apply to Services for which transparency regarding users identities is relevant for their purposes.",
+    "updated_at": "2021-02-25T18:48:05.605459",
+    "created_at": "2018-01-16T15:26:10.305929",
+    "topic_id": 26,
+    "classification": "bad"
+  },
+  {
+    "id": 222,
+    "weight": 10,
+    "title": "You can choose the copyright license",
+    "description": "You have the right to choose or change the license over content you publish through the Service.",
+    "updated_at": "2021-02-27T16:19:55.044532",
+    "created_at": "2018-01-16T15:26:10.522244",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 141,
+    "weight": 10,
+    "title": "Inconvenient process for obtaining personal data",
+    "description": "This applies to cases where obtaining personal data requires sending a written letter by mail or is otherwise more complicated and time consuming than necessary.",
+    "updated_at": "2021-03-15T19:38:02.904264",
+    "created_at": "2018-01-16T15:26:08.695809",
+    "topic_id": 34,
+    "classification": "bad"
+  },
+  {
+    "id": 227,
+    "weight": 30,
+    "title": "Information is provided about how your personal data is used",
+    "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+    "updated_at": "2021-05-06T08:00:39.315952",
+    "created_at": "2018-01-16T15:26:10.619333",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 220,
+    "weight": 40,
+    "title": "Your personal data is used to employ targeted third-party advertising",
+    "description": "Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.",
+    "updated_at": "2021-05-06T08:29:30.145481",
+    "created_at": "2018-01-16T15:26:10.452350",
+    "topic_id": 57,
+    "classification": "bad"
+  },
+  {
+    "id": 231,
+    "weight": 40,
+    "title": "You are informed about the risk of publishing personal info online",
+    "description": "",
+    "updated_at": "2021-05-06T08:37:31.235093",
+    "created_at": "2018-01-16T15:26:10.686705",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 277,
+    "weight": 50,
+    "title": "Conditions may change, but your continued acceptance is not inferred from an earlier acceptance",
+    "description": "When you're not logged in to a service, but use it repeatedly, it may still feel weird that their terms and conditions can change between one use and the next. However, this does not violate the rule-of-thumb that each new version should be accepted from scratch, without inferring your acceptance from the acceptance of an earlier version. Since no acceptance is inferred from continued use, but only from current use, we rate this as neutral instead of bad.",
+    "updated_at": "2019-04-10T09:43:47.943088",
+    "created_at": "2018-08-21T09:47:56.311778",
+    "topic_id": 46,
+    "classification": "neutral"
+  },
+  {
+    "id": 285,
+    "weight": 25,
+    "title": "You shall not interfere with another person's enjoyment of the service",
+    "description": "Users are asked not to interfere with another person't enjoyment in using the service.\r\nHowever, this statement is very vague and open to interpretation by the service itself.",
+    "updated_at": "2021-05-06T08:40:39.091694",
+    "created_at": "2018-08-24T05:31:18.691665",
+    "topic_id": 52,
+    "classification": "bad"
+  },
+  {
+    "id": 284,
+    "weight": 20,
+    "title": "You are prohibited from attempting to gain unauthorized access to other computer systems",
+    "description": "The service does not allow any attempts at hacking or otherwise gaining unauthorized access to other users' computers.",
+    "updated_at": "2021-05-06T08:43:17.982925",
+    "created_at": "2018-08-24T05:24:43.733394",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 195,
+    "weight": 50,
+    "title": "You can request access, correction and/or deletion of your data",
+    "description": "Users have the right to access personal data hold by the Service, correct it and/or permanently delete it. This usually applies to Services GDPR compliants. ",
+    "updated_at": "2021-03-15T19:39:19.351488",
+    "created_at": "2018-01-16T15:26:09.802002",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 200,
+    "weight": 0,
+    "title": "Separate policies are employed for different parts of the service",
+    "description": "The user may need to read additional product-specific agreements depending on the way the service is used.",
+    "updated_at": "2021-05-14T12:48:24.407240",
+    "created_at": "2018-01-16T15:26:09.894815",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 230,
+    "weight": 25,
+    "title": "You must create an account to use this service",
+    "description": "You must provide the service with your information in order to use it",
+    "updated_at": "2021-05-14T14:37:23.623179",
+    "created_at": "2018-01-16T15:26:10.674031",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 192,
+    "weight": 50,
+    "title": "IP addresses of website visitors are not tracked",
+    "description": "The Service disclaims that IP adresses from users are not collected (or anonymized) nor shared.",
+    "updated_at": "2021-05-31T20:20:49.018415",
+    "created_at": "2018-01-16T15:26:09.755556",
+    "topic_id": 56,
+    "classification": "good"
+  },
+  {
+    "id": 159,
+    "weight": 30,
+    "title": "You will be notified about website maintenance",
+    "description": "Users will be notified before their experience is impacted due to website maintenance.",
+    "updated_at": "2021-05-06T08:14:33.371274",
+    "created_at": "2018-01-16T15:26:09.118286",
+    "topic_id": 32,
+    "classification": "good"
+  },
+  {
+    "id": 328,
+    "weight": 20,
+    "title": "Usernames can be rejected or changed for any reason",
+    "description": "The service's terms explain they may change or remove usernames at their sole discretion, and they may do so without prior notice.",
+    "updated_at": "2021-03-27T16:58:50.185870",
+    "created_at": "2018-09-04T13:43:38.325222",
+    "topic_id": 47,
+    "classification": "bad"
+  },
+  {
+    "id": 167,
+    "weight": 50,
+    "title": "Third parties are not allowed to access your personal information without a legal basis",
+    "description": "",
+    "updated_at": "2021-05-06T08:03:57.813988",
+    "created_at": "2018-01-16T15:26:09.258554",
+    "topic_id": 28,
+    "classification": "good"
+  },
+  {
+    "id": 205,
+    "weight": 15,
+    "title": "Your account can be suspended for several reasons",
+    "description": "",
+    "updated_at": "2021-05-06T08:05:24.939122",
+    "created_at": "2018-01-16T15:26:09.988104",
+    "topic_id": 47,
+    "classification": "neutral"
+  },
+  {
+    "id": 161,
+    "weight": 30,
+    "title": "You are entitled to a refund if certain thresholds or standards are not met by the service",
+    "description": "",
+    "updated_at": "2021-05-06T08:43:46.929764",
+    "created_at": "2018-01-16T15:26:09.146306",
+    "topic_id": 54,
+    "classification": "good"
+  },
+  {
+    "id": 208,
+    "weight": 50,
+    "title": "Many third parties are involved in operating the service",
+    "description": "",
+    "updated_at": "2018-07-11T08:34:24.680438",
+    "created_at": "2018-01-16T15:26:10.085781",
+    "topic_id": 48,
+    "classification": "bad"
+  },
+  {
+    "id": 158,
+    "weight": 10,
+    "title": "Accessibility to this service is guaranteed at 99% or more",
+    "description": "",
+    "updated_at": "2018-07-26T14:49:49.961547",
+    "created_at": "2018-01-16T15:26:09.102354",
+    "topic_id": 32,
+    "classification": "good"
+  },
+  {
+    "id": 182,
+    "weight": 50,
+    "title": "If you offer suggestions to the service, they become the owner of the ideas that you give them",
+    "description": "The service can claim ownership on feedback, proposals, ideas and suggestions submitted by the users, who may waive their \"moral rights\" on that feedback.",
+    "updated_at": "2021-02-25T18:53:35.651935",
+    "created_at": "2018-01-16T15:26:09.599171",
+    "topic_id": 27,
+    "classification": "bad"
+  },
+  {
+    "id": 137,
+    "weight": 0,
+    "title": "[DEPRECATED] You are free to choose the type of copyright license that you want to use over your content",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:19:35.295628",
+    "created_at": "2018-01-16T15:26:08.583951",
+    "topic_id": 55,
+    "classification": "good"
+  },
+  {
+    "id": 213,
+    "weight": 10,
+    "title": "You are not allowed to use pseudonyms, as trust and transparency between users regarding their identities is relevant to the service",
+    "description": "You must provide your legal name and pseudonyms aren't allowed, but it makes sense for the purposes of this service.",
+    "updated_at": "2026-04-04T07:23:44.907258",
+    "created_at": "2018-01-16T15:26:10.275878",
+    "topic_id": 26,
+    "classification": "neutral"
+  },
+  {
+    "id": 212,
+    "weight": 0,
+    "title": "[DEPRECATED] Pseudonyms are allowed due to the service's billing policies",
+    "description": "",
+    "updated_at": "2026-02-27T21:18:53.749791",
+    "created_at": "2018-01-16T15:26:10.234820",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 184,
+    "weight": 0,
+    "title": "[DEPRECATED] This service provides a way for you to export your data",
+    "description": "Weight was 30.",
+    "updated_at": "2026-02-27T21:19:13.645352",
+    "created_at": "2018-01-16T15:26:09.635322",
+    "topic_id": 55,
+    "classification": "good"
+  },
+  {
+    "id": 127,
+    "weight": 5,
+    "title": "Third-party cookies are employed, but with opt out instructions",
+    "description": "",
+    "updated_at": "2026-05-05T06:14:00.070008",
+    "created_at": "2018-01-16T15:26:08.335897",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 278,
+    "weight": 0,
+    "title": "[DEPRECATED] The service is not responsible for linked or (clearly) quoted content from third-party content providers",
+    "description": "Weight used to be 50.",
+    "updated_at": "2026-07-05T06:19:30.939419",
+    "created_at": "2018-08-22T10:01:05.829395",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 193,
+    "weight": 25,
+    "title": "This service claims that your personal data is not being sold",
+    "description": "This service makes the claim that your personal data is not being sold, rented or traded with third parties. This, however, may not always be an accurate statement as it may be, more often than not, based entirely on a very loose legal definition on “selling”, whereas other jurisdictions may actually constitute their sharing of your personal data as “selling”.",
+    "updated_at": "2026-07-05T19:26:40.132425",
+    "created_at": "2018-01-16T15:26:09.775334",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 374,
+    "weight": 50,
+    "title": "The cookies used by this service do not contain information that would personally identify you",
+    "description": "The cookies used only collect anonymous, aggregated data that cannot be linked to a unique identity.",
+    "updated_at": "2021-02-25T10:53:10.117009",
+    "created_at": "2018-10-21T10:06:24.631589",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 186,
+    "weight": 30,
+    "title": "This service assumes no liability for unauthorized access to your personal information",
+    "description": "",
+    "updated_at": "2018-08-02T10:12:00.793674",
+    "created_at": "2018-01-16T15:26:09.663458",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 189,
+    "weight": 30,
+    "title": "Your private content may be accessed by people working for the service",
+    "description": "",
+    "updated_at": "2018-08-02T10:12:36.942645",
+    "created_at": "2018-01-16T15:26:09.700286",
+    "topic_id": 41,
+    "classification": "neutral"
+  },
+  {
+    "id": 194,
+    "weight": 40,
+    "title": "The service does not index or open files that you upload",
+    "description": "",
+    "updated_at": "2018-08-02T10:13:47.018723",
+    "created_at": "2018-01-16T15:26:09.788045",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 190,
+    "weight": 10,
+    "title": "Your personal data is aggregated into statistics",
+    "description": "Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.",
+    "updated_at": "2021-02-25T11:55:50.916941",
+    "created_at": "2018-01-16T15:26:09.717516",
+    "topic_id": 41,
+    "classification": "neutral"
+  },
+  {
+    "id": 279,
+    "weight": 50,
+    "title": "This service assumes no responsibility and liability for the contents of links to other websites",
+    "description": "The service rejects any responsibility for the contents of other websites to which it links.",
+    "updated_at": "2018-08-24T00:18:08.427476",
+    "created_at": "2018-08-24T00:18:08.427476",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 207,
+    "weight": 0,
+    "title": "Third parties are involved in operating the service",
+    "description": "",
+    "updated_at": "2021-01-21T23:25:01.924991",
+    "created_at": "2018-01-16T15:26:10.072322",
+    "topic_id": 48,
+    "classification": "neutral"
+  },
+  {
+    "id": 289,
+    "weight": 50,
+    "title": "The service does not guarantee that software errors will be corrected",
+    "description": "Users agree to use the service and its software as provided and accept that any errors within that software may not be corrected.",
+    "updated_at": "2018-08-26T03:58:55.464172",
+    "created_at": "2018-08-26T03:58:55.464172",
+    "topic_id": 32,
+    "classification": "bad"
+  },
+  {
+    "id": 183,
+    "weight": 50,
+    "title": "You maintain ownership of your content",
+    "description": "This service does not claim ownership over user-generated content or materials, and the user doesn't need to waive any moral rights by posting owned content.",
+    "updated_at": "2021-02-27T11:57:10.726037",
+    "created_at": "2018-01-16T15:26:09.611656",
+    "topic_id": 27,
+    "classification": "good"
+  },
+  {
+    "id": 197,
+    "weight": 50,
+    "title": "Archives of their agreements are provided so that changes can be viewed over time",
+    "description": "This case applies to Services whose agreements provide previous versions, so that users can compare them and understand how the Service seems to evolve regarding user rights.",
+    "updated_at": "2021-05-14T12:47:29.839710",
+    "created_at": "2018-01-16T15:26:09.846745",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 288,
+    "weight": 10,
+    "title": "The service does not guarantee accuracy or reliability of the information provided",
+    "description": "This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.",
+    "updated_at": "2021-05-14T14:37:01.345548",
+    "created_at": "2018-08-26T03:47:34.754888",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 286,
+    "weight": 20,
+    "title": "The service is provided 'as is' and to be used at your sole risk",
+    "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+    "updated_at": "2021-06-05T18:05:24.110855",
+    "created_at": "2018-08-25T23:38:08.160210",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 292,
+    "weight": 35,
+    "title": "This service does not condone any ideas contained in its user-generated contents",
+    "description": "",
+    "updated_at": "2021-03-27T16:55:09.803169",
+    "created_at": "2018-08-26T22:16:14.493980",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 295,
+    "weight": 10,
+    "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+    "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+    "updated_at": "2021-03-27T16:55:56.991983",
+    "created_at": "2018-08-26T23:19:50.328259",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 180,
+    "weight": 50,
+    "title": "This service can use your content for all their existing and future services",
+    "description": "",
+    "updated_at": "2023-04-03T18:57:54.870897",
+    "created_at": "2018-01-16T15:26:09.567984",
+    "topic_id": 27,
+    "classification": "neutral"
+  },
+  {
+    "id": 303,
+    "weight": 50,
+    "title": "The data retention period is kept to the minimum necessary for fulfilling its purposes",
+    "description": "The service will remove personal data from its systems once it is no longer required. Depending on the type of information and the reason it was collected, data retention periods will vary.",
+    "updated_at": "2021-05-06T08:07:14.388141",
+    "created_at": "2018-08-27T05:14:18.155888",
+    "topic_id": 45,
+    "classification": "good"
+  },
+  {
+    "id": 128,
+    "weight": 70,
+    "title": "Third-party cookies are used for advertising",
+    "description": "The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.",
+    "updated_at": "2021-05-06T08:27:20.175213",
+    "created_at": "2018-01-16T15:26:08.349479",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 291,
+    "weight": 50,
+    "title": "You are responsible for any risks, damages, or losses that may incur by downloading materials",
+    "description": "Users are responsible for any harm to their computer system or loss of data they may incur through the download of materials from the service.",
+    "updated_at": "2021-05-06T08:44:01.637557",
+    "created_at": "2018-08-26T04:23:47.990049",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 298,
+    "weight": 60,
+    "title": "You can access most of the pages on the service's website without revealing any personal information",
+    "description": "The service does not require users to reveal personal information for most of its website. However, it may still collect anonymous logs.",
+    "updated_at": "2021-05-06T08:44:07.774025",
+    "created_at": "2018-08-27T01:48:06.184033",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 297,
+    "weight": 50,
+    "title": "Information is provided about how your personal data is collected",
+    "description": "The service details situations in which they collect personal information or means by which they do.",
+    "updated_at": "2026-04-22T21:45:55.440140",
+    "created_at": "2018-08-27T01:42:07.244108",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 301,
+    "weight": 30,
+    "title": "The service reviews its Privacy Policy on a regular basis",
+    "description": "Users know the date the privacy policy was last updated and can thus infer the next time it will be reviewed. This gives users more certainty about how long they can trust the current policy to apply.",
+    "updated_at": "2026-04-23T05:57:10.875603",
+    "created_at": "2018-08-27T04:06:12.780745",
+    "topic_id": 46,
+    "classification": "good"
+  },
+  {
+    "id": 299,
+    "weight": 10,
+    "title": "This service informs you that its Privacy Policy does not apply to third-party services",
+    "description": "The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.",
+    "updated_at": "2026-04-24T03:39:02.455618",
+    "created_at": "2018-08-27T02:47:12.321969",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 144,
+    "weight": 0,
+    "title": "Other rules, terms, conditions and/or guidelines may apply",
+    "description": "Use of the service is subject also to an exhaustive list of other documents containing rules, guidelines, terms or policies (in addition to the obvious Terms of Service/Terms of Use and Privacy Policy/Data Use Policy)",
+    "updated_at": "2026-07-05T18:49:55.440981",
+    "created_at": "2018-01-16T15:26:08.747630",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 306,
+    "weight": 40,
+    "title": "A list of all cookies used by the service is provided",
+    "description": "The service provides users with a complete list of all first and third party cookies its website sets and an explanation of their uses. This information can be valuable for users to make an informed choice whether to allow those cookies.",
+    "updated_at": "2026-07-12T05:59:21.696297",
+    "created_at": "2018-08-27T06:34:01.848100",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 210,
+    "weight": 20,
+    "title": "The service claims that third parties it shares your personal information with are bound by confidentiality obligations",
+    "description": "The Third Parties accessing your personal information must keep it confidential and only use it for limited purposes.",
+    "updated_at": "2026-07-12T20:28:24.979049",
+    "created_at": "2018-01-16T15:26:10.160599",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 305,
+    "weight": 60,
+    "title": "The service will resist legal requests for your information where reasonably possible",
+    "description": "The service will attempt to protect user information to a great extent, even so far as stating that they will only follow legal requirements to disclose user information in circumstances where this cannot be reasonably resisted.",
+    "updated_at": "2021-05-06T08:44:18.937551",
+    "created_at": "2018-08-27T05:47:31.015760",
+    "topic_id": 28,
+    "classification": "good"
+  },
+  {
+    "id": 304,
+    "weight": 40,
+    "title": "The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period",
+    "description": "The data retention period states how long a service keeps user data. In this case, the service may anonymize the personal data after its retention period is over and use it for analytical or research purposes.",
+    "updated_at": "2021-05-06T08:44:35.514501",
+    "created_at": "2018-08-27T05:34:45.352715",
+    "topic_id": 45,
+    "classification": "bad"
+  },
+  {
+    "id": 296,
+    "weight": 80,
+    "title": "Your information is only shared with third parties when given specific consent",
+    "description": "The service does not share user information with any third parties unless users specifically give it permission to do so.",
+    "updated_at": "2021-05-06T08:44:54.629626",
+    "created_at": "2018-08-27T01:35:24.964651",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 217,
+    "weight": 5,
+    "title": "Tracking pixels are used in service-to-user communication",
+    "description": "The service tracks the user count or some actions of the user; this is usually used for statistics. For example, emails sent by a service can contain a pixel tag, which is a small, clear image that can tell them whether or not you have opened an email and what your IP address is.",
+    "updated_at": "2019-09-28T21:12:42.211513",
+    "created_at": "2018-01-16T15:26:10.392302",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 131,
+    "weight": 90,
+    "title": "Content is published under a free license instead of a bilateral one",
+    "description": "User-generated content, such as posts or comments, is published under a free license, meaning other users can reuse it (e.g. Creative Commons license).",
+    "updated_at": "2021-02-27T14:16:11.795721",
+    "created_at": "2018-01-16T15:26:08.406054",
+    "topic_id": 30,
+    "classification": "good"
+  },
+  {
+    "id": 221,
+    "weight": 35,
+    "title": "The service deletes tracking data after a period of time and allows you to opt out",
+    "description": "",
+    "updated_at": "2019-09-28T21:13:15.739423",
+    "created_at": "2018-01-16T15:26:10.479156",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 315,
+    "weight": 15,
+    "title": "The posting of pornographic content is prohibited",
+    "description": "Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.",
+    "updated_at": "2021-05-06T08:21:13.533469",
+    "created_at": "2018-08-29T02:25:34.663823",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 337,
+    "weight": 50,
+    "title": "You can opt out of providing personal information to third parties",
+    "description": "The Service provides opt-out instructions to the share of (some) personal information with third parties.",
+    "updated_at": "2021-03-15T19:43:48.051790",
+    "created_at": "2018-10-17T06:24:53.671696",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 219,
+    "weight": 25,
+    "title": "You can opt out of targeted advertising",
+    "description": "The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.",
+    "updated_at": "2021-03-27T16:51:25.883877",
+    "created_at": "2018-01-16T15:26:10.435599",
+    "topic_id": 57,
+    "classification": "good"
+  },
+  {
+    "id": 320,
+    "weight": 50,
+    "title": "No need to register",
+    "description": "This service can be used without providing a user profile.",
+    "updated_at": "2021-03-27T16:57:15.948575",
+    "created_at": "2018-08-29T08:43:36.413004",
+    "topic_id": 45,
+    "classification": "good"
+  },
+  {
+    "id": 311,
+    "weight": 50,
+    "title": "Your personal data is not shared with third parties",
+    "description": "Information collected from users by this service is not given to third parties.",
+    "updated_at": "2021-06-09T16:02:00.441528",
+    "created_at": "2018-08-28T02:39:24.892359",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 325,
+    "weight": 10,
+    "title": "Third-party cookies are used for statistics",
+    "description": "For instance, Google Analytics, rather than self-hosted (first-party) statistics software.",
+    "updated_at": "2021-03-27T16:58:36.867072",
+    "created_at": "2018-08-31T12:09:15.853779",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 331,
+    "weight": 50,
+    "title": "There is a date of the last update of the agreements",
+    "description": "The given text has a date that allows to know when it was last updated.",
+    "updated_at": "2021-03-27T16:59:06.252181",
+    "created_at": "2018-09-15T15:08:09.700759",
+    "topic_id": 38,
+    "classification": "neutral"
+  },
+  {
+    "id": 335,
+    "weight": 50,
+    "title": "You aren’t forced into binding arbitration in case of disputes",
+    "description": "Binding Arbitration is a dispute resolution method involving a neutral third party which will render a decision instead of going to court. Since the arbitrator can decide the outgoing of a dispute without evidences or a legal basis, it is preferable that users decide whether they want or not their dispute to be resolved this way.",
+    "updated_at": "2021-05-06T08:30:25.336118",
+    "created_at": "2018-09-23T22:17:51.199205",
+    "topic_id": 42,
+    "classification": "good"
+  },
+  {
+    "id": 312,
+    "weight": 25,
+    "title": "Two factor authentication is provided for your account",
+    "description": "The service provides means of further securing your account with two factor authentification, thus greatly improving account security.",
+    "updated_at": "2021-05-06T08:18:28.306333",
+    "created_at": "2018-08-28T19:11:03.401196",
+    "topic_id": 50,
+    "classification": "good"
+  },
+  {
+    "id": 317,
+    "weight": 50,
+    "title": "You aren’t allowed to publicly post private messages",
+    "description": "The service does not allow users to publicly post private messages they have received from other users.",
+    "updated_at": "2021-05-06T08:21:32.085499",
+    "created_at": "2018-08-29T02:34:51.222481",
+    "topic_id": 52,
+    "classification": "good"
+  },
+  {
+    "id": 327,
+    "weight": 90,
+    "title": "Your identity is used in ads that are shown to other users",
+    "description": "Ads shown to other users may include a reference to you as an implied endorsement.\r\nMight give away information about your own personal lifestyle to strangers.",
+    "updated_at": "2020-12-15T00:00:30.888373",
+    "created_at": "2018-08-31T13:32:23.819708",
+    "topic_id": 57,
+    "classification": "blocker"
+  },
+  {
+    "id": 316,
+    "weight": 30,
+    "title": "Political discussions or campaining are prohibited",
+    "description": "Political content in the form or pictures, discussions, or campaigning isn't allowed.",
+    "updated_at": "2021-05-06T08:20:56.999800",
+    "created_at": "2018-08-29T02:28:34.614375",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 172,
+    "weight": 70,
+    "title": "You cannot delete your account of this service",
+    "description": "There is no way of deleting your account, which implies that data might be stored forever.",
+    "updated_at": "2018-08-29T20:51:01.473394",
+    "created_at": "2018-01-16T15:26:09.399754",
+    "topic_id": 45,
+    "classification": "blocker"
+  },
+  {
+    "id": 326,
+    "weight": 50,
+    "title": "Your profile is combined across various products",
+    "description": "When using multiple services from one same company, they can combine these (unrelated) information sources about you to build up a single richer user profile about you.",
+    "updated_at": "2018-08-31T13:16:23.785562",
+    "created_at": "2018-08-31T13:15:57.978585",
+    "topic_id": 26,
+    "classification": "bad"
+  },
+  {
+    "id": 336,
+    "weight": 50,
+    "title": "Your personal data may be used for marketing purposes",
+    "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+    "updated_at": "2021-05-06T08:29:43.206779",
+    "created_at": "2018-10-14T10:41:58.905206",
+    "topic_id": 57,
+    "classification": "bad"
+  },
+  {
+    "id": 140,
+    "weight": 40,
+    "title": "You can retrieve an archive of your data",
+    "description": "Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.",
+    "updated_at": "2021-05-06T08:28:43.835698",
+    "created_at": "2018-01-16T15:26:08.660760",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 505,
+    "weight": 30,
+    "title": "Staff at this organisation receive training about handling data",
+    "description": "When an organisation trains its staff regarding data, this should be regarded as a positive as it shows they are careful and helps staff to understand how to handle data.",
+    "updated_at": "2024-05-19T18:16:41.570732",
+    "created_at": "2023-11-17T19:31:35.986628",
+    "topic_id": 50,
+    "classification": "good"
+  },
+  {
+    "id": 330,
+    "weight": 50,
+    "title": "The service disables software that you are not licensed to use",
+    "description": "The service disables software that you are not licensed to use.",
+    "updated_at": "2026-04-04T07:24:13.441948",
+    "created_at": "2018-09-14T06:18:43.157061",
+    "topic_id": 27,
+    "classification": "bad"
+  },
+  {
+    "id": 319,
+    "weight": 20,
+    "title": "Banned users are prohibited from creating a new account",
+    "description": "Once users have been permanently banned from this service, they are not allowed to create a new account to keep using the service.",
+    "updated_at": "2026-04-04T07:38:00.831674",
+    "created_at": "2018-08-29T02:57:12.348464",
+    "topic_id": 47,
+    "classification": "neutral"
+  },
+  {
+    "id": 283,
+    "weight": 20,
+    "title": "You agree not to submit libelous, harassing or threatening content",
+    "description": "This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.",
+    "updated_at": "2021-05-06T08:44:59.314814",
+    "created_at": "2018-08-24T05:20:59.209908",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 334,
+    "weight": 30,
+    "title": "The service explains how to prevent disclosure of personal information to third parties",
+    "description": "",
+    "updated_at": "2018-09-21T07:20:48.648231",
+    "created_at": "2018-09-21T07:20:48.648231",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 329,
+    "weight": 50,
+    "title": "You should revisit the terms periodically, although in case of material changes, the service will notify",
+    "description": "The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified.",
+    "updated_at": "2021-05-06T08:45:04.837282",
+    "created_at": "2018-09-10T12:21:49.956070",
+    "topic_id": 46,
+    "classification": "neutral"
+  },
+  {
+    "id": 399,
+    "weight": 0,
+    "title": "Your IP address is collected, which can be used to view your approximate location",
+    "description": "",
+    "updated_at": "2021-05-06T08:11:11.748969",
+    "created_at": "2020-10-24T03:25:39.315313",
+    "topic_id": 56,
+    "classification": "neutral"
+  },
+  {
+    "id": 389,
+    "weight": 50,
+    "title": "You can scrape the site, as long as it doesn't impact the server too much",
+    "description": "Automated web scraping is a method of extracting information from a website. The service authorises scraping if it doesn't impact its server(s) too much.",
+    "updated_at": "2021-05-06T08:45:19.789216",
+    "created_at": "2019-05-18T12:46:51.712939",
+    "topic_id": 31,
+    "classification": "good"
+  },
+  {
+    "id": 209,
+    "weight": 30,
+    "title": "You are warned of the potential consequences related to third-party access",
+    "description": "This is different from disclaiming liability for external links, which is handled by the \"This service assumes no responsibility and liability for the contents of links to other websites\" case.",
+    "updated_at": "2021-05-06T08:31:31.304199",
+    "created_at": "2018-01-16T15:26:10.104663",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 394,
+    "weight": 20,
+    "title": "You cannot delete your contributions, but it makes sense for this service",
+    "description": "For services that are under an open license where your contributions are for public knowledge (such as Wikipedia and ToS;DR).",
+    "updated_at": "2020-07-06T19:03:44.148075",
+    "created_at": "2020-07-06T19:00:59.092815",
+    "topic_id": 45,
+    "classification": "neutral"
+  },
+  {
+    "id": 135,
+    "weight": 15,
+    "title": "Copyright license limited for the purposes of that same service but transferable and sublicenseable",
+    "description": "",
+    "updated_at": "2019-05-12T14:25:54.622190",
+    "created_at": "2018-01-16T15:26:08.542487",
+    "topic_id": 30,
+    "classification": "good"
+  },
+  {
+    "id": 339,
+    "weight": 50,
+    "title": "You are forced into binding arbitration in case of disputes",
+    "description": "This service forces users to use their own contracted arbitrator and forces users to waive their rights to jury trial.",
+    "updated_at": "2021-05-06T08:30:14.831800",
+    "created_at": "2018-10-18T11:37:47.416869",
+    "topic_id": 42,
+    "classification": "bad"
+  },
+  {
+    "id": 388,
+    "weight": 50,
+    "title": "You are allowed to quote their content with attribution",
+    "description": "",
+    "updated_at": "2019-05-18T12:04:12.238535",
+    "created_at": "2019-05-18T12:04:12.238535",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 384,
+    "weight": 50,
+    "title": "You authorise the service to charge a credit card supplied on re-occurring basis",
+    "description": "You card will be billed on recurring basis unless cancelled. For instance, monthly or annual subscriptions.",
+    "updated_at": "2021-05-31T20:25:18.854573",
+    "created_at": "2019-04-19T09:19:06.923122",
+    "topic_id": 54,
+    "classification": "neutral"
+  },
+  {
+    "id": 381,
+    "weight": 25,
+    "title": "No third-party analytics or tracking platforms are used",
+    "description": "There are no Google Analytics or other tracking codes embedded in the service.  Any tracking is performed by the service itself.",
+    "updated_at": "2021-05-06T08:31:08.882310",
+    "created_at": "2018-11-24T07:31:17.579575",
+    "topic_id": 48,
+    "classification": "good"
+  },
+  {
+    "id": 391,
+    "weight": 30,
+    "title": "You will be notified if personal data has been affected by data breaches",
+    "description": "Should the personal information of a service be compromised, the service will inform users if any personal data has been affected by data breaches. This case is also related to privacy.",
+    "updated_at": "2021-05-06T08:45:11.259982",
+    "created_at": "2019-05-18T19:43:31.457056",
+    "topic_id": 50,
+    "classification": "good"
+  },
+  {
+    "id": 376,
+    "weight": 70,
+    "title": "Many different types of personal data are collected",
+    "description": "The service collects different kinds of personal data, such as name, demographic information, postal address, biometric data, device information, IDs, contacts, call logs...",
+    "updated_at": "2021-05-06T08:08:55.809152",
+    "created_at": "2018-10-23T23:28:53.357252",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 218,
+    "weight": 100,
+    "title": "You are not being tracked",
+    "description": "The document excerpt needs to include the words \"[the service] does not track [users]\" or \"[the service] does not use any tracking technology\".",
+    "updated_at": "2021-05-06T08:10:50.588547",
+    "created_at": "2018-01-16T15:26:10.414249",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 307,
+    "weight": 50,
+    "title": " You are being tracked via social media cookies/pixels",
+    "description": "These types of cookies/pixels send information to social media sites when you interact with the service.",
+    "updated_at": "2021-05-06T08:11:02.904163",
+    "created_at": "2018-08-27T06:40:35.316641",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 382,
+    "weight": 50,
+    "title": "Information is gathered about you through third parties",
+    "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+    "updated_at": "2021-05-06T08:29:07.413292",
+    "created_at": "2019-01-10T18:06:34.391114",
+    "topic_id": 48,
+    "classification": "bad"
+  },
+  {
+    "id": 393,
+    "weight": 30,
+    "title": "The service will only respond to government requests that are reasonable",
+    "description": " The Agreement explains they will disclose personal data about you if it is reasonably necessary to comply with applicable law and government requests.",
+    "updated_at": "2021-02-25T10:35:13.254067",
+    "created_at": "2020-06-15T19:00:08.698385",
+    "topic_id": 28,
+    "classification": "good"
+  },
+  {
+    "id": 400,
+    "weight": 45,
+    "title": "This service receives your precise location through GPS coordinates",
+    "description": "Unless the service relies on Geo Location, this case is to be assigned to points that don't need your GPS coordinates to function properly.",
+    "updated_at": "2021-02-18T10:56:40.735475",
+    "created_at": "2020-10-24T03:32:35.365968",
+    "topic_id": 56,
+    "classification": "bad"
+  },
+  {
+    "id": 398,
+    "weight": 40,
+    "title": "This service has a no refund policy with some exceptions",
+    "description": "Payments can be refunded if some requirements are fulfilled.",
+    "updated_at": "2021-02-25T10:34:30.981207",
+    "created_at": "2020-10-01T08:52:32.114721",
+    "topic_id": 54,
+    "classification": "neutral"
+  },
+  {
+    "id": 234,
+    "weight": 100,
+    "title": "Your data is collected even if you did not interact with the service directly",
+    "description": "Some services store data on you even if you did not provide that data yourself. For example, users might provide access to their address book, after which a service might also store the phone numbers of that person's contacts.",
+    "updated_at": "2026-04-22T21:42:56.994551",
+    "created_at": "2018-07-03T09:36:21.094100",
+    "topic_id": 41,
+    "classification": "blocker"
+  },
+  {
+    "id": 375,
+    "weight": 50,
+    "title": "Blocking first-party cookies may limit your ability to use the service",
+    "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+    "updated_at": "2026-05-12T16:24:31.325353",
+    "created_at": "2018-10-21T10:14:30.867458",
+    "topic_id": 25,
+    "classification": "neutral"
+  },
+  {
+    "id": 378,
+    "weight": 80,
+    "title": "Users can be fined for Terms of Service violations",
+    "description": "Service fines users for violating provisions in the Terms of Service",
+    "updated_at": "2026-07-05T18:31:02.336747",
+    "created_at": "2018-10-26T00:28:51.062282",
+    "topic_id": 31,
+    "classification": "bad"
+  },
+  {
+    "id": 387,
+    "weight": 50,
+    "title": "Referring and/or exit pages are tracked",
+    "description": "The service logs the URL of the last web page you visited before and/or after visiting the Site and may use that information to gather more data about you.",
+    "updated_at": "2026-07-12T04:19:25.770442",
+    "created_at": "2019-05-18T11:10:35.059546",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 397,
+    "weight": 30,
+    "title": "Your biometric data is collected",
+    "description": "This service can collect or use your biometric data. This includes but is not limited to facial recognition, fingerprints, and iris scans. Although this feature can sometimes be convenient to the user, providing this type of information to the service could open your personal data to being sold or stolen.",
+    "updated_at": "2020-10-24T03:11:59.592826",
+    "created_at": "2020-09-11T22:33:35.876997",
+    "topic_id": 56,
+    "classification": "bad"
+  },
+  {
+    "id": 402,
+    "weight": 10,
+    "title": "The service has non-exclusive use of your content",
+    "description": "The service can pay for your content and you are allowed to make it commercially available to other services/parties. ",
+    "updated_at": "2020-11-12T05:26:31.829033",
+    "created_at": "2020-11-12T05:16:05.848826",
+    "topic_id": 30,
+    "classification": "good"
+  },
+  {
+    "id": 321,
+    "weight": 50,
+    "title": "Promises will be kept after a merger or acquisition",
+    "description": "If the service gets acquired or needs to transfer personal data after a merger, bankruptcy, reorganisation or sale of the services, the data will still be processed in a manner that honours the promises made in the agreements.",
+    "updated_at": "2021-02-24T23:26:30.356632",
+    "created_at": "2018-08-29T10:35:07.816299",
+    "topic_id": 39,
+    "classification": "good"
+  },
+  {
+    "id": 302,
+    "weight": 60,
+    "title": "Personal information that is shared outside its jurisdiction is processed according to the original jurisdiction’s data protection standards",
+    "description": "The service has arrangements in place to ensure that users' personal information, if shared with an entity outside of the service's jurisdiction, is processed to the same standards that apply to the processing of personal data in the service's jurisdiction.",
+    "updated_at": "2021-02-10T08:05:46.462340",
+    "created_at": "2018-08-27T04:34:05.373166",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 310,
+    "weight": 15,
+    "title": "If you are the target of a copyright claim, your content may be removed",
+    "description": "The content you have published on the service may be removed if it infringes copyright.",
+    "updated_at": "2021-02-27T15:55:15.943323",
+    "created_at": "2018-08-27T12:56:52.766670",
+    "topic_id": 47,
+    "classification": "neutral"
+  },
+  {
+    "id": 405,
+    "weight": 20,
+    "title": "An anonymous payment method is offered",
+    "description": "Some services allow payments via cryptocurrencies, so that users don’t need to reveal their identity to payment processors.",
+    "updated_at": "2021-05-06T08:20:27.062322",
+    "created_at": "2021-02-08T02:34:56.032912",
+    "topic_id": 54,
+    "classification": "good"
+  },
+  {
+    "id": 300,
+    "weight": 30,
+    "title": "A complaint mechanism is provided for the handling of personal data",
+    "description": "The service provides users with contact information for an internal or external structure to lodge complaints. It also provides users with contact information for a higher data protection / privacy office in case the internal mechanism fails to satisfy the user.",
+    "updated_at": "2021-03-27T16:56:27.514538",
+    "created_at": "2018-08-27T03:20:39.589412",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 125,
+    "weight": 20,
+    "title": "Only temporary session cookies are used",
+    "description": "Temporary session cookies are cookies that are deleted when you close your browser instead of remaining there until they are manually deleted (or expire). These cookies are only used for the purposes of the service and therefore disappear when it's no longer used.",
+    "updated_at": "2021-05-06T08:12:06.458695",
+    "created_at": "2018-01-16T15:26:08.291990",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 120,
+    "weight": 35,
+    "title": "Critical changes to the terms are made without user involvement",
+    "description": "They may significantly update the terms at any time and at their sole discretion, meaning for any reason and without necessarily taking into account the interests or suggestions of the users of the Service. ",
+    "updated_at": "2021-05-06T08:16:02.249917",
+    "created_at": "2018-01-16T15:26:08.170138",
+    "topic_id": 35,
+    "classification": "neutral"
+  },
+  {
+    "id": 406,
+    "weight": 40,
+    "title": "An onion site accessible over Tor is provided",
+    "description": "Tor is a software for anonymous communication that directs Internet traffic through an overlay network. Onion sites are only available through Tor browser and provide additional security and anonymity to users.",
+    "updated_at": "2021-05-06T08:30:41.752910",
+    "created_at": "2021-02-22T13:41:13.056029",
+    "topic_id": 26,
+    "classification": "good"
+  },
+  {
+    "id": 121,
+    "weight": 70,
+    "title": " Terms may be changed any time at their discretion, without notice to you ",
+    "description": "The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.",
+    "updated_at": "2021-05-06T08:45:26.936883",
+    "created_at": "2018-01-16T15:26:08.180238",
+    "topic_id": 46,
+    "classification": "bad"
+  },
+  {
+    "id": 124,
+    "weight": 40,
+    "title": "When the service wants to make a material change to its terms, you are notified at least 30 days in advance",
+    "description": "The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified at least 30 days in advance.",
+    "updated_at": "2021-05-06T08:45:33.649754",
+    "created_at": "2018-01-16T15:26:08.252813",
+    "topic_id": 46,
+    "classification": "good"
+  },
+  {
+    "id": 390,
+    "weight": 50,
+    "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+    "description": "The service may employ a broad copyright license over feedback, proposals, ideas and suggestions submitted, including the right to use them without restriction, compensation or obligation to the user, but they do not claim ownership on them.",
+    "updated_at": "2021-02-25T10:36:53.085067",
+    "created_at": "2019-05-18T12:52:27.550831",
+    "topic_id": 27,
+    "classification": "good"
+  },
+  {
+    "id": 163,
+    "weight": 0,
+    "title": "The court of law governing the terms is in location X",
+    "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+    "updated_at": "2021-02-25T12:38:43.370701",
+    "created_at": "2018-01-16T15:26:09.179743",
+    "topic_id": 44,
+    "classification": "neutral"
+  },
+  {
+    "id": 203,
+    "weight": 40,
+    "title": "The service can stop being provided at any time",
+    "description": "They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.",
+    "updated_at": "2026-06-26T22:56:13.319110",
+    "created_at": "2018-01-16T15:26:09.944198",
+    "topic_id": 47,
+    "classification": "neutral"
+  },
+  {
+    "id": 513,
+    "weight": 0,
+    "title": "[DEPRECATED] behavioral data is collected",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:19:52.949232",
+    "created_at": "2024-01-16T19:40:48.436298",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 373,
+    "weight": 75,
+    "title": "Location data may be collected, used and/or shared",
+    "description": "Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).",
+    "updated_at": "2026-04-22T21:50:24.507177",
+    "created_at": "2018-10-21T09:37:52.750314",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 392,
+    "weight": 25,
+    "title": "Location data will not be collected, used or shared",
+    "description": "No location-based information is tracked by the service, so that it cannot be used or shared with third parties.\r\n",
+    "updated_at": "2026-04-22T21:50:54.659519",
+    "created_at": "2019-09-25T05:26:39.661745",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 396,
+    "weight": 60,
+    "title": "Your personal data may be sold unless you opt out",
+    "description": "There is a form to opt-out (typically California's CCPA) of the selling of your personal data. This is a bad a point because there are many services that don't have this form due to not selling your data in the first place.",
+    "updated_at": "2026-04-23T06:14:53.223482",
+    "created_at": "2020-09-07T18:57:48.105379",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 404,
+    "weight": 20,
+    "title": "This service provides a list of third parties involved in its operation",
+    "description": "The service provides a list detailing the third parties involved, their roles, and may even provide more information.",
+    "updated_at": "2026-07-01T23:47:40.223023",
+    "created_at": "2020-12-30T03:18:47.006353",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 313,
+    "weight": 50,
+    "title": "Your account may be suspended and/or terminated for breaching the Terms of Service",
+    "description": "Your account can be terminated for having been in breach of the Terms of Service/Community Guidelines/any other relevant policy. Your account can not be terminated without a reason.",
+    "updated_at": "2026-07-12T04:17:05.352955",
+    "created_at": "2018-08-29T01:42:29.223555",
+    "topic_id": 47,
+    "classification": "good"
+  },
+  {
+    "id": 196,
+    "weight": 60,
+    "title": "Your personal data is used for limited purposes",
+    "description": "Your Personal Data is only used for the essential purposes of the Service, which are clearly defined on the Agreements. For instance, the Service won't abuse your data to deliver targeted advertisements to you or for marketing purposes.",
+    "updated_at": "2021-02-25T18:57:32.265660",
+    "created_at": "2018-01-16T15:26:09.828431",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 377,
+    "weight": 50,
+    "title": "Your content can be deleted if you violate the terms",
+    "description": "Content infringing the Terms of Service (or the Acceptable Use Policy or equivalent)  may be removed, with or without notice.",
+    "updated_at": "2021-05-06T08:12:18.606906",
+    "created_at": "2018-10-25T06:32:35.388617",
+    "topic_id": 47,
+    "classification": "neutral"
+  },
+  {
+    "id": 185,
+    "weight": 40,
+    "title": "Your personal information is used for many different purposes",
+    "description": "Personal Data can be processed for many reasons, including non essential processing such as for advertising, marketing and analytics purposes.",
+    "updated_at": "2021-05-06T08:13:23.465634",
+    "created_at": "2018-01-16T15:26:09.649723",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 206,
+    "weight": 15,
+    "title": "30 days of notice are given before closing your account",
+    "description": "The Terms explain they will notify users at least 30 days before closing their accounts, which allows users to limit the losses and damages caused by this termination.",
+    "updated_at": "2021-05-06T08:17:09.578268",
+    "created_at": "2018-01-16T15:26:10.009998",
+    "topic_id": 47,
+    "classification": "good"
+  },
+  {
+    "id": 486,
+    "weight": 0,
+    "title": "Minors must have the authorization of their legal guardians to use the service",
+    "description": "Minors must have the authorization of their legal guardians to use the services. The legal guardians are responsible for the use of the service by the minor.",
+    "updated_at": "2021-05-08T12:37:09.382832",
+    "created_at": "2021-05-08T12:37:09.382832",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 333,
+    "weight": 70,
+    "title": "Some personal data may be kept for business interests or legal obligations",
+    "description": "After the end of the data retention period and/or if you request the deletion of your data, they may still keep it for business interests (fraud detection, transactions...) or legal obligations (tax, legal reporting...)",
+    "updated_at": "2021-07-15T22:27:22.568820",
+    "created_at": "2018-09-21T00:08:10.584163",
+    "topic_id": 45,
+    "classification": "bad"
+  },
+  {
+    "id": 323,
+    "weight": 50,
+    "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+    "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+    "updated_at": "2021-05-06T08:12:43.922005",
+    "created_at": "2018-08-29T11:07:14.686490",
+    "topic_id": 25,
+    "classification": "bad"
+  },
+  {
+    "id": 407,
+    "weight": 70,
+    "title": "Content you post may be edited by the service for any reason",
+    "description": "This service can edit any content on the service for whatever the reason and at their sole discretion.",
+    "updated_at": "2021-05-06T08:17:36.547163",
+    "created_at": "2021-02-26T13:24:51.760842",
+    "topic_id": 47,
+    "classification": "blocker"
+  },
+  {
+    "id": 243,
+    "weight": 50,
+    "title": "Your personal data may be sold or otherwise transferred as part of a bankruptcy proceeding or other type of financial transaction",
+    "description": "If the service gets acquired or is involved in a merger, bankruptcy, reorganisation or sale, your personal data may be transferred or sold.",
+    "updated_at": "2021-05-06T08:18:13.688385",
+    "created_at": "2018-08-08T06:24:47.607478",
+    "topic_id": 39,
+    "classification": "bad"
+  },
+  {
+    "id": 156,
+    "weight": 40,
+    "title": "Per the service's terms, you may not express negative opinions about them",
+    "description": "Criticising, questioning, making objections or complaints about the Service, its staff or anything related to it is prohibited and constitutes a breach of the Terms.",
+    "updated_at": "2021-05-06T08:45:59.612349",
+    "created_at": "2018-01-16T15:26:09.076008",
+    "topic_id": 31,
+    "classification": "bad"
+  },
+  {
+    "id": 240,
+    "weight": 15,
+    "title": "This service will continue using anonymized user-generated content after erasure of personal information",
+    "description": "If you delete your account or your information from this service, user-generated content such as comments and posts will remain and still be used, but on a pseudonymized or anonymized form so that they can't be linked back to you.",
+    "updated_at": "2021-02-26T18:42:28.927780",
+    "created_at": "2018-07-24T00:27:05.794339",
+    "topic_id": 26,
+    "classification": "neutral"
+  },
+  {
+    "id": 191,
+    "weight": 10,
+    "title": "Only aggregate data is given to third parties",
+    "description": "The Service only shares your information in an aggregated form, which means an anonymized form\r\nthat can't be linked to a unique identity.",
+    "updated_at": "2021-02-26T19:59:54.129707",
+    "created_at": "2018-01-16T15:26:09.743571",
+    "topic_id": 41,
+    "classification": "neutral"
+  },
+  {
+    "id": 322,
+    "weight": 80,
+    "title": "App required for this service requires broad device permissions",
+    "description": "The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ",
+    "updated_at": "2021-02-27T15:45:32.933193",
+    "created_at": "2018-08-29T11:00:24.358324",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 225,
+    "weight": 0,
+    "title": "You can choose with whom you share content",
+    "description": "Users can decide whether or not they want their content to be shared and they can control how and with whom it is shared.",
+    "updated_at": "2021-02-27T16:22:40.728375",
+    "created_at": "2018-01-16T15:26:10.569204",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 409,
+    "weight": 80,
+    "title": "You must provide your identifiable information",
+    "description": "The Service requires users to provide their identifiable information, including phone number, iD number or other information, even though this data collection isn’t essential for the purposes of the service. They may still allow pseudonyms in the foreground.",
+    "updated_at": "2021-03-01T08:16:35.777427",
+    "created_at": "2021-03-01T08:16:35.777427",
+    "topic_id": 26,
+    "classification": "bad"
+  },
+  {
+    "id": 188,
+    "weight": 35,
+    "title": "This service gives your personal data to third parties involved in its operation",
+    "description": "Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.",
+    "updated_at": "2021-03-11T17:16:34.893185",
+    "created_at": "2018-01-16T15:26:09.684316",
+    "topic_id": 48,
+    "classification": "bad"
+  },
+  {
+    "id": 119,
+    "weight": 30,
+    "title": "Your feedback is invited regarding changes to the terms",
+    "description": "The Service takes user suggestions into account to update its Terms.",
+    "updated_at": "2026-04-04T07:27:08.676836",
+    "created_at": "2018-01-16T15:26:08.158996",
+    "topic_id": 35,
+    "classification": "good"
+  },
+  {
+    "id": 123,
+    "weight": 15,
+    "title": "When the service wants to change its terms, you are notified a week or more in advance",
+    "description": "Users will be notified a week before the Terms are somehow updated, which lets them a reasonable amount of time to carefully read the changes and perhaps stop using the services if they do not longer agree.",
+    "updated_at": "2026-04-04T07:27:21.401903",
+    "created_at": "2018-01-16T15:26:08.223767",
+    "topic_id": 46,
+    "classification": "good"
+  },
+  {
+    "id": 204,
+    "weight": 20,
+    "title": "User suspension from the service will be fair and proportionate",
+    "description": "The Service promises to fairly terminate users accounts, only with a reason, and may give them an opportunity to explain and defend themselves.",
+    "updated_at": "2026-04-04T07:27:36.492307",
+    "created_at": "2018-01-16T15:26:09.966576",
+    "topic_id": 47,
+    "classification": "good"
+  },
+  {
+    "id": 223,
+    "weight": 10,
+    "title": "You can opt out of receiving promotional communications",
+    "description": "You can update your account preferences and/or easily unsubscribe of email/sms lists to stop receiving promotional communications.",
+    "updated_at": "2026-07-05T19:01:04.522142",
+    "created_at": "2018-01-16T15:26:10.532434",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 165,
+    "weight": 50,
+    "title": "The service will try to inform and/or notify you regarding government inquiries that may involve your personal information",
+    "description": "In case the Government governing the Terms requests personal data of a user of this service, they will make reasonable efforts to inform/notify the user (e.g. warrant canary).",
+    "updated_at": "2026-04-24T03:41:26.518347",
+    "created_at": "2018-01-16T15:26:09.213811",
+    "topic_id": 28,
+    "classification": "good"
+  },
+  {
+    "id": 332,
+    "weight": 25,
+    "title": "This service offers a symbolic but nonbinding statement about a matter of opinion, ethics, society, or politics",
+    "description": "If a service expresses a worldview antithetical to the user’s, that is a good signal that they should not use the service. Or conversely, if the service expresses an uncommonly-held belief that the user agrees with and thinks is relevant to the service-user relationship and/or important, they may wish to use that to choose between otherwise comparable services.",
+    "updated_at": "2021-03-11T17:33:05.170600",
+    "created_at": "2018-09-17T17:20:22.937299",
+    "topic_id": 31,
+    "classification": "good"
+  },
+  {
+    "id": 411,
+    "weight": 50,
+    "title": "Your data is processed and stored in a country that is less friendly to user privacy protection",
+    "description": "This case means that user data is not anywhere in the world, but somewhere where it is more likely to be obtained and used by government and/or possible data analysts.",
+    "updated_at": "2021-03-11T17:58:41.719187",
+    "created_at": "2021-03-11T17:58:28.661818",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 177,
+    "weight": 80,
+    "title": "Logs are deleted after a finite period of time",
+    "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that periodically delete their logs to prevent user sessions being tracked over time.",
+    "updated_at": "2021-05-06T08:47:59.188027",
+    "created_at": "2018-01-16T15:26:09.503520",
+    "topic_id": 40,
+    "classification": "good"
+  },
+  {
+    "id": 232,
+    "weight": 10,
+    "title": "A free help desk is provided",
+    "description": "The service can be easily contacted for questions or provides a support center at no extra cost.",
+    "updated_at": "2021-05-06T08:14:00.434758",
+    "created_at": "2018-01-16T15:26:10.703750",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 160,
+    "weight": 20,
+    "title": "No guarantee is given regarding quality",
+    "description": "The Service doesn't warrant or guarantee the quality of the products or services provided.",
+    "updated_at": "2021-05-14T14:36:40.088869",
+    "created_at": "2018-01-16T15:26:09.131135",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 166,
+    "weight": 70,
+    "title": "This service shares your personal data with third parties that are not essential to its operation",
+    "description": "Your personal data is or may be given to third parties nonessential to the service’s operation. This could be a business partner that receives your data to provide targeted advertisements.",
+    "updated_at": "2021-07-02T15:20:09.009467",
+    "created_at": "2018-01-16T15:26:09.231802",
+    "topic_id": 48,
+    "classification": "bad"
+  },
+  {
+    "id": 410,
+    "weight": 70,
+    "title": "Political discussions which are against the government-advocated value are prohibited",
+    "description": "Political content, which is against the government-advocated value, in the form or pictures, discussions, or campaigning isn’t allowed. Since it encourages the promotional content of the value, the service may tolerate trolling or spamming against political rivals or enemies.",
+    "updated_at": "2021-05-06T08:18:00.338948",
+    "created_at": "2021-03-01T09:06:07.976754",
+    "topic_id": 47,
+    "classification": "blocker"
+  },
+  {
+    "id": 211,
+    "weight": 50,
+    "title": "Extra data may be collected about you through promotions",
+    "description": "Additional personal data may be collected through contests, surveys, promotions, petitions or sweepstakes. ",
+    "updated_at": "2021-05-06T08:29:55.670148",
+    "created_at": "2018-01-16T15:26:10.199169",
+    "topic_id": 57,
+    "classification": "bad"
+  },
+  {
+    "id": 176,
+    "weight": 50,
+    "title": "Only necessary logs are kept by the service to ensure quality",
+    "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that only keep the strictly necessary logs on their servers and therefore protect your privacy.",
+    "updated_at": "2021-05-06T08:48:04.736192",
+    "created_at": "2018-01-16T15:26:09.472792",
+    "topic_id": 40,
+    "classification": "good"
+  },
+  {
+    "id": 148,
+    "weight": 10,
+    "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+    "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+    "updated_at": "2021-03-27T16:40:43.393615",
+    "created_at": "2018-01-16T15:26:08.835939",
+    "topic_id": 50,
+    "classification": "neutral"
+  },
+  {
+    "id": 152,
+    "weight": 15,
+    "title": "This service is only available to users over a certain age",
+    "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+    "updated_at": "2021-03-27T16:41:50.594690",
+    "created_at": "2018-01-16T15:26:08.952429",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 187,
+    "weight": 25,
+    "title": "Your data may be processed and stored anywhere in the world",
+    "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+    "updated_at": "2021-03-27T16:49:08.698243",
+    "created_at": "2018-01-16T15:26:09.675651",
+    "topic_id": 41,
+    "classification": "bad"
+  },
+  {
+    "id": 294,
+    "weight": 10,
+    "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+    "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+    "updated_at": "2021-03-27T16:55:39.895228",
+    "created_at": "2018-08-26T23:10:29.004536",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 281,
+    "weight": 25,
+    "title": "You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages",
+    "description": "Users are not allowed to use the service for chain letters, junk mail, spamming or any other distribution of content to people who have not agreed to receiving it.",
+    "updated_at": "2021-05-06T08:48:26.340167",
+    "created_at": "2018-08-24T03:58:16.944492",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 445,
+    "weight": 50,
+    "title": "Harming minors in any ways is prohibited",
+    "description": "This service prohibits harming minor in any ways. Since both “minor” and “in any ways” are vague and can be cited to restrict possibly any actions, the case is not classified as “good”.",
+    "updated_at": "2021-05-08T12:35:30.431826",
+    "created_at": "2021-03-16T18:49:12.601921",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 157,
+    "weight": 30,
+    "title": "Certain features may be throttled",
+    "description": "The service may impose limits or restrictions to the use of the service, thus negatively impacting users experience. They may do so without reason or prior notice.",
+    "updated_at": "2026-06-26T17:14:39.871157",
+    "created_at": "2018-01-16T15:26:09.092475",
+    "topic_id": 32,
+    "classification": "bad"
+  },
+  {
+    "id": 216,
+    "weight": 30,
+    "title": "Your personal data is used for advertising purposes",
+    "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+    "updated_at": "2026-07-12T04:14:45.679955",
+    "created_at": "2018-01-16T15:26:10.380532",
+    "topic_id": 57,
+    "classification": "bad"
+  },
+  {
+    "id": 444,
+    "weight": 0,
+    "title": "You are prohibited from publishing any third party’s personally identifiable information without their consent",
+    "description": "Users agree not to publicly post personally identifiable information (name, postal address, contact information…) without the owner’s knowledge or consent",
+    "updated_at": "2026-07-12T05:02:18.369453",
+    "created_at": "2021-03-15T19:22:22.644633",
+    "topic_id": 52,
+    "classification": "good"
+  },
+  {
+    "id": 151,
+    "weight": 50,
+    "title": "You have a reduced time period to take legal action against the service",
+    "description": "If you wish to bring legal action against a service about a past incident, you may not be able to do so if the Terms you agreed to implied a limited amount of time. As a result it may be worthy to carefully read that section of the Terms to know exactly how much time you might have before your right to take legal action expires.",
+    "updated_at": "2021-05-06T08:48:21.060636",
+    "created_at": "2018-01-16T15:26:08.926854",
+    "topic_id": 31,
+    "classification": "bad"
+  },
+  {
+    "id": 150,
+    "weight": 20,
+    "title": "Spidering, crawling, or accessing the site through any automated means is not allowed",
+    "description": "",
+    "updated_at": "2021-07-25T10:42:48.562971",
+    "created_at": "2018-01-16T15:26:08.898719",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 126,
+    "weight": 10,
+    "title": "First-party cookies are used",
+    "description": "First-party cookies only belong to the domain of the service and not a third party.",
+    "updated_at": "2021-05-06T08:28:30.139694",
+    "created_at": "2018-01-16T15:26:08.311645",
+    "topic_id": 25,
+    "classification": "neutral"
+  },
+  {
+    "id": 480,
+    "weight": 40,
+    "title": "Your personal data will not be used for an automated decision-making",
+    "description": "The service promises not to use your personal data for automated decision-making, including profiling.",
+    "updated_at": "2021-04-11T00:10:06.706358",
+    "created_at": "2021-04-11T00:10:06.706358",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 174,
+    "weight": 30,
+    "title": "This service holds onto content that you've deleted",
+    "description": "Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.",
+    "updated_at": "2021-04-17T01:15:07.628805",
+    "created_at": "2018-01-16T15:26:09.426866",
+    "topic_id": 45,
+    "classification": "blocker"
+  },
+  {
+    "id": 481,
+    "weight": 20,
+    "title": "The service claims to be GDPR compliant for European users",
+    "description": "The service has a different behavior towards users protected by the GDPR.",
+    "updated_at": "2021-05-02T12:49:40.815109",
+    "created_at": "2021-05-02T12:49:40.815109",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 482,
+    "weight": 20,
+    "title": "The service claims to be CCPA compliant for California users",
+    "description": "The service has a different behavior towards users protected by the California Consumer Privacy Act.",
+    "updated_at": "2021-05-02T18:27:16.534781",
+    "created_at": "2021-05-02T12:54:56.791488",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 483,
+    "weight": 20,
+    "title": "The service claims to be LGPD compliant for Brazilian users",
+    "description": "The service has a different behavior towards users protected by the Lei Geral de Proteção de Dados Pessoais.",
+    "updated_at": "2021-05-02T18:29:13.376533",
+    "created_at": "2021-05-02T18:29:13.376533",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 484,
+    "weight": 10,
+    "title": "You must report to the service any unauthorized use of your account or any breach of security",
+    "description": "The service asks the user to notify them immediately of any unauthorized use or security breaches.",
+    "updated_at": "2021-05-04T17:27:41.868261",
+    "created_at": "2021-05-04T17:27:41.868261",
+    "topic_id": 50,
+    "classification": "neutral"
+  },
+  {
+    "id": 324,
+    "weight": 30,
+    "title": "Alternative accounts are not allowed",
+    "description": "Services that do not allow multiple or alternative accounts are covered by this case.\r\nAlternative accounts can contribute to an increased privacy, but can also be used to manipulate discussions and polls and might decrease the trustworthiness of a person.",
+    "updated_at": "2021-05-06T08:07:49.942730",
+    "created_at": "2018-08-29T20:45:49.903657",
+    "topic_id": 26,
+    "classification": "neutral"
+  },
+  {
+    "id": 202,
+    "weight": 50,
+    "title": "Specific content can be deleted without reason and may be removed without prior notice",
+    "description": " This service can delete specific content. Usually they will claim they reserve the right to do it at their sole discretion, which is legalese for saying they won't give a specific reason. If the terms say they will not notify you, it shall be included in the quote but if it does not explicitly say they will give you a notice, it can be reasonably inferred that they can do it without telling you.",
+    "updated_at": "2021-05-06T08:16:55.066703",
+    "created_at": "2018-01-16T15:26:09.934111",
+    "topic_id": 47,
+    "classification": "blocker"
+  },
+  {
+    "id": 145,
+    "weight": 40,
+    "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service",
+    "description": "You are responsible for your use of the service. If a claim arises related to that use, you agree to indemnify and hold the service harmless.\r\nIf users are also required to defend the service, see Case 146 instead.",
+    "updated_at": "2023-04-03T18:53:28.339283",
+    "created_at": "2018-01-16T15:26:08.768423",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 170,
+    "weight": 15,
+    "title": "You have the right to leave this service at any time",
+    "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+    "updated_at": "2021-07-25T10:37:45.140006",
+    "created_at": "2018-01-16T15:26:09.347811",
+    "topic_id": 45,
+    "classification": "good"
+  },
+  {
+    "id": 479,
+    "weight": 50,
+    "title": "You aren’t allowed to remove or edit user-generated content",
+    "description": "You cannot edit or remove your content from this service.",
+    "updated_at": "2024-06-01T10:25:32.377930",
+    "created_at": "2021-04-06T01:39:46.666904",
+    "topic_id": 52,
+    "classification": "blocker"
+  },
+  {
+    "id": 487,
+    "weight": 50,
+    "title": "Sensitive data is collected and shared to target advertising",
+    "description": "Sensitive data refers to information requiring special protection, such as health data, political and religious beliefs, ethnic origins, sexual life and financial information. The service collects and shares this data with third parties for advertising or marketing.",
+    "updated_at": "2021-05-08T12:40:24.840855",
+    "created_at": "2021-05-08T12:40:24.840855",
+    "topic_id": 57,
+    "classification": "blocker"
+  },
+  {
+    "id": 478,
+    "weight": 30,
+    "title": "You may still be tracked even after opting out from tracking",
+    "description": "Users can’t fully opt out of tracking technologies used for non essential purposes such as advertising, marketing or analytics. The user may be asked for consent for installing some tracking technologies on the device, and even if all are rejected the service will still track its visitors and ignore the choice.This case doesn’t apply to functional cookies that are necessary to provide the services.",
+    "updated_at": "2026-04-24T03:36:30.565139",
+    "created_at": "2021-03-31T14:12:47.586669",
+    "topic_id": 25,
+    "classification": "blocker"
+  },
+  {
+    "id": 507,
+    "weight": 0,
+    "title": "[DEPRECATED] a changelog or past policy versions are available for review",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:20:38.849776",
+    "created_at": "2024-01-16T19:36:44.958899",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 485,
+    "weight": 30,
+    "title": "The service is released as free software or open-source",
+    "description": "The code of the service’s software is licensed under either an open-source or a free software license, so the users can have access to the source code and inspect it for themselves.",
+    "updated_at": "2026-06-16T20:28:38.754556",
+    "created_at": "2021-05-04T17:36:27.207157",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 488,
+    "weight": 50,
+    "title": "Your data is processed and stored in a country that is friendlier to user privacy protection",
+    "description": "The Terms are governed by the applicable laws of a jurisdiction known for strong data regulations and user privacy protection. Usually contributors will need to explain in the Analysis view of each point linked to this Case the reason why it shall be applied.",
+    "updated_at": "2021-05-11T20:53:06.582421",
+    "created_at": "2021-05-11T20:53:06.582421",
+    "topic_id": 41,
+    "classification": "good"
+  },
+  {
+    "id": 395,
+    "weight": 50,
+    "title": "Your browsing history can be viewed by the service",
+    "description": "The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.",
+    "updated_at": "2021-05-13T10:58:50.095184",
+    "created_at": "2020-07-14T20:53:53.714593",
+    "topic_id": 56,
+    "classification": "blocker"
+  },
+  {
+    "id": 386,
+    "weight": 100,
+    "title": "The policy refers to documents that are missing or unfindable",
+    "description": "For instance, when the privacy policy refers to the cookie policy, but there is no link to a cookie policy, anywhere. It only applies to services that are impossible to contact to raise the issue, either because they don’t offer any contact method or they do not respond in a reasonable time.",
+    "updated_at": "2021-05-14T12:45:50.713571",
+    "created_at": "2019-05-11T14:41:29.424185",
+    "topic_id": 36,
+    "classification": "blocker"
+  },
+  {
+    "id": 199,
+    "weight": 15,
+    "title": "The terms for this service are easy to read",
+    "description": "The Agreements are well-organised, define legal terms (where applicable), aren't needlessly long and may be pleasant to read.",
+    "updated_at": "2021-05-14T12:47:00.376324",
+    "created_at": "2018-01-16T15:26:09.875993",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 198,
+    "weight": 0,
+    "title": "The terms for this service are translated into different languages",
+    "description": "Although there's generally a unique binding language for the terms, they are translated to allow all users to understand the agreement they're accepting, no matter their native language.",
+    "updated_at": "2021-05-14T12:48:02.779807",
+    "created_at": "2018-01-16T15:26:09.859584",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 290,
+    "weight": 0,
+    "title": "This service does not guarantee that it or the products obtained through it meet your expectations or requirements",
+    "description": "This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.",
+    "updated_at": "2021-05-14T14:36:47.627981",
+    "created_at": "2018-08-26T04:11:17.888842",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 490,
+    "weight": 20,
+    "title": " The service is only available in some countries approved by its government",
+    "description": "Countries under embargo or banned by the government of the country in question cannot use the service.",
+    "updated_at": "2021-05-19T14:51:32.683749",
+    "created_at": "2021-05-18T00:15:05.481669",
+    "topic_id": 44,
+    "classification": "bad"
+  },
+  {
+    "id": 491,
+    "weight": 100,
+    "title": "All Traffic is unencrypted (no https)",
+    "description": "The service doesn’t employ TLS/SSL encryption to secure the traffic between your browser and the website you’re visiting. As a result the data transmitted may be monitored by unauthorized third parties.",
+    "updated_at": "2021-05-24T08:07:42.130561",
+    "created_at": "2021-05-24T08:07:42.130561",
+    "topic_id": 50,
+    "classification": "blocker"
+  },
+  {
+    "id": 164,
+    "weight": 50,
+    "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+    "description": "If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.",
+    "updated_at": "2023-05-05T09:43:54.553344",
+    "created_at": "2018-01-16T15:26:09.194087",
+    "topic_id": 28,
+    "classification": "bad"
+  },
+  {
+    "id": 503,
+    "weight": 20,
+    "title": "You can set guidelines for the use of your personal information after your death",
+    "description": "After death, the deceased’s accounts may still exist and personal data could still be processed with no more control by the user. Citizens of some jurisdictions can set a digital testimony to guide the use of personal data by companies after death.",
+    "updated_at": "2023-05-20T20:07:10.124728",
+    "created_at": "2023-05-20T20:07:10.124728",
+    "topic_id": 45,
+    "classification": "good"
+  },
+  {
+    "id": 118,
+    "weight": 50,
+    "title": "You waive your moral rights",
+    "description": "Moral rights are rights to creators of literary, dramatic, musical and artistic works, as well as directors of films.\r\n\r\n\"The moral rights include the right of attribution, the right to have a work published anonymously or pseudonymously, and the right to the integrity of the work. The preserving of the integrity of the work allows the author to object to alteration, distortion, or mutilation of the work that is \"prejudicial to the author's honor or reputation\". Anything else that may detract from the artist's relationship with the work even after it leaves the artist's possession or ownership may bring these moral rights into play. Moral rights are distinct from any economic rights tied to copyrights. Even if an artist has assigned his or her copyright rights to a work to a third party, he or she still maintains the moral rights to the work.\" -Wikipedia\r\n\r\nIn general, any terms that use the exact words \"moral rights\" as rights that are waived will fall under this Case.",
+    "updated_at": "2021-05-24T08:17:03.838154",
+    "created_at": "2018-01-16T15:26:08.131701",
+    "topic_id": 27,
+    "classification": "blocker"
+  },
+  {
+    "id": 492,
+    "weight": 30,
+    "title": "Your provided identifiable information is actively checked by the service",
+    "description": "The service checks if the required identifiable information you've provided is correct, and may do so on a regular basis. The check measures could be analyzing your browser information and/or providing the identifiable information to a third-party or the authority, thus compromising your anonymity.",
+    "updated_at": "2021-05-28T09:51:31.306055",
+    "created_at": "2021-05-28T09:40:19.204027",
+    "topic_id": 26,
+    "classification": "bad"
+  },
+  {
+    "id": 379,
+    "weight": 0,
+    "title": "[DEPRECATED] User-generated content can be blocked or censored for any reason",
+    "description": "Weight used to be 60.",
+    "updated_at": "2026-04-15T08:39:35.278816",
+    "created_at": "2018-10-26T05:58:57.599967",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 383,
+    "weight": 30,
+    "title": "Do Not Track (DNT) headers are respected",
+    "description": "This service does respect the browser's Do Not Track header and disables all user tracking if it is enabled.",
+    "updated_at": "2026-04-24T03:42:10.635461",
+    "created_at": "2019-03-31T20:46:25.931745",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 489,
+    "weight": 50,
+    "title": "Voice data is collected and shared with third parties",
+    "description": "The service collects data and recordings of your voice when you communicate with a service verbally and may use and share them with third parties, that may use this data for marketing or advertising.",
+    "updated_at": "2026-05-05T06:15:15.530769",
+    "created_at": "2021-05-16T13:12:21.126139",
+    "topic_id": 56,
+    "classification": "bad"
+  },
+  {
+    "id": 287,
+    "weight": 30,
+    "title": "No warranty is made regarding an uninterrupted, timely, secure and/or error-free experience",
+    "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+    "updated_at": "2026-07-04T08:44:48.412038",
+    "created_at": "2018-08-25T23:51:23.964727",
+    "topic_id": 32,
+    "classification": "neutral"
+  },
+  {
+    "id": 239,
+    "weight": 70,
+    "title": "Private messages can be read",
+    "description": "The Service is able to access, scan, review or read all user communications, including private messages, which may contain personal or sensitive data.",
+    "updated_at": "2021-05-31T21:12:36.233269",
+    "created_at": "2018-07-22T09:27:23.303262",
+    "topic_id": 41,
+    "classification": "blocker"
+  },
+  {
+    "id": 493,
+    "weight": 10,
+    "title": "This service is a subsidiary of Company X",
+    "description": "The service is a subsidiary of a certain company (called X in the title, to be replaced by the parent Company in each point's title). Company X’s Terms of Service may apply to the service.",
+    "updated_at": "2021-06-02T12:28:40.372913",
+    "created_at": "2021-06-02T12:28:40.372913",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 494,
+    "weight": 10,
+    "title": "An audio version of the Terms of Service is provided",
+    "description": "This service provides an audio file of someone reading the agreements for users to play and listen to.",
+    "updated_at": "2021-06-05T10:27:28.522417",
+    "created_at": "2021-06-05T10:27:28.522417",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 495,
+    "weight": 25,
+    "title": "This service is only available for commercial use",
+    "description": "Users can’t use the Service for individual or personal purposes (unless the Service consents): it is only for business to business (B2B).",
+    "updated_at": "2021-06-20T19:00:03.676507",
+    "created_at": "2021-06-20T19:00:03.676507",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 496,
+    "weight": 10,
+    "title": "You can’t close your account if an investigation is ongoing",
+    "description": "If an investigation is currently ongoing, you’re not allowed to close your account until it’s done or in an attempt to avoid investigation.",
+    "updated_at": "2021-06-29T15:55:06.256163",
+    "created_at": "2021-06-29T15:55:06.256163",
+    "topic_id": 28,
+    "classification": "neutral"
+  },
+  {
+    "id": 497,
+    "weight": 80,
+    "title": "Prices and fees may be changed at any time, without notice to you",
+    "description": "The service reserves the right to change or modify its pricing and fees at any time, and such changes are effective immediately without need for further notice to the user.",
+    "updated_at": "2021-07-15T22:32:46.553363",
+    "created_at": "2021-07-15T22:32:46.553363",
+    "topic_id": 54,
+    "classification": "bad"
+  },
+  {
+    "id": 178,
+    "weight": 100,
+    "title": "Logs are kept for an undefined period of time",
+    "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that may keep logs indefinitely, allowing user sessions to be tracked over time. Logs that are kept for a time \"consistent with applicable law\" also fall under this case, since this period of time may be murky or undefined.",
+    "updated_at": "2021-08-19T01:05:09.145886",
+    "created_at": "2018-01-16T15:26:09.527019",
+    "topic_id": 40,
+    "classification": "bad"
+  },
+  {
+    "id": 498,
+    "weight": 20,
+    "title": "The service does not use any third-party advertising services",
+    "description": "The service does not put any paid third party advertisements on their platform",
+    "updated_at": "2023-01-12T12:17:44.733823",
+    "created_at": "2023-01-12T12:17:44.733823",
+    "topic_id": 57,
+    "classification": "good"
+  },
+  {
+    "id": 499,
+    "weight": 50,
+    "title": "The service suspends your account after inactivity for a certain or uncertain time",
+    "description": "",
+    "updated_at": "2023-01-12T12:26:49.890394",
+    "created_at": "2023-01-12T12:26:49.890394",
+    "topic_id": 45,
+    "classification": "neutral"
+  },
+  {
+    "id": 500,
+    "weight": 70,
+    "title": "Security incidents are reported to the authorities",
+    "description": "If the service is encountering and dealing with a security incident involving potential losses or damages for its users, its reactions may be reported to the authority as part of a legal proceeding.",
+    "updated_at": "2023-01-12T12:29:51.400689",
+    "created_at": "2023-01-12T12:29:51.400689",
+    "topic_id": 50,
+    "classification": "neutral"
+  },
+  {
+    "id": 146,
+    "weight": 60,
+    "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+    "description": "",
+    "updated_at": "2023-04-03T18:50:27.070533",
+    "created_at": "2018-01-16T15:26:08.798489",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 504,
+    "weight": 50,
+    "title": "Your personal data is used for automated decision-making, profiling or AI training",
+    "description": "Personal data or content you share with the service may be processed to make decisions by automated means without human involvement. This includes profiling, which is any form of automated processing of your information to analyse or predict things like your economic situation, health, personal preferences or interests; as well as Artificial Intelligence training.",
+    "updated_at": "2023-05-20T20:14:57.173997",
+    "created_at": "2023-05-20T20:14:57.173997",
+    "topic_id": 41,
+    "classification": "blocker"
+  },
+  {
+    "id": 201,
+    "weight": 60,
+    "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+    "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+    "updated_at": "2024-04-11T15:32:51.319612",
+    "created_at": "2018-01-16T15:26:09.915249",
+    "topic_id": 47,
+    "classification": "bad"
+  },
+  {
+    "id": 403,
+    "weight": 50,
+    "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage",
+    "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+    "updated_at": "2026-04-01T01:57:47.111082",
+    "created_at": "2020-12-30T03:17:35.286075",
+    "topic_id": 46,
+    "classification": "bad"
+  },
+  {
+    "id": 142,
+    "weight": 0,
+    "title": "[DEPRECATED] Only for your individual use",
+    "description": "Weight was 10.",
+    "updated_at": "2026-02-27T21:20:56.729770",
+    "created_at": "2018-01-16T15:26:08.714406",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 501,
+    "weight": 90,
+    "title": "This Service does not keep any logs",
+    "description": "This service is committed to not store any log data at all.",
+    "updated_at": "2026-04-04T07:30:13.489265",
+    "created_at": "2023-01-12T12:31:05.922965",
+    "topic_id": 40,
+    "classification": "good"
+  },
+  {
+    "id": 502,
+    "weight": 100,
+    "title": "Changes in policies are applied retroactively",
+    "description": "This service requires that your behavior, and/or content, complies with the newest version of the regulations regardless of the time at which you have submitted it.",
+    "updated_at": "2026-04-04T07:30:26.214712",
+    "created_at": "2023-02-01T13:52:02.496615",
+    "topic_id": 38,
+    "classification": "blocker"
+  },
+  {
+    "id": 228,
+    "weight": 30,
+    "title": "Information is provided about what kind of personal information is collected",
+    "description": "The Privacy Policy describes in detail the data collected through the website and through the services provided.",
+    "updated_at": "2026-04-24T03:22:27.415037",
+    "created_at": "2018-01-16T15:26:10.631312",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 515,
+    "weight": 50,
+    "title": "Terms are short",
+    "description": "The terms text is short. Not a lot of detail is provided, which can be good or bad depending on the context, hence the neutral classification for this case.",
+    "updated_at": "2025-02-04T15:55:15.281866",
+    "created_at": "2025-02-04T15:55:15.281866",
+    "topic_id": 36,
+    "classification": "neutral"
+  },
+  {
+    "id": 293,
+    "weight": 50,
+    "title": "The service assumes no liability for any damages the user incurs",
+    "description": "The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.",
+    "updated_at": "2025-03-30T11:20:33.605027",
+    "created_at": "2018-08-26T22:31:46.138198",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 215,
+    "weight": 20,
+    "title": "Pseudonyms are allowed",
+    "description": "You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.",
+    "updated_at": "2025-05-19T10:47:53.414600",
+    "created_at": "2018-01-16T15:26:10.347919",
+    "topic_id": 26,
+    "classification": "good"
+  },
+  {
+    "id": 132,
+    "weight": 0,
+    "title": "[DEPRECATED] The copyright license maintained by the service over your data and/or content is broader than necessary",
+    "description": "Weight was 50.",
+    "updated_at": "2026-04-04T07:31:18.520792",
+    "created_at": "2018-01-16T15:26:08.435933",
+    "topic_id": 55,
+    "classification": "bad"
+  },
+  {
+    "id": 506,
+    "weight": 0,
+    "title": "[DEPRECATED] the policy version has a clear date",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:20:10.158587",
+    "created_at": "2024-01-16T19:35:44.151724",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 133,
+    "weight": 0,
+    "title": "[DEPRECATED] very broad",
+    "description": "Weight was 80.",
+    "updated_at": "2026-02-27T21:21:19.518229",
+    "created_at": "2018-01-16T15:26:08.468309",
+    "topic_id": 55,
+    "classification": "bad"
+  },
+  {
+    "id": 509,
+    "weight": 0,
+    "title": "[DEPRECATED] users can contact the (edtech) vendor about any privacy policy questions, complaints, and material changes as indicated in the policies",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:22:00.448116",
+    "created_at": "2024-01-16T19:37:56.114420",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 514,
+    "weight": 0,
+    "title": "[DEPRECATED] sensitive personal information is collected",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:22:25.473130",
+    "created_at": "2024-01-16T19:41:12.682078",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 508,
+    "weight": 0,
+    "title": "[DEPRECATED] users are notified of any material changes",
+    "description": "Weight was 50.",
+    "updated_at": "2026-02-27T21:22:43.434254",
+    "created_at": "2024-01-16T19:37:25.778787",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 385,
+    "weight": 50,
+    "title": "Refusing tracking cookies won’t limit your ability to use the service",
+    "description": "Blocking tracking technologies will not negatively impact your use of the service.",
+    "updated_at": "2026-03-24T04:33:48.829001",
+    "created_at": "2019-05-11T14:24:25.487129",
+    "topic_id": 25,
+    "classification": "good"
+  },
+  {
+    "id": 241,
+    "weight": 50,
+    "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection",
+    "description": "The Terms are governed by the applicable laws of a jurisdiction known for protecting citizens privacy with strong data regulations. Usually contributors will need to explain in the Analysis view of each point linked to this Case why the jurisdiction is friendly to user privacy protection.",
+    "updated_at": "2026-03-24T17:55:35.299055",
+    "created_at": "2018-08-08T06:09:52.829613",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 233,
+    "weight": 0,
+    "title": "Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header",
+    "description": "Even though the Do Not Track (DNT) header was not implemented perfectly, services should not track users whose browsers send a DNT header.",
+    "updated_at": "2026-04-04T07:22:52.842699",
+    "created_at": "2018-06-26T12:04:59.070418",
+    "topic_id": 25,
+    "classification": "neutral"
+  },
+  {
+    "id": 143,
+    "weight": 25,
+    "title": "This service is only available for use individually and non-commercially",
+    "description": "Users can't use the Service for commercial purposes (unless the Service consents): it is only for personal, individual purposes.",
+    "updated_at": "2026-04-04T07:23:29.016960",
+    "created_at": "2018-01-16T15:26:08.727572",
+    "topic_id": 31,
+    "classification": "neutral"
+  },
+  {
+    "id": 314,
+    "weight": 20,
+    "title": "You are prohibited from posting content which promotes violence or politically or religiously extremist values",
+    "description": "Users are not allowed to post extremist political or religious content. They are also not allowed to post content that glorifies violence.",
+    "updated_at": "2026-04-04T07:23:59.912075",
+    "created_at": "2018-08-29T02:24:25.241886",
+    "topic_id": 52,
+    "classification": "neutral"
+  },
+  {
+    "id": 242,
+    "weight": 50,
+    "title": "The court of law governing the terms is in a jurisdiction that is less friendly to user privacy protection",
+    "description": "The Terms are governed by the applicable laws of a jurisdiction known for weak data regulations and poor user privacy protection. Usually contributors will need to explain in the Analysis view of each point linked to this Case the reason why it shall be applied.",
+    "updated_at": "2026-04-04T07:24:42.178694",
+    "created_at": "2018-08-08T06:10:34.628333",
+    "topic_id": 44,
+    "classification": "bad"
+  },
+  {
+    "id": 117,
+    "weight": 50,
+    "title": "You waive your right to a class action",
+    "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+    "updated_at": "2026-04-04T07:28:10.847529",
+    "created_at": "2018-01-16T15:26:08.113037",
+    "topic_id": 42,
+    "classification": "bad"
+  },
+  {
+    "id": 153,
+    "weight": 30,
+    "title": "Spammers may be fined",
+    "description": "Sending unsolicited promotional communications through the Service (i.e. spam) is prohibited and spammers must pay a sum of money as a penalty.",
+    "updated_at": "2026-04-24T03:37:46.453504",
+    "created_at": "2018-01-16T15:26:08.987556",
+    "topic_id": 31,
+    "classification": "good"
+  },
+  {
+    "id": 372,
+    "weight": 50,
+    "title": "This service claims User-generated content is encrypted, and they can not decrypt it",
+    "description": "The service claims that user-generated content is end-to-end encrypted, meaning only intended recipients can access or decrypt it. As a result, no unauthorized parties, including the service itself, can view the content.\r\n\r\nThis does not necessarily cover meta data, such as the date of creation or sender and recipient information.",
+    "updated_at": "2026-04-04T16:43:09.110005",
+    "created_at": "2018-10-20T10:35:42.493421",
+    "topic_id": 52,
+    "classification": "good"
+  },
+  {
+    "id": 338,
+    "weight": 50,
+    "title": "You can limit how your information is used by third parties and the service",
+    "description": "Usually it's related to the right to object to data processing or restrict it under the GDPR. Users may be able to refuse the use of their data for marketing purposes for instance.",
+    "updated_at": "2026-05-05T06:14:54.787976",
+    "created_at": "2018-10-17T06:48:48.129697",
+    "topic_id": 34,
+    "classification": "good"
+  },
+  {
+    "id": 309,
+    "weight": 0,
+    "title": "[DEPRECATED] You have the right to request lower charges from third-party providers",
+    "description": "Weight used to be 50.",
+    "updated_at": "2026-06-19T20:06:09.742222",
+    "created_at": "2018-08-27T10:35:04.874643",
+    "topic_id": 55,
+    "classification": "neutral"
+  },
+  {
+    "id": 171,
+    "weight": 90,
+    "title": "Features of the service are available under a free software and/or open source license",
+    "description": "This case applies to services under a license that is either free software (free as in \"freedom\"), or just open source. This means that the code is entirely open source. For free software licenses, according to the Free Software Foundation, \"free software is the software that grants the user the freedom to share, study, and modify it\".",
+    "updated_at": "2026-06-16T20:26:51.805698",
+    "created_at": "2018-01-16T15:26:09.366216",
+    "topic_id": 36,
+    "classification": "good"
+  },
+  {
+    "id": 516,
+    "weight": 50,
+    "title": "The cookies used by this service contain information that would personally identify you",
+    "description": "The cookies used by this service collect data that contains personal information, and can be used by other services to identify you.",
+    "updated_at": "2026-07-05T18:54:58.243526",
+    "created_at": "2026-07-05T18:54:58.243526",
+    "topic_id": 25,
+    "classification": "blocker"
+  },
+  {
+    "id": 517,
+    "weight": 30,
+    "title": "You can opt out of binding arbitration, but might have reduced time to do so",
+    "description": "The service allows you to opt out of its binding arbitration clause, though often you have to do so before a certain amount of time passes after your registration.",
+    "updated_at": "2026-07-05T19:04:48.363063",
+    "created_at": "2026-07-05T19:04:48.363063",
+    "topic_id": 42,
+    "classification": "good"
+  },
+  {
+    "id": 518,
+    "weight": 20,
+    "title": "This service is COPPA compliant",
+    "description": "This service complies with the U.S. Children’s Online Privacy Protection Act, which limits the collection of personal information from children under the age of 13.",
+    "updated_at": "2026-07-12T04:42:47.699163",
+    "created_at": "2026-07-12T04:42:47.699163",
+    "topic_id": 44,
+    "classification": "good"
+  },
+  {
+    "id": 519,
+    "weight": 10,
+    "title": "You must keep your information up to date and accurate",
+    "description": "The service expects you to provide true and accurate information upon registering an account with them, and that you will keep it up to date.",
+    "updated_at": "2026-07-12T06:18:43.904895",
+    "created_at": "2026-07-12T06:18:43.904895",
+    "topic_id": 26,
+    "classification": "neutral"
+  },
+  {
+    "id": 520,
+    "weight": 20,
+    "title": "Prices and fees may be changed at any time, but you will be notified beforehand",
+    "description": "The service reserves the right to modify prices at any time, but you will recieve a notice of such changes.",
+    "updated_at": "2026-07-12T20:25:18.218029",
+    "created_at": "2026-07-12T20:25:18.218029",
+    "topic_id": 54,
+    "classification": "neutral"
+  },
+  {
+    "id": 521,
+    "weight": 30,
+    "title": "Contact information from a Data Protection Officer (DPO) is provided",
+    "description": "The service provides the contact information of a Data Protection Officer (DPO) to handle privacy requests and/or complaints.",
+    "updated_at": "2026-07-14T04:33:51.016947",
+    "created_at": "2026-07-14T04:33:51.016947",
+    "topic_id": 36,
+    "classification": "good"
+  }
+]
