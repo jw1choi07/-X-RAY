@@ -3,6 +3,7 @@ import path from "node:path";
 import { NextResponse } from "next/server";
 import { fetchDocument, CrawlBlocked } from "@/lib/crawl";
 import { analyzeDocument } from "@/lib/analyze";
+import { isUsablePresetText } from "@/lib/presets";
 
 export async function POST(req: Request) {
   try {
@@ -11,19 +12,37 @@ export async function POST(req: Request) {
     let meta: { char_count: number; method: string } | null = null;
 
     if (body.presetFile) {
+      if (typeof body.presetFile !== "string" || body.presetFile.includes("/") || body.presetFile.includes("\\")) {
+        return NextResponse.json({ error: "존재하지 않는 프리셋입니다." }, { status: 400 });
+      }
       const dir = path.join(process.cwd(), "data", "texts");
       const files = fs.readdirSync(dir).filter((f) => f.endsWith(".txt"));
       if (!files.includes(body.presetFile)) {
         return NextResponse.json({ error: "존재하지 않는 프리셋입니다." }, { status: 400 });
       }
       text = fs.readFileSync(path.join(dir, body.presetFile), "utf-8");
+      if (!isUsablePresetText(text)) {
+        return NextResponse.json(
+          { error: "이 프리셋은 원문 크롤링에 실패해 분석할 수 없습니다. 다른 문서를 선택해주세요." },
+          { status: 400 },
+        );
+      }
       meta = { char_count: text.length, method: "preset" };
     } else if (body.url) {
+      if (typeof body.url !== "string" || body.url.length > 2048) {
+        return NextResponse.json({ error: "올바른 URL을 입력해주세요." }, { status: 400 });
+      }
       const doc = await fetchDocument(body.url);
       text = doc.text;
       meta = { char_count: doc.char_count, method: doc.method };
     } else if (body.text) {
-      text = body.text;
+      if (typeof body.text !== "string") {
+        return NextResponse.json({ error: "텍스트 형식이 올바르지 않습니다." }, { status: 400 });
+      }
+      if (body.text.trim().length < 200) {
+        return NextResponse.json({ error: "분석하기에는 원문이 너무 짧습니다 (최소 200자)." }, { status: 400 });
+      }
+      text = body.text.slice(0, 100000);
       meta = { char_count: text.length, method: "text" };
     } else {
       return NextResponse.json({ error: "url, presetFile, text 중 하나가 필요합니다." }, { status: 400 });

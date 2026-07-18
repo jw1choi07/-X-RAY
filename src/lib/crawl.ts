@@ -10,6 +10,34 @@ const READER_TIMEOUT_MS = 45_000;
 
 export class CrawlBlocked extends Error {}
 
+const PRIVATE_HOSTNAME_PATTERNS = [
+  /^localhost$/i,
+  /^127\./,
+  /^0\./,
+  /^10\./,
+  /^169\.254\./,
+  /^192\.168\./,
+  /^172\.(1[6-9]|2\d|3[0-1])\./,
+  /^\[?::1\]?$/,
+  /^fc[0-9a-f]{2}:/i,
+  /^fe80:/i,
+];
+
+function assertPublicUrl(url: string): void {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    throw new CrawlBlocked(`올바른 URL이 아닙니다: ${url}`);
+  }
+  if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+    throw new CrawlBlocked(`지원하지 않는 프로토콜입니다: ${parsed.protocol}`);
+  }
+  if (PRIVATE_HOSTNAME_PATTERNS.some((p) => p.test(parsed.hostname))) {
+    throw new CrawlBlocked(`내부/사설 네트워크 주소는 분석할 수 없습니다: ${parsed.hostname}`);
+  }
+}
+
 function normalizeText(raw: string): string {
   return raw
     .split("\n")
@@ -120,7 +148,10 @@ function stripReaderMetadata(raw: string): string {
 async function robotsAllowed(url: string): Promise<boolean> {
   try {
     const { origin } = new URL(url);
-    const res = await fetch(`${origin}/robots.txt`, { headers: { "User-Agent": UA } });
+    const res = await fetch(`${origin}/robots.txt`, {
+      headers: { "User-Agent": UA },
+      signal: AbortSignal.timeout(5000),
+    });
     if (!res.ok) return true;
     const text = await res.text();
     const lines = text.split("\n").map((l) => l.trim());
@@ -144,7 +175,7 @@ async function robotsAllowed(url: string): Promise<boolean> {
 }
 
 async function fetchStatic(url: string): Promise<{ html: string; text: string }> {
-  const res = await fetch(url, { headers: { "User-Agent": UA } });
+  const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const contentType = res.headers.get("content-type") ?? "";
   if (contentType.toLowerCase().includes("pdf") || url.toLowerCase().endsWith(".pdf")) {
@@ -182,6 +213,7 @@ function pickLongerText(current: string, candidate: string): string {
 }
 
 export async function fetchDocument(url: string) {
+  assertPublicUrl(url);
   if (!(await robotsAllowed(url))) {
     throw new CrawlBlocked(`이 사이트는 robots.txt로 자동 수집을 금지하고 있습니다: ${url}`);
   }

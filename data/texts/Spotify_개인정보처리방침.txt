@@ -1,645 +1,550 @@
-Privacy Policy - Spotify
-Skip to content
-Spotify - Home
-Premium plans
-Premium Individual
-1 account - For one person.
-Premium Duo
-2 accounts - For couples under one roof.
-Premium Student
-1 account - Discount for eligible students.
-Support
-Download
-Sign up
-Log in
+콘텐츠로 건너뛰기
+Spotify - 홈
+Premium 요금제
+Premium 개인
+개인 사용자를 위한 계정 1개
+Premium 듀오
+한 지붕 아래 사는 커플을 위한 계정 2개
+Premium 학생
+이용 자격이 있는 학생을 위한 할인이 적용된 계정 1개
+지원
+다운로드하기
+가입하기
+로그인하기
 Menu
-Legal
-Terms and Conditions of Use
-Intellectual Property Policy
-Privacy Policy
-User Guidelines
-Paid Subscription Terms
-Spotify Privacy Policy
-Effective as of 12 June 2026
-About this Policy
-Your personal data rights and controls
-Personal data we collect about you
-Our purpose for using your personal data
-Sharing your personal data
-Data retention
-Transfer to other countries
-Keeping your personal data safe
-Children
-Third-Party Links
-Changes to this Policy
-How to contact us
-1. About this Policy
-This Policy describes how we process your personal data at Spotify AB.
-It applies to your use of:
-all Spotify streaming services as a user. For example this includes:
-your use of Spotify on any device
-the personalization of your user experience
-the infrastructure required to provide our services
-connection of your Spotify account with another application
-our free or paid streaming options (each a ‘
-Service Option
-’)
-other Spotify services which include a link to this Privacy Policy. These include Spotify websites, Customer Service and the
-Community Site
-.
-From now on, we’ll collectively call these the ‘
-Spotify Service
-’.
-From time to time, we may develop new or offer additional services. They’ll also be subject to this Policy, unless stated otherwise when we introduce them. If necessary depending on the relevant jurisdictions and regulations, any separate consent may be requested from you.
-This Policy is
-not
-...
-the Spotify
-Terms of Use
-, which is a separate document. The Terms of Use outline the legal contract between you and Spotify for using the Spotify Service. It also describes the rules of Spotify and your rights under your agreement with us.
-about your use of other Spotify services which have their own privacy policy, such as Megaphone.
-Other resources and settings
-Key information about your personal data is right here in this Policy. However, you might want to take a look at our other privacy resources and controls:
-Safety & Privacy Center
-: A user-friendly hub with summaries of key topics. See
-Section 2 ‘Your personal data rights and controls’
-for more on user rights.
-Account Privacy
-: Control the processing of certain personal data.
-Notification Settings
-: Set which marketing communications you get from Spotify.
-Settings (found in the Desktop and Mobile versions of Spotify): Control certain aspects of the Spotify Service such as ‘Social’ or ‘Explicit Content’. On the ‘Social’ setting, you can:
-start a Private session
-choose whether to share what you listen to on Spotify with your followers
-choose whether to show your recently played artists on your public profile
-turn off messaging with other users (if messaging is available in your market)
-On the ‘Explicit Content’ setting you can control whether explicit-rated content can be played on your Spotify account.
-2. Your personal data rights and controls
-Many privacy laws give rights to individuals over their personal data. These laws include the General Data Protection Regulation (‘GDPR’) and the Personal Information Protection Act (‘PIPA’). Accordingly we are happy to offer transparency and access controls to help users take advantage of those rights. As available, and except as limited under applicable law, please see your rights and their descriptions in this table:
-It’s your right to...
-How?
-Be informed
-Be informed of the personal data we process about you and how we process it.
-We inform you:
-through this Policy
-through information provided to you as you use the Spotify Service
-by answering your specific questions and requests when you
-contact us
-Access
-Request access to the personal data we process about you.
-To request a copy of your personal data from Spotify, either:
-use the ‘Download your data tool’ on your account
-Account Privacy
-page, or
-contact us
-When you download your data you will receive the information about your data that Spotify has to provide under Article 15 of the GDPR, Article 35 of the PIPA, and other applicable laws. If you would like more details about how we process your personal data, you can
-contact us
-.
-Rectification
-Request that we amend or update your personal data where it’s inaccurate or incomplete.
-You can edit your User Data under ‘Edit profile’ in your account or
-by contacting us
-.
-Erasure
-Request that we erase certain of your personal data.
-For example, you can ask us to erase personal data:
-that we no longer need for the purpose it was collected for
-that we process based on the
-legal basis
-of consent, and you withdraw your consent
-There are situations where Spotify is unable to delete your data, for example when:
-it’s still necessary to process the data for the purpose we collected it for
-Spotify’s interest in using the data overrides your interest in having it deleted. For example, where we need the data to protect our services from fraud
-Spotify has a legal obligation to keep the data, or
-Spotify needs the data to establish, exercise or defend legal claims. For example, if there’s an unresolved issue relating to your account
-There are several ways you can erase personal data from Spotify:
-to remove audio content you have saved, select the relevant content and choose to remove it. For example, you can remove a track from your playlist or an artist you’ve saved to your library
-to request erasure of your account data from Spotify (and close your account), follow the steps on our
-support page
-. This data includes your User Data, Usage Data and other data listed in
-Section 3 ‘Personal data we collect about you
-’
-for any other deletion requests, you can
-contact us
-Restriction
-Request that we stop processing all or some of your personal data.
-You can do this if:
-your personal data is inaccurate
-our processing is unlawful
-we do not need your information for a specific purpose, or
-you object to our processing and we are assessing your objection request. See section ‘
-Object
-’ below
-You can request that we stop this processing temporarily or permanently.
-You can exercise your right to restriction by
-contacting us
-.
-Object
-Object to us processing your personal data.
-You can choose to switch off or adjust some features which process your personal data.
-To exercise your right to object you can:
-use controls on Spotify Service to switch off or adjust some features which process your personal data.
-Data portability
-Request a copy of your personal data in electronic format and the right to transmit that personal data for use in another party’s service.
-You can request us to transmit your data when we are processing your personal data on the legal basis of consent or performance of contract. However, Spotify will try to honour any request to the extent possible.
-For information about how to exercise the right to portability, see ‘Access’ above.
-Not be subject to automated decision making
-Not be subject to a decision based solely on automated decision making (decisions without human involvement), including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.
-Spotify does not carry out this type of automated decision making in the Spotify Service.
-Withdrawal of consent
-Withdraw your consent to us collecting or using your personal data.
-You can do this if Spotify is processing your personal data on the
-legal basis
-of consent.
-To withdraw your consent, you can:
-adjust the relevant control on Spotify
-contact us
-Lodge a complaint
-Contact the Swedish Authority for Privacy Protection or your local data protection authority about any questions or concerns.
-You can find the Swedish Authority’s details
-here
-. You can also go to the website of your local data protection authority.
-You may also contact the following organizations for reporting or consultation regarding personal data infringement:
-Personal Information Protection Commission (PIPC):
-pipc.go.kr
-/ +82-2-2100-3399
-Korea Internet & Security Agency (KISA) Privacy Center:
-privacy.kisa.or.kr
-/ 118
-Personal Information Dispute Mediation Committee:
-kopico.go.kr
-/ +82-1833-6972
-Supreme Prosecutors’ Office Cyber Investigation Division:
-spo.go.kr
-/ +82-2-3480-3573
-National Police Agency Cyber Bureau:
-ecrm.cyber.go.kr
-/ 182
-A legal representative may request at any time to view, correct/delete, suspend the processing of, and withdraw consent to personal data. In this case, a legal representative has to contact us by using the contact information above.
-3. Personal data we collect about you
-These tables set out the categories of personal data we collect from you.
-Where a data category listed below relates to a feature that is not available in your market, such category is not applicable to you.
-Collected when you sign up for the Spotify Service
-or when you update your account
-Category
-Description
-Period of Retention
-User Data
-Personal data that we need to create your Spotify account and that enables you to use the Spotify Service.
-The type of data collected and used depends on the type of Service Option you have. It also depends on how you create your account, the country you are in, and if you use third party services to sign in. This may include your:
-display name
-email address
-password
-phone number
-date of birth
-gender
-street address (see further details below)
-country
-estimated or confirmed age from an Age Check by a third party provider
-We receive some of this data from you e.g. from the sign up form or account page.
-We also collect some of this data from your device e.g. country or region. For more information about how we collect and use this data, see ‘Your general (non-precise) location’ in the Usage Data category.
-Your personal data will be retained until you close your account or the purpose of collecting and using your personal data is achieved; provided, however, that the retention period is subject to the relevant laws.
-Street Address Data
-We may ask for and process your street address for the following reasons:
-to check eligibility for a Service Option
-to deliver notices which are required by law
-to deliver support options
-for billing and tax administration
-to deliver physical goods or gifts which you have purchased or requested
-In some cases, we may use a third party application to help you verify your address, such as Google Maps.
-Collected through your use of the Spotify Service
-Categories
-Description
-Period of Retention
-Usage Data
-Personal data collected and processed about you when you’re accessing or using the Spotify Service.
-This includes information such as:
-Information about how you use Spotify
-Examples:
-information about your Spotify Service Option
-your actions with the Spotify Service (including date and time), such as:
-search queries
-streaming history
-playlists you create
-your library
-browsing history
-account settings
-interactions with other Spotify users
-prompts in AI powered features
-transcripts
-engagement with ads
-your use of third party services, devices and applications in connection with the Spotify Service
-Behavioral information and other inferences (i.e., our understanding) of your age, interests and preferences based on your usage of the Spotify Service
-content you provide when participating in Spotify promotions, such as contests or sweepstakes
-content you post to any part of the Spotify Service. For example: images, audio, text, titles, descriptions, communications, and other types of content
-Your technical data
-Examples include:
-URL information
-online identifiers such as
-cookie data
-and IP addresses
-information about the devices you use such as:
-device IDs
-network connection type (e.g. wifi, 4G, LTE, Bluetooth)
-provider
-network and device performance
-browser type
-language
-information enabling digital rights management
-operating system
-Spotify application version
-information which enables us to discover and connect with third party devices and applications. Examples of this information are the device name, device identifiers, brand and version. Examples of third party devices and applications are:
-devices on your wifi network (such as speakers) which can connect to the Spotify Service
-devices your operating system makes available when connecting via Bluetooth, plugin, and installation
-Spotify partner applications to determine whether the application is installed on your device
-Your general (non-precise) location
-Your general location includes country, region, state, or city. We may learn this from technical data (e.g. your IP address, language setting of your device) or payment currency.
-We need this to:
-meet geographic requirements in our agreements with the owners of content on the Spotify Service
-deliver content, advertising and recommendations that are relevant to you
-Your device sensor data
-Motion-generated or orientation-generated device sensor data if needed to provide features of the Spotify Service that require this data. This is data which your device collects about the way you
-move or hold your device.
-Cookies
-To provide personalised services Spotify uses ‘cookies’ to store and process your data. A cookie is a small file which the http server for the operation of a website or application sends to the user's device browser, and may be saved to their device.
-Purpose of cookies: Cookies are used to deliver content and ads to you, to understand how you interact with online content and ads, to assess the performance of our website and to personalise the content and ads that you see.
-Installation, operation and rejection of the cookies: You can withdraw or modify your consent to our use of cookies at any time. If you no longer wish to receive cookies you can use your web browser settings to accept, refuse and delete cookies. To do this, follow the instructions provided by your browser (usually located within the ‘Help’, ‘Tools’ or ‘Edit’ settings). If you refuse to save cookies, you may experience difficulties in using customised services.
-Your personal data will be retained until you close your account or the purpose of collecting and using your personal data is achieved; provided, however, that the retention period is subject to the relevant laws.
-Additional data you may choose to give us
-Categories
-Description
-Period of Retention
-Voice Data
-If voice features are available in your market and you’ve chosen to use a voice feature, we collect and process voice data. Voice data means audio recordings of your voice.
-Your personal data will be retained until you close your account or the purpose of collecting and using your personal data is achieved; provided, however, that the retention period is subject to the relevant laws.
-Message Data
-If messaging is available in your market and where you’ve chosen to use messaging, we collect and process message data. Message data means text or other content you send directly to another user.
-Age Check Data
-Age Check Data is the data you provide if you (i) choose to use a feature that is subject to an Age Check or (ii) are a parent or legal guardian providing parental consent for a Managed Account (“Age Check”). Examples of Age Check methods we use, which are powered by a third party provider, are:
-identity document verification: a photo of your identity document is used to confirm your age. In some cases, we may also use a photo of your face to verify that your ID belongs to you
-facial age estimation: a photo of your face which is used to estimate your age
-All Age Check Data is deleted immediately after the Age Check.
-Payment and Purchase Data
-If you make any purchases from Spotify or sign up for certain Service Options or a trial, we will need to process your payment data.
-The exact personal data collected and used will vary depending on the payment method. It will include information such as:
-name
-date of birth
-payment method type (e.g. credit or debit card)
-if using a debit or credit card, the card type, expiry date, and certain digits of your card number
-Note: For security, we never store your full card number
-ZIP/postal code
-mobile phone number
-details of your purchase and payment history
-Precise Location Data
-Spotify will only use your precise location data with your permission. You can grant this access through the in-app pop-up and in your device settings. This information allows Spotify to offer a number of features such as better recommendations for nearby concerts and events.
-Survey and Research Data
-When you respond to a survey or take part in user research, we collect and use the personal data you provide.
-Customer Service Data
-Information about your contacts with our Customer Service, such as chat conversations and email correspondence.
-We receive some of the data mentioned above from third parties. We may inform the data subject of the personal information, pursuant to the applicable laws, that we receive from a third party of the following: (i) the sources from which the personal data are collected; (ii) the purpose of processing personal data; and (iii) the data subjects’ right to request for suspension of processing their personal data to the extent required by the applicable laws. The below table describes the categories of those third parties.
-Third party sources that we receive your data from
-Categories of third parties
-Description
-Data categories
-Period of Retention
-Authentication partners
-If you register for or log into the Spotify Service using another service, that service will send your information to us. This information helps create your account with us.
-Google: GoogleID, email address, access token.
-Facebook: FacebookID, access token.
-User Data
-Your personal data will be retained until you close your account or the purpose of collecting and using your personal data is achieved; provided, however, that the retention period is subject to the relevant laws.
-Third party applications, services and devices you connect to your Spotify account
-If you connect your Spotify account to a third party application, service or device, we may collect and use information from them. This collection is to make the integration possible.
-These third party apps, services or devices may include:
-social media
-devices including:
-audio (e.g. speakers and headphones)
-wearables (e.g. smart watches
-televisions
-mobile phones and tablets
-automotive (e.g. cars)
-games consoles
-services or platforms such as voice assistants or content platforms
-We’ll ask your permission before we collect your information from certain third parties.
-User Data
-Usage Data
-Technical service partners
-We work with technical service partners that give us certain data. This includes mapping IP addresses to non-precise location data (e.g., country or region, city, state).
-This makes it possible for Spotify to provide the Spotify Service, content, and features.
-We also work with technical service partners who help us protect user accounts.
-User Data
-Usage Data
-Payment partners and Merchants
-If you choose to pay through third parties or by invoice, we may get data from our payment partners.
-This allows us to:
-send you invoices
-process your payment
-give you what you’ve purchased
-If we direct you to a merchant, we receive data from the merchant that is related to your purchase. For example, we might direct you to an artist’s merchandise store on a third party platform or to a third party ticketing website.
-Receiving this data allows us to:
-calculate any commissions owed to us
-analyse the effectiveness of our partnership with these merchant partners
-understand your interests
-Payment and Purchase Data
-Advertising and marketing partners
-We receive data about you from certain advertising or marketing partners, including device identifiers such as hashed contact information. They also provide us with inferences, which are the partners’ understanding of your interests and preferences.
-This allows us to deliver more relevant ads and marketing, and measure their performance.
-Usage Data
-Acquired companies
-We may receive data about you from companies we acquire. This is to enhance our services, products, and offerings.
-User Data
-Usage Data
-If you download the Spotify mobile app and try Spotify using a logged out user experience, we will collect limited information about your usage of the Spotify Service, including Usage Data. We do this to understand how you are accessing and using the Service. We also do this to ensure we provide the right experience for you, for example based on your country or region. If you decide to create a Spotify account to experience our service in full, then we will combine this data with your Spotify account data.
-4. Our purpose for using your personal data
-The table below sets out:
-our purpose for processing your personal data
-our legal justifications (each called a ‘
-legal basis
-’) under data protection law, for each purpose
-categories of personal data which we use for each purpose. See more about these categories in
-Section 3 ‘Personal data we collect about you’
-Where a data category listed below relates to a feature that is not available in your market, such category is not applicable to you.
-Here is a general explanation of each ‘legal basis’ to help you understand the table:
-Consent:
-When Spotify asks you to actively indicate your agreement to Spotify’s use of your personal data for a certain purpose.
-Compliance with Legal Obligations:
-When Spotify must process your personal data to comply with a law.
-Purpose for processing your data
-Legal basis that permits the purpose
-Categories of personal data used for the purpose
-To provide the Spotify Service.
-For example, when we use your personal data to:
-set up an account for you
-personalise your account including your content recommendations, or
-provide the Spotify app when you download it onto your device
-Consent
-User Data
-Street Address Data
-Usage Data
-Voice Data
-Message Data
-Payment and Purchase Data
-To improve our personalized recommendations and to improve the Spotify experience for all users, based on precise location data (where available and explicitly permitted by you).
-For example, we can provide better personalized concert and event recommendations or let you know what is trending at your specific location. What we learn from your streaming at one location, could be used to suggest similar content to other users close to that location.
-Consent
-Precise Location Data
-To diagnose, troubleshoot, and fix issues with the Spotify Service.
-Consent
-User Data
-Usage Data
-Voice Data
-Message Data
-Customer Service Data
-For marketing or promotion.
-Consent
-User Data
-Usage Data
-Survey and Research Data
-For delivering targeted ads, depending on your account type and account settings on Spotify's Services.
-Consent
-User Data
-Usage Data
-To comply with a legal obligation and law enforcement requests that we are subject to. For example, when we use your date of birth when required for age verification purposes.
-This might be:
-an obligation under the law of the country / region you are in
-Swedish law (because of our headquarters in Sweden), or
-EU law that applies to us
-Compliance with legal obligations
-We may disclose personal information to competent authorities where required to comply with applicable laws, regulations, or lawful requests.
-The categories of personal information disclosed will vary depending on the nature of the request and may include account information, contact details, usage information, communications data, transaction information, and other information relevant to the request.
-To fulfil contractual obligations with third parties. For example, when we provide pseudonymised data about our users’ listening because we
-have an agreement with owners of
-content on a Spotify rightsholder to do so.
-Consent
-User Data
-Usage Data
-Voice Data
-Payment and Purchase Data
-To detect, investigate and take appropriate action on reports inappropriate content or violations of our Terms of Use or other Spotify terms, policies, rules or guidelines.
-Consent
-User Data
-Usage Data
-Voice Data
-Message Data
-Payment and Purchase Data
-Customer Service Data
-To establish, exercise, or defend legal claims.
-For example, if we are involved in litigation and we need to provide information to our lawyers in relation to that legal case.
-Consent
-User Data
-Street Address Data
-Usage Data
-Voice Data
-Message Data
-Payment and Purchase Data
-Survey and Research Data
-Customer Service Data
-To conduct business planning, reporting, and forecasting.
-For example, when we look at aggregated user data like the number of new sign ups in a country in order to plan new locations to launch our products and features in.
-Consent
-User Data
-Usage Data
-Payment and Purchase Data
-To process your payment. For example, when we use your
-personal data to let you purchase a
-Spotify subscription.
-Consent
-User Data
-Payment and Purchase Data
-Street Address Data
-To keep the Spotify Service secure and to detect and prevent fraud.
-For example, when we analyse Usage Data to check for fraudulent use of the Spotify Service.
-Consent
-User Data
-Street Address Data
-Message Data
-Usage Data
-Payment and Purchase Data
-Customer Service Data
-To conduct research and surveys.
-For example, when we contact our
-users to ask for your feedback.
-Consent
-User Data
-Usage Data
-Voice Data
-Survey and Research Data
-5. Sharing/providing your personal data
-This section sets out who receives personal data which is collected or generated through your use of the Spotify Service.
-Information available to other Spotify users
-The following personal data is available to other Spotify users:
-your profile name
-your profile photo, if you choose to upload one
-your public playlists, and any associated titles, descriptions and images
-other content you post on the Spotify Service, and any associated titles, descriptions and images
-the number of people who you follow and the number of people who follow you on the Spotify Service (the profiles of those people may be visible depending on your settings)
-You or another user can share certain information on third party services, like social media or messaging platforms. This includes:
-your profile
-any content you post on Spotify and details about that content
-your playlists and any associated titles, descriptions and images
-When this sharing occurs, the third party service may store a copy of it to support their features.
+법률 정보사용 약관지식재산권 정책개인정보 처리방침사용자 가이드라인유료 구독 약관
+Spotify 개인정보 처리방침
+2026년 6월 12일부터 유효
+본 정책에 대한 소개
+개인 데이터 권한 및 제어
+Spotify가 수집하는 개인 데이터
+개인 데이터 사용의 목적
+개인 데이터 공유/제공
+데이터 보존(개인 데이터 삭제 절차 및 방법)
+다른 국가로의 전송 및 위탁
+개인 데이터의 안전한 보관
+미성년자
+제3자 링크
+본 정책의 변경 사항
+문의 방법
+1. 본 정책에 대한 소개
+본 정책은 Spotify AB에서 회원님의 개인 데이터가 어떻게 처리되는지 설명합니다.
+본 정책은 회원님이 다음 항목을 이용하는 경우에 적용됩니다.
+사용자로서 이용하는 모든 Spotify 스트리밍 서비스. 예를 들면 다음과 같습니다.
+모든 기기에서의 Spotify 사용
+맞춤화된 사용자 경험
+Spotify 서비스 제공에 필요한 인프라
+다른 애플리케이션과 연결된 회원님의 Spotify 계정
+무료 또는 유료 스트리밍 옵션(각각 '서비스 옵션')
+개인정보 처리방침을 확인할 수 있는 링크가 포함된 다른 Spotify 서비스. 여기에는 Spotify 웹사이트, 고객 서비스 및 커뮤니티 사이트가 포함됩니다.
+여기서부터는 위에서 나열한 모든 서비스를 'Spotify 서비스'라 통칭하겠습니다.
+Spotify는 수시로 새로운 서비스를 개발하거나 추가할 수 있습니다. 서비스 설명에 정책이 적용되지 않는다는 구체적 내용이 포함되지 않는 한 이러한 서비스에도 본 정책이 적용됩니다. 해당 관할권 및 규정에 따라 필요한 경우 회원님에게 별도의 동의를 요청할 수 있습니다.
+본 정책은 다음에 대한 문서가 아닙니다.
+별도의 문서인 Spotify 이용 약관. 이용 약관은 Spotify 서비스를 이용하는 것과 관련하여 회원님과 Spotify 간의 법적 계약에 대해 설명하며, Spotify의 규정과 Spotify와의 계약에 따른 회원님의 권리에 대해서도 설명합니다.
+Megaphone과 같이 자체적인 개인정보 처리방침이 있는 다른 Spotify 서비스의 이용.
+기타 자료 및 설정
+회원님의 개인 데이터에 대한 주요 정보는 본 정책에 명시되어 있습니다. 그러나, 필요하다면 다음과 같은 기타 개인정보 관련 자료 및 제어 기능도 살펴보시기 바랍니다.
+안전 및 개인정보 보호 센터: 주요 주제가 요약되어 있는 사용자 친화적인 허브입니다. 사용자 권한에 대한 자세한 내용은 섹션 2 '개인 데이터 권한 및 제어'를 참조하세요.
+계정 개인정보: 특정 개인 데이터의 처리 방식을 제어할 수 있습니다.
+알림 설정: Spotify에서 수신하는 마케팅 알림 유형을 설정할 수 있습니다.
+설정(Spotify 데스크톱 및 모바일 버전에서 이용 가능): Spotify 서비스의 특정 기능(예: '공개 범위', '유해성 콘텐츠')을 제어할 수 있습니다. '공개 범위' 설정에서는 다음 작업을 할 수 있습니다.
+비공개 세션을 시작합니다.
+Spotify에서 내 팔로워에게 내가 듣는 음악을 공유할지 여부를 선택합니다.
+최근 들은 아티스트를 공개 프로필에 표시할지 여부를 선택합니다.
+다른 사용자와의 메시지 기능을 끕니다(회원님의 지역에서 메시지 기능을 사용할 수 있는 경우).
+'유해성 콘텐츠' 설정에서는 내 Spotify 계정에서 유해성 등급을 받은 콘텐츠의 재생을 허용할지 여부를 선택할 수 있습니다.
+2. 개인 데이터 권한 및 제어
+많은 개인정보 보호 관련 법률은 개인에게 자신의 개인 데이터를 관리할 수 있는 권리를 부여합니다. 이러한 법률에는 개인정보보호 규정('GDPR') 및 개인정보보호법('PIPA')이 포함됩니다. 이에 따라 Spotify는 사용자의 이러한 권리 행사를 돕기 위해 투명성과 액세스 제어 옵션을 제공하고 있습니다. 관련 법률에 따라 제한되는 경우를 제외하고, 가용한 경우 회원님이 행사할 수 있는 권리와 이에 대한 설명은 다음 표에서 확인하실 수 있습니다.
+사용자의 권리
+어떻게 하면 되나요?
+사용자에게 정보 제공
+Spotify가 처리하는 개인 데이터와, 처리 방식에 대해 알 권리
+Spotify는 다음 방법으로 해당 내용을 알려 드립니다.
+본 정책을 통해
+Spotify 서비스를 사용할 때 제공되는 정보를 통해
+Spotify에 문의하여 구체적인 질문과 요청을 하는 경우 답변을 통해
+액세스
+Spotify가 회원님에 대해 처리하는 개인 데이터에 대한 액세스를 요청하실 수 있습니다.
+Spotify에 개인 데이터 사본을 요청하는 방법은 다음과 같습니다.
+계정 개인정보 페이지에서 '데이터 다운로드 도구' 사용하기
+Spotify에 문의하기
+데이터를 다운로드하면 Spotify가 GDPR 제15조, PIPA 제35조 및 기타 관련 법률에 따라 제공해야 하는 회원님의 데이터에 대한 정보를 받으실 수 있습니다. Spotify가 회원님의 개인 데이터를 처리하는 방식에 대해 자세히 알아보려면 Spotify에 문의해 주세요.
+정정
+개인 데이터가 부정확하거나 불완전한 경우 수정이나 업데이트를 요청하실 수 있습니다.
+계정의 '프로필 편집'에서 사용자 데이터를 직접 수정하거나, Spotify에 문의하여 수정을 요청할 수 있습니다.
+삭제
+특정 개인 데이터의 삭제를 요청하실 수 있습니다.
+예를 들어 다음과 같은 경우 개인 데이터 삭제를 요청하실 수 있습니다.
+데이터가 처음에 수집된 목적으로 더 이상 필요하지 않은 경우
+Spotify가 동의를 법적 근거로 하여개인 데이터를 처리하고, 회원님이 이에 대해 동의를 철회하는 경우
+다음과 같은 상황에서는 Spotify에서 개인 데이터를 삭제할 수 없습니다.
+처음에 수집한 목적으로 계속 데이터를 처리해야 하는 경우
+데이터를 삭제하여 얻는 개인의 이익보다 Spotify가 데이터를 사용하여 얻는 이익이 우선하는 경우. 예를 들어 사기로부터 서비스를 보호하기 위해 데이터가 필요할 수 있습니다.
+Spotify에 데이터를 보존해야 할 법적 의무가 있는 경우
+Spotify가 법적 청구권을 성립, 행사하거나 방어해야 하는 경우. 예를 들어 계정과 관련하여 해결되지 않은 문제가 있는 경우입니다.
+다음과 같은 방법으로 Spotify에서 개인 데이터를 삭제할 수 있습니다.
+저장한 오디오 콘텐츠를 삭제하려면 관련 콘텐츠를 선택하고 삭제를 선택합니다. 예를 들어 플레이리스트에서 트랙을 삭제하거나 내 라이브러리에 저장한 아티스트를 삭제할 수 있습니다.
+Spotify에 계정 데이터의 삭제(및 계정 탈퇴)를 요청하려면 지원 페이지에 설명된 단계를 따르세요. 이러한 데이터에는 사용자 데이터, 사용 데이터 및 섹션 3 'Spotify가 수집하는 개인 데이터'에 나열된 기타 데이터가 포함됩니다.
+그 밖의 삭제 요청이 있는 경우 Spotify에 문의하시기 바랍니다.
+제한
+Spotify에 개인 데이터 전체 또는 일부의 처리를 중단할 것을 요청하실 수 있습니다.
+다음 경우에 데이터 처리 중단을 요청하실 수 있습니다.
+개인 데이터가 부정확함
+처리가 불법적임
+특정 목적으로 정보가 필요하지 않음
+Spotify의 데이터 처리에 이의를 제기하고 Spotify에서 이의 요청을 평가하는 경우. 아래의 '이의 제기' 섹션을 참조하세요.
+이러한 처리를 일시적, 또는 영구적으로 중단할 것을 요청하실 수 있습니다.
+Spotify에 문의하여 제한에 대한 권리를 행사할 수 있습니다.
+이의 제기
+개인 데이터 처리에 대한 이의를 제기할 수 있습니다.
+개인 데이터를 처리하는 일부 기능을 비활성하거나 조정할 수 있습니다.
+다음 방법으로 이의 제기 권리를 행사하실 수 있습니다.
+Spotify 서비스의 제어 옵션을 사용하여 개인 데이터를 처리하는 일부 기능을 비활성화하거나 조정합니다.
+데이터 이동성
+전자적 형식으로 된 개인 데이터 사본을 요청하고, 다른 당사자의 서비스 이용을 위해 해당 개인 데이터를 전송할 권리를 요청하실 수 있습니다.
+Spotify가 동의 또는 계약 이행을 법적 근거로 하여 회원님의 개인 데이터를 처리하는 경우, 데이터 전송을 요청하실 수 있습니다. Spotify는 가능한 한도 내에서 요청을 이행하기 위해 노력할 것입니다.
+이동성에 대한 권리를 행사하는 방법에 대한 자세한 내용은 위의 '액세스'를 참조하세요.
+자동화된 의사 결정에 따르지 않음
+자동화된 의사 결정(사람이 개입하지 않은 결정)만을 기초로 한 결정에 따르지 않음. 여기에는 회원님에게 법적 영향을 미치거나 그와 유사한 중요한 영향을 초래할 수 있는 결정인 프로파일링이 포함됩니다.
+Spotify는 Spotify 서비스에서 이러한 유형의 자동화된 의사 결정을 수행하지 않습니다.
+동의 철회
+Spotify가 회원님의 개인 데이터를 수집하거나 사용하는 데 제공한 동의를 철회할 수 있습니다.
+Spotify가 동의를 법적 근거로 하여 회원님의 개인 데이터를 처리하는 경우에 철회 가능합니다.
+다음 방법으로 동의를 철회하실 수 있습니다.
+Spotify에서 관련 제어 조정
+Spotify에 문의
+불만 제기
+질문이나 우려 사항에 대해 스웨덴 개인정보 보호 기관 또는 현지 개인정보 보호 기관에 문의하실 수 있습니다.
+여기에서 스웨덴 개인 데이터 보호 기관에 대해 자세히 알아보거나, 현지 개인 데이터 보호 기관 웹사이트로 이동하여 알아보세요.
+개인 데이터 침해에 관한 신고 또는 상담이 필요한 경우 아래 기관에 문의하실 수도 있습니다.
+개인정보보호위원회(PIPC): pipc.go.kr/+82-2-2100-3399
+한국인터넷진흥원(KISA) 개인정보 보호 센터: privacy.kisa.or.kr/118
+개인정보분쟁조정위원회: kopico.go.kr/+82-1833-6972
+대검찰청 사이버수사과: spo.go.kr/+82-2-3480-3573
+경찰청 사이버범죄 신고시스템: ecrm.cyber.go.kr/182
+법정대리인은 언제든지 개인 데이터의 조회, 수정/삭제, 처리 중단, 동의 철회를 요청할 수 있습니다. 이 경우 법정대리인은 위의 연락처 정보를 통해 저희에게 연락을 주셔야 합니다.
+3. Spotify가 수집하는 개인 데이터
+아래 표에서 Spotify가 사용자로부터 수집하는 개인 데이터의 카테고리에 대해 알아보세요.
+아래 나열된 데이터 카테고리가 회원님의 지역에서 제공되지 않는 기능에 관련된 것일 경우, 해당 카테고리는 회원님에게 적용되지 않습니다.
+Spotify 서비스에 가입하거나
+계정을 업데이트할 때 수집되는 정보
+카테고리
+설명
+보존 기간
+사용자 데이터
+회원님의 Spotify 계정 생성 및 회원님의 Spotify 서비스 사용에 필요한 개인 데이터.
+수집 및 사용되는 데이터의 유형은 사용하는 서비스 옵션의 유형에 따라 다르며, 계정 생성 방식, 거주 중인 국가, 제3자 서비스를 통해 로그인하는지 여부에 따라서도 달라집니다. 예를 들어 여기에는 다음과 같은 데이터 유형이 포함될 수 있습니다.
+표시 이름
+이메일 주소
+비밀번호
+전화번호
+생년월일
+성별
+상세 주소(자세한 내용은 아래 참조)
+국가
+제3자 제공업체의 나이 확인 서비스를 통해 추정 또는 확인된 나이
+이러한 데이터 중 일부는 가입 양식이나 계정 페이지를 통해 수집됩니다.
+회원님의 기기에서도 일부 데이터가 수집됩니다(예: 국가 또는 지역). Spotify에서 이 데이터를 수집하고 사용하는 방식에 관한 자세한 내용은 '데이터 사용' 카테고리에서 '회원님의 대략적인(구체적이지 않은) 위치'를 참조하세요.
+회원님의 개인 데이터는 계정을 탈퇴하거나 개인 데이터 수집 및 사용 목적이 달성될 때까지 보존됩니다. 단, 보존 기간은 관련 법률에 따라 달라질 수 있습니다.
+상세 주소 데이터
+Spotify는 다음과 같은 이유로 상세 주소를 요청하고 처리할 수 있습니다.
+서비스 옵션 이용 자격 확인
+법률에 규정된 고지 사항 제공
+지원 옵션 제공
+청구 및 세금 관리 목적
+회원님이 구매하거나 요청하신 실물 상품이나 선물 배달
+회원님의 주소를 확인하기 위해 Google 지도와 같은 타사 애플리케이션을 사용할 수도 있습니다.
+Spotify 서비스 사용을 통해 수집된 정보
+카테고리
+설명
+보존 기간
+사용 데이터
+회원님이 Spotify 서비스에 액세스하거나 서비스를 사용할 때 회원님에 대해 수집되고 처리되는 개인 데이터입니다.
+여기에는 다음과 같은 정보가 포함됩니다.
+Spotify 사용 방식에 관한 정보
+예:
+Spotify 서비스 옵션에 관한 정보
+Spotify 서비스를 사용한 작업(날짜 및 시간 포함). 예:
+검색 질문
+스트리밍 내역
+만든 플레이리스트
+내 라이브러리
+방문 기록
+계정 설정
+다른 Spotify 사용자와의 상호작용
+AI 기능에 사용된 프롬프트
+스크립트
+광고 참여
+Spotify 서비스와 함께 사용한 타사 서비스, 기기 및 애플리케이션
+Spotify 서비스 사용을 토대로 한 행동 정보 및 회원님의 나이, 관심사, 선호 사항에 대한 추정 정보(Spotify가 파악한 정보)
+콘테스트, 경품 이벤트와 같은 Spotify 프로모션에 참여할 때 제공하는 콘텐츠
+Spotify 서비스상에 회원님이 게시한 콘텐츠(예: 이미지, 오디오, 텍스트, 제목, 설명, 공지 및 기타 유형의 콘텐츠)
+기술적 데이터
+예를 들면 다음과 같습니다.
+URL 정보
+온라인 식별자(예: 쿠키 데이터 및 IP 주소 등)
+사용하는 기기에 관한 정보. 예:
+기기 ID
+네트워크 연결 유형(예: Wi-Fi, 4G, LTE, Bluetooth)
+제공자
+네트워크 및 기기 성능
+브라우저 유형
+언어
+디지털 권한 관리를 지원하는 정보
+운영 체제
+Spotify 애플리케이션 버전
+Spotify가 타사 기기 및 애플리케이션을 감지하고 연결할 수 있게 하는 정보. 이러한 정보의 예로는 기기 이름, 기기 식별자, 브랜드 및 버전 등이 있습니다. 제3자 기기 및 애플리케이션의 예는 다음과 같습니다.
+Spotify 서비스에 연결될 수 있는 Wi-Fi 네트워크의 기기(예: 스피커)
+Bluetooth, 플러그인, 설치를 통해 연결할 때 운영 체제에서 사용 가능한 기기
+Spotify 파트너 애플리케이션(기기에 해당 애플리케이션이 설치되어 있는지 여부를 확인하기 위해)
+회원님의 대략적인(구체적이지 않은) 위치
+대략적인 위치에는 국가, 지역 또는 시/도가 포함됩니다. 기술적 데이터(예: IP 주소, 기기의 언어 설정) 또는 결제 통화를 통해 이러한 정보를 수집할 수 있습니다.
+이 정보가 필요한 이유:
+Spotify 서비스 콘텐츠 소유자와의 계약에 따른 지리적 요구 사항 충족
+회원님과 관련성 있는 콘텐츠, 광고 및 추천 제공
+기기 센서 데이터
+동작 또는 방향 기반의 기기 센서 데이터를 필요로 하는 Spotify 서비스의 기능을 제공하려면 이 데이터가 필요합니다. 회원님의 기기에서 회원님이 기기를 움직이거나 잡는 방식과 관련하여
+수집하는 데이터입니다.
+쿠키
+Spotify는 맞춤 서비스를 제공하기 위해 '쿠키'를 통해 회원님의 데이터를 저장하고 처리합니다. 쿠키는 웹사이트 또는 애플리케이션 운영을 위해 http 서버가 사용자의 기기 브라우저로 전송하는 소형 파일로, 사용자의 기기에 저장될 수 있습니다.
+쿠키의 목적: 쿠키는 회원님에게 콘텐츠와 광고를 제공하고, 회원님이 온라인 콘텐츠 및 광고와 상호작용하는 방식을 파악하고, Spotify 웹사이트 성과를 평가하고, 회원님에게 표시되는 콘텐츠와 광고를 맞춤 설정하는 데 사용됩니다.
+쿠키의 설치, 운영 및 거부: 회원님은 언제든지 Spotify의 쿠키 사용에 대한 동의를 철회하거나 수정할 수 있습니다. 더 이상 쿠키 수신을 원치 않으실 경우, 웹 브라우저 설정을 사용해 쿠키를 허용, 거부 및 삭제할 수 있습니다. 사용 중인 브라우저가 제공하는 지침(보통 '도움말', '도구' 또는 '편집' 메뉴에 있음)에 따라 진행하시면 됩니다. 쿠키 저장을 거부하는 경우 맞춤 서비스 이용에 어려움이 있을 수 있습니다.
+회원님의 개인 데이터는 계정을 탈퇴하거나 개인 데이터 수집 및 사용 목적이 달성될 때까지 보존됩니다. 단, 보존 기간은 관련 법률에 따라 달라질 수 있습니다.
+Spotify에 제공하기로 한 선택적 추가 정보
+카테고리
+설명
+보존 기간
+음성 데이터
+회원님의 지역에서 음성 기능을 사용할 수 있고 음성 기능 사용을 선택한 경우, Spotify가 음성 데이터를 수집하고 처리합니다. 음성 데이터란 회원님의 음성을 녹음한 오디오를 의미합니다.
+회원님의 개인 데이터는 계정을 탈퇴하거나 개인 데이터 수집 및 사용 목적이 달성될 때까지 보존됩니다. 단, 보존 기간은 관련 법률에 따라 달라질 수 있습니다.
+메시지 데이터
+회원님의 지역에서 메시지 기능을 사용할 수 있고 메시지 기능 사용을 선택한 경우, Spotify가 메시지 데이터를 수집하고 처리합니다. 메시지 데이터란 회원님이 다른 사용자에게 직접 전송하는 텍스트 또는 기타 콘텐츠를 의미합니다.
+나이 확인 데이터
+나이 확인 데이터는 (i) 나이 확인이 필요한 기능의 사용을 선택했거나 (ii) 부모 또는 법적 보호자로서 관리되는 계정에 대해 부모 동의를 제공하는 경우 제공하는 데이터입니다('나이 확인'). Spotify가 제3자 제공업체를 통해 사용하는 나이 확인 방법의 예시는 다음과 같습니다.
+신분증 확인: 나이를 확인하는 데 신분증의 사진이 사용됩니다. 경우에 따라 신분증이 본인의 것인지 확인하기 위해 회원님의 얼굴 사진을 함께 사용할 수도 있습니다.
+얼굴 기반 나이 추정: 얼굴 사진을 사용해 나이를 추정합니다.
+나이 확인에 사용되는 모든 데이터는 나이 확인 후 즉시 삭제됩니다.
+결제 및 구매 데이터
+Spotify에서 구매하거나 특정 서비스 옵션 또는 체험에 가입할 경우 Spotify가 결제 데이터를 처리해야 합니다.
+수집되고 사용되는 개인 데이터는 결제 수단에 따라 다릅니다. 여기에는 다음과 같은 정보가 포함됩니다.
+이름
+생년월일
+결제 수단 유형(예: 신용카드 또는 직불카드)
+신용카드나 직불카드를 사용하는 경우, 카드 유형, 만료일, 카드 번호의 일부
+참고: Spotify는 보안상의 이유로 카드 번호 전체를 저장하지 않습니다
+우편번호
+휴대폰 번호
+구매 및 결제 내역 세부 정보
+정확한 위치 정보
+Spotify는 회원님의 허가가 있는 경우에만 회원님의 정확한 위치 정보를 사용합니다. 앱 내 팝업창과 기기 설정에서 정확한 위치 정보에 대한 액세스 권한을 부여할 수 있습니다. Spotify는 이러한 정보를 통해 보다 정확한 주변 콘서트 및 이벤트 추천 등 다양한 기능을 제공할 수 있습니다.
+설문조사 및 연구 데이터
+설문조사에 응답하거나 사용자 조사에 참여하신 경우 Spotify는 제공해 주신 개인 데이터를 수집하고 사용합니다.
+고객 서비스 데이터
+채팅 내역, 이메일 서신 등 Spotify 고객 서비스와의 연락으로 발생한 정보를 의미합니다.
+Spotify는 위에 언급된 데이터 중 일부를 제3자로부터 제공받습니다. Spotify는 관련 법률에 따라 제3자로부터 받은 개인 정보의 데이터 주체에게 (i) 개인 데이터가 수집되는 출처; (ii) 개인 데이터 처리 목적, 및 (ⅲ) 관련 법률에서 요구하는 범위 내에서 본인의 개인 데이터 처리 중단을 요청할 수 있는 데이터 주체의 권리에 대해 알릴 수 있습니다. 아래 표에 이러한 제3자 카테고리가 설명되어 있습니다.
+Spotify가 회원님의 데이터를 제공받는 제3자 출처
+제3자 카테고리
+설명
+데이터 카테고리
+보존 기간
+인증 파트너
+회원님이 다른 서비스를 사용하여 Spotify 서비스에 등록하거나 로그인하는 경우 해당 제3자는 Spotify에 회원님의 정보를 전송합니다. 이러한 정보는 Spotify 계정 생성에 사용됩니다.
+Google: GoogleID, 이메일 주소, 액세스 토큰.
+Facebook: FacebookID, 액세스 토큰.
+사용자 데이터
+회원님의 개인 데이터는 계정을 탈퇴하거나 개인 데이터 수집 및 사용 목적이 달성될 때까지 보존됩니다. 단, 보존 기간은 관련 법률에 따라 달라질 수 있습니다.
+회원님이 Spotify 계정에 연결하는 타사 애플리케이션, 서비스 및 기기
+제3자 애플리케이션, 서비스, 기기에 Spotify 계정을 연결하는 경우, Spotify는 해당 제3자로부터 정보를 수집하고 사용할 수 있습니다. 이렇게 수집된 정보는 계정 통합 목적으로 사용됩니다.
+이러한 타사 앱, 서비스 또는 기기는 다음이 포함될 수 있습니다.
+소셜 미디어
+기기에는 다음이 포함됩니다.
+오디오(예: 스피커 및 헤드폰)
+웨어러블(예: 스마트 워치
+텔레비전
+휴대폰 및 태블릿
+운송 수단(예: 자동차)
+게임 콘솔
+음성 도우미와 같은 서비스 또는 플랫폼이나 콘텐츠 플랫폼
+Spotify는 특정 제3자로부터 회원님의 정보를 수집하기 전에 회원님에게 허락을 구합니다.
+사용자 데이터
+사용 데이터
+기술 서비스 파트너
+Spotify는 Spotify에 특정 데이터를 제공하는 기술 서비스 파트너와 협업합니다. 여기에는 구체적이지 않은 위치 데이터(예: 국가 또는 지역, 도시, 주)에 IP 주소를 매핑하는 것이 포함됩니다.
+Spotify는 이러한 데이터를 바탕으로 서비스, 콘텐츠 및 기능을 제공할 수 있습니다.
+Spotify는 또한 사용자 계정 보안을 지원하는 기술 서비스 파트너와 협력하고 있습니다.
+사용자 데이터
+사용 데이터
+결제 파트너 및 판매자
+제3자 또는 인보이스를 통한 결제를 선택하는 경우 Spotify는 결제 파트너로부터 데이터를 수집할 수 있습니다.
+이를 통해 다음 작업을 할 수 있습니다.
+청구서 발송
+결제 처리
+구매 내역 제공
+Spotify가 회원님을 판매자에게 연결하는 경우, 해당 판매자로부터 회원님의 구매와 관련된 데이터를 수신할 수 있습니다. 예를 들어 Spotify는 타사 플랫폼이나 타사 티켓 판매 웹사이트의 아티스트 굿즈 스토어에 연결할 수 있습니다.
+Spotify는 이 데이터를 수신하여 다음 작업을 할 수 있습니다.
+Spotify가 지급받을 수수료 계산
+이러한 판매자 파트너와의 파트너십 효과 분석
+회원님의 관심사 이해
+결제 및 구매 데이터
+광고 및 마케팅 파트너
+Spotify는 특정 광고 또는 마케팅 파트너로부터 기기 식별자(해시된 연락처 정보 포함)를 비롯한 회원님의 데이터를 수신합니다. 또한 파트너는 회원님의 관심사 및 선호 사항에 대해 파악한 내용을 기반으로 하는 추정 정보를 제공합니다.
+이를 바탕으로 Spotify는 더 관련성 있는 광고 및 마케팅을 제공하고 성과를 측정할 수 있습니다.
+사용 데이터
+인수된 회사
+Spotify는 Spotify가 인수한 회사로부터 회원님에 대한 데이터를 제공받을 수 있습니다. Spotify는 이러한 정보를 바탕으로 Spotify의 서비스, 제품 및 혜택을 개선합니다.
+사용자 데이터
+사용 데이터
+회원님이 Spotify 모바일 앱을 다운로드한 다음 로그아웃한 환경에서 Spotify를 이용하려 하는 경우, Spotify는 사용 데이터를 포함해 Spotify 서비스 이용과 관련된 제한적인 정보를 수집합니다. 이는 회원님이 서비스에 액세스하고 사용하는 방식을 파악하기 위함이며, 국가 또는 지역 기반의 적절한 경험을 제공하기 위한 목적이기도 합니다. Spotify 서비스의 모든 기능을 이용하기 위해 Spotify 계정을 생성하는 경우, Spotify는 이 데이터를 회원님의 Spotify 계정 데이터와 통합합니다.
+4. 개인 데이터 사용의 목적
+아래 표의 내용은 다음과 같습니다.
+개인 데이터 처리의 목적
+각 목적과 관련하여 데이터 보호법에 의거해 Spotify가 따르는 법적 정당화 사유(개별적으로 '법적 근거'라 칭함)
+각 목적을 위해 사용하는 개인 데이터의 카테고리(이러한 카테고리에 대한 자세한 내용은 섹션 3 'Spotify가 수집하는 개인 데이터' 참조)
+아래 나열된 데이터 카테고리가 회원님의 지역에서 제공되지 않는 기능에 관련된 것일 경우, 해당 카테고리는 회원님에게 적용되지 않습니다.
+다음은 각 '법적 근거'에 대한 일반적인 설명으로, 표를 이해하는 데 도움이 됩니다.
+동의: Spotify가 Spotify에서 특정 목적으로 회원님의 개인 데이터를 사용하는 것에 대해 회원님이 동의를 적극적으로 표시하도록 회원님에게 요청하는 경우.
+법적 의무 준수: Spotify가 법률을 준수하기 위해 회원님의 개인 데이터를 처리해야 하는 경우.
+데이터 처리의 목적
+해당 목적을 허용하는 법적 근거
+해당 목적에 사용되는 개인 데이터의 카테고리
+Spotify 서비스 제공.
+Spotify에서 회원님의 개인 데이터를 이용하는 경우의 예시는 다음과 같습니다.
+회원님의 계정을 생성하는 경우
+콘텐츠 추천을 포함해 계정을 맞춤 설정하는 경우
+회원님이 자신의 기기에 Spotify 앱을 다운로드한 경우
+동의
+사용자 데이터
+상세 주소 데이터
+사용 데이터
+음성 데이터
+메시지 데이터
+결제 및 구매 데이터
+정확한 위치 데이터를 기반으로 맞춤 추천을 개선하고 모든 사용자의 Spotify 경험을 향상하기 위해(기능이 사용 가능하고 회원님이 명시적으로 허용한 경우).
+예를 들어 당사는 정확한 위치를 기반으로 더 적합한 콘서트 및 이벤트를 추천하거나 해당 지역에서 인기 상승 중인 콘텐츠를 안내할 수 있습니다. 또한 특정 위치의 사용자가 스트리밍하는 콘텐츠를 파악해 해당 지역 주변의 다른 사용자에게 유사한 콘텐츠를 추천하는 데 사용될 수도 있습니다.
+동의
+정확한 위치 정보
+Spotify 서비스의 문제를 진단, 해결 및 수정하기 위함입니다.
+동의
+사용자 데이터
+사용 데이터
+음성 데이터
+메시지 데이터
+고객 서비스 데이터
+마케팅 또는 홍보를 위해.
+동의
+사용자 데이터
+사용 데이터
+설문조사 및 연구 데이터
+Spotify 서비스에 설정된 회원님의 계정 유형 및 계정 설정에 따라 타겟팅된 광고를 제공하기 위해.
+동의
+사용자 데이터
+사용 데이터
+Spotify에 적용되는 법적 의무 및 법 이행 요구를 준수하기 위해. 그 예로는 나이 확인을 위해 Spotify가 회원님의 생년월일 데이터를 사용하는 경우가 있습니다.
+예를 들어 다음과 같습니다.
+회원님이 거주하시는 국가/지역의 법률에 따른 의무
+Spotify 본사 소재지인 스웨덴의 법률
+Spotify에 적용되는 EU 법률
+법적 의무 준수
+Spotify는 관련 법률, 규정 또는 적법한 요청을 준수하기 위해 필요한 경우 관할 당국에 개인 정보를 공개할 수 있습니다.
+공개되는 개인 정보의 카테고리는 요청의 성격에 따라 달라지며, 여기에는 계정 정보, 연락처 세부 정보, 사용 정보, 커뮤니케이션 데이터, 거래 정보 및 기타 요청과 관련된 정보가 포함될 수 있습니다.
+제3자와의 계약 의무를 이행하기 위해. 예를 들어 Spotify가 콘텐츠 소유자와 Spotify 권리 보유자에 대해 체결한 계약으로 인해
+사용자의 청취와 관련하여
+가명 데이터를 제공하는 경우입니다.
+동의
+사용자 데이터
+사용 데이터
+음성 데이터
+결제 및 구매 데이터
+부적절한 콘텐츠 또는 이용 약관이나 기타 Spotify 약관, 정책, 규정 또는 가이드라인 위반을 감지 및 조사하고, 관련 신고에 대해 적절한 조치를 취하기 위해.
+동의
+사용자 데이터
+사용 데이터
+음성 데이터
+메시지 데이터
+결제 및 구매 데이터
+고객 서비스 데이터
+법적 청구권을 설정, 행사 또는 방어.
+예를 들면 Spotify가 소송에 연루되어 있으며 해당 소송과 관련하여 변호사에게 정보를 제공해야 하는 경우입니다.
+동의
+사용자 데이터
+상세 주소 데이터
+사용 데이터
+음성 데이터
+메시지 데이터
+결제 및 구매 데이터
+설문조사 및 연구 데이터
+고객 서비스 데이터
+사업 계획, 보고, 예측 수행.
+예를 들면 Spotify가 제품 및 기능을 출시할 새로운 지역을 계획하기 위해 해당 국가의 신규 가입 수 등 집계된 사용자 데이터를 확인하는 경우가 있습니다.
+동의
+사용자 데이터
+사용 데이터
+결제 및 구매 데이터
+결제를 처리하기 위해. 예를 들어 Spotify는 회원님의
+Spotify 구독을 진행하기 위해
+회원님의 개인 데이터를 사용합니다.
+동의
+사용자 데이터
+결제 및 구매 데이터
+상세 주소 데이터
+Spotify 서비스를 안전하게 이용할 수 있도록 하고 사기 행위를 감지 및 예방하기 위함입니다.
+예를 들면 Spotify에서 사용 데이터를 분석하여 Spotify 서비스의 사기성 사용을 확인하는 경우가 있습니다.
+동의
+사용자 데이터
+상세 주소 데이터
+메시지 데이터
+사용 데이터
+결제 및 구매 데이터
+고객 서비스 데이터
+조사 및 설문조사 수행.
+예를 들어 Spotify에서
+사용자에게 연락해 피드백을 요청할 수 있습니다.
+동의
+사용자 데이터
+사용 데이터
+음성 데이터
+설문조사 및 연구 데이터
+5. 개인 데이터 공유/제공
+이 섹션은 Spotify 서비스를 사용하면서 수집되거나 생성된 개인 데이터를 제공받는 주체에 대해 설명합니다.
+다른 Spotify 사용자에게 공개되는 정보
+다른 Spotify 사용자에게 공개되는 개인 데이터는 다음과 같습니다.
+프로필 이름
+프로필 사진(프로필 사진을 업로드하는 경우)
+공개 플레이리스트 및 관련 제목, 설명, 이미지
+Spotify 서비스 상에 게시한 기타 콘텐츠 및 관련 제목, 설명, 이미지
+Spotify 서비스에서 회원님이 팔로우하는 사람 수 및 회원님을 팔로우하는 사람 수(설정에 따라 이러한 사람들의 프로필이 표시될 수도 있음)
+회원님이나 다른 사용자는 소셜 미디어, 메시징 플랫폼과 같은 제3자 서비스에 특정 정보를 공유할 수 있습니다. 여기에는 다음이 포함됩니다.
+프로필
+Spotify에 게시한 콘텐츠 및 해당 콘텐츠의 세부 정보
+회원님의 플레이리스트 및 관련 제목, 설명, 이미지
+정보를 공유하면 타사 서비스에 관련 기능을 지원하기 위한 목적으로 데이터 사본이 저장될 수 있습니다.
 Spotify Connect
-After you have created a Spotify account you may choose to connect it to a compatible device over wi-fi. You may choose to connect Spotify via wi-fi to an integrated device such as a speaker, tv, a car, or even a fridge. This is called Spotify ‘Connect’. You may choose to ‘Connect’ to other devices, and may share your data by doing so.
-Personal data you may choose to share / provide to a third party
-We will only share the following personal data with those outlined in the table below:
-where you have chosen to use a Spotify Service feature, or a third party application, service or device, and we need to share personal data to enable this, or
-if you otherwise grant us your permission to share the personal data. For example, you can do it by selecting the appropriate setting in the Spotify Service or by giving your consent
-Categories of recipients
-Reason for sharing
-The period of use and retention of the data by the third party
-The items of personal data to be provided to the third party
-Third party applications, services and devices you connect to your Spotify Account
-You can review a list of the Third Party apps you have granted access to your Spotify account (if any)
-here
-.
-To connect your Spotify account to third party services which may request or require that we share information about you with them, pursuant to your choice.
-Examples of such third party applications, services and devices include: social media applications, speaker devices, televisions, automotive platforms, or voice assistants, which interact with the Spotify Service.
-You can see and remove many third party connections under ‘
-Apps
-’ in your account.
-We will only share your data where you choose to connect your Spotify account to a third party application or device. Your consent will always be requested before we provide your information to such third parties.
-Third Parties use and retain the data until the purposes of the use have been achieved (or until cancellation/termination of subscription by the user).
-You will be informed about which User Data and Usage Data the third party will receive at the point where you choose to connect your account. It may differ slightly depending on the third party application, but may include: information about what you are currently playing and your connected devices, email address, username, information about your playlists or library, information about your subscription details, artists you follow, your followers, recently played and top tracks. For more information about how these third party applications and devices will handle your data, such as whether they will transfer it overseas or for how long they will retain it, please see the privacy policy of the application or device you are choosing to connect with.
-The following record label partners:
+Spotify 계정을 만든 후에 Wi-Fi를 통해 호환되는 기기에 연결하도록 선택할 수 있습니다. Wi-Fi를 통해 Spotify를 스피커, TV, 자동차 또는 냉장고와 같은 통합 기기에 연결할 수도 있습니다. 이 기능을 Spotify 'Connect(연결)'라고 합니다. 다른 기기와의 'Connect(연결)'를 선택하고, 이를 통해 데이터를 공유할 수도 있습니다.
+제3자 공유나 제공을 선택할 수 있는 개인 데이터
+Spotify는 아래 표에 나열된 개인 데이터만 타사 서비스와 공유합니다.
+회원님이 Spotify 서비스 기능이나 타사의 애플리케이션, 서비스, 기기를 사용하기로 선택했을 때 Spotify에서 이를 위해 개인 데이터를 공유해야 하는 경우
+그 외에 Spotify에 개인 데이터를 공유할 수 있는 권한을 부여한 경우(예를 들어, Spotify 서비스에서 해당 설정을 선택하거나 동의를 제공하여 권한을 부여할 수 있음).
+수신자 카테고리
+공유 이유
+제3자의 데이터 사용 및 보존 기간
+제3자에 제공되는 개인 데이터 항목
+회원님이 Spotify 계정에 연결하는 타사 애플리케이션, 서비스 및 기기
+여기에서 회원님이 Spotify 계정(있는 경우)에 대한 액세스 권한을 부여한 제3자 앱 목록을 검토할 수 있습니다.
+제3자 서비스에 회원님의 Spotify 계정을 연결하기 위함이며, 회원님이 선택하신 바에 따라 회원님의 정보를 제3자 서비스에 공유한다는 요청 또는 요구가 있을 수도 있습니다.
+이러한 제3자 애플리케이션, 서비스 및 기기의 예로는 Spotify 서비스와 상호작용하는 소셜 미디어 애플리케이션, 스피커 기기, TV, 자동차 플랫폼 또는 음성 도우미 등이 있습니다.
+계정의 '앱'에서 연결된 제3자를 확인하고 삭제할 수 있습니다.
+Spotify는 회원님이 Spotify 계정을 제3자 애플리케이션 또는 기기에 연결하기로 선택한 경우에만 데이터를 공유합니다. Spotify는 이러한 제3자에 회원님의 정보를 제공하기 전에 항상 회원님의 동의를 요청합니다.
+제3자는 사용 목적이 달성될 때까지(또는 사용자가 구독을 해지/종료할 때까지) 데이터를 사용하고 보존합니다.
+계정을 연결하기로 선택한 시점에 제3자에게 제공되는 사용자 데이터 및 사용 데이터에 대한 안내가 있을 것입니다. 제3자 애플리케이션에 따라 약간 다를 수 있지만, 이러한 정보에는 현재 재생 중인 항목 및 연결된 기기에 대한 정보, 이메일 주소, 사용자 이름, 플레이리스트나 라이브러리에 대한 정보, 구독 세부 정보에 대한 정보, 팔로우하는 아티스트, 내 팔로워, 최근 재생 목록, 인기 트랙 등이 포함될 수 있습니다. 데이터의 해외 전송 여부, 보존 기간 등 제3자 애플리케이션 및 기기에서 회원님의 데이터가 처리되는 방식에 대한 자세한 내용은 연결하려는 애플리케이션 또는 기기의 개인정보 처리방침을 참조하세요.
+다음의 레코드 음반사 파트너.
 Warner Music Inc.Warner Music Inc. and WEA International Inc. 1633 Broadway, New York, New York 10019
 Warner Music International Services Ltd.27 Wrights LaneLondon, England W8 5SW
 UMG Recordings Services Inc.2220 Colorado Avenue, Santa Monica, California, 90404-4506, USA
 Universal International Music, B.V.Gravelandseweg 80 NL – 1217 EW Hilversum, The Netherlands
 Sony Music Entertainment25 Madison AvenueNew York, NY 10010
-To receive news or promotional offers directly from artists, record labels or other partners.
-You may choose to share personal data (for example, your email address) for this purpose. You’ll always have the option to change your mind and
-withdraw your consent at any time
-.
-Only if you choose to share your account registration data with the record labels, we will share your data when you sign up for Spotify via transmission over the network at the time of service.You will always have the option to change your mind and withdraw your consent at any time in your account settings. Third Parties use and retain the data until the purposes of the use have been achieved (or until cancellation/termination of subscription by the user).
-Account registration data
-Information we may share
-See this table for details of who we share to and why.
-Categories of recipients
-Reason for sharing
-Spotify service providers listed at
-this link
-We work with service providers that work on our behalf which may need access to certain personal data in order to provide their services to us. We have listed the work performed by each service provider at
-this link
-. Please see
-Section 7 ‘Transfer to other countries & entrustment'
-of this policy for more information about these service providers.
-Other Spotify group companies
-Our group companies may process your data on our behalf. We have listed the work performed by the Spotify group companies at
-this link
-. Please see
-Section 7 'Transfer to other countries & entrustment'
-of this policy for more information about these service providers.
-Spotify partners
-Depending on how you sign up for the Spotify Service (e.g. through a bundle deal with a mobile telecoms provider), we share your Spotify username or other User Data as necessary to enable your account. We may also share personal data with that third party about your use of the Spotify Service, such as whether and to what extent you have used the offer, activated a Spotify account, or actively used the Spotify Service.
-6. Data retention (procedure for and method of deleting personal data)
-It’s your right to request that we delete certain of your personal data. See the section on ‘Erasure’ in
-Section 2 ‘Your personal data rights and controls’
-for more information. If you close or request that we close your account, we'll delete or anonymise your personal data so it no longer identifies you, unless we're required to keep something or we still need to use it for a legally justifiable reason.
-Your personal data will be retained until you close your account or the purpose of collecting and using your personal data is achieved; provided, however, that the retention period is subject to the relevant laws. Here are some examples of situations where we're legally allowed or required to keep some of your personal data (in such cases, we will transfer the relevant data to a separate database or storage place):
-if there's an unresolved issue relating to your account, such as an outstanding credit or unresolved claim or dispute
-for our user safety, legal, tax, audit and accounting obligations
-where necessary for our legitimate business interests such as fraud prevention or to maintain security.
-The process and method of destruction are as follows
-(1) Destruction process
-Once the purpose is achieved, user's personal data is moved to a separate database and is destroyed after storage for a certain period depending on data protection reasons under our internal policy and other applicable laws and regulations
-(2) Destruction method
-We delete personal data stored in the form of electronic files by using technical means which makes it impossible to restore the data. We destroy your personal data through de-identification so that the individuals cannot be identified.
-Note that if you had a Premium account and become dormant for one year, we may contact you to give you the option of converting your account to a Free account or close your account.
-7. Transfer to other countries & entrustment
-When carrying out the activities described in this Policy, Spotify shares your personal data internationally with Spotify group companies, subcontractors and partners. They may process your data in South Korea and outside of it. Your personal data, therefore, may be subject to privacy laws that are different from those in your country.
-In such instances Spotify shall ensure that the transfer of your personal data is carried out in accordance with applicable privacy laws and, in particular, that appropriate contractual, technical, and organisational measures are in place in order to protect your data including by way of restricting re-entrustment, and managing and overseeing the entrusted processors. You can find out more about where your data is processed at
-this link
-.
-Information on provision of your personal data is set out under
-Section 5
-above.
-8. Keeping your personal data safe
-We’re committed to protecting our users’ personal data. We put in place appropriate technical and organisational measures to help protect the security of your personal data. However, be aware that no system is ever completely secure.
-We have put various safeguards in place to guard against unauthorised access and unnecessary retention of personal data in our systems. These include pseudonymisation, encryption, access, and retention policies.
-To protect your user account, we encourage you to:
-use a strong password which you
-only
-use for your Spotify account
-never share your password with anyone
-limit access to your computer and browser
-log out once you have finished using the Spotify Service on a shared device
-read more detail on
-protecting your account
-You can log out of Spotify in multiple places at once by using the ‘Sign out everywhere’ function on
-your account page
-.
-If other individuals have access to your Spotify account, then they can access personal data, controls and the Spotify Service available in your account. For example, someone might use your account on a shared device.
-It’s your responsibility to only allow this to happen if you’re comfortable sharing your personal data with them. Anyone else’s use of your Spotify account may impact your personalised recommendations.
-9. Children
-Note: This Policy doesn't apply to
-Managed Accounts
-or
-Spotify Kids
-except where those respective privacy notices say so.
-The Spotify Service (outside of Managed Accounts or Spotify Kids) that is tied to this privacy policy has a minimum age limit in each country or region (the “Age Limit”).
-If you're under the Age Limit, do not create or use the standard Spotify Service. Instead, we recommend asking a parent or guardian to create a Managed Account for you, where available. If you are above the Age Limit but under the age of majority in your country (a “Minor”), you may use the Spotify Service only with the consent of your parent or legal guardian.
-We do not knowingly collect or use personal data from children under the applicable Age Limit outside of Managed Accounts or Spotify Kids. If you are a parent or guardian and become aware that your child, who is under the applicable Age Limit, has provided personal data to Spotify in any other context,
-contact us
-. If we learn that we’ve collected the personal data of a child under the applicable Age Limit, we'll take reasonable steps to delete the personal data. This may require us to delete the Spotify account for that child.
-When using a shared device on the Spotify Service, be cautious about playing or recommending any inappropriate content to Minors.
-10. Third-Party Links
-The Spotify Service may include links to third-party websites, plug-ins and applications. Clicking on such links may allow third parties to collect or share data about you. These third-party services operate under their own privacy policies, and we encourage you to review them before providing your personal data. Spotify does not control these third-party websites and is not responsible for their privacy practices.
-11. Changes to this Policy
-We may occasionally make changes to this Policy.
-When we make material changes to this Policy, we’ll provide you with prominent notice as appropriate under the circumstances. For example, we may display a prominent notice within the Spotify Service or send you an email (to the email address provided at registration or as updated in your account settings) or device notification.
-12. How to contact us
-For any questions or concerns about this Policy, contact our Office of the Data Protection Officer through any of the following ways:
-Department: Office of the Data Protection Officer
-email
-privacy@spotify.com
-write to us at: Office of the Data Protection Officer, Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Sweden, Attn: Data Protection Officer
-Spotify AB is the data controller, as defined under the GDPR, of personal data processed under this Policy.
-For users in South Korea, Spotify's Korean Domestic Representative is as follows:
-Domestic Representative under Article 31-2 of the Personal Information Protection Act (For inquiries relating to personal data processing and data subject rights)
-Name and Representative: Spotify Korea Ltd
-Address: 18th Floor, 373, Gangnam-daero, Seocho-gu, Seoul, Republic of Korea
-Telephone: +82 2 3016 8744
-Email: privacy.kr@spotify.com
-Domestic Representative under Article 32-5 of the Information and Communications Network Act (For inquiries relating to information and communications services)
-Name and Representative: D&A LLC, Kyu Chul Lee
-Telephone: +82 2 3016 8744
-Email: privacyspotify@draju.com
-Address: 13
-th
-Floor, Donghun Tower, 317 Teheran ro, Gangnam gu, Seoul, South Korea 06151
-For general customer service queries not related to personal data processing, please contact our Customer Service.
+아티스트, 레코드 음반사 또는 그 밖의 파트너로부터 직접 새로운 소식이나 프로모션 혜택을 받아보기 위해.
+이러한 목적으로 회원님의 개인 데이터(예: 이메일 주소) 공유를 선택할 수 있습니다. 더 이상 원치 않는 경우 언제든지 동의를 철회할 수 있습니다.
+계정 등록 데이터를 레코드 음반사와 공유하기로 선택하는 경우에 한해, 당사는 회원님이 Spotify에 가입하는 시점에 네트워크 전송을 통해 회원님의 데이터를 공유합니다. 회원님은 언제든지 계정 설정에서 동의 여부를 변경하거나 동의를 철회할 수 있습니다. 제3자는 사용 목적이 달성될 때까지(또는 사용자가 구독을 해지/종료할 때까지) 데이터를 사용하고 보존합니다.
+계정 등록 데이터
+Spotify에서 공유할 수 있는 정보
+Spotify에서 정보를 공유하는 대상과 그 이유에 대한 세부 정보는 아래 표를 참조하세요.
+수신자 카테고리
+공유 이유
+이 링크에 나열된 Spotify 서비스 제공업체
+Spotify는 당사를 대신해 업무를 수행하는 서비스 제공업체와 협력하고 있으며, 이들은 당사에 서비스를 제공하기 위해 특정 개인 데이터에 액세스해야 할 수 있습니다. 이 링크에서 각 서비스 제공업체가 수행하는 업무를 확인하실 수 있습니다. 이러한 서비스 제공업체에 대한 자세한 내용은 본 정책 섹션 7 '다른 국가로의 전송 및 위탁'을 참조하세요.
+기타 Spotify 그룹 계열사
+Spotify 그룹 계열사가 당사를 대신하여 회원님의 데이터를 처리할 수도 있습니다. 이 링크에서 Spotify 그룹 계열사가 수행하는 업무 목록을 확인하실 수 있습니다. 이러한 서비스 제공업체에 대한 자세한 정보는 본 정책의 섹션 7 '다른 국가로의 전송 및 위탁'을 참조하세요.
+Spotify 파트너
+Spotify는 Spotify 서비스 가입 방식(예: 이동 통신사의 번들 상품을 통해)에 따라 계정을 활성화하는 데 필요한 범위에서 회원님의 Spotify 사용자 이름이나 그 밖의 사용자 데이터를 공유합니다. 또한 Spotify는 혜택 이용, Spotify 계정 활성화, 또는 Spotify 서비스의 실제 사용 여부와 범위 등 Spotify 서비스 사용과 관련된 개인 데이터를 제3자와 공유할 수도 있습니다.
+6. 데이터 보존(개인 데이터 삭제 절차 및 방법)
+회원님은 당사에 특정 개인 데이터의 삭제를 요청할 권리를 보유하고 있습니다. 자세한 내용은 섹션 2 '개인 데이터 권한 및 제어'의 '삭제' 섹션을 참조하세요. 계정을 탈퇴하거나 Spotify에 계정 탈퇴를 요청하는 경우, Spotify는 정당한 법적 사유에 따라 보관해야 하거나 계속 사용해야 하는 경우를 제외하고, 회원님을 식별할 수 없도록 개인 데이터를 삭제하거나 익명 처리합니다.
+회원님의 개인 데이터는 계정을 탈퇴하거나 개인 데이터 수집 및 사용 목적이 달성될 때까지 보존됩니다. 단, 보존 기간은 관련 법률에 따라 달라질 수 있습니다. 다음은 Spotify가 회원님의 개인 데이터 중 일부를 합법적으로 보유할 수 있거나 의무적으로 보유해야 하는 몇 가지 사례입니다. 이 경우, 당사는 관련 데이터를 별도의 데이터베이스나 저장 공간으로 옮깁니다.
+계정과 관련하여 해결되지 않은 문제가 있는 경우(예: 미결제 금액이 있거나 청구 또는 분쟁이 해결되지 않은 경우)
+Spotify 사용자의 안전과 법률, 세금, 감사 및 회계 관련 의무 준수에 필요한 경우
+Spotify의 합법적인 비즈니스 이익과 관련해 필요한 경우(예: 사기 방지 또는 보안 유지)
+파기 절차 및 방법은 다음과 같습니다.
+(1) 파기 절차
+목적이 달성된 후, 사용자의 개인 데이터는 별도의 데이터베이스로 옮겨지고, Spotify 내부 정책과 기타 해당 법률 및 규정에 따른 데이터 보호 사유에 따라 일정 기간 보관 후 파기됩니다.
+(2) 파기 방법
+전자적 파일 형태로 저장된 개인 데이터는 복구가 불가능하도록 만드는 기술을 사용해 삭제합니다. Spotify는 개인을 식별할 수 없도록 비식별화 절차를 거쳐 개인 데이터를 파기합니다.
+Premium 계정을 보유한 상태에서 1년 동안 휴면 상태가 지속되는 경우, 무료 계정으로 전환하거나 계정을 탈퇴할 수 있는 선택권을 제공하기 위해 회원님께 연락을 드릴 수 있습니다.
+7. 다른 국가로의 전송 및 위탁
+Spotify는 이 개인정보 처리방침에 기술된 활동을 수행할 때 회원님의 개인 데이터를 Spotify 계열사, 외주업체 및 파트너와 내부적으로 공유합니다. 이러한 관계자가 한국 및 해외에서 회원님의 데이터를 처리할 수 있습니다. 이에 따라 사용자의 개인 데이터에 사용자 거주 국가의 법과 다른 개인정보보호법이 적용될 수도 있습니다.
+이러한 경우 Spotify는 개인 데이터의 전송이 관련 개인정보 보호 법률에 따라 이루어지도록 하며, 특히 재위탁을 제한하고 위탁 처리업체를 관리 및 감독하는 등의 조치를 포함해 개인 데이터를 보호하기 위한 적절한 계약적, 기술적, 조직적 조치를 취합니다. 개인 데이터 처리 위치에 관한 자세한 정보는 이 링크에서 확인하실 수 있습니다.
+개인 데이터 제공에 관한 정보는 위의 섹션 5에 설명되어 있습니다.
+8. 개인 데이터의 안전한 보관
+Spotify는 사용자의 개인 데이터를 보호하는 데 최선의 노력을 기울이고 있습니다. 저희는 적절한 기술적 및 조직적 조치를 취하여 회원님의 개인 데이터를 보호합니다. 하지만 어떤 시스템도 완전무결한 보안을 제공할 수는 없습니다.
+따라서 저희는 시스템 내 무단 액세스 및 불필요한 개인 데이터 보유를 방지하기 위해 다양한 보호 조치를 시행하고 있습니다. 이러한 조치로는 가명화, 암호화, 액세스 권한 및 보유 정책 등이 있습니다.
+다음은 사용자 계정을 보호하는 데 도움이 되는 팁입니다.
+Spotify 계정에서만 단독으로 사용하는 강력한 비밀번호를 사용합니다.
+비밀번호를 절대 다른 사람과 공유하지 않습니다.
+컴퓨터와 브라우저에 대한 액세스 권한을 제한합니다.
+공유 기기에서 Spotify 서비스를 사용한 후에는 로그아웃합니다.
+계정 보호 방법에 대해 자세히 알아봅니다.
+내 계정 페이지의 '모든 기기에서 로그아웃' 기능을 사용해 한 번에 여러 곳에서 Spotify 로그아웃을 할 수 있습니다.
+다른 사람이 회원님의 Spotify 계정에 액세스할 수 있는 경우, 해당 개인이 회원님 계정의 개인 데이터, 제어 기능 및 Spotify 서비스에 액세스할 수 있습니다. 예를 들어 다른 사람이 공유 기기에서 회원님의 계정을 사용하는 경우가 있을 수 있습니다.
+회원님은 개인 데이터를 공유해도 괜찮다고 판단하는 경우에만 개인 데이터를 공유해야 할 책임이 있습니다. 다른 사람이 Spotify 계정을 사용하면 제공되는 맞춤 추천에 영향을 미칠 수 있습니다.
+9. 미성년자
+참고: 본 정책은 각 개인정보 처리방침에서 별도로 명시한 경우를 제외하고 관리되는 계정 또는 Spotify Kids에 적용되지 않습니다.
+본 개인정보 처리방침이 적용되는 Spotify 서비스(관리되는 계정 또는 Spotify Kids 제외)에는 국가 또는 지역별 최소 연령 요건('연령 요건')이 적용됩니다.
+연령 요건을 충족하지 않는 경우 일반 Spotify 서비스를 생성하거나 사용하지 마세요. 대신 가능한 경우 부모 또는 보호자에게 관리되는 계정을 만들어 달라고 요청하는 것이 좋습니다. 연령 요건은 충족하지만 회원님의 국가에서 규정하는 성년 연령 미만('미성년자')인 경우 부모 또는 법적 보호자의 동의가 있어야만 Spotify 서비스를 사용할 수 있습니다.
+Spotify는 관리되는 계정 또는 Spotify Kids를 제외한 서비스에서 해당 연령 요건을 충족하지 않는 어린이의 개인 데이터를 고의로 수집하거나 사용하지 않습니다. 부모 또는 보호자이고 해당 연령 요건 미만의 자녀가 그 외의 상황에서 Spotify에 개인 데이터를 제공한 사실을 알게 된 경우 Spotify에 문의해 주세요. 해당 연령 요건에 미달하는 어린이의 개인 데이터를 수집했다는 사실을 알게 되는 경우 Spotify는 해당 개인 데이터를 삭제하기 위해 합리적인 조치를 취할 것입니다. 이 과정에서 해당 어린이의 Spotify 계정을 삭제해야 할 수도 있습니다.
+Spotify 서비스에서 공유 기기를 사용하고 있는 경우, 미성년자에게 부적절한 콘텐츠가 재생되거나 추천되는 일이 없도록 주의해 주시기 바랍니다.
+10. 제3자 링크
+Spotify 서비스에는 제3자 웹사이트, 플러그인 및 애플리케이션으로 연결되는 링크가 포함될 수 있습니다. 해당 링크를 클릭하면 제3자가 회원님에 대한 데이터를 수집하거나 공유할 수 있습니다. 이러한 제3자 서비스는 자체 개인정보 처리방침에 따라 운영되므로 개인 데이터를 제공하기 전에 해당 서비스의 정책을 검토하는 것이 좋습니다. Spotify는 이러한 제3자 웹사이트를 관리하지 않으며 해당 웹사이트의 개인정보 처리방침에 대해 책임을 지지 않습니다.
+11. 본 정책의 변경 사항
+Spotify는 수시로 이 정책을 변경할 수 있습니다.
+본 정책에 중요한 변경 사항이 있는 경우 해당 상황에서 확인이 가장 용이한 방식으로 공지를 보내드립니다. 예를 들어 Spotify 서비스 내에서 눈에 잘 띄는 알림을 표시하거나 이메일(등록 시 제공한 이메일 주소 또는 계정 설정에서 업데이트한 이메일 주소) 또는 기기 알림을 보낼 수 있습니다.
+12. 문의 방법
+본 정책에 대한 질문이나 우려 사항이 있을 경우 다음 방법 중 하나로 Spotify 데이터 보호 담당 부서에 문의해 주시기 바랍니다.
+부서: 데이터 보호 담당 부서
+이메일: privacy@spotify.com
+우편 주소: Office of the Data Protection Officer, Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Sweden, Attn: Data Protection Officer
+Spotify AB는 GDPR에 정의된 대로 본 정책에 따라 처리되는 개인 데이터를 제어하는 데이터 관리자입니다.
+한국에 거주하는 사용자에게 해당하는 Spotify의 국내대리인 정보는 다음과 같습니다.
+개인정보 보호법 제31조의2에 따른 국내대리인(개인 데이터 처리 및 데이터 주체 권리 관련 문의 담당자)
+이름 및 대표자: Spotify Korea Ltd
+주소: 대한민국 서울특별시 서초구 강남대로 373, 18층
+전화: +82 2 3016 8744
+이메일: privacy.kr@spotify.com
+정보통신망법 제32조의5에 따른 국내대리인(정보 통신 서비스 관련 문의 담당자)
+이름 및 담당자: 법무법인(유한) 대륙아주, 이규철
+전화: +82 2 3016 8744
+이메일: privacyspotify@draju.com
+주소: 대한민국 서울특별시 강남구 테헤란로 317 동훈타워 13층, 06151
+개인 데이터 처리와 관련되지 않은 일반적인 고객 서비스 질문은 Spotify 고객 서비스에 문의하시기 바랍니다.
 © Spotify AB
-See previous versions of this policy published
-2 April 2026
-9 October 2024
-2 May 2024
-8 June 2023
-26 November 2021
-1 February 2021
-Spotify - Home
-Company
-About
-Jobs
+본 정책의 이전 게시 버전 보기
+2026년 4월 2일
+2024년 10월 9일
+2024년 5월 2일
+2023년 6월 8일
+2021년 11월 26일
+2021년 2월 1일
+Spotify - 홈
+회사
+상세정보
+채용 정보
 For the Record
-Communities
-For Artists
-Developers
-Advertising
-Investors
-Vendors
-Useful links
-Support
-Web Player
-Free Mobile App
-Import your music
-Spotify Plans
-Premium Individual
-Premium Duo
-Premium Student
-South Korea (English)
-Legal
-Safety & Privacy Center
-Privacy Policy
-About Ads
-Accessibility
+커뮤니티
+아티스트
+개발자
+광고
+투자자
+공급업체
+유용한 링크
+지원
+웹 플레이어
+무료 모바일 앱
+내 음악 가져오기
+Spotify 요금제
+Premium 개인
+Premium 듀오
+Premium 학생
+대한민국 (한국어)
+법률 정보
+안전 및 개인정보 보호 센터
+개인정보 처리방침
+광고 상세정보
+접근성
 © 2026 Spotify AB

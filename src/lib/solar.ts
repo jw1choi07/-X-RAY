@@ -56,6 +56,7 @@ async function chat(messages: { role: string; content: string }[], maxTokens?: n
       temperature: 0,
       ...(maxTokens ? { max_tokens: maxTokens } : {}),
     }),
+    signal: AbortSignal.timeout(60000),
   });
   if (!res.ok) throw new Error(`Upstage API error: ${res.status} ${await res.text()}`);
   return res.json();
@@ -65,6 +66,19 @@ function extractJsonArray(content: string): Finding[] {
   let c = content.trim();
   if (c.startsWith("```")) {
     c = c.replace(/^```[a-zA-Z]*\n?/, "").replace(/\n?```$/, "");
+  }
+  c = c.trim();
+  // Model sometimes wraps the array in an object, e.g. {"findings": [...]}
+  if (c.startsWith("{")) {
+    const parsed = JSON.parse(c);
+    const arr = Object.values(parsed).find((v) => Array.isArray(v));
+    if (!Array.isArray(arr)) throw new Error("모델 응답에서 findings 배열을 찾을 수 없습니다.");
+    return arr as Finding[];
+  }
+  // If the array got truncated mid-object, salvage complete objects up to the last "},"
+  if (!c.endsWith("]")) {
+    const lastComplete = c.lastIndexOf("},");
+    if (lastComplete !== -1) c = c.slice(0, lastComplete + 1) + "]";
   }
   return JSON.parse(c);
 }
@@ -76,7 +90,16 @@ export async function generateFindings(text: string, taxonomy: string): Promise<
     { role: "user", content: `다음은 약관 원문입니다:\n\n${doc}` },
   ]);
   const content = result.choices[0].message.content;
-  return { findings: extractJsonArray(content), usage: result.usage ?? {} };
+  let findings: Finding[];
+  try {
+    findings = extractJsonArray(content);
+  } catch {
+    throw new Error("AI 응답을 해석하지 못했습니다. 잠시 후 다시 시도해주세요.");
+  }
+  findings = findings.filter(
+    (f) => f && typeof f.quote === "string" && f.quote.trim().length > 0 && typeof f.risk_summary === "string",
+  );
+  return { findings, usage: result.usage ?? {} };
 }
 
 export async function judgeCaseMatch(finding: Finding): Promise<string> {

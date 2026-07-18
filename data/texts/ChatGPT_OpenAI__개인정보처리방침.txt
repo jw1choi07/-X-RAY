@@ -1,472 +1,99 @@
-Korea privacy policy | OpenAI
-Skip to main content
-Research
-Products
-Business
-Developers
-Company
-Foundation
-(opens in a new window)
-Log in
-Try ChatGPT
-(opens in a new window)
-Research
-Products
-Business
-Developers
-Company
-Foundation
-(opens in a new window)
-Try ChatGPT
-(opens in a new window)
-Login
-OpenAI
-Select language
-…
-Updated: June 16, 2026
-Korea privacy policy
-(
-Previous version
-⁠
-)
-For individuals in the European Economic Area, United Kingdom, and Switzerland, you can read this
-version⁠
-⁠
-of our Privacy Policy. For individuals in the Republic of Korea, please refer to the
-Korea Addendum⁠
-⁠
-.
-At OpenAI, our mission is to ensure that artificial general intelligence benefits everyone. We build tools like ChatGPT and Sora to help people learn, create, and solve problems. We at OpenAI (together with our affiliates, “OpenAI”, “we”, “our” or “us”) are committed to respecting your privacy and are strongly committed to keeping secure any information we obtain from you or about you. This Privacy Policy describes our practices with respect to personal data that we collect from or about you, and how we use it when you use our website, applications, and services (collectively, “Services”).
-This Privacy Policy does not apply to content that we process on behalf of customers of our business offerings, such as our API. Our use of that data is governed by our customer agreements covering access to and use of those offerings.
-For information about how we collect and use training information to develop our language models that power ChatGPT and other Services, and your choices with respect to that information, please see this policy as well as
-this help center article
-⁠
-(opens in a new window)
-.
-1. Personal Data we collect
-We collect personal data relating to you (“Personal Data”) as follows:
-Personal Data You Provide:
-We collect Personal Data if you create an account to use our Services or communicate with us as follows:
-Account Information:
-When you create an account with us, we will collect information associated with your account, including your name, contact information, account credentials, date of birth, payment information, and transaction history, (collectively, “Account Information”). Some of our Services may also allow you to upload a profile picture, a username, or other information as part of your Account Information.
-User Content:
-We collect Personal Data that you provide in the input to our Services (“Content”), including your prompts and other content you upload, such as
-files
-⁠
-(opens in a new window)
-,
-images
-⁠
-(opens in a new window)
-,
-audio and video
-⁠
-(opens in a new window)
-,
-Sora characters
-⁠
-(opens in a new window)
-, and data from
-connected services
-⁠
-(opens in a new window)
-, depending on the features you use. Some of our Services allow you to interact with other users, such as post, comment, or send messages, and we treat those interactions as Content, too.
-Communication Information
-: If you communicate with us, such as via email or our pages on social media sites, we may collect Personal Data like your name, contact information, and the contents of the messages you send (“Communication Information”).
-Contact Data:
-If you choose to connect your device contacts, we upload information from your device address books and check which of your contacts also use our Services. If any of your contacts aren’t yet using our Services, we’ll update you if they sign up for our Services later.
-Learn more
-⁠
-(opens in a new window)
-about connecting your contacts and
-how we use uploaded contact information
-⁠
-(opens in a new window)
-of people who don’t use our Services.
-Other Information You Provide
-: We collect other information that you provide to us, such as when you participate in our events or surveys, or when you provide us or a vendor operating on our behalf with information to establish your identity or age (collectively, “Other Information You Provide”).
-Personal Data We Receive from Your Use of the Services:
-When you visit, use, or interact with the Services, we receive the following information about your visit, use, or interactions:
-Log Data
-: We collect information that your browser or device automatically sends when you use our Services. Log data includes your Internet Protocol address, browser type and settings, the date and time of your request, and how you interact with our Services.
-Usage Data
-: We collect information about your use and activity across the Services, such as the types of content that you view or engage with, the features you use and the actions you take, when you submit feedback to a model response, the people with whom you interact, as well as your time zone, country, the dates and times of access, user agent and version, type of computer or mobile device, and your computer connection. If you use the Atlas browser we may also collect your browser data according to
-your controls
-⁠
-(opens in a new window)
-and use of the service.
-Ads data
-: For Free and Go users, subject to your choices and controls, we collect information about your ads history and interests, such as the types of ad content that you view or engage with.
-Device Information
-: We collect information about the device you use to access the Services, such as the name of the device, operating system, device identifiers, and browser you are using. Information collected depends on the type of device you use and its settings.
-Location Information:
-We determine the general area from which your device accesses our Services based on information like its IP address for security reasons and to make your product experience better, for example to protect your account by detecting unusual login activity or to provide more accurate responses. In addition, some of our Services allow you to choose to provide more precise location information from your device, such as location information from your device’s GPS.
-Cookies and Similar Technologies
-: We use cookies and similar technologies to operate and administer our Services, and improve your experience. We store some of the information described in this policy with cookies, for example to help maintain your preferences across sessions if you’re not logged in, or to assist with authentication and customer support. For details about our use of cookies, please read our
-Cookie Notice
-⁠
-.
-Information We Receive from Other Sources:
-We receive information from other sources, such as our trusted security and safety partners to protect safety and prevent fraud, abuse, and other threats to our Services, and from marketing vendors who provide us with information about potential customers of our business services.
-We may receive information from advertisers and other data partners, which we use for purposes including to help us measure and to help us show more relevant ads to Free and Go users on our Services. For example, we could receive information about purchases you make from these advertisers.
-We also collect information from other sources, like information that is publicly available on the internet, to develop the models that power our Services. For more information on the sources of information used to develop the models that power ChatGPT and other Services, please see
-this article
-⁠
-.
-2. How we use Personal Data
-We use Personal Data for the following purposes:
-To provide, analyse, and maintain our Services, for example to respond to your questions for ChatGPT;
-To improve and develop our Services and conduct research, for example to develop new product features;
-To personalize and customize your experience across our Services, for example to provide you with more relevant Content;
-For Free and Go users, to personalize the ads you see on our Services (subject to your choices and controls), and to measure the effectiveness of ads shown on our Services.
-Learn more
-⁠
-(opens in a new window)
-about ads on our services;
-To communicate with you, including to respond to your questions, and send you information about our Services and events, for example about changes or improvements to the Services;
-Identify your contacts who use our Services when you choose to connect your contacts and update you if they join our Services later;
-To prevent fraud, illegal activity, or misuses of our Services, including by monitoring any Content submitted or exchanged on our platforms (learn more
-here
-⁠
-); and
-To comply with legal obligations and to protect the rights, privacy, safety, or property of our users, OpenAI, or third parties, for instance to prevent harm to you or others, or to estimate your age to give you an age-appropriate experience.
-We also aggregate or de-identify Personal Data so that it no longer identifies you and use this information for the purposes described above, such as to analyze the way our Services are being used, to improve and add features to them, and to conduct research. We will maintain and use de-identified information in de-identified form and not attempt to reidentify the information, unless required by law.
-As noted above, we may use Content you provide us to improve our Services, for example to train the models that power ChatGPT. Read
-our instructions⁠
-⁠
-(opens in a new window)
-on how you can opt out of our use of your Content to train our models.
-3. Disclosure of Personal Data
-We disclose your Personal Data in the following circumstances:
-Vendors and Service Providers
-: To assist us in meeting business operations needs and to perform certain services and functions, we disclose Personal Data to vendors and service providers, including providers of hosting services, customer service vendors, cloud services, content delivery services, support and safety services, email communication software, web analytics services, payment and transaction processors, search and shopping providers, marketing service providers, and other information technology providers. We also work with service providers who help us with age and identity verification, and you can
-learn more here
-⁠
-(opens in a new window)
-. Based on our instructions, these parties will access, process, or store Personal Data only in the course of performing their duties to us.
-Business Transfers
-: If we are involved in strategic transactions, reorganization, bankruptcy, receivership, or transition of service to another provider (collectively, a “Transaction”), your Personal Data may be disclosed in the diligence process with counterparties and others assisting with the Transaction and transferred to a successor or affiliate as part of that Transaction along with other assets.
-Government Authorities or Other Third Parties
-: We may share your Personal Data, including information about your interaction with our Services, with government authorities, industry peers, or other third parties in compliance with the law (i) if required to do so to comply with a legal obligation, or in the good faith belief that such action is necessary to comply with a legal obligation, (ii) to protect and defend our rights or property, (iii) if we determine, in our sole discretion, that there is a violation of our terms, policies, or the law; (iv) to detect or prevent fraud or other illegal activity; (v) to protect the safety, security, and integrity of our products, employees, users, or the public, or (vi) to protect against legal liability.
-Affiliates
-: We disclose Personal Data to our affiliates, meaning an entity that controls, is controlled by, or is under common control with OpenAI. Our affiliates may use this Personal Data in a manner consistent with this policy.
-Business Account Administrators
-: When you join a ChatGPT Enterprise or business account, the administrators of that account may access and control your OpenAI account, including being able to access your Content. In addition, if you create an account using an email address belonging to your employer or another organization, we may share the fact that you have an account and certain account information, such as your email address, with your employer or organization to, for example, enable you to be added to their business account.
-Parent or Guardian of a Teen
-: Teen users and their parents or guardians can choose to link their accounts, allowing the parent or guardian to manage certain settings, and receive alerts if we detect a serious safety concern. These accounts can be unlinked at any time.
-Learn more
-⁠
-(opens in a new window)
-about account linking.
-Other Users and Third Parties You Interact or Share Information With
-: Certain Services allow you to interact or share information with other users or third parties. For example, you can share content like
-ChatGPT conversations
-⁠
-(opens in a new window)
-or Sora
-videos
-⁠
-(opens in a new window)
-and
-characters
-⁠
-(opens in a new window)
-, or share information with third-party
-search
-⁠
-(opens in a new window)
-and
-shopping
-⁠
-(opens in a new window)
-partners. Information you share with third-party partners is governed by their own terms and privacy policies, and you should make sure you understand those terms and policies before sharing information with them.
-We also aggregate or de-identify Personal Data so that it no longer identifies you and share it with third parties for the purposes described above, such as to help improve our Services.
-4. Retention
-We’ll retain your Personal Data for only as long as we need in order to provide our Services to you, or for other legitimate business purposes such as resolving disputes, safety and security reasons, or complying with our legal obligations. How long we retain Personal Data depends on the type of data, how we use it, and in many cases your settings:
-Information we retain until you delete it:
-Some of our Services allow you to delete Personal Data stored in your account. For example, you can delete specific, or all, of your ChatGPT conversations, delete specific
-Saved Memories
-⁠
-(opens in a new window)
-, or delete your account. Once you choose to delete Personal Data, we will remove it from our systems within 30 days unless we need to retain it for longer as described below, or it has already been de-identified and disassociated from your account when you allow us to use your Content to
-improve our models
-⁠
-(opens in a new window)
-.
-Information we delete automatically:
-In some cases, Personal Data will be deleted automatically. For example,
-Temporary Chats
-⁠
-(opens in a new window)
-will be automatically deleted within 30 days (unless we have to retain them for safety or legal reasons, as described further below), and your
-Atlas incognito browsing history
-⁠
-(opens in a new window)
-won’t be saved after you end your session.
-Information we retain for longer for legitimate security, safety, or legal reasons:
-In some cases, we need to retain Personal Data for longer even after you delete it, for example because we are legally required to, to address fraud and abuse, for security reasons, or for financial record-keeping purposes. For instance:
-If specific Content, or your account, is banned because of violations of our
-usage policies
-⁠
-, we may retain that data for to protect our services from fraud, abuse, or other violations of our policies;
-If we are legally required to retain your data (for instance, we receive a lawful subpoena) then we may retain it for the duration of the relevant legal or regulatory obligation;
-When we are a party to a financial transaction (for instance, when we process your payment for a ChatGPT Plus or Pro account, or facilitate a purchase on ChatGPT), we may retain payment and transaction related information to meet our accounting, dispute resolution, and regulatory compliance purposes;
-When you ask us to delete your Personal Data, we retain the audit record of the erasure request to be able to verify that we have complied with the request.
-In determining these retention periods, we consider a number of factors, such as:
-Our purpose for processing the Personal Data (such as whether we need to retain it to provide our Services);
-The amount, nature, and sensitivity of the information;
-The potential risk of harm from unauthorized use or disclosure;
-Any legal requirements that we are subject to.
-5. Data controls
-Our Services provide you with a number of controls over your Personal Data and how it is used and retained. You can always change these settings in your account. These include the following controls:
-You can easily
-choose whether your Content can be used to improve and train our models
-⁠
-(opens in a new window)
-.
-You can decide whether we will remember details between chats to make Content more personalized and relevant.
-You can export your ChatGPT history and data in your account’s data controls.
-You can delete or archive chats in ChatGPT, or delete your account entirely.
-If you enable
-Temporary Chat
-⁠
-(opens in a new window)
-in ChatGPT, those conversations with ChatGPT will not appear in your history or be used to improve OpenAI’s models.
-Depending on applicable law, you may be able to choose which cookies are used when you use our Services.
-Free and Go users can use the advertising controls in your account settings to control what data we use to personalize the ads we show you on our Services.
-If you use the Atlas browser, you can delete your browsing history or choose to browse the web in incognito mode, which helps keep your browsing private from other people who use your device.
-You can unsubscribe from marketing communications you receive from us by using the choices provided in those communications.
-You can find more information on data controls
-here
-⁠
-(opens in a new window)
-and by visiting
-privacy.openai.com
-⁠
-(opens in a new window)
-.
-6. Your rights
-Depending on where you live, you may have certain statutory rights in relation to your Personal Data. For example, you may have the right to:
-Access your Personal Data and information relating to how it is processed.
-Rectify or update your Personal Data.
-Delete your Personal Data from our records.
-Restrict how we process your Personal Data.
-Transfer your Personal Data to a third party (right to data portability).
-Withdraw your consent—where we rely on consent as the legal basis for processing.
-Lodge a complaint with your local data protection authority.
-You can exercise some of these rights through your OpenAI account using the tools described in the Data controls section, or you can submit your request through
-privacy.openai.com
-⁠
-(opens in a new window)
-or to
-dsar@openai.com
-⁠
-⁠. You can contact our data protection officer at dpo@openai.com⁠⁠.
-A note about accuracy: Services like ChatGPT generate responses by reading a user’s request and, in response, predicting the words most likely to appear next. In some cases, the words most likely to appear next may not be the most factually accurate. For this reason, you should not rely on the factual accuracy of output from our models. If you notice that ChatGPT output contains factually inaccurate information about you and you would like to request a correction or removal of the information, you can submit these requests through
-privacy.openai.com
-⁠
-(opens in a new window)
-or to
-dsar@openai.com
-⁠
-⁠, and we will consider your request based on applicable law and the technical capabilities of our models.
-For information on how to exercise your rights with respect to data we have collected from the internet to train our models, please see
-this help center article
-⁠
-(opens in a new window)
-.
-OpenAI processes your Personal Data for the purposes described in this policy on servers located in various jurisdictions, including processing and storing your Personal Data in our facilities and servers in the United States, or in countries or territories where our affiliates and partners or our vendors and service providers are located. While data protection law varies by country, we apply the protections described in this policy to your Personal Data regardless of where it is processed, and only transfer that data pursuant to legally valid transfer mechanisms.
-7. Children
-Our Services are not directed to, or intended for, children under 13. We do not knowingly collect Personal Data from children under 13. If you have reason to believe that a child under 13 has provided Personal Data to OpenAI through the Services, please email us at
-privacy.openai.com
-⁠
-(opens in a new window)
-. We will investigate any notification and, if appropriate, delete the Personal Data from our systems. Users under 18 must have permission from their parent or guardian to use our Services.
-Learn more
-⁠
-(opens in a new window)
-about how teens and parents or guardians can choose to link their accounts.
-8. Security
-We implement commercially reasonable technical, administrative, and organizational measures designed to protect Personal Data from loss, misuse, and unauthorized access, disclosure, alteration, or destruction. However, no Internet or email transmission is ever fully secure or error free. Therefore, you should take special care in deciding what information you provide to the Services. In addition, we are not responsible for circumvention of any privacy settings or security measures contained on the Service, or third-party websites.
-9. Additional U.S. state disclosures
-Some U.S. state privacy laws require specific disclosures. The following table provides additional information about the categories of Personal Data we collect and how we use and disclose that information. You can read more about the Personal Data we collect and where we collect it from in “
-Personal Data we collect
-⁠
-” above, how we use Personal Data in “
-How we use Personal Data
-⁠
-” above, when we disclose Personal Data in “
-Disclosure of Personal Data
-⁠
-” above and how we retain Personal Data in “
-Retention
-⁠
-” above.
-Category of Personal Data
-Use of Personal Data
-Disclosure of Personal Data
-We collect the following information, as described above:
-Identifiers, such as your name, contact details, IP address, and other device identifiers
-Commercial information, such as your transaction history
-Network activity information, such as how you interact with our Services, including Log Data, Usage Data, and information about the device you use to access the Services
-Content, including your prompts and content you upload to the Services and interactions and messages with other users
-Communication information, such as your contact information when you send us email
-Contact Data if you choose to connect your device contacts
-Geolocation data, such as the general area from which your device accesses our Services based on information like its IP address, or precise location information you choose to provide
-Other Account Information, such as your account credentials, and payment information, date of birth, and profile picture
-Other Information You Provide, such as if you choose to participate in our events or surveys or when you provide us or a vendor operating on our behalf with information to establish your identity or age.
-We use this information for the following purposes, as described above:
-Provide, analyze, and maintain our Services
-Improve and develop our Services and conduct research, including using your Content to train our models (subject to your
-control)
-To personalize and customize your experience across our Services
-For Free and Go users, subject to your controls, to personalize the ads you see on our Services and measure the effectiveness of ads shown on our Services.
-Learn more.
-Communicate with you, including to respond to your questions, and send you information about our Services and events, for example about changes or improvements to the Services or offers or information that may interest you
-To identify your contacts who use our Services when you choose to connect your contacts and update you if they join our Services later
-Prevent fraud, illegal activity, or misuses of our Services, and to protect the security of our systems and Services, including by monitoring any Content submitted or exchanged on our platforms (learn more
-here)
-Comply with legal obligations and protect the rights, privacy, safety, or property of our users, OpenAI, or third parties, for instance to prevent harm to you or others, and to estimate your age to give you an age-appropriate experience
-We may disclose this information in the following circumstances, as described above:
-Vendors, service providers, and affiliates to assist us in meeting business operations needs and to perform certain services and functions described above
-Government authorities or other third parties for the legal reasons described above
-Parties involved in Transactions
-Business account administrators for the reasons described above
-Parents or guardians of teen users for account linking purposes described above
-Other users and third parties you interact or share information with
-Depending on where you live and subject to applicable exceptions, you may have the following privacy rights in relation to your Personal Data:
-The right to know information about our processing of your Personal Data, including the right to access your Personal Data, often in a portable format;
-The right to request deletion of your Personal Data;
-The right to correct your Personal Data; and
-The right to be free from retaliation relating to the exercise of any of your privacy rights.
-We don’t “sell” Personal Data or “share” Personal Data for cross-contextual behavioral advertising, and we do not process Personal Data for “targeted advertising” purposes (as those terms are defined under state privacy laws). We also don’t process sensitive Personal Data for the purposes of inferring characteristics about a consumer.
-Exercising Your Rights.
-You can exercise privacy rights described in this section by submitting a request through
-privacy.openai.com⁠
-⁠
-(opens in a new window)
-or to
-dsar@openai.com
-⁠
-⁠. Review our
-California privacy rights reporting⁠
-⁠
-.
-Verification.
-In order to protect your Personal Data from unauthorized access, change, or deletion, we may require you to verify your credentials before you can submit a request to know, correct, or delete Personal Data. If you do not have an account with us, or if we suspect fraudulent or malicious activity, we may ask you to provide additional Personal Data for verification. If we cannot verify your identity, we will not be able to honor your request.
-Authorized Agents.
-Depending upon where you reside, you may also submit a rights request through an authorized agent. If you do so, the agent must present authority to act on your behalf, such as signed written permission, and you may also be required to independently verify your identity with us. Authorized agent requests can be submitted to
-dsar@openai.com
-⁠
-.
-Appeals.
-Depending on where you live, you may have the right to appeal a decision we make relating to requests to exercise your rights. To appeal a decision, please send your request to
-dsar@openai.com⁠
-⁠
-.
-10. Changes to the privacy policy
-We may update this policy from time to time. When we do, we will publish an updated version and effective date on this page, unless another type of notice is required by applicable law.
-11. Data controller
-If you live in the European Economic Area (EEA) or Switzerland, OpenAI Ireland Limited, with its registered office at 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper, Dublin 1, D01 YC43, Ireland, is the controller and is responsible for the processing of your Personal Data as described in this policy.
-If you live anywhere else, OpenAI OpCo, LLC, with its registered office at 1455 Third Street, San Francisco, California 94158, United States, is the controller and is responsible for the processing of your Personal Data as described in this policy.
-12. How to contact us
-Please
-contact support⁠
-⁠
-(opens in a new window)
-if you have any questions or concerns not already addressed in this policy.
-13. Useful resources
-How your data is used to improve model performance
-⁠
-(opens in a new window)
-Data Controls FAQ
-⁠
-(opens in a new window)
-Privacy Portal
-⁠
-(opens in a new window)
-Memories FAQ
-⁠
-(opens in a new window)
-Voice Mode FAQ
-⁠
-(opens in a new window)
-Health Privacy Notice
-⁠
-Research
-Research Index
-Research Overview
-Economic Research
-Latest Advancements
-GPT-5.6
-GPT-5.5
-GPT-5.4
-Safety
-Safety Approach
-Deployment Safety
-(opens in a new window)
-Security & Privacy
-Trust & Transparency
-Products
-ChatGPT
-(opens in a new window)
-ChatGPT Business
-(opens in a new window)
-ChatGPT Enterprise
-(opens in a new window)
-ChatGPT for Education
-(opens in a new window)
-Codex
-Release Notes
-API Platform
-Overview
-API Log In
-(opens in a new window)
-Docs
-(opens in a new window)
-Business
-Overview
-Solutions
-Resources
-Customer Stories
-Partner Network
-Contact Sales
-Developers
-Apps SDK
-(opens in a new window)
-Open Models
-Docs
-(opens in a new window)
-Resources
-(opens in a new window)
-Developer Forum
-(opens in a new window)
-Company
-About Us
-Our Charter
-Careers
-News
-Support
-Help Center
-(opens in a new window)
-More
-Stories
-Academy
-Livestreams
-Podcast
-RSS
-Terms & Policies
-Terms of Use
-Privacy Policy
-Other Policies
-(opens in a new window)
-(opens in a new window)
-(opens in a new window)
-(opens in a new window)
-(opens in a new window)
-(opens in a new window)
-(opens in a new window)
-OpenAI © 2015–2026
-Manage Cookies
-English
-United States
+유럽 경제 지역, 영국, 스위스에 거주하는 개인은 [이 버전](https://openai.com/policies/eu-privacy-policy/)의 개인정보 보호 정책을 읽어보시기 바랍니다. 미국에 거주하는 개인은 [이 버전](https://openai.com/policies/us-privacy-policy/)의 개인정보 보호 정책을 읽어보시기 바랍니다.
+OpenAI의 미션은 범용 인공지능이 모두에게 혜택을 주도록 하는 것입니다. OpenAI는 사람들이 배우고, 창작하고, 문제를 해결할 수 있도록 ChatGPT와 Sora와 같은 툴을 개발합니다. OpenAI 및 그 계열사(이하 “OpenAI”, “당사”)는 개인정보를 존중하며, 귀하로부터 또는 귀하에 대해 수집한 모든 정보를 안전하게 보호하기 위해 최선을 다하고 있습니다. 이 개인정보 보호 정책은 당사의 웹사이트, 애플리케이션, 서비스(총칭하여 “서비스”)를 이용할 때 귀하로부터 또는 귀하에 대해 수집하는 개인 데이터와 그 사용 방식에 대한 당사의 관행을 설명합니다.
+본 개인정보 보호 정책은 API와 같은 비즈니스 제품을 이용하는 고객을 대신하여 처리하는 콘텐츠에는 적용되지 않습니다. 당사가 이러한 데이터를 사용하는 데는 해당 제품의 액세스 및 이용과 관련된 고객 계약이 적용됩니다.
+ChatGPT 및 기타 서비스를 구동하는 언어 모델을 개발하기 위해 학습 정보를 어떻게 수집하고 사용하는지, 그리고 해당 정보에 대한 선택 사항에 대해서는 본 정책과 함께 [이 지원 센터 문서⁠(새 창에서 열기)](https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed)를 참고하세요.
+## 1. 수집하는 개인정보
+OpenAI는 다음과 같이 귀하에 관한 개인정보(“개인정보”)를 수집합니다.
+**귀하가 제공하는 개인정보:** 귀하가 서비스를 이용하기 위해 계정을 생성하거나 OpenAI와 소통하는 경우 OpenAI는 다음과 같이 개인정보를 수집합니다.
+*   _계정 정보:_ 귀하가 OpenAI에 계정을 생성할 때, OpenAI는 귀하의 성명, 연락처, 계정 자격증명, 생년월일, 결제 정보 및 거래 내역을 포함한 귀하의 계정과 관련된 정보(총칭하여 “계정 정보”)를 수집합니다. 일부 서비스에서는 계정 정보의 일부로 프로필 사진, 사용자 이름 또는 기타 정보를 업로드할 수도 있습니다.
+*   _사용자 콘텐츠:_ 서비스에 입력한 정보(이하 “콘텐츠”)에 포함된 개인 데이터를 수집하며, 여기에는 프롬프트와 함께 [파일⁠(새 창에서 열기)](https://help.openai.com/en/articles/8555545-file-uploads-faq), [이미지⁠(새 창에서 열기)](https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq), [오디오 및 동영상⁠(새 창에서 열기)](https://help.openai.com/en/articles/8400625-voice-mode-faq), [Sora 캐릭터⁠(새 창에서 열기)](https://help.openai.com/en/articles/12435986-generating-content-with-cameos), 그리고 사용하는 기능에 따라 [연결된 서비스⁠(새 창에서 열기)](https://help.openai.com/en/articles/11487775-connectors-in-chatgpt)의 데이터 등 사용자가 업로드한 기타 콘텐츠가 포함됩니다. 일부 서비스에서는 게시, 댓글 작성, 메시지 전송 등 다른 사용자와 상호작용할 수 있으며, 이러한 상호작용 역시 콘텐츠로 취급합니다.
+*   _커뮤니케이션 정보:_ 귀하가 이메일 또는 OpenAI의 소셜 미디어 사이트 페이지 등을 통해 OpenAI와 커뮤니케이션하는 경우, OpenAI는 귀하의 성명, 연락처와 같은 개인정보와 귀하가 보내는 메시지의 내용(“커뮤니케이션 정보”)을 수집할 수 있습니다.
+*   _연락처 데이터:_ 장치 연락처를 연결하도록 선택하는 경우, 장치의 주소록에서 정보를 업로드하고 해당 연락처 중 누가 당사 서비스를 사용하는지 확인합니다. 연락처 중 아직 서비스를 사용하지 않는 사람이 있는 경우, 이후 해당 사용자가 서비스를 가입하면 이를 알려드립니다. 연락처를 연결하는 방법과 당사 서비스를 사용하지 않는 사람들의 [업로드된 연락처 정보를 사용하는 방식⁠(새 창에서 열기)](http://help.openai.com/articles/20001059)에 대해 [자세히 알아보세요⁠(새 창에서 열기)](http://help.openai.com/articles/20001058).
+*   _기타 제공 정보_: 행사 또는 설문조사에 참여할 때 제공하는 정보, 또는 신원이나 연령 확인을 위해 당사 또는 당사를 대신해 운영하는 공급자에게 제공하는 정보 등 기타 정보를 수집합니다(통칭하여 “기타 제공 정보”).
+**서비스 이용으로부터 수집되는 개인 데이터**: 서비스를 방문, 이용 또는 상호작용할 때, 방문, 이용 또는 상호작용과 관련된 다음 정보를 수집합니다.
+*   _로그 데이터_: OpenAI는 귀하가 서비스를 이용할 때 귀하의 브라우저 또는 장치가 자동으로 전송하는 정보를 수집합니다. 로그 데이터는 귀하의 IP 주소, 브라우저 유형 및 설정, 요청 일시 및 OpenAI 서비스와 상호작용하는 방식을 포함합니다.
+*   _사용 데이터_: OpenAI는 귀하가 서비스 전반에서 열람하거나 참여하는 콘텐츠의 종류, 사용하는 기능, 수행하는 작업, 모델 응답에 대한 피드백 제출 시점, 상호작용하는 사람들, 시간대, 국가, 접속 일시, 사용자 에이전트 및 버전, 컴퓨터 또는 모바일 기기의 유형, 컴퓨터 연결에 관한 정보를 수집합니다. Atlas 브라우저를 사용하는 경우, [설정⁠(새 창에서 열기)](https://help.openai.com/en/articles/12574142-chatgpt-atlas-data-controls-and-privacy) 및 서비스 이용 방식에 따라 브라우저 데이터를 추가로 수집할 수 있습니다.
+*   _장치 정보:_ OpenAI는 귀하가 사용하는 장치의 명칭, 운영체제, 장치 식별 정보 및 브라우저와 같이 귀하가 서비스에 액세스하기 위해 사용하는 장치에 대한 정보를 수집합니다. 수집되는 정보는 귀하가 사용하는 장치의 종류 및 그 설정에 따라 달라질 수 있습니다.
+*   _위치 정보:_ OpenAI는 비정상적인 로그인 활동을 감지하여 귀하의 계정을 보호하기 위한 목적 등 보안상의 이유와 귀하에게 더 정확한 응답을 제공하는 등 제품 경험을 개선하기 위한 이유로, 장치의 IP 주소와 같은 정보를 기반으로 귀하의 장치가 서비스에 액세스하는 대략적인 지역 정보를 확인할 수 있습니다. 또한, 일부 서비스의 경우 귀하는 장치의 GPS 위치 정보와 같이 보다 정확한 위치 정보를 제공할 것을 선택할 수 있습니다.
+*   _쿠키 및 유사 기술:_ OpenAI는 서비스를 운영 및 관리하고 귀하의 경험을 개선하기 위한 목적으로 쿠키 및 유사 기술을 사용합니다. 본 정책에 설명된 일부 정보는 쿠키를 통해 저장되며, 예를 들어 로그인하지 않은 상태에서도 세션 간 환경설정을 유지하거나 인증 및 고객 지원을 지원하는 데 사용됩니다. 쿠키 사용에 대한 자세한 내용은 [쿠키 고지⁠](https://openai.com/policies/cookie-policy/)를 읽어보세요.
+**기타 출처로부터 수신하는 정보:** 서비스의 안전을 보호하고 사기, 남용 및 기타 위협을 방지하기 위해 신뢰하는 보안 및 안전 파트너로부터 정보를 수신하며, 비즈니스 서비스의 잠재 고객에 대한 정보를 제공하는 마케팅 공급자로부터도 정보를 수신합니다.
+OpenAI는 또한 OpenAI의 서비스를 지원하는 모델 개발을 위해 인터넷에 공개된 정보 등 기타 출처로부터 정보를 수집합니다. ChatGPT 및 기타 서비스를 구동하는 모델 개발에 사용되는 정보 출처에 대한 자세한 내용은 [이 지원 센터 문서⁠(새 창에서 열기)](https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed)를 참고하세요.
+## 2. 개인정보 사용 방법
+OpenAI는 다음과 같은 목적으로 개인정보를 사용할 수 있습니다.
+*   ChatGPT에 대한 질문에 답변하는 등의 서비스 제공, 분석 및 유지
+*   신규 기능 개발 등 서비스 개선, 개발 및 연구 수행
+*   서비스 전반에서 경험을 개인화하고 맞춤화하기 위해, 예를 들어 보다 관련성 높은 콘텐츠를 제공하기 위해;
+*   귀하와 소통하기 위해, 질문에 응답하고 서비스 변경 또는 개선 사항 등 당사의 서비스 및 이벤트에 대한 정보를 귀하에게 전달하기 위해;
+*   연락처 연결을 선택한 경우, 당사 서비스를 사용하는 연락처를 식별하고 이후 해당 연락처가 서비스를 이용하게 되면 이를 알리기 위해;
+*   사기, 불법 활동, 서비스 오용을 방지하고, 플랫폼에 제출되거나 교환되는 콘텐츠를 모니터링하는 등 시스템과 서비스의 보안을 보호하기 위해([자세히 보기⁠](https://openai.com/ko-KR/transparency-and-content-moderation/)); 그리고
+*   법적 의무를 준수하고, 사용자, OpenAI 또는 제3자의 권리, 개인정보, 안전 또는 재산을 보호하기 위해, 예를 들어 귀하 또는 타인에게 발생할 수 있는 피해를 방지하거나 연령에 적합한 경험을 제공하기 위해 연령을 추정하는 경우를 포함합니다.
+OpenAI는 또한 개인정보로 더 이상 귀하를 식별할 수 없도록 총계화하거나 비식별화할 수 있으며, 서비스가 이용되는 방식을 분석하고, 서비스의 기능을 개선 및 추가하고, 연구를 수행하는 등 위에 기술된 목적으로 이를 이용할 수 있습니다. OpenAI는 비식별화된 정보를 비식별화된 형태로 유지 및 이용하며, 관련 법령에 의해 요구되지 않는 한 해당 정보의 재식별을 시도하지 않습니다.
+위에서 설명한 바와 같이, OpenAI는 ChatGPT의 기반이 되는 모델을 학습시키는 등 서비스를 개선하기 위하여 귀하가 OpenAI에 제공하는 콘텐츠를 이용할 수 있습니다. 모델 학습에 귀하의 콘텐츠를 이용하는 것을 거부하는 방법에 관한 [설명⁠(새 창에서 열기)](https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance)을 참조하시기 바랍니다.
+## 3. 개인정보의 공개
+OpenAI는 다음과 같은 상황에서 귀하의 개인정보를 공개할 수 있습니다.
+*   _공급업체 및 서비스 제공업체_: 비즈니스 운영상의 필요를 충족하고 특정 서비스 및 기능을 수행하기 위해, 당사는 호스팅 서비스 제공업체, 고객 지원 서비스 제공업체, 클라우드 서비스, 콘텐츠 전송 서비스, 지원 및 안전 서비스, 이메일 커뮤니케이션 소프트웨어, 웹 분석 서비스, 결제 및 거래 처리업체, 검색 및 쇼핑 제공업체, 정보 기술 제공업체를 포함한 공급업체 및 서비스 제공업체에 개인 데이터를 공개합니다. 또한 당사는 연령 및 신원 확인을 지원하는 서비스 제공업체와 협력하고 있으며, 이에 대한 자세한 내용은 [여기에서 자세히 알아볼 수 있습니다⁠(새 창에서 열기)](https://help.openai.com/en/articles/12652064-age-prediction-in-chatgpt). 당사의 지침에 따라, 이러한 당사자들은 당사를 위한 업무를 수행하는 범위 내에서만 개인 데이터에 액세스, 처리 또는 저장합니다.
+*   _비즈니스 전송_: OpenAI가 전략적 거래, 구조조정, 파산, 법정관리 또는 기타 서비스 제공자에 대한 서비스 이전(총칭하여 “거래”)에 관여되는 경우, 귀하의 개인정보는 실사 과정에서 거래 상대방 및 거래를 지원하는 기타 주체에게 공개될 수 있으며, 거래의 일부로서 다른 자산과 함께 양수인 또는 계열사에 이전될 수 있습니다.
+*   _정부 당국 또는 기타 제3자_: OpenAI는 (i) 법적 의무를 준수하기 위해 요구되거나 법적 의무를 준수하기 위하여 그러한 조치가 필요하다고 선의로 판단한 경우, (ii) OpenAI의 권리 또는 재산을 보호 및 방어하기 위한 경우, (iii) OpenAI의 단독 재량에 따라 OpenAI의 조건, 정책 또는 법률에 위배되는 사항이 있다고 판단하는 경우, (iv) 사기 또는 기타 불법 행위를 감지하거나 방지하기 위한 경우, (v) OpenAI의 제품, 직원, 사용자 또는 공공의 안전, 보안 및 무결성을 보호하기 위한 경우, 또는 (vi) 법적 책임으로부터 보호하기 위한 경우, 귀하가 서비스와 상호작용한 정보를 포함한 개인정보를 법률에 따라 정부 당국, 동종업계 또는 기타 제3자에 공유할 수 있습니다.
+*   _계열사_: 당사는 OpenAI를 지배하거나, OpenAI의 지배를 받거나, OpenAI와 공동의 지배하에 있는 법인, 즉 계열사에 개인정보를 공개할 수 있습니다. 당사의 계열사는 본 정책과 일치하는 방식으로 해당 개인 데이터를 사용할 수 있습니다.
+*   _비즈니스 계정 관리자_: 귀하가 ChatGPT Enterprise 또는 비즈니스 계정에 가입할 때, 해당 계정의 관리자들은 귀하의 콘텐츠에 액세스하는 등 귀하의 OpenAI 계정에 액세스하고 이를 제어할 수 있습니다. 또한 귀하가 귀하의 고용주 또는 다른 조직 소유의 이메일 주소를 이용하여 계정을 생성하는 경우, OpenAI는 이를 비즈니스 계정에 추가하는 등의 목적으로 귀하의 고용주 또는 조직에 귀하가 계정을 보유하고 있다는 사실과 귀하의 이메일 주소 등 특정 계정 정보를 공유할 수 있습니다.
+*   _청소년의 부모 또는 보호자_: 청소년 사용자와 해당 부모 또는 보호자는 계정을 연결하도록 선택할 수 있으며, 이를 통해 부모 또는 보호자가 특정 설정을 관리하고 중대한 안전 문제가 감지될 경우 알림을 받을 수 있습니다. 이러한 계정은 언제든지 연결 해제할 수 있습니다. 계정 연결에 대해 [자세히 알아보세요⁠(새 창에서 열기)](https://help.openai.com/en/articles/12315553-parental-controls-on-chatgpt-faq).
+*   _상호작용하거나 정보를 공유하는 다른 사용자 및 제3자_: 일부 서비스에서는 다른 사용자 또는 제3자와 상호작용하거나 정보를 공유할 수 있습니다. 예를 들어, [ChatGPT 대화⁠(새 창에서 열기)](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)나 Sora [동영상⁠(새 창에서 열기)](https://help.openai.com/en/articles/12456897-getting-started-with-the-sora-app) 및 [캐릭터⁠(새 창에서 열기)](https://help.openai.com/en/articles/12435986-generating-content-with-cameos)와 같은 콘텐츠를 공유하거나, 제3자 [검색⁠(새 창에서 열기)](https://help.openai.com/en/articles/9237897-chatgpt-search) 및 [쇼핑⁠(새 창에서 열기)](https://help.openai.com/en/articles/12440090-instant-checkout-buy-directly-from-merchants-through-chatgpt) 파트너와 정보를 공유할 수 있습니다. 제3자 파트너와 공유하는 정보는 해당 파트너의 자체 약관 및 개인정보 보호 정책의 적용을 받으므로, 정보를 공유하기 전에 이러한 약관과 정책을 이해해야 합니다.
+또한 당사는 개인을 식별할 수 없도록 개인 데이터를 집계하거나 비식별화하여, 서비스 개선을 포함한 상기 목적을 위해 제3자와 공유합니다.
+## 4. 보존
+OpenAI는 귀하에게 서비스를 제공하기 위하여 필요한 기간 동안, 또는 분쟁 해결, 안전 및 보안상의 이유나 법적 의무 준수와 같은 기타 적법한 사업상의 목적을 위하여 필요한 기간 동안에만 귀하의 개인정보를 보유합니다. 개인 데이터를 보관하는 기간은 데이터의 유형, 해당 데이터를 사용하는 방식, 그리고 많은 경우 설정에 따라 달라집니다.
+*   **삭제할 때까지 보관되는 정보:** 일부 서비스에서는 계정에 저장된 개인 데이터를 삭제할 수 있습니다. 예를 들어, 특정 또는 모든 ChatGPT 대화를 삭제하거나, 특정 [저장된 메모리⁠(새 창에서 열기)](https://help.openai.com/en/articles/8590148-memory-faq)를 삭제하거나, 계정을 삭제할 수 있습니다. 개인 데이터를 삭제하기로 선택하면, 아래에 설명된 사유로 더 오래 보관해야 하는 경우이거나 콘텐츠를 [모델 개선⁠(새 창에서 열기)](https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance)에 사용하도록 허용하여 이미 비식별화되어 계정과 분리된 경우를 제외하고, 30일 이내에 당사 시스템에서 삭제됩니다.
+*   **자동으로 삭제되는 정보:** 일부 경우에는 개인 데이터가 자동으로 삭제됩니다. 예를 들어, [임시 채팅⁠(새 창에서 열기)](https://help.openai.com/en/articles/8914046-temporary-chat-faq)은(아래에 더 설명된 바와 같이 안전 또는 법적 사유로 보관해야 하는 경우를 제외하고) 30일 이내에 자동으로 삭제되며, [Atlas 시크릿 브라우징 기록⁠(새 창에서 열기)](https://help.openai.com/en/articles/12574142-chatgpt-atlas-data-controls-and-privacy#h_1822c59321)은 세션을 종료하면 저장되지 않습니다.
+*   **정당한 보안, 안전 또는 법적 사유로 더 오래 보관되는 정보:** 일부 경우에는 법적 의무, 사기 및 남용 대응, 보안 사유, 또는 재무 기록 보관 목적 등으로 인해 개인 데이터를 삭제 후에도 더 오래 보관해야 할 수 있습니다. 예:
+*   특정 콘텐츠 또는 계정이 [사용 정책⁠](https://openai.com/policies/usage-policies/) 위반으로 인해 차단된 경우, 당사는 사기, 남용 또는 기타 정책 위반으로부터 서비스를 보호하기 위해 해당 데이터를 보관할 수 있습니다.
+*   법적으로 데이터를 보관해야 하는 경우(예: 적법한 소환장을 받은 경우), 관련 법적 또는 규제상 의무가 지속되는 기간 동안 해당 데이터를 보관할 수 있습니다.
+*   당사가 금융 거래의 당사자인 경우(예: ChatGPT Plus 또는 Pro 계정 결제를 처리하거나 ChatGPT에서 구매를 중개하는 경우), 회계, 분쟁 해결 및 규제 준수 목적을 충족하기 위해 결제 및 거래 관련 정보를 보관할 수 있습니다.
+*   개인 데이터 삭제를 요청하는 경우, 요청을 준수했음을 확인하기 위해 삭제 요청에 대한 감사 기록을 보관합니다.
+이러한 보관 기간을 결정할 때, 당사는 다음과 같은 여러 요소를 고려합니다.
+*   개인 데이터를 처리하는 목적(예: 서비스를 제공하기 위해 보관이 필요한지 여부).
+*   정보의 양, 성격 및 민감도
+*   무단 이용 또는 공개로 인한 잠재적 피해 위험
+*   OpenAI에 적용되는 모든 법적 의무
+## 5. 데이터 제어
+당사의 서비스는 개인 데이터의 사용 및 보관 방식에 대해 여러 가지 제어 기능을 제공합니다. 이러한 설정은 언제든지 계정에서 변경할 수 있습니다. 다음과 같은 제어 기능이 포함됩니다.
+*   [콘텐츠를 모델 개선 및 학습에 사용할지 여부를 쉽게 선택할 수 있습니다⁠(새 창에서 열기)](https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance).
+*   콘텐츠를 보다 개인화하고 관련성 있게 만들기 위해 대화 간 세부 정보를 기억할지 여부를 결정할 수 있습니다.
+*   계정의 데이터 제어에서 ChatGPT 기록과 데이터를 내보낼 수 있습니다.
+*   ChatGPT에서 대화를 삭제하거나 보관할 수 있으며, 계정을 완전히 삭제할 수도 있습니다.
+*   ChatGPT에서 [임시 채팅⁠(새 창에서 열기)](https://help.openai.com/en/articles/8914046-temporary-chat-faq)을 활성화하면, 해당 대화는 기록에 남지 않으며 OpenAI의 모델 개선에 사용되지 않습니다.
+*   적용되는 법률에 따라, 서비스를 이용할 때 사용되는 쿠키를 선택할 수 있습니다.
+*   Atlas 브라우저를 사용하는 경우, 검색 기록을 삭제하거나 시크릿 모드를 선택해 동일한 기기를 사용하는 다른 사람으로부터 검색 기록을 보호할 수 있습니다.
+*   마케팅 커뮤니케이션에 포함된 선택 옵션을 사용해 수신을 거부할 수 있습니다.
+## 6. 귀하의 권리
+거주 지역에 따라, 귀하는 귀하의 개인정보와 관련하여 법적으로 보장된 특정 권리를 가질 수 있습니다. 예를 들어, 귀하는 다음과 같은 권리를 가질 수 있습니다.
+*   개인정보 및 개인정보 처리 방법에 관한 정보에 액세스할 권리.
+*   개인 데이터 정정 또는 업데이트
+*   OpenAI 기록에서 개인정보를 삭제할 권리.
+*   OpenAI가 개인정보를 처리하는 방식을 제한할 권리.
+*   개인정보를 제3자에게 전송할 권리(전송 요구권).
+*   귀하의 동의를 철회할 권리(OpenAI가 동의를 개인정보 처리에 대한 법적 근거로 사용하는 경우).
+*   현지 개인정보 보호 당국에 불만을 제기할 권리.
+정확성에 대한 참고 사항: ChatGPT와 같은 서비스는 사용자의 요청을 읽고 그 다음에 나올 가능성이 가장 높은 단어를 예측하여 응답을 생성합니다. 경우에 따라, 다음에 나올 가능성이 가장 높은 단어들이 사실상 가장 정확하지 않을 수 있습니다. 따라서 모델이 출력하는 결과의 사실적 정확성에 의존해서는 안 됩니다. ChatGPT 출력 결과에 귀하에 관해 사실과 다른 정보가 포함되어 있음을 발견하여 해당 정보의 정정 또는 삭제를 요청하려면, [privacy.openai.com⁠(새 창에서 열기)](https://privacy.openai.com/) 또는 [dsar@openai.com⁠](mailto:dsar@openai.com)으로 요청을 제출하실 수 있습니다. 관련 법률 및 당사 모델의 기술적 능력을 고려하여 귀하의 요청을 검토할 것입니다.
+모델 학습을 위해 당사가 인터넷에서 수집한 데이터에 대해 귀하의 권리를 행사하는 방법을 알아보려면 [이 도움말 센터 문서⁠(새 창에서 열기)](https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed)를 참조하시기 바랍니다.
+OpenAI는 본 정책에 설명된 목적을 위해 여러 관할 지역에 위치한 서버에서 개인정보를 처리하며, 여기에는 미국에 있는 당사의 시설 및 서버 또는 당사의 계열사와 파트너, 공급업체 및 서비스 제공업체가 위치한 국가나 지역에서 개인정보를 처리하고 저장하는 것이 포함됩니다. 정보보호 법률은 국가마다 다르지만, 처리 위치와 상관없이 본 정책에 명시된 보호조치를 귀하의 개인정보에 적용하며, 법적으로 유효한 전송 메커니즘에 따라서만 해당 데이터를 전송합니다.
+## 7. 아동
+당사의 서비스는 만 13세 미만의 아동을 대상으로 하거나 만 13세 미만의 아동을 위한 것이 아닙니다. 당사는 만 13세 미만 아동으로부터 고의로 개인정보를 수집하지 않습니다. 만 13세 미만의 아동이 서비스를 통해 OpenAI에 개인정보를 제공했다고 믿을 만한 근거가 있는 경우, privacy@openai.com으로 이메일을 보내주시기 바랍니다. 당사는 모든 통지를 조사하고, 적절한 경우 시스템에서 개인정보를 삭제할 것입니다. 만 18세 미만의 사용자는 부모나 보호자의 허가를 받아야만 서비스를 이용할 수 있습니다. 청소년과 부모 또는 보호자가 계정을 연결하는 방법에 대해 [자세히 알아보세요⁠(새 창에서 열기)](https://help.openai.com/en/articles/12315553-parental-controls-on-chatgpt-faq).
+## 8. 보안
+OpenAI는 분실, 오용, 무단 액세스, 공개, 변경 또는 파기로부터 개인정보를 보호하도록 고안된 상업적으로 합리적인 기술적, 관리적 및 조직적 보호 조치를 시행하고 있습니다. 그러나 인터넷이나 이메일 전송은 결코 완전히 안전하거나 오류가 없지 않습니다. 따라서 귀하는 서비스에 제공할 정보를 결정할 때 특히 주의를 기울여야 합니다. 또한, 당사는 서비스 또는 제3자 웹사이트에 포함된 개인정보 보호 설정이나 보안 조치를 우회하는 행위에 대해 책임을 지지 않습니다.
+## 9. 미국 주법에 따른 추가 공개
+일부 [미국 주 개인정보 보호법⁠(새 창에서 열기)](http://help.openai.com/articles/20001055)은 특정 고지를 요구합니다. 다음 표는 당사가 수집하는 개인정보의 범주와 해당 정보를 사용 및 공개하는 방식에 대한 추가 정보를 제공합니다. 당사가 수집하는 개인정보와 그 수집 출처에 대해서는 위의 “[수집하는 개인정보⁠](https://openai.com/ko-KR/policies/row-privacy-policy/#personal-data-we-collect)”에서, 개인정보를 사용하는 방법에 대해서는 위의 “[개인정보 사용 방법⁠](https://openai.com/ko-KR/policies/row-privacy-policy/#how-we-use-personal-data)”에서, 개인정보를 공개하는 시점에 대해서는 위의 “[개인정보 공개⁠](https://openai.com/ko-KR/policies/row-privacy-policy/#disclosure-of-personal-data)”에서, 그리고 개인정보를 보관하는 방법에 대해서는 위의 “[보관⁠](https://openai.com/ko-KR/policies/row-privacy-policy/#retention)”에서 더 자세히 확인할 수 있습니다.
+귀하의 거주지와 적용 가능한 예외 사항에 따라, 귀하는 귀하의 개인정보와 관련하여 다음과 같은 프라이버시권을 가질 수 있습니다.
+*   이전이 가능한 형식으로 개인정보 열람을 요청할 수 있는 권리를 포함한 귀하의 개인정보 처리에 대해 알 권리
+*   개인정보의 삭제를 요청할 권리
+*   개인정보를 정정할 권리
+*   개인정보 권리의 행사와 관련하여 어떠한 보복도 받지 않을 권리.
+OpenAI는 교차맥락 행동 광고(cross-contextual behavioral advertising)를 위해 개인정보를 “판매”하거나 개인 정보를 “공유”하지 않으며, “타겟 광고(targeted advertising)” 목적(관련 주의 개인정보 보호법에 정의된 해당 용어의 의미를 따름)으로 개인정보를 처리하지 않습니다. 또한, 민감한 개인정보를 소비자의 특성을 유추하는 목적으로 처리하지 않습니다.
+**신원 확인.** 개인정보에 대한 무단 액세스, 변경 또는 삭제를 방지하기 위해, 당사는 귀하가 개인정보를 열람, 정정 또는 삭제하기 위한 요청을 제출하기 전에 자격 증명을 확인하기를 요구할 수 있습니다. 귀하가 당사에 계정을 보유하고 있지 않거나 사기 또는 악의적인 활동이 의심되는 경우, 당사는 신원 확인을 위해 추가적인 개인정보 제공을 요청할 수 있습니다. 귀하의 신원을 확인할 수 없는 경우 요청을 처리할 수 없습니다.
+**수권 대리인.** 거주 지역에 따라, 승인된 대리인을 통해서도 권리 요청을 제출할 수 있습니다. 이 경우, 대리인은 서명된 서면 동의 등 귀하를 대신해 행동할 권한을 제시해야 하며, 또한 귀하가 당사에 대해 별도로 본인 확인을 해야 할 수도 있습니다. 수권 대리인은 dsar@openai.com으로 요청을 제출할 수 있습니다.
+**이의 제기.** 거주하는 지역에 따라, 귀하는 귀하의 권리 행사 요청과 관련하여 당사가 내린 결정에 대해 이의를 제기할 권리가 있을 수 있습니다. 결정에 이의를 제기하려면, [dsar@openai.com⁠](mailto:dsar@openai.com)으로 요청을 보내주시기 바랍니다.
+## 10. 개인정보 처리방침의 변경
+본 정책은 수시로 업데이트될 수 있습니다. 업데이트될 경우, 관련 법률에 따라 다른 유형의 통지가 요구되지 않는 한, 이 페이지에 업데이트된 버전과 효력 발생일을 게시할 것입니다.
+## 11. 데이터 관리 주체
+귀하가 유럽경제지역(EEA) 또는 스위스에 거주하는 경우, 등록 사무소가 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper, Dublin 1, D01 YC43, Ireland에 있는 OpenAI Ireland Limited가 데이터 컨트롤러이며, OpenAI Ireland Limited는 본 정책에 기술된 바에 따라 귀하의 개인정보를 처리할 책임이 있습니다.
+그 외 지역에 거주하는 경우, 미국 1455 Third Street, San Francisco, California 94158에 등록 사무소를 둔 OpenAI OpCo, LLC가 본 정책에 설명된 바와 같이 개인 데이터 처리에 대한 관리자가 됩니다.
+## 12. 당사에 문의하는 방법
+## 13. 유용한 리소스
