@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { FloatingSitesSection } from "@/components/floating-sites-section";
 import { SearchSection } from "@/components/search-section";
@@ -13,6 +13,8 @@ interface Preset {
   label: string;
 }
 
+const SECTION_COUNT = 3;
+
 export default function Home() {
   const [presets, setPresets] = useState<Preset[]>([]);
   const [loading, setLoading] = useState(false);
@@ -21,6 +23,8 @@ export default function Home() {
   const [meta, setMeta] = useState<{ char_count: number; method: string } | null>(null);
   const [activeSiteName, setActiveSiteName] = useState<string | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [activeSection, setActiveSection] = useState(0);
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     fetch("/api/presets")
@@ -78,11 +82,40 @@ export default function Home() {
     setError(null);
   }
 
+  function scrollToSection(index: number) {
+    const el = mainRef.current;
+    if (!el) return;
+    el.scrollTo({ top: index * el.clientHeight, behavior: "smooth" });
+  }
+
   return (
     <>
       <SiteHeader />
 
-      <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+      <nav className="fixed top-1/2 right-5 z-50 hidden -translate-y-1/2 flex-col gap-3 md:flex">
+        {Array.from({ length: SECTION_COUNT }).map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`섹션 ${i + 1}로 이동`}
+            onClick={() => scrollToSection(i)}
+            className={`h-2 w-2 rounded-full transition-all ${
+              activeSection === i
+                ? "h-6 bg-neutral-900 dark:bg-white"
+                : "bg-neutral-300 hover:bg-neutral-400 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+            }`}
+          />
+        ))}
+      </nav>
+
+      <main
+        ref={mainRef}
+        onScroll={(e) => {
+          const el = e.currentTarget;
+          setActiveSection(Math.round(el.scrollTop / el.clientHeight));
+        }}
+        className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
+      >
         <FloatingSitesSection onSelectSite={handleFeaturedSelect} />
         <SearchSection presets={presets} onSearchResult={handleSearchResult} />
         <LinkSection loading={loading} onAnalyze={handleUrlAnalyze} />

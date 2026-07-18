@@ -59,16 +59,25 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
   }
 
   return (
-    <section className="flex min-h-screen snap-start flex-col items-center justify-center bg-neutral-50 px-6">
-      <div className="w-full max-w-lg text-center">
-        <h2 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">검색하기</h2>
-        <p className="mt-4 text-lg text-neutral-500">이미 분석이 끝난 사이트를 검색해보세요!</p>
+    <section className="relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden bg-neutral-50 px-6 dark:bg-neutral-950">
+      <div className="pointer-events-none absolute top-1/3 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-100/50 blur-3xl dark:bg-blue-500/5" />
+
+      <div className="relative z-10 w-full max-w-lg text-center">
+        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-black/5 dark:bg-neutral-900 dark:ring-white/10">
+          <Search className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+        </div>
+        <h2 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-white">
+          검색하기
+        </h2>
+        <p className="mt-4 text-lg text-neutral-500 dark:text-neutral-400">
+          이미 분석이 끝난 사이트를 검색해보세요
+        </p>
 
         <div className="mt-10 flex gap-2">
           <div className="relative flex-1">
             <Search className="absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-neutral-400" />
             <Input
-              className="h-12 rounded-2xl border-neutral-200 bg-white pl-11 text-base shadow-sm"
+              className="h-12 rounded-2xl border-neutral-200 bg-white pl-11 text-base shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
               placeholder="카카오T, 멜론, 토스, 넷플릭스..."
               value={query}
               onChange={(e) => {
@@ -88,10 +97,12 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         </div>
 
         {noResult && (
-          <p className="mt-4 text-sm font-medium text-red-500">검색결과가 없습니다.</p>
+          <p className="mt-4 text-sm font-medium text-red-500 animate-in fade-in slide-in-from-top-1">
+            검색결과가 없습니다. 아래에서 링크로 직접 분석해보세요.
+          </p>
         )}
 
-        <p className="mt-8 text-xs text-neutral-400">
+        <p className="mt-8 text-xs text-neutral-400 dark:text-neutral-500">
           {presets.length}개의 사전 크롤링 문서에서 검색합니다
         </p>
       </div>
