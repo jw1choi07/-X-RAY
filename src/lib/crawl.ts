@@ -3,10 +3,10 @@ import * as cheerio from "cheerio";
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
 
-/** 정적 HTML 결과가 이보다 짧으면 JS 렌더링 폴백을 시도합니다. */
+/** 정적 HTML 결과가 이보다 짧으면 추가 수집 방식을 시도합니다. */
 const MIN_TEXT_LENGTH = 500;
 
-const BROWSER_TIMEOUT_MS = 45_000;
+const READER_TIMEOUT_MS = 45_000;
 
 export class CrawlBlocked extends Error {}
 
@@ -22,6 +22,99 @@ function htmlToText(html: string): string {
   const $ = cheerio.load(html);
   $("script, style, noscript").remove();
   return normalizeText($("body").text());
+}
+
+function jsonToText(value: unknown, depth = 0): string {
+  if (depth > 8) return "";
+  if (typeof value === "string") {
+    return value.length >= 40 ? value : "";
+  }
+  if (Array.isArray(value)) {
+    return value.map((item) => jsonToText(item, depth + 1)).filter(Boolean).join("\n");
+  }
+  if (!value || typeof value !== "object") return "";
+
+  const record = value as Record<string, unknown>;
+  const preferredKeys = [
+    "text",
+    "content",
+    "body",
+    "html",
+    "description",
+    "articleBody",
+    "privacyPolicy",
+    "termsOfService",
+    "markdown",
+    "rawContent",
+  ];
+
+  const chunks: string[] = [];
+  for (const key of preferredKeys) {
+    const part = jsonToText(record[key], depth + 1);
+    if (part) chunks.push(part);
+  }
+
+  for (const nested of Object.values(record)) {
+    if (nested && typeof nested === "object") {
+      const part = jsonToText(nested, depth + 1);
+      if (part) chunks.push(part);
+    }
+  }
+
+  return chunks.join("\n");
+}
+
+function extractEmbeddedText(html: string): string {
+  const $ = cheerio.load(html);
+  const chunks: string[] = [];
+
+  const nextData = $("#__NEXT_DATA__").html();
+  if (nextData) {
+    try {
+      chunks.push(jsonToText(JSON.parse(nextData)));
+    } catch {
+      /* ignore malformed JSON */
+    }
+  }
+
+  $('script[type="application/ld+json"], script[type="application/json"]').each((_, el) => {
+    const raw = $(el).html();
+    if (!raw) return;
+    try {
+      chunks.push(jsonToText(JSON.parse(raw)));
+    } catch {
+      /* ignore malformed JSON */
+    }
+  });
+
+  $("script:not([src])").each((_, el) => {
+    const content = $(el).html() ?? "";
+    const patterns = [
+      /window\.__NEXT_DATA__\s*=\s*(\{[\s\S]*?\})\s*;?/,
+      /window\.__INITIAL_STATE__\s*=\s*(\{[\s\S]*?\})\s*;?/,
+      /window\.__PRELOADED_STATE__\s*=\s*(\{[\s\S]*?\})\s*;?/,
+    ];
+    for (const pattern of patterns) {
+      const match = content.match(pattern);
+      if (!match) continue;
+      try {
+        chunks.push(jsonToText(JSON.parse(match[1])));
+      } catch {
+        /* ignore malformed JSON */
+      }
+    }
+  });
+
+  return normalizeText(chunks.join("\n"));
+}
+
+function stripReaderMetadata(raw: string): string {
+  const marker = "Markdown Content:";
+  const markerIndex = raw.indexOf(marker);
+  if (markerIndex !== -1) {
+    return raw.slice(markerIndex + marker.length).trim();
+  }
+  return raw.trim();
 }
 
 async function robotsAllowed(url: string): Promise<boolean> {
@@ -50,36 +143,33 @@ async function robotsAllowed(url: string): Promise<boolean> {
   }
 }
 
-async function fetchStatic(url: string): Promise<string> {
+async function fetchStatic(url: string): Promise<{ html: string; text: string }> {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const contentType = res.headers.get("content-type") ?? "";
   if (contentType.toLowerCase().includes("pdf") || url.toLowerCase().endsWith(".pdf")) {
-    return `[PDF 파일 - 별도 파서 필요, 원본 URL: ${url}]`;
+    const placeholder = `[PDF 파일 - 별도 파서 필요, 원본 URL: ${url}]`;
+    return { html: "", text: placeholder };
   }
   const html = await res.text();
-  return htmlToText(html);
+  return { html, text: htmlToText(html) };
 }
 
-async function fetchWithBrowser(url: string): Promise<string> {
-  const { chromium } = await import("playwright");
-  const browser = await chromium.launch({ headless: true });
+async function fetchViaReader(url: string): Promise<string> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), READER_TIMEOUT_MS);
   try {
-    const page = await browser.newPage({ userAgent: UA });
-    await page.goto(url, { waitUntil: "networkidle", timeout: BROWSER_TIMEOUT_MS });
-
-    // SPA가 #root 등에 늦게 렌더링하는 경우를 위해 잠시 대기
-    await page
-      .waitForFunction(
-        () => (document.body?.innerText?.replace(/\s+/g, "")?.length ?? 0) > 200,
-        { timeout: 10_000 },
-      )
-      .catch(() => {});
-
-    const text = await page.locator("body").innerText();
-    return normalizeText(text);
+    const res = await fetch(`https://r.jina.ai/${url}`, {
+      headers: {
+        "User-Agent": UA,
+        Accept: "text/plain",
+      },
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`Reader API HTTP ${res.status}`);
+    return normalizeText(stripReaderMetadata(await res.text()));
   } finally {
-    await browser.close();
+    clearTimeout(timer);
   }
 }
 
@@ -87,25 +177,38 @@ function isPdfPlaceholder(text: string): boolean {
   return text.startsWith("[PDF 파일");
 }
 
+function pickLongerText(current: string, candidate: string): string {
+  return candidate.length > current.length ? candidate : current;
+}
+
 export async function fetchDocument(url: string) {
   if (!(await robotsAllowed(url))) {
     throw new CrawlBlocked(`이 사이트는 robots.txt로 자동 수집을 금지하고 있습니다: ${url}`);
   }
 
-  let text = await fetchStatic(url);
+  const { html, text: staticText } = await fetchStatic(url);
+  let text = staticText;
   let method = "static";
 
   if (text.length < MIN_TEXT_LENGTH && !isPdfPlaceholder(text)) {
+    const embeddedText = extractEmbeddedText(html);
+    if (embeddedText.length > text.length) {
+      text = embeddedText;
+      method = "embedded";
+    }
+  }
+
+  if (text.length < MIN_TEXT_LENGTH && !isPdfPlaceholder(text)) {
     try {
-      const browserText = await fetchWithBrowser(url);
-      if (browserText.length > text.length) {
-        text = browserText;
-        method = "browser";
+      const readerText = await fetchViaReader(url);
+      text = pickLongerText(text, readerText);
+      if (readerText.length >= MIN_TEXT_LENGTH || readerText.length > staticText.length) {
+        method = "reader";
       }
     } catch (e) {
       if (text.length < MIN_TEXT_LENGTH) {
         throw new Error(
-          `페이지 본문을 가져오지 못했습니다. JavaScript 렌더링이 필요한 페이지일 수 있습니다. (${(e as Error).message})`,
+          `페이지 본문을 가져오지 못했습니다. JavaScript로 렌더링되는 페이지일 수 있습니다. (${(e as Error).message})`,
         );
       }
     }
