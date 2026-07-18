@@ -174,13 +174,53 @@ async function robotsAllowed(url: string): Promise<boolean> {
   }
 }
 
+const DOCUMENT_PARSE_TIMEOUT_MS = 60_000;
+
+/**
+ * Upstage Document Parse API로 PDF(표/레이아웃 포함)를 마크다운 텍스트로 변환합니다.
+ * 참고: https://console.upstage.ai/api/docs/for-agents/raw
+ * 표는 마크다운 표 문법으로 보존되어, 이후 청킹 단계에서 행/열 관계가 깨지지 않습니다.
+ */
+async function parsePdfWithDocumentParse(pdfBuffer: ArrayBuffer, sourceUrl: string): Promise<string> {
+  const key = process.env.UPSTAGE_API_KEY;
+  if (!key) throw new Error("UPSTAGE_API_KEY not set");
+
+  const form = new FormData();
+  form.append("document", new Blob([pdfBuffer], { type: "application/pdf" }), "document.pdf");
+  form.append("model", "document-parse");
+  form.append("output_formats", "['markdown']");
+
+  const res = await fetch("https://api.upstage.ai/v1/document-digitization", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key}` },
+    body: form,
+    signal: AbortSignal.timeout(DOCUMENT_PARSE_TIMEOUT_MS),
+  });
+  if (!res.ok) {
+    throw new Error(`Document Parse API 오류: ${res.status} ${await res.text()} (원본: ${sourceUrl})`);
+  }
+  const data = await res.json();
+  // 응답 스키마는 콘솔 문서 기준 content.markdown 형태 - 실제 응답을 한 번 찍어보고
+  // 필드명이 다르면 아래 경로만 맞춰주면 됩니다.
+  const markdown: string | undefined = data?.content?.markdown ?? data?.markdown;
+  if (!markdown) throw new Error("Document Parse 응답에서 텍스트를 찾지 못했습니다.");
+  return normalizeText(markdown);
+}
+
 async function fetchStatic(url: string): Promise<{ html: string; text: string }> {
   const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const contentType = res.headers.get("content-type") ?? "";
   if (contentType.toLowerCase().includes("pdf") || url.toLowerCase().endsWith(".pdf")) {
-    const placeholder = `[PDF 파일 - 별도 파서 필요, 원본 URL: ${url}]`;
-    return { html: "", text: placeholder };
+    try {
+      const pdfBuffer = await res.arrayBuffer();
+      const text = await parsePdfWithDocumentParse(pdfBuffer, url);
+      return { html: "", text };
+    } catch (e) {
+      // Document Parse 실패 시 완전히 죽지 않고, 이유를 알 수 있는 placeholder로 폴백
+      console.error("Document Parse 실패:", e);
+      return { html: "", text: `[PDF 파싱 실패: ${(e as Error).message}, 원본 URL: ${url}]` };
+    }
   }
   const html = await res.text();
   return { html, text: htmlToText(html) };
@@ -205,7 +245,8 @@ async function fetchViaReader(url: string): Promise<string> {
 }
 
 function isPdfPlaceholder(text: string): boolean {
-  return text.startsWith("[PDF 파일");
+  // Document Parse가 실패했을 때만 placeholder로 취급 (성공 시 실제 텍스트가 오므로 정상 검증 경로를 탐)
+  return text.startsWith("[PDF 파싱 실패");
 }
 
 function pickLongerText(current: string, candidate: string): string {

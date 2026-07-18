@@ -15,6 +15,7 @@ export interface Finding {
   quote: string;
   quote_grounded?: boolean;
   case_match_verdict?: string;
+  groundedness_verdict?: "grounded" | "notGrounded" | "notSure";
 }
 
 interface AnalysisResultsProps {
