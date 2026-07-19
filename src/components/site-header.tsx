@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function SiteHeader() {
   return (
@@ -11,22 +10,14 @@ export function SiteHeader() {
         <h1 className="text-sm font-bold tracking-tight text-neutral-900 dark:text-white">약관 X-ray</h1>
       </div>
 
-      <div className="flex items-center gap-2">
-        <Link
-          href="/login"
-          className="rounded-full bg-white/70 px-4 py-2 text-xs font-medium text-neutral-700 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition-colors hover:text-neutral-900 dark:bg-neutral-900/70 dark:text-neutral-200 dark:ring-white/10 dark:hover:text-white"
-        >
-          로그인
-        </Link>
-        <a
-          href="https://github.com/jw1choi07/-X-RAY"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden items-center gap-1.5 rounded-full bg-white/70 px-4 py-2 text-xs font-medium text-neutral-500 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition-colors hover:text-neutral-800 sm:flex dark:bg-neutral-900/70 dark:text-neutral-400 dark:ring-white/10 dark:hover:text-neutral-100"
-        >
-          Powered by Upstage Solar
-        </a>
-      </div>
+      <a
+        href="https://github.com/jw1choi07/-X-RAY"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hidden items-center gap-1.5 rounded-full bg-white/70 px-4 py-2 text-xs font-medium text-neutral-500 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition-colors hover:text-neutral-800 sm:flex dark:bg-neutral-900/70 dark:text-neutral-400 dark:ring-white/10 dark:hover:text-neutral-100"
+      >
+        Powered by Upstage Solar
+      </a>
     </header>
   );
 }
