@@ -57,6 +57,7 @@ export async function runAgentLoop(
   sourceText: string,
   metadata: Record<string, unknown> = {},
   filters: RetrievalFilter = {},
+  priorityPrompt = "",
 ): Promise<AgentLoopResult> {
   const taxonomy = loadRiskTaxonomy();
   const elements = buildDocumentElements(sourceText, metadata);
@@ -74,7 +75,7 @@ export async function runAgentLoop(
 
   const finalContext = buildContextText(collected.length > 0 ? collected : elements);
   const perChunkResults = await Promise.all(
-    [finalContext].map((chunk) => generateFindings(chunk, taxonomy)),
+    [finalContext].map((chunk) => generateFindings(chunk, taxonomy, priorityPrompt)),
   );
 
   const findings = dedupeFindings(perChunkResults.flatMap((r) => r.findings as Finding[])).slice(0, 10);

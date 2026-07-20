@@ -163,10 +163,15 @@ const FINDINGS_JSON_SCHEMA = {
   },
 };
 
-export async function generateFindings(text: string, taxonomy: string): Promise<{ findings: Finding[]; usage: unknown }> {
+export async function generateFindings(
+  text: string,
+  taxonomy: string,
+  priorityPrompt = "",
+): Promise<{ findings: Finding[]; usage: unknown }> {
   const doc = text.slice(0, 15000);
+  const system = SYSTEM_PROMPT.replace("{taxonomy}", taxonomy) + priorityPrompt;
   const messages = [
-    { role: "system", content: SYSTEM_PROMPT.replace("{taxonomy}", taxonomy) },
+    { role: "system", content: system },
     { role: "user", content: `다음은 약관 원문입니다:\n\n${doc}` },
   ];
 
