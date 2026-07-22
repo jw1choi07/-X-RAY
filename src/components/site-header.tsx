@@ -1,14 +1,15 @@
-import Image from "next/image";
 import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 
 export function SiteHeader() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between py-4 pr-6 pl-16 md:pr-10 md:pl-20">
-      <div className="flex items-center gap-2.5 rounded-full bg-white/70 py-1.5 pr-4 pl-1.5 shadow-sm ring-1 ring-black/5 backdrop-blur-md dark:bg-neutral-900/70 dark:ring-white/10">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-800 dark:ring-neutral-700">
-          <Image src="/logo.svg" alt="약관 X-ray 로고" width={20} height={20} priority />
+      <div className="flex items-center gap-2.5 rounded-md border border-border bg-card/90 py-1.5 pr-4 pl-2 shadow-sm backdrop-blur-md">
+        <div className="flex h-7 w-7 items-center justify-center rounded-sm border border-scan/40 bg-scan/10 font-mono text-[10px] font-semibold tracking-tight text-scan">
+          Rx
         </div>
-        <h1 className="text-sm font-bold tracking-tight text-neutral-900 dark:text-white">약관 X-ray</h1>
+        <h1 className="font-mono text-xs font-semibold tracking-[0.08em] text-foreground uppercase">
+          약관 X-ray
+        </h1>
       </div>
 
       <div className="flex items-center gap-3">
@@ -16,9 +17,9 @@ export function SiteHeader() {
           href="https://github.com/jw1choi07/-X-RAY"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-1.5 rounded-full bg-white/70 px-4 py-2 text-xs font-medium text-neutral-500 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition-colors hover:text-neutral-800 sm:flex dark:bg-neutral-900/70 dark:text-neutral-400 dark:ring-white/10 dark:hover:text-neutral-100"
+          className="hidden items-center gap-1.5 rounded-md border border-border bg-card/80 px-3.5 py-2 font-mono text-[11px] tracking-wide text-muted-foreground backdrop-blur-md transition-colors hover:text-foreground sm:flex"
         >
-          Powered by Upstage Solar
+          POWERED BY UPSTAGE SOLAR
         </a>
 
         <Show when="signed-in">
@@ -28,7 +29,7 @@ export function SiteHeader() {
           <SignInButton mode="modal">
             <button
               type="button"
-              className="rounded-full bg-white/70 px-4 py-2 text-xs font-medium text-neutral-600 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition-colors hover:text-neutral-900 dark:bg-neutral-900/70 dark:text-neutral-300 dark:ring-white/10 dark:hover:text-white"
+              className="rounded-md border border-border bg-card/80 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-md transition-colors hover:text-foreground"
             >
               로그인
             </button>

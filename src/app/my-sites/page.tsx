@@ -22,13 +22,13 @@ import type { Preset } from "@/lib/presets";
 function riskTone(label: SiteRiskLabel) {
   switch (label) {
     case "높음":
-      return "bg-red-50 text-red-700 ring-red-200 dark:bg-red-950/40 dark:text-red-300 dark:ring-red-900/50";
+      return "border-risk-blocker/30 bg-risk-blocker/10 text-risk-blocker";
     case "보통":
-      return "bg-orange-50 text-orange-700 ring-orange-200 dark:bg-orange-950/40 dark:text-orange-300 dark:ring-orange-900/50";
+      return "border-risk-bad/30 bg-risk-bad/10 text-risk-bad";
     case "낮음":
-      return "bg-emerald-50 text-emerald-700 ring-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:ring-emerald-900/50";
+      return "border-risk-ok/30 bg-risk-ok/10 text-risk-ok";
     default:
-      return "bg-neutral-100 text-neutral-600 ring-neutral-200 dark:bg-neutral-900 dark:text-neutral-300 dark:ring-neutral-700";
+      return "border-border bg-muted text-muted-foreground";
   }
 }
 
@@ -228,22 +228,25 @@ export default function MySitesPage() {
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 pt-24 pb-16 md:px-10">
         <Link
           href="/"
-          className="text-sm text-neutral-500 transition-colors hover:text-neutral-800"
+          className="font-mono text-[11px] tracking-wide text-muted-foreground uppercase transition-colors hover:text-foreground"
         >
           ← 홈으로
         </Link>
 
         <div className="mt-6 flex items-end justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <p className="font-mono text-[11px] tracking-[0.15em] text-scan uppercase">
+              My Records
+            </p>
+            <h1 className="mt-0.5 text-3xl font-bold tracking-tight text-foreground">
               나의 이용현황
             </h1>
-            <p className="mt-2 text-sm text-neutral-500">
+            <p className="mt-2 text-sm text-muted-foreground">
               자주 쓰는 사이트를 모아두고 위험도를 한눈에 확인하세요.
             </p>
           </div>
           {isSignedIn && (
-            <Button type="button" onClick={() => setShowAdd((v) => !v)}>
+            <Button type="button" className="rounded-md" onClick={() => setShowAdd((v) => !v)}>
               <Plus className="h-4 w-4" />
               항목 추가
             </Button>
@@ -251,24 +254,24 @@ export default function MySitesPage() {
         </div>
 
         {!isLoaded || loadingPrefs ? (
-          <p className="mt-10 text-sm text-neutral-500">불러오는 중…</p>
+          <p className="mt-10 text-sm text-muted-foreground">불러오는 중…</p>
         ) : !isSignedIn ? (
-          <div className="mt-10 rounded-2xl bg-neutral-50 px-5 py-8 text-sm text-neutral-600 dark:bg-neutral-900 dark:text-neutral-300">
+          <div className="mt-10 rounded-md border border-border bg-muted/40 px-5 py-8 text-sm text-muted-foreground">
             이용현황은 로그인 후 이용할 수 있습니다.{" "}
-            <Link href="/sign-in" className="font-medium underline underline-offset-2">
+            <Link href="/sign-in" className="font-medium text-foreground underline underline-offset-2">
               로그인하기
             </Link>
           </div>
         ) : (
           <>
             {error && (
-              <p className="mt-4 text-sm text-red-600" role="alert">
+              <p className="mt-4 text-sm text-risk-blocker" role="alert">
                 {error}
               </p>
             )}
 
             {showAdd && (
-              <section className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-950">
+              <section className="mt-8 rounded-md border border-border bg-card p-5">
                 <div className="flex gap-2">
                   <Button
                     type="button"
@@ -297,7 +300,7 @@ export default function MySitesPage() {
                 {addMode === "search" ? (
                   <form onSubmit={handleAddSearch} className="mt-4 space-y-3">
                     <div className="relative">
-                      <Search className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-neutral-400" />
+                      <Search className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                       <Input
                         className="pl-9"
                         placeholder="카카오T, 멜론, 토스…"
@@ -306,12 +309,12 @@ export default function MySitesPage() {
                       />
                     </div>
                     {searchHint && (
-                      <p className="text-xs text-neutral-500">
+                      <p className="text-xs text-muted-foreground">
                         검색 결과 후보: {searchHint.label}
                       </p>
                     )}
-                    {addError && <p className="text-sm text-red-600">{addError}</p>}
-                    <Button type="submit" disabled={saving || !searchQuery.trim()}>
+                    {addError && <p className="text-sm text-risk-blocker">{addError}</p>}
+                    <Button type="submit" className="rounded-md" disabled={saving || !searchQuery.trim()}>
                       검색해서 추가
                     </Button>
                   </form>
@@ -329,8 +332,8 @@ export default function MySitesPage() {
                       onChange={(e) => setManualUrl(e.target.value)}
                       required
                     />
-                    {addError && <p className="text-sm text-red-600">{addError}</p>}
-                    <Button type="submit" disabled={saving}>
+                    {addError && <p className="text-sm text-risk-blocker">{addError}</p>}
+                    <Button type="submit" className="rounded-md" disabled={saving}>
                       직접 추가
                     </Button>
                   </form>
@@ -338,9 +341,9 @@ export default function MySitesPage() {
               </section>
             )}
 
-            <ul className="mt-8 divide-y divide-neutral-100 dark:divide-neutral-800">
+            <ul className="mt-8 divide-y divide-border">
               {sites.length === 0 && (
-                <li className="py-10 text-sm text-neutral-500">
+                <li className="py-10 text-sm text-muted-foreground">
                   아직 추가된 사이트가 없습니다. 항목 추가 버튼으로 시작해 보세요.
                 </li>
               )}
@@ -352,17 +355,17 @@ export default function MySitesPage() {
                     className="min-w-0 flex-1 text-left"
                   >
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="truncate text-base font-semibold text-neutral-900 dark:text-white">
+                      <span className="truncate text-base font-semibold text-foreground">
                         {site.name}
                       </span>
                       <span
-                        className={`rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ${riskTone(site.riskLabel)}`}
+                        className={`rounded-sm border px-2.5 py-0.5 font-mono text-[11px] font-medium ${riskTone(site.riskLabel)}`}
                       >
                         위험도 {site.riskLabel}
                         {typeof site.riskScore === "number" ? ` · ${site.riskScore}` : ""}
                       </span>
                     </div>
-                    <p className="mt-1 truncate text-sm text-neutral-500">
+                    <p className="mt-1 truncate text-sm text-muted-foreground">
                       {site.summary ?? site.url ?? site.presetFile ?? "상세 분석을 보려면 클릭하세요"}
                     </p>
                   </button>
@@ -372,7 +375,7 @@ export default function MySitesPage() {
                     size="icon"
                     aria-label={`${site.name} 삭제`}
                     onClick={() => handleRemove(site.id)}
-                    className="shrink-0 text-neutral-400 hover:text-red-600"
+                    className="shrink-0 text-muted-foreground hover:text-risk-blocker"
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>

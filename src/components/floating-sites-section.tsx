@@ -1,13 +1,13 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { FEATURED_SITES, type FeaturedSite } from "@/lib/featured-sites";
 
-const RISK_COLORS: Record<FeaturedSite["riskLabel"], string> = {
-  위험: "text-red-600 bg-red-50 border-red-200 dark:text-red-400 dark:bg-red-950/40 dark:border-red-900/50",
-  주의: "text-orange-600 bg-orange-50 border-orange-200 dark:text-orange-400 dark:bg-orange-950/40 dark:border-orange-900/50",
-  보통: "text-emerald-600 bg-emerald-50 border-emerald-200 dark:text-emerald-400 dark:bg-emerald-950/40 dark:border-emerald-900/50",
+const RISK_TONE: Record<FeaturedSite["riskLabel"], string> = {
+  위험: "text-risk-blocker",
+  주의: "text-risk-bad",
+  보통: "text-risk-ok",
 };
 
 interface FloatingSitesSectionProps {
@@ -17,22 +17,29 @@ interface FloatingSitesSectionProps {
 export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps) {
   return (
     <section className="relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-sky-50 via-white to-violet-50 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900" />
-      <div className="pointer-events-none absolute top-1/4 left-1/4 h-64 w-64 animate-pulse rounded-full bg-blue-200/30 blur-3xl dark:bg-blue-500/10" />
-      <div className="pointer-events-none absolute right-1/4 bottom-1/4 h-72 w-72 animate-pulse rounded-full bg-violet-200/30 blur-3xl [animation-delay:1.5s] dark:bg-violet-500/10" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.04)_1px,transparent_0)] bg-[size:28px_28px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,black,transparent)] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)]" />
+      {/* film-edge sprocket marks — a quiet nod to a strip of negatives, not a decorative border */}
+      <div className="pointer-events-none absolute inset-y-0 left-3 hidden flex-col justify-evenly py-24 md:flex">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-border" />
+        ))}
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 right-3 hidden flex-col justify-evenly py-24 md:flex">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-border" />
+        ))}
+      </div>
 
-      <div className="relative z-10 mb-10 text-center">
-        <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50/80 px-3 py-1 text-xs font-semibold text-blue-700 backdrop-blur-sm dark:border-blue-900/50 dark:bg-blue-950/40 dark:text-blue-400">
-          <Sparkles className="h-3 w-3" />
-          Upstage Solar 기반 AI 약관 분석
+      <div className="relative z-10 mb-10 max-w-2xl text-center">
+        <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-scan/30 bg-scan/5 px-3 py-1 font-mono text-[11px] tracking-[0.1em] text-scan uppercase">
+          <span className="h-1.5 w-1.5 rounded-full bg-scan" />
+          Upstage Solar 판독 시스템
         </div>
-        <h2 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-white">
-          약관, 읽지 않고도
+        <h2 className="text-4xl leading-[1.15] font-bold tracking-tight text-foreground md:text-5xl">
+          <span className="scan-reveal">약관, 읽지 않고도</span>
           <br className="hidden sm:block" /> 위험한 조항만 골라보세요
         </h2>
-        <p className="mt-4 text-neutral-500 dark:text-neutral-400">
-          이미 분석된 주요 서비스 · 카드를 선택하면 상세 결과를 확인할 수 있어요
+        <p className="mt-4 text-muted-foreground">
+          이미 분석된 주요 서비스 · 카드를 선택하면 판독 결과를 확인할 수 있어요
         </p>
       </div>
 
@@ -58,8 +65,8 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
         ))}
       </div>
 
-      <div className="relative z-10 mt-10 flex flex-col items-center gap-1 text-neutral-400">
-        <span className="text-[11px] font-medium tracking-wide uppercase">스크롤해서 더보기</span>
+      <div className="relative z-10 mt-10 flex flex-col items-center gap-1 text-muted-foreground/70">
+        <span className="font-mono text-[10px] tracking-[0.15em] uppercase">스크롤해서 더보기</span>
         <ChevronDown className="h-4 w-4 animate-bounce" />
       </div>
     </section>
@@ -81,42 +88,32 @@ function FloatingCard({
     <button
       type="button"
       onClick={() => onSelect(site)}
-      className={`group cursor-pointer rounded-2xl border border-white/80 bg-white/90 p-4 text-left shadow-lg shadow-neutral-900/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-900/10 dark:border-white/10 dark:bg-neutral-900/90 dark:shadow-black/30 ${className}`}
-      style={{
-        ...style,
-        borderTopColor: site.color,
-        borderTopWidth: "3px",
-      }}
+      className={`group cursor-pointer border border-white/10 bg-[#0d1319] p-4 text-left shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl hover:shadow-black/30 ${className}`}
+      style={style}
     >
       <div className="mb-2 flex items-center justify-between">
-        <span
-          className="flex h-9 w-9 items-center justify-center rounded-xl text-lg"
-          style={{ backgroundColor: `${site.color}1a` }}
-        >
+        <span className="flex h-9 w-9 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-lg">
           {site.emoji}
         </span>
-        <span
-          className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold ${RISK_COLORS[site.riskLabel]}`}
-        >
+        <span className={`font-mono text-[10px] font-semibold tracking-wide uppercase ${RISK_TONE[site.riskLabel]}`}>
           {site.riskLabel}
         </span>
       </div>
-      <p className="font-bold text-neutral-900 dark:text-white">{site.name}</p>
-      <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">{site.summary}</p>
+      <p className="font-semibold text-[#dfeaf0]">{site.name}</p>
+      <p className="mt-1 text-xs leading-relaxed text-[#82949f]">{site.summary}</p>
       <div className="mt-3 flex items-center gap-2">
-        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-800">
+        <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/10">
           <div
-            className="h-full rounded-full transition-all duration-700 ease-out"
-            style={{
-              width: `${site.riskScore}%`,
-              backgroundColor: site.color,
-            }}
+            className={`h-full rounded-full transition-all duration-700 ease-out ${
+              site.riskLabel === "위험" ? "bg-risk-blocker" : site.riskLabel === "주의" ? "bg-risk-bad" : "bg-risk-ok"
+            }`}
+            style={{ width: `${site.riskScore}%` }}
           />
         </div>
-        <span className="text-xs font-semibold text-neutral-600 dark:text-neutral-300">{site.riskScore}</span>
+        <span className="font-mono text-xs font-semibold text-[#dfeaf0]">{site.riskScore}</span>
       </div>
-      <p className="mt-2 text-[10px] font-medium text-blue-600 md:opacity-0 md:transition-opacity md:group-hover:opacity-100 dark:text-blue-400">
-        탭하여 상세보기 →
+      <p className="mt-2 font-mono text-[10px] tracking-wide text-[#57c2dd] uppercase md:opacity-0 md:transition-opacity md:group-hover:opacity-100">
+        판독지 보기 →
       </p>
     </button>
   );

@@ -97,8 +97,8 @@ export default function Home() {
             onClick={() => scrollToSection(i)}
             className={`h-2 w-2 rounded-full transition-all ${
               activeSection === i
-                ? "h-6 bg-neutral-900 dark:bg-white"
-                : "bg-neutral-300 hover:bg-neutral-400 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+                ? "h-6 bg-scan"
+                : "bg-border hover:bg-muted-foreground/40"
             }`}
           />
         ))}

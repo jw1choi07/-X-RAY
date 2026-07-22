@@ -64,19 +64,19 @@ export function AnalysisResultsPanel({
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-end justify-center bg-neutral-900/50 p-0 backdrop-blur-sm animate-in fade-in duration-200 sm:items-center sm:p-4"
+      className="fixed inset-0 z-[60] flex items-end justify-center bg-black/60 p-0 backdrop-blur-sm animate-in fade-in duration-200 sm:items-center sm:p-4"
       onClick={onClose}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-3xl bg-white shadow-2xl ring-1 ring-black/5 animate-in slide-in-from-bottom-8 duration-300 sm:rounded-3xl dark:bg-neutral-900 dark:ring-white/10"
+        className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-lg border border-border bg-card shadow-2xl animate-in slide-in-from-bottom-8 duration-300 sm:rounded-lg"
       >
-        <div className="flex items-start justify-between border-b border-neutral-100 px-6 py-5 dark:border-neutral-800">
+        <div className="flex items-start justify-between border-b border-border px-6 py-5">
           <div>
-            <p className="text-xs font-medium tracking-wide text-neutral-400 uppercase">
-              이용약관 분석 결과
+            <p className="font-mono text-[11px] tracking-[0.12em] text-scan uppercase">
+              판독 보고서 · Reading Report
             </p>
-            <h2 className="mt-0.5 text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <h2 className="mt-0.5 text-2xl font-bold tracking-tight text-foreground">
               {siteName}
             </h2>
           </div>
@@ -85,7 +85,7 @@ export function AnalysisResultsPanel({
             size="icon"
             onClick={onClose}
             aria-label="닫기"
-            className="rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-800"
+            className="rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
           >
             <X className="h-5 w-5" />
           </Button>
@@ -103,8 +103,8 @@ export function AnalysisResultsPanel({
           {findings && !loading && (
             <div className="space-y-6">
               {overallRisk && (
-                <div className={`flex items-center gap-4 rounded-2xl p-4 ring-1 ${overallRisk.bg} ${overallRisk.ring}`}>
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white shadow-sm dark:bg-neutral-900">
+                <div className={`flex items-center gap-4 rounded-md border p-4 ${overallRisk.bg}`}>
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-border bg-card">
                     {overallRisk.level === "낮음" ? (
                       <ShieldCheck className={`h-5 w-5 ${overallRisk.color}`} />
                     ) : (
@@ -112,8 +112,10 @@ export function AnalysisResultsPanel({
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className={`text-sm font-bold ${overallRisk.color}`}>종합 위험도 · {overallRisk.level}</p>
-                    <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
+                    <p className={`font-mono text-xs font-bold tracking-wide uppercase ${overallRisk.color}`}>
+                      종합 판독 · {overallRisk.level}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
                       {meta && `원문 ${meta.char_count.toLocaleString()}자 분석 · `}
                       원문 근거 확인 {groundedCount}/{findings.length}
                     </p>
@@ -122,9 +124,9 @@ export function AnalysisResultsPanel({
               )}
 
               <div className="grid grid-cols-3 gap-2.5">
-                <StatTile label="치명적" value={blockerCount} accent="text-red-600 dark:text-red-400" />
-                <StatTile label="위험" value={badCount} accent="text-orange-600 dark:text-orange-400" />
-                <StatTile label="기타" value={counts["기타"] ?? 0} accent="text-neutral-500 dark:text-neutral-400" />
+                <StatTile label="치명적" value={blockerCount} accent="text-risk-blocker" />
+                <StatTile label="위험" value={badCount} accent="text-risk-bad" />
+                <StatTile label="기타" value={counts["기타"] ?? 0} accent="text-muted-foreground" />
               </div>
 
               {findings.length === 0 && (
@@ -142,8 +144,8 @@ export function AnalysisResultsPanel({
           )}
         </div>
 
-        <div className="border-t border-neutral-100 px-6 py-3 dark:border-neutral-800">
-          <p className="text-center text-[11px] text-neutral-400">
+        <div className="border-t border-border px-6 py-3">
+          <p className="text-center font-mono text-[10px] text-muted-foreground/70">
             판단 기준: ToS;DR(tosdr.org) bad/blocker 케이스 79종 기반 · 모든 인용문은 원문 대조 검증을 거칩니다
           </p>
         </div>
@@ -170,7 +172,7 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
 
   return (
     <div
-      className="group rounded-2xl border border-neutral-200 p-4 transition-colors hover:border-neutral-300 animate-in fade-in slide-in-from-bottom-2 dark:border-neutral-800 dark:hover:border-neutral-700"
+      className="group rounded-md border border-border p-4 transition-colors hover:border-scan/40 animate-in fade-in slide-in-from-bottom-2"
       style={{ animationDelay: `${Math.min(index * 40, 400)}ms`, animationFillMode: "backwards" }}
     >
       <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
@@ -178,32 +180,28 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
           <Icon className="h-3 w-3" />
           {style.label}
         </Badge>
-        <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium ${style.chip}`}>
+        <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium ${style.chip}`}>
           {f.matched_case || "기타"}
         </span>
       </div>
 
-      <h3 className="mb-2 text-sm leading-snug font-semibold text-neutral-900 dark:text-neutral-100">
+      <h3 className="mb-2 text-sm leading-snug font-semibold text-foreground">
         {f.risk_summary}
       </h3>
 
-      <div
-        className={`relative rounded-lg px-3 py-2 text-[13px] leading-relaxed ${
-          f.quote_grounded
-            ? "bg-neutral-50 text-neutral-600 dark:bg-neutral-800/60 dark:text-neutral-300"
-            : "bg-neutral-50/50 text-neutral-400 line-through dark:bg-neutral-800/30"
-        }`}
-      >
-        &ldquo;{f.quote}&rdquo;
+      <div className="relative rounded-sm bg-muted px-3 py-2 text-[13px] leading-relaxed text-muted-foreground">
+        &ldquo;
+        {f.quote_grounded ? <mark className="confirmed">{f.quote}</mark> : <span className="redacted">{f.quote}</span>}
+        &rdquo;
       </div>
 
-      <div className="mt-2.5 flex items-center justify-between text-[11px] text-neutral-400">
+      <div className="mt-2.5 flex items-center justify-between font-mono text-[10px] text-muted-foreground/80">
         <div className="flex items-center gap-2.5">
           <span className="inline-flex items-center gap-1">
             {f.quote_grounded ? (
-              <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+              <CheckCircle2 className="h-3 w-3 text-risk-ok" />
             ) : (
-              <AlertTriangle className="h-3 w-3 text-neutral-400" />
+              <AlertTriangle className="h-3 w-3 text-muted-foreground" />
             )}
             {f.quote_grounded ? "원문 확인됨" : "원문 미확인"}
           </span>
@@ -211,7 +209,7 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
         </div>
         <button
           onClick={copyQuote}
-          className="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 font-medium text-neutral-400 opacity-0 transition-opacity group-hover:opacity-100 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+          className="inline-flex items-center gap-1 rounded-sm px-1.5 py-0.5 font-medium text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:bg-muted hover:text-foreground"
         >
           {copied ? (
             <>
@@ -230,9 +228,9 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
 
 function StatTile({ label, value, accent }: { label: string; value: string | number; accent: string }) {
   return (
-    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-3 text-center dark:border-neutral-800 dark:bg-neutral-800/30">
-      <div className={`text-xl font-bold ${accent}`}>{value}</div>
-      <div className="mt-0.5 text-[11px] text-neutral-500 dark:text-neutral-400">{label}</div>
+    <div className="rounded-md border border-border bg-muted/40 p-3 text-center">
+      <div className={`font-mono text-xl font-bold ${accent}`}>{value}</div>
+      <div className="mt-0.5 text-[11px] text-muted-foreground">{label}</div>
     </div>
   );
 }
@@ -242,12 +240,12 @@ function LoadingState() {
     <div className="space-y-5 py-4">
       <div className="flex flex-col items-center gap-3 py-2 text-center">
         <div className="relative h-10 w-10">
-          <div className="absolute inset-0 animate-ping rounded-full bg-blue-400/30" />
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/10">
-            <div className="h-4 w-4 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
+          <div className="absolute inset-0 animate-ping rounded-full bg-scan/30" />
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-scan/10">
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-scan border-t-transparent" />
           </div>
         </div>
-        <ol className="space-y-1 text-xs text-neutral-400">
+        <ol className="space-y-1 font-mono text-xs text-muted-foreground">
           {LOADING_STEPS.map((step, i) => (
             <li key={step} style={{ animationDelay: `${i * 1.2}s` }} className="animate-in fade-in">
               {step}...

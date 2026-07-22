@@ -67,7 +67,7 @@ export function SideMenu() {
         aria-label="메뉴 열기"
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="fixed top-4 left-3 z-[70] flex h-11 w-11 items-center justify-center rounded-full bg-white/80 text-neutral-800 shadow-sm ring-1 ring-black/5 backdrop-blur-md transition hover:bg-white dark:bg-neutral-900/80 dark:text-neutral-100 dark:ring-white/10 md:left-4"
+        className="fixed top-4 left-3 z-[70] flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card/90 text-foreground shadow-sm backdrop-blur-md transition hover:border-scan/40 md:left-4"
       >
         <Menu className="h-5 w-5" />
       </button>
@@ -76,22 +76,22 @@ export function SideMenu() {
         <button
           type="button"
           aria-label="메뉴 닫기 배경"
-          className="fixed inset-0 z-[75] bg-neutral-900/40 backdrop-blur-[2px] animate-in fade-in duration-200"
+          className="fixed inset-0 z-[75] bg-black/50 backdrop-blur-[2px] animate-in fade-in duration-200"
           onClick={() => setOpen(false)}
         />
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-[80] flex w-[min(22rem,85vw)] flex-col border-r border-neutral-200/80 bg-white/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:w-[34vw] md:max-w-[26rem] md:min-w-[18rem] dark:border-neutral-800 dark:bg-neutral-950/95 ${
+        className={`fixed inset-y-0 left-0 z-[80] flex w-[min(22rem,85vw)] flex-col border-r border-border bg-card/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:w-[34vw] md:max-w-[26rem] md:min-w-[18rem] ${
           open ? "translate-x-0" : "pointer-events-none -translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-5 py-5">
+        <div className="flex items-center justify-between border-b border-border px-5 py-5">
           <div>
-            <p className="text-xs font-medium tracking-wide text-neutral-400 uppercase">
+            <p className="font-mono text-[11px] tracking-[0.15em] text-scan uppercase">
               Menu
             </p>
-            <h2 className="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">
+            <h2 className="mt-0.5 text-lg font-bold tracking-tight text-foreground">
               약관 X-ray
             </h2>
           </div>
@@ -101,31 +101,31 @@ export function SideMenu() {
             size="icon"
             aria-label="메뉴 닫기"
             onClick={() => setOpen(false)}
-            className="rounded-full"
+            className="rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
           >
             <X className="h-5 w-5" />
           </Button>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-4 pb-8">
+        <div className="flex-1 overflow-y-auto px-4 pt-4 pb-8">
           {!isLoaded && (
-            <p className="px-2 text-sm text-neutral-500">불러오는 중…</p>
+            <p className="px-2 text-sm text-muted-foreground">불러오는 중…</p>
           )}
 
           <Show when="signed-out">
-            <div className="mx-1 rounded-2xl bg-neutral-50 px-4 py-5 dark:bg-neutral-900">
-              <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <div className="mx-1 rounded-md border border-border bg-muted/40 px-4 py-5">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 메뉴 기능을 이용하려면 로그인이 필요합니다.
                 로그인 후 이용현황과 약관 필터를 사용할 수 있습니다.
               </p>
               <SignInButton mode="modal">
-                <Button type="button" className="mt-4 w-full">
+                <Button type="button" className="mt-4 w-full rounded-md">
                   로그인하러 가기
                 </Button>
               </SignInButton>
               <Link
                 href="/sign-in"
-                className="mt-2 block text-center text-xs text-neutral-500 underline-offset-2 hover:underline"
+                className="mt-2 block text-center text-xs text-muted-foreground underline-offset-2 hover:underline"
                 onClick={() => setOpen(false)}
               >
                 로그인 페이지로 이동
@@ -138,10 +138,10 @@ export function SideMenu() {
               <Link
                 href="/my-sites"
                 onClick={() => setOpen(false)}
-                className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors ${
                   pathname === "/my-sites"
-                    ? "bg-neutral-900 text-white dark:bg-white dark:text-neutral-900"
-                    : "text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-900"
+                    ? "bg-foreground text-background"
+                    : "text-foreground hover:bg-muted"
                 }`}
               >
                 <ListChecks className="h-4 w-4 shrink-0" />
@@ -151,10 +151,10 @@ export function SideMenu() {
               <button
                 type="button"
                 onClick={() => setShowFilters((v) => !v)}
-                className={`flex items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-medium transition-colors ${
+                className={`flex items-center gap-3 rounded-md px-3 py-3 text-left text-sm font-medium transition-colors ${
                   showFilters
-                    ? "bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-white"
-                    : "text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-900"
+                    ? "bg-muted text-foreground"
+                    : "text-foreground hover:bg-muted"
                 }`}
               >
                 <Filter className="h-4 w-4 shrink-0" />
@@ -163,13 +163,13 @@ export function SideMenu() {
             </nav>
 
             {showFilters && (
-              <div className="mt-3 space-y-3 rounded-2xl bg-neutral-50 px-3 py-4 dark:bg-neutral-900">
-                <p className="px-1 text-xs leading-relaxed text-neutral-500">
+              <div className="mt-3 space-y-3 rounded-md border border-border bg-muted/40 px-3 py-4">
+                <p className="px-1 text-xs leading-relaxed text-muted-foreground">
                   선택한 항목은 이후 분석 결과에서 최우선으로 표시됩니다.
                   {saving ? " 저장 중…" : ""}
                 </p>
                 {error && (
-                  <p className="px-1 text-xs text-red-600" role="alert">
+                  <p className="px-1 text-xs text-risk-blocker" role="alert">
                     {error}
                   </p>
                 )}
@@ -178,10 +178,10 @@ export function SideMenu() {
                     const checked = prefs?.riskFilters.includes(option.id) ?? false;
                     return (
                       <li key={option.id}>
-                        <label className="flex cursor-pointer items-start gap-2.5 rounded-xl px-2 py-2 text-sm text-neutral-700 transition hover:bg-white dark:text-neutral-200 dark:hover:bg-neutral-950">
+                        <label className="flex cursor-pointer items-start gap-2.5 rounded-md px-2 py-2 text-sm text-foreground transition hover:bg-card">
                           <input
                             type="checkbox"
-                            className="mt-0.5 h-4 w-4 rounded border-neutral-300"
+                            className="mt-0.5 h-4 w-4 rounded border-border accent-scan"
                             checked={checked}
                             onChange={() => toggleFilter(option.id)}
                           />
