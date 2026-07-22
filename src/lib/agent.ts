@@ -1,5 +1,5 @@
 import { type Finding, generateFindings, judgeCaseMatch } from "./solar";
-import { buildContextText, buildDocumentElements, createRetrievalIndex, hybridSearchElements, type DocumentElement, type RetrievalFilter } from "./rag";
+import { buildContextText, buildDocumentElements, createRetrievalIndex, hybridSearchElements, loadCachedIndex, type DocumentElement, type RetrievalFilter } from "./rag";
 import { selectRelevantCases } from "./tosdr";
 
 export interface AgentLoopResult {
@@ -59,6 +59,7 @@ export async function runAgentLoop(
   metadata: Record<string, unknown> = {},
   filters: RetrievalFilter = {},
   priorityPrompt = "",
+  presetFile?: string,
 ): Promise<AgentLoopResult> {
   const elements = buildDocumentElements(sourceText, metadata);
   // Embed all elements once (real Embed 2 vectors, not the old fake
@@ -69,7 +70,11 @@ export async function runAgentLoop(
   let finalContext: string;
   let iterations = 0;
   try {
-    const index = await createRetrievalIndex(elements, metadata);
+    // Preset documents (the ~147 users pick from a category/search) have
+    // their embedding index precomputed offline (scripts/embed-presets.mjs)
+    // so a live analysis doesn't pay embedding latency/cost/rate-limit risk
+    // on every click -- only URL/pasted-text analysis embeds live.
+    const index = (presetFile && loadCachedIndex(presetFile, metadata)) || (await createRetrievalIndex(elements, metadata));
     const rewrittenQueries = await rewriteQuery(question);
     iterations = Math.min(3, rewrittenQueries.length);
     const collected: DocumentElement[] = [];

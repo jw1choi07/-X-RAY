@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { cosineSimilarity, embedPassages, embedQuery } from "./embed";
 
 export interface DocumentElement {
@@ -131,6 +133,32 @@ export async function createRetrievalIndex(
     metadata: { ...baseMetadata, ...element.metadata },
     embedding: embeddings[index],
   }));
+}
+
+/**
+ * Loads a precomputed embedding index for a preset document (built offline
+ * via scripts/embed-presets.mjs) instead of calling the Embeddings API live.
+ * Avoids per-request embedding latency/cost/rate-limit exposure for the 147
+ * preset documents users pick from most often. Returns null if no cache
+ * exists (e.g. the preset was added after the cache was last built, or this
+ * is a URL/pasted-text analysis) -- callers should fall back to
+ * createRetrievalIndex() in that case.
+ */
+export function loadCachedIndex(presetFile: string, baseMetadata: Record<string, unknown> = {}): DocumentRecord[] | null {
+  const cachePath = path.join(process.cwd(), "data", "preset-index", `${presetFile}.json`);
+  if (!fs.existsSync(cachePath)) return null;
+  try {
+    const cached = JSON.parse(fs.readFileSync(cachePath, "utf-8")) as (DocumentElement & { embedding: number[] })[];
+    return cached.map((el) => ({
+      id: el.id,
+      content: el.text,
+      metadata: { ...baseMetadata, ...el.metadata },
+      embedding: el.embedding,
+    }));
+  } catch (e) {
+    console.error(`프리셋 임베딩 캐시 로드 실패 (${presetFile}):`, e);
+    return null;
+  }
 }
 
 export async function hybridSearchElements(

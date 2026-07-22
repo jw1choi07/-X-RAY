@@ -66,7 +66,7 @@ export async function POST(req: Request) {
     }
 
     const priorityFilters = await loadPriorityFilters();
-    const result = await analyzeDocument(text, priorityFilters);
+    const result = await analyzeDocument(text, priorityFilters, typeof body.presetFile === "string" ? body.presetFile : undefined);
     return NextResponse.json({ ...result, meta, priorityFilters });
   } catch (e) {
     if (e instanceof CrawlBlocked) {
