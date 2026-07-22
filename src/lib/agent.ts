@@ -1,6 +1,6 @@
-import { checkGroundedness, type Finding, generateFindings } from "./solar";
+import { checkGroundedness, type Finding, generateFindings, judgeCaseMatch } from "./solar";
 import { buildContextText, buildDocumentElements, hybridSearchElements, type DocumentElement, type RetrievalFilter } from "./rag";
-import { loadRiskTaxonomy } from "./tosdr";
+import { selectRelevantCases } from "./tosdr";
 
 export interface AgentLoopResult {
   findings: Finding[];
@@ -59,7 +59,6 @@ export async function runAgentLoop(
   filters: RetrievalFilter = {},
   priorityPrompt = "",
 ): Promise<AgentLoopResult> {
-  const taxonomy = loadRiskTaxonomy();
   const elements = buildDocumentElements(sourceText, metadata);
   const rewrittenQueries = await rewriteQuery(question);
   const iterations = Math.min(3, rewrittenQueries.length);
@@ -74,8 +73,12 @@ export async function runAgentLoop(
   }
 
   const finalContext = buildContextText(collected.length > 0 ? collected : elements);
+  // Embed the retrieved context and pull only the semantically closest ToS;DR
+  // cases instead of stuffing all 79 into every prompt (metadata/embedding
+  // pre-filtering, per mentor feedback on RAG structure).
+  const relevantTaxonomy = await selectRelevantCases(finalContext);
   const perChunkResults = await Promise.all(
-    [finalContext].map((chunk) => generateFindings(chunk, taxonomy, priorityPrompt)),
+    [finalContext].map((chunk) => generateFindings(chunk, relevantTaxonomy, priorityPrompt)),
   );
 
   const findings = dedupeFindings(perChunkResults.flatMap((r) => r.findings as Finding[])).slice(0, 10);
@@ -90,6 +93,16 @@ export async function runAgentLoop(
     finding.groundedness_verdict = grounded;
     if (grounded === "notGrounded") {
       finding.case_match_verdict = "SKIPPED_UNGROUNDED";
+      continue;
+    }
+    // Second verification stage: does the quote actually support the matched
+    // risk classification, or did the model just grab a real-but-unrelated
+    // sentence? (originally designed in the pilot pipeline, wasn't wired into
+    // the live app until now.)
+    try {
+      finding.case_match_verdict = await judgeCaseMatch(finding);
+    } catch (e) {
+      console.error("case match judge 호출 실패:", e);
     }
   }
 
