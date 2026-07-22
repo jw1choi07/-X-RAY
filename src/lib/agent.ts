@@ -1,4 +1,4 @@
-import { type Finding, generateFindings, judgeCaseMatch } from "./solar";
+import { getChatModel, type Finding, generateFindings, judgeCaseMatch } from "./solar";
 import { buildContextText, buildDocumentElements, createRetrievalIndex, hybridSearchElements, loadCachedIndex, type DocumentElement, type RetrievalFilter } from "./rag";
 import { selectRelevantCases } from "./tosdr";
 
@@ -39,7 +39,7 @@ async function rewriteQuery(query: string): Promise<string[]> {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: process.env.UPSTAGE_CHAT_MODEL ?? "solar-pro2",
+      model: getChatModel(),
       messages: [{ role: "user", content: prompt }],
       temperature: 0,
       max_tokens: 200,

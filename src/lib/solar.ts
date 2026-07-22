@@ -58,7 +58,11 @@ export interface Finding {
   groundedness_verdict?: "grounded" | "notGrounded" | "notSure";
 }
 
-export const SOLAR_CHAT_MODEL = process.env.UPSTAGE_CHAT_MODEL ?? "solar-pro2";
+// Read at call time, not module-load time, so a benchmark script can flip
+// process.env.UPSTAGE_CHAT_MODEL between requests without re-importing.
+export function getChatModel(): string {
+  return process.env.UPSTAGE_CHAT_MODEL ?? "solar-pro2";
+}
 
 function getKey(): string {
   const key = process.env.UPSTAGE_API_KEY;
@@ -66,27 +70,48 @@ function getKey(): string {
   return key;
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Retries on 429 (rate limit) with exponential backoff + jitter. Concurrent
+// requests -- multiple demo-day visitors, or a finding-heavy document doing
+// up to 10 sequential judgeCaseMatch calls -- can trip Upstage's per-second
+// limit even when well under any per-minute quota. A transient 429 shouldn't
+// surface as a failed analysis.
+const MAX_RETRIES = 4;
+
 async function chat(
   messages: { role: string; content: string }[],
   opts: { maxTokens?: number; model?: string; responseFormat?: Record<string, unknown> } = {},
 ) {
-  const res = await fetch("https://api.upstage.ai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${getKey()}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: opts.model ?? SOLAR_CHAT_MODEL,
-      messages,
-      temperature: 0,
-      ...(opts.maxTokens ? { max_tokens: opts.maxTokens } : {}),
-      ...(opts.responseFormat ? { response_format: opts.responseFormat } : {}),
-    }),
-    signal: AbortSignal.timeout(60000),
-  });
-  if (!res.ok) throw new Error(`Upstage API error: ${res.status} ${await res.text()}`);
-  return res.json();
+  let lastError: Error | undefined;
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt += 1) {
+    const res = await fetch("https://api.upstage.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${getKey()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: opts.model ?? getChatModel(),
+        messages,
+        temperature: 0,
+        ...(opts.maxTokens ? { max_tokens: opts.maxTokens } : {}),
+        ...(opts.responseFormat ? { response_format: opts.responseFormat } : {}),
+      }),
+      signal: AbortSignal.timeout(60000),
+    });
+    if (res.ok) return res.json();
+    if (res.status === 429 && attempt < MAX_RETRIES) {
+      const backoffMs = 500 * 2 ** attempt + Math.random() * 300;
+      await sleep(backoffMs);
+      continue;
+    }
+    lastError = new Error(`Upstage API error: ${res.status} ${await res.text()}`);
+    break;
+  }
+  throw lastError;
 }
 
 // Strip whitespace AND punctuation/symbol variants (quote marks, dashes,
