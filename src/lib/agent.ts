@@ -1,5 +1,5 @@
 import { type Finding, generateFindings, judgeCaseMatch } from "./solar";
-import { buildContextText, buildDocumentElements, hybridSearchElements, type DocumentElement, type RetrievalFilter } from "./rag";
+import { buildContextText, buildDocumentElements, createRetrievalIndex, hybridSearchElements, type DocumentElement, type RetrievalFilter } from "./rag";
 import { selectRelevantCases } from "./tosdr";
 
 export interface AgentLoopResult {
@@ -25,8 +25,9 @@ function dedupeFindings(findings: Finding[]): Finding[] {
 
 async function rewriteQuery(query: string): Promise<string[]> {
   const prompt = [
-    "당신은 정부 공고문 검색 질의 확장 전문가입니다.",
-    "사용자 질문을 바탕으로 검색에 쓰기 좋은 한국어 쿼리 3개를 생성하되, 핵심 키워드와 기관/기간/카테고리 단서를 포함하세요.",
+    "당신은 이용약관·개인정보처리방침에서 이용자에게 불리한 위험 조항을 찾아내는 검색 질의 확장 전문가입니다.",
+    "사용자 질문을 바탕으로, 문서 안에서 위험 조항이 있을 만한 부분을 찾기 위한 한국어 검색 쿼리 3개를 생성하세요.",
+    "개인정보 수집 항목, 제3자 제공, 마케팅 활용, 보관기간, 계정 해지·정지, 약관 변경 권한, 위치정보·추적기술 같은 핵심 위험 키워드를 다양하게 포함하세요.",
     `질문: ${query}`,
     "출력 형식은 줄바꿈으로 구분된 문자열 3개만 출력하세요.",
   ].join("\n");
@@ -60,19 +61,32 @@ export async function runAgentLoop(
   priorityPrompt = "",
 ): Promise<AgentLoopResult> {
   const elements = buildDocumentElements(sourceText, metadata);
-  const rewrittenQueries = await rewriteQuery(question);
-  const iterations = Math.min(3, rewrittenQueries.length);
-  const collected: DocumentElement[] = [];
+  // Embed all elements once (real Embed 2 vectors, not the old fake
+  // bag-of-words) and reuse across every rewritten-query iteration below,
+  // instead of re-embedding the whole document on each pass. If embedding
+  // fails for any reason, fall back to analyzing the raw document directly
+  // rather than 500ing the whole request.
+  let finalContext: string;
+  let iterations = 0;
+  try {
+    const index = await createRetrievalIndex(elements, metadata);
+    const rewrittenQueries = await rewriteQuery(question);
+    iterations = Math.min(3, rewrittenQueries.length);
+    const collected: DocumentElement[] = [];
 
-  for (let index = 0; index < iterations; index += 1) {
-    const query = rewrittenQueries[index] ?? question;
-    const hits = hybridSearchElements(query, elements, { filters, topK: 6, baseMetadata: metadata });
-    collected.push(...hits);
-    const context = buildContextText(hits);
-    if (context.length > 800) break;
+    for (let i = 0; i < iterations; i += 1) {
+      const query = rewrittenQueries[i] ?? question;
+      const hits = await hybridSearchElements(query, elements, { filters, topK: 6, precomputedIndex: index });
+      collected.push(...hits);
+      const context = buildContextText(hits);
+      if (context.length > 800) break;
+    }
+
+    finalContext = buildContextText(collected.length > 0 ? collected : elements);
+  } catch (e) {
+    console.error("임베딩 기반 검색 실패, 원문 통짜 분석으로 폴백:", e);
+    finalContext = buildContextText(elements);
   }
-
-  const finalContext = buildContextText(collected.length > 0 ? collected : elements);
   // Embed the retrieved context and pull only the semantically closest ToS;DR
   // cases instead of stuffing all 79 into every prompt (metadata/embedding
   // pre-filtering, per mentor feedback on RAG structure).
