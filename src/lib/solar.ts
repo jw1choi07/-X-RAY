@@ -40,7 +40,6 @@ export interface Finding {
 }
 
 export const SOLAR_CHAT_MODEL = process.env.UPSTAGE_CHAT_MODEL ?? "solar-pro2";
-const GROUNDEDNESS_MODEL = "solar-1-mini-groundedness-check";
 
 function getKey(): string {
   const key = process.env.UPSTAGE_API_KEY;
@@ -71,27 +70,26 @@ async function chat(
   return res.json();
 }
 
+function normalizeForMatch(value: string): string {
+  return value.replace(/\s+/g, "").trim();
+}
+
+/**
+ * Upstage's dedicated groundedness-check model (solar-1-mini-groundedness-check)
+ * has been removed from the API entirely (confirmed against the current API
+ * reference -- no Groundedness Check endpoint is documented anymore). Falls
+ * back to the deterministic approach the original pilot pipeline used:
+ * a direct substring check of the quote against the source text, which is
+ * 100% reproducible and costs no API call.
+ */
 export async function checkGroundedness(
   context: string,
   answer: string,
 ): Promise<"grounded" | "notGrounded" | "notSure"> {
-  try {
-    const result = await chat(
-      [
-        { role: "user", content: context },
-        { role: "assistant", content: answer },
-      ],
-      { model: GROUNDEDNESS_MODEL, maxTokens: 5 },
-    );
-    const verdict = String(result.choices?.[0]?.message?.content ?? "").trim();
-    if (verdict === "grounded" || verdict === "notGrounded" || verdict === "notSure") {
-      return verdict;
-    }
-    return "notSure";
-  } catch (e) {
-    console.error("Groundedness Check API 호출 실패:", e);
-    return "notSure";
-  }
+  const normContext = normalizeForMatch(context);
+  const normAnswer = normalizeForMatch(answer);
+  if (!normAnswer) return "notSure";
+  return normContext.includes(normAnswer) ? "grounded" : "notGrounded";
 }
 
 function parseFindingsResponse(raw: string): Finding[] {
@@ -186,16 +184,17 @@ export async function generateFindings(
       usage = result.usage ?? {};
       const parsed = parseFindingsResponse(content);
       const findings = validateFindings(parsed);
-      const groundedFindings: Finding[] = [];
+      // Tag groundedness but don't drop notGrounded findings here -- a strict
+      // exact-substring check will legitimately miss some real quotes (line
+      // breaks, punctuation differences), and silently returning zero findings
+      // for a whole document is a worse outcome than showing an "원문 미확인"
+      // badge. The UI already surfaces this per-finding.
       for (const finding of findings) {
         const verdict = await checkGroundedness(text, finding.quote ?? "");
         finding.quote_grounded = verdict === "grounded";
         finding.groundedness_verdict = verdict;
-        if (verdict === "grounded" || verdict === "notSure") {
-          groundedFindings.push(finding);
-        }
       }
-      return { findings: groundedFindings.slice(0, 10), usage };
+      return { findings: findings.slice(0, 10), usage };
     } catch (error) {
       lastError = error;
       if (!useStructuredOutput) {

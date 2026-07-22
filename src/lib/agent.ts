@@ -1,4 +1,4 @@
-import { checkGroundedness, type Finding, generateFindings, judgeCaseMatch } from "./solar";
+import { type Finding, generateFindings, judgeCaseMatch } from "./solar";
 import { buildContextText, buildDocumentElements, hybridSearchElements, type DocumentElement, type RetrievalFilter } from "./rag";
 import { selectRelevantCases } from "./tosdr";
 
@@ -88,17 +88,17 @@ export async function runAgentLoop(
     return acc;
   }, {} as Record<string, number>);
 
+  // generateFindings() already tagged groundedness_verdict against this same
+  // context. Here we only run the second verification stage: does the quote
+  // actually support the matched risk classification, or did the model grab
+  // a real-but-unrelated sentence? (Originally designed in the pilot
+  // pipeline, wasn't wired into the live app until now.) Skip it for
+  // ungrounded quotes since there's nothing meaningful to validate.
   for (const finding of findings) {
-    const grounded = await checkGroundedness(finalContext, finding.quote ?? "");
-    finding.groundedness_verdict = grounded;
-    if (grounded === "notGrounded") {
+    if (finding.groundedness_verdict === "notGrounded") {
       finding.case_match_verdict = "SKIPPED_UNGROUNDED";
       continue;
     }
-    // Second verification stage: does the quote actually support the matched
-    // risk classification, or did the model just grab a real-but-unrelated
-    // sentence? (originally designed in the pilot pipeline, wasn't wired into
-    // the live app until now.)
     try {
       finding.case_match_verdict = await judgeCaseMatch(finding);
     } catch (e) {
