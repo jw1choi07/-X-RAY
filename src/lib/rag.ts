@@ -161,6 +161,71 @@ export function loadCachedIndex(presetFile: string, baseMetadata: Record<string,
   }
 }
 
+// Matches runs of Hangul syllables, Latin letters, or digits as "words".
+// Korean has no whitespace between words the way English does and we have no
+// morphological analyzer available, so this is a crude tokenizer -- but legal
+// boilerplate ("제3자", "위치정보", "보관기간") tends to appear as fixed
+// compounds, which this catches well enough for keyword scoring purposes.
+function tokenize(text: string): string[] {
+  return (text.toLowerCase().match(/[가-힣]+|[a-zA-Z0-9]+/g) ?? []).filter((t) => t.length > 1);
+}
+
+const BM25_K1 = 1.5;
+const BM25_B = 0.75;
+
+/**
+ * Real keyword scoring (BM25) over the current retrieval pool, computed
+ * fresh per query since the pool is just this one document's elements/spans
+ * rather than a shared corpus. Embedding similarity alone (the previous
+ * "hybridSearchElements" despite its name) rewards semantically-close text
+ * but can miss exact legal terms ("제3자 제공", "위치정보") when a chunk's
+ * embedding drifts slightly off -- BM25 catches those by exact term overlap
+ * instead, so combining the two covers each other's blind spot.
+ */
+function bm25Scores(query: string, records: DocumentRecord[]): Map<string, number> {
+  const queryTerms = Array.from(new Set(tokenize(query)));
+  const docTokens = records.map((r) => tokenize(r.content));
+  const docLengths = docTokens.map((t) => t.length);
+  const avgDocLength = docLengths.reduce((s, l) => s + l, 0) / (docLengths.length || 1);
+
+  const df = new Map<string, number>();
+  for (const term of queryTerms) {
+    let count = 0;
+    for (const tokens of docTokens) {
+      if (tokens.includes(term)) count += 1;
+    }
+    df.set(term, count);
+  }
+
+  const N = records.length;
+  const scores = new Map<string, number>();
+  records.forEach((record, i) => {
+    const tokens = docTokens[i];
+    const dl = docLengths[i];
+    let score = 0;
+    for (const term of queryTerms) {
+      const tf = tokens.filter((t) => t === term).length;
+      if (tf === 0) continue;
+      const n = df.get(term) ?? 0;
+      const idf = Math.log((N - n + 0.5) / (n + 0.5) + 1);
+      score += idf * ((tf * (BM25_K1 + 1)) / (tf + BM25_K1 * (1 - BM25_B + BM25_B * (dl / (avgDocLength || 1)))));
+    }
+    scores.set(record.id, score);
+  });
+  return scores;
+}
+
+function normalize(values: number[]): (v: number) => number {
+  const max = Math.max(...values, 0);
+  if (max <= 0) return () => 0;
+  return (v) => v / max;
+}
+
+// Embeddings get more weight (0.65) since they still carry most of the
+// semantic recall; BM25 (0.35) mainly rescues exact-term matches embeddings
+// miss rather than replacing them.
+const EMBEDDING_WEIGHT = 0.65;
+
 export async function hybridSearchElements(
   query: string,
   elements: DocumentElement[],
@@ -173,14 +238,24 @@ export async function hybridSearchElements(
 ): Promise<DocumentElement[]> {
   const filters = options.filters ?? {};
   const topK = options.topK ?? 6;
-  const records = options.precomputedIndex ?? (await createRetrievalIndex(elements, options.baseMetadata ?? {}));
+  const allRecords = options.precomputedIndex ?? (await createRetrievalIndex(elements, options.baseMetadata ?? {}));
+  const records = allRecords.filter((record) => metadataMatches(record, filters));
   const queryEmbedding = await embedQuery(query);
+
+  const keywordScores = bm25Scores(query, records);
+  const normalizeKeyword = normalize(Array.from(keywordScores.values()));
+  const normalizeEmbedding = normalize(records.map((r) => cosineSimilarity(queryEmbedding, r.embedding)));
+
   const ranked = records
-    .filter((record) => metadataMatches(record, filters))
-    .map((record) => ({
-      record,
-      score: cosineSimilarity(queryEmbedding, record.embedding) + (record.content.length > 200 ? 0.05 : 0),
-    }))
+    .map((record) => {
+      const embeddingScore = normalizeEmbedding(cosineSimilarity(queryEmbedding, record.embedding));
+      const keywordScore = normalizeKeyword(keywordScores.get(record.id) ?? 0);
+      const lengthBonus = record.content.length > 200 ? 0.05 : 0;
+      return {
+        record,
+        score: EMBEDDING_WEIGHT * embeddingScore + (1 - EMBEDDING_WEIGHT) * keywordScore + lengthBonus,
+      };
+    })
     .sort((a, b) => b.score - a.score)
     .slice(0, topK);
 
