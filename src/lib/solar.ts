@@ -89,8 +89,18 @@ async function chat(
   return res.json();
 }
 
+// Strip whitespace AND punctuation/symbol variants (quote marks, dashes,
+// bullets, middle dots, brackets...) before comparing. Crawled HTML and the
+// model's re-typed quote often differ only in these characters (curly vs
+// straight quotes, "·" vs "∙" vs "‧", table-cell spacing) -- treating those
+// as mismatches was rejecting quotes that are substantively grounded. Content
+// characters (Korean/English/digits) still must match exactly and in order,
+// so this doesn't let genuinely different content through.
 function normalizeForMatch(value: string): string {
-  return value.replace(/\s+/g, "").trim();
+  return value
+    .toLowerCase()
+    .replace(/[\s ]+/g, "")
+    .replace(/[.,·∙‧、，。！？!?"'“”‘’`´()（）\[\]{}<>「」『』\-—–_/\\:;：；]/g, "");
 }
 
 /**
