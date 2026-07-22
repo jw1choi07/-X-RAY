@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { Search } from "lucide-react";
+import { useMemo, useState } from "react";
+import { ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FEATURED_SEARCH_ALIASES } from "@/lib/featured-sites";
+import { CATEGORY_ORDER, type SiteCategory } from "@/lib/site-categories";
 
 interface Preset {
   file: string;
   label: string;
+  siteName: string;
+  category: SiteCategory;
 }
 
 interface SearchSectionProps {
@@ -47,6 +50,20 @@ export function findPresetByQuery(query: string, presets: Preset[]): Preset | nu
 export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
   const [query, setQuery] = useState("");
   const [noResult, setNoResult] = useState(false);
+  const [browseOpen, setBrowseOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const categorized = useMemo(() => {
+    const groups = new Map<string, Preset[]>();
+    for (const p of presets) {
+      const list = groups.get(p.category) ?? [];
+      list.push(p);
+      groups.set(p.category, list);
+    }
+    return groups;
+  }, [presets]);
+
+  const categoriesWithSites = CATEGORY_ORDER.filter((c) => (categorized.get(c)?.length ?? 0) > 0);
 
   function handleSearch() {
     const match = findPresetByQuery(query, presets);
@@ -56,6 +73,10 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
     }
     setNoResult(false);
     onSearchResult(match, getSiteName(match.label));
+  }
+
+  function handlePresetClick(preset: Preset) {
+    onSearchResult(preset, preset.siteName);
   }
 
   return (
@@ -102,7 +123,57 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
           </p>
         )}
 
-        <p className="mt-8 text-xs text-neutral-400 dark:text-neutral-500">
+        <button
+          type="button"
+          onClick={() => setBrowseOpen((v) => !v)}
+          className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+        >
+          카테고리로 찾아보기
+          <ChevronDown
+            className={`h-4 w-4 transition-transform ${browseOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        {browseOpen && (
+          <div className="mt-4 max-h-[45vh] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 text-left shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+            <div className="flex flex-wrap gap-2">
+              {categoriesWithSites.map((category) => (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() =>
+                    setActiveCategory((c) => (c === category ? null : category))
+                  }
+                  className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                    activeCategory === category
+                      ? "border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900"
+                      : "border-neutral-200 text-neutral-600 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-500"
+                  }`}
+                >
+                  {category}
+                  <span className="ml-1 opacity-60">{categorized.get(category)?.length}</span>
+                </button>
+              ))}
+            </div>
+
+            {activeCategory && (
+              <div className="mt-4 flex flex-wrap gap-2 border-t border-neutral-100 pt-4 dark:border-neutral-800">
+                {categorized.get(activeCategory)?.map((preset) => (
+                  <button
+                    key={preset.file}
+                    type="button"
+                    onClick={() => handlePresetClick(preset)}
+                    className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 transition-colors hover:bg-blue-100 hover:text-blue-700 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-blue-500/20 dark:hover:text-blue-300"
+                  >
+                    {preset.siteName}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-500">
           {presets.length}개의 사전 크롤링 문서에서 검색합니다
         </p>
       </div>

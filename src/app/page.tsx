@@ -7,11 +7,7 @@ import { SearchSection } from "@/components/search-section";
 import { LinkSection } from "@/components/link-section";
 import { AnalysisResultsPanel, type Finding } from "@/components/analysis-results";
 import type { FeaturedSite } from "@/lib/featured-sites";
-
-interface Preset {
-  file: string;
-  label: string;
-}
+import type { Preset } from "@/lib/presets";
 
 const SECTION_COUNT = 3;
 

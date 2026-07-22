@@ -15,7 +15,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
   {
     id: "kakaot",
     name: "카카오T",
-    presetFile: "카카오T_이용약관.txt",
+    presetFile: "카카오T_개인정보처리방침.txt",
     emoji: "🚕",
     color: "#FEE500",
     riskLabel: "위험",
@@ -27,7 +27,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
   {
     id: "melon",
     name: "멜론",
-    presetFile: "멜론_이용약관.txt",
+    presetFile: "멜론_개인정보처리방침.txt",
     emoji: "🎵",
     color: "#00CD3C",
     riskLabel: "주의",
@@ -39,7 +39,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
   {
     id: "toss",
     name: "토스",
-    presetFile: "토스_이용약관.txt",
+    presetFile: "토스_개인정보처리방침.txt",
     emoji: "💳",
     color: "#0064FF",
     riskLabel: "위험",
@@ -51,7 +51,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
   {
     id: "netflix",
     name: "넷플릭스",
-    presetFile: "넷플릭스_이용약관.txt",
+    presetFile: "넷플릭스_개인정보처리방침.txt",
     emoji: "🎬",
     color: "#E50914",
     riskLabel: "주의",
@@ -63,7 +63,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
   {
     id: "spotify",
     name: "Spotify",
-    presetFile: "Spotify_이용약관.txt",
+    presetFile: "Spotify_개인정보처리방침.txt",
     emoji: "🎧",
     color: "#1DB954",
     riskLabel: "보통",

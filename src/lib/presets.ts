@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getSiteCategory, type SiteCategory } from "@/lib/site-categories";
 
 const JUNK_PHRASES = [
   "Your browser is not compatible",
@@ -18,12 +19,28 @@ export function isUsablePresetText(text: string): boolean {
   return koreanRatio >= 0.15;
 }
 
-export function listUsablePresets(): { file: string; label: string }[] {
+export interface Preset {
+  file: string;
+  label: string;
+  siteName: string;
+  category: SiteCategory;
+}
+
+export function listUsablePresets(): Preset[] {
   const dir = path.join(process.cwd(), "data", "texts");
   const files = fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".txt"))
     .filter((f) => isUsablePresetText(fs.readFileSync(path.join(dir, f), "utf-8")))
     .sort();
-  return files.map((f) => ({ file: f, label: f.replace(".txt", "").replace(/_/g, " · ") }));
+  return files.map((f) => {
+    const nameKey = f.replace(/\.txt$/, "").replace(/_(개인정보처리방침|이용약관)$/, "");
+    const siteName = nameKey.split("_")[0];
+    return {
+      file: f,
+      label: f.replace(".txt", "").replace(/_/g, " · "),
+      siteName,
+      category: getSiteCategory(nameKey),
+    };
+  });
 }

@@ -17,11 +17,7 @@ import {
   type UserPrefs,
 } from "@/lib/user-prefs";
 import { fetchUserPrefs, updateSites } from "@/lib/user-prefs-client";
-
-interface Preset {
-  file: string;
-  label: string;
-}
+import type { Preset } from "@/lib/presets";
 
 function riskTone(label: SiteRiskLabel) {
   switch (label) {
