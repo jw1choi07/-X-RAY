@@ -1,32 +1,36 @@
+import type { Span } from "./rag";
+
 export const SYSTEM_PROMPT = `당신은 이용약관·개인정보처리방침을 분석해서 이용자에게 위험한 조항을 짚어주는 전문가입니다.
 아래는 ToS;DR(국제 약관 감시 프로젝트)이 정의한 "위험 조항 판단 기준" 목록입니다. 이 기준을 참고해서 주어진 약관 원문 안에서 실제로 해당하는 조항을 찾아내세요.
 
 판단 기준 목록:
 {taxonomy}
 
+원문은 "[sN] 문장내용" 형식의 번호가 매겨진 문장/행 목록으로 주어집니다. 각 위험 조항의 근거는 이 목록 중 정확히 하나의 항목을 가리키는 quote_id(sN)로만 지정하세요 — 문장을 직접 다시 타이핑하지 마세요.
+
 규칙:
-1. 반드시 원문에 실제로 존재하는 문장만 인용하세요. 원문에 없는 내용을 지어내지 마세요.
+1. quote_id는 반드시 주어진 목록에 실제로 있는 sN 값이어야 합니다. 목록에 없는 내용을 지어내지 마세요.
 2. 판단 기준 목록에 없는 위험이어도, 이용자에게 불리하다고 판단되면 "기타"로 분류해 포함하세요.
 3. 출력은 반드시 JSON 객체만 반환하세요. 다른 설명 텍스트는 붙이지 마세요.
 4. 각 항목은 다음 필드를 가져야 합니다:
    - "matched_case": 매칭된 판단 기준 제목 (없으면 "기타")
    - "classification": "blocker" | "bad" | "기타"
    - "risk_summary": 이용자 관점에서 한 문장 요약 (한국어)
-   - "quote": 원문에서 그대로 발췌한 근거 문장 (한국어 원문 그대로, 15~200자)
+   - "quote_id": 근거가 되는 항목의 번호 (예: "s7")
 5. 최대 10개까지만, 가장 중요한 위험 조항 순으로 반환하세요.
 6. 결과는 {"findings": [...]} 형식으로만 출력하세요.
 
-예시 (실제 크롤링된 한국 서비스 원문에서 발췌 — matched_case는 반드시 판단 기준 목록에 있는 제목과 정확히 일치시키세요):
-- 원문: "회원탈퇴일로부터 90일(단, 휴대폰번호, DI는 5년)"
-  → {"matched_case": "Some personal data may be kept for business interests or legal obligations", "classification": "bad", "risk_summary": "회원 탈퇴 후에도 최대 90일(일부 정보는 5년)간 개인정보가 보관됩니다.", "quote": "회원탈퇴일로부터 90일(단, 휴대폰번호, DI는 5년)"}
-- 원문: "카카오페이 및 제3자 소식∙상품∙혜택∙이벤트∙광고 등 마케팅, 안내 및 알림"
-  → {"matched_case": "Your personal data may be used for marketing purposes", "classification": "bad", "risk_summary": "수집된 개인정보가 카카오페이 및 제3자의 마케팅·광고 목적으로 활용될 수 있습니다.", "quote": "카카오페이 및 제3자 소식∙상품∙혜택∙이벤트∙광고 등 마케팅, 안내 및 알림"}
-- 원문: "회사는 「위치정보의 보호 및 이용 등에 관한 법률」 제16조 제2항에 따라 위치정보 수집∙이용∙제공사실 확인자료를 자동으로 기록되고 보존되도록 합니다. 해당 자료는 6개월간 보관합니다."
-  → {"matched_case": "Location data may be collected, used and/or shared", "classification": "bad", "risk_summary": "위치정보 수집·이용·제공 사실이 자동으로 기록되어 6개월간 보관됩니다.", "quote": "회사는 「위치정보의 보호 및 이용 등에 관한 법률」 제16조 제2항에 따라 위치정보 수집∙이용∙제공사실 확인자료를 자동으로 기록되고 보존되도록 합니다. 해당 자료는 6개월간 보관합니다."}
-- 원문: "광고 제공업체\nSupermatrix\nMeta\nNaver\nGoogle ads"
-  → {"matched_case": "This service shares your personal data with third parties that are not essential to its operation", "classification": "bad", "risk_summary": "서비스 운영에 필수적이지 않은 광고 제공업체(Meta, Naver, Google ads 등)와 개인정보가 공유됩니다.", "quote": "광고 제공업체\\nSupermatrix\\nMeta\\nNaver\\nGoogle ads"}
-- 원문: "IP주소, 웹브라우징, 검색항목, 쿠키 정보/태그/웹비콘, 이메일주소, 전화번호, MAC주소, 기타고유ID, 기기정보"
-  → {"matched_case": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting", "classification": "bad", "risk_summary": "쿠키·웹비콘·MAC주소 등 기기 식별 정보를 통해 이용자가 추적됩니다.", "quote": "IP주소, 웹브라우징, 검색항목, 쿠키 정보/태그/웹비콘, 이메일주소, 전화번호, MAC주소, 기타고유ID, 기기정보"}
+예시 (실제 크롤링된 한국 서비스 원문에서 발췌 — matched_case는 반드시 판단 기준 목록에 있는 제목과 정확히 일치시키세요. quote_id 번호는 예시일 뿐, 실제로는 주어진 목록에서 해당 문장의 진짜 번호를 쓰세요):
+- [s12] 회원탈퇴일로부터 90일(단, 휴대폰번호, DI는 5년)
+  → {"matched_case": "Some personal data may be kept for business interests or legal obligations", "classification": "bad", "risk_summary": "회원 탈퇴 후에도 최대 90일(일부 정보는 5년)간 개인정보가 보관됩니다.", "quote_id": "s12"}
+- [s5] 카카오페이 및 제3자 소식∙상품∙혜택∙이벤트∙광고 등 마케팅, 안내 및 알림
+  → {"matched_case": "Your personal data may be used for marketing purposes", "classification": "bad", "risk_summary": "수집된 개인정보가 카카오페이 및 제3자의 마케팅·광고 목적으로 활용될 수 있습니다.", "quote_id": "s5"}
+- [s21] 회사는 「위치정보의 보호 및 이용 등에 관한 법률」 제16조 제2항에 따라 위치정보 수집∙이용∙제공사실 확인자료를 자동으로 기록되고 보존되도록 합니다. 해당 자료는 6개월간 보관합니다.
+  → {"matched_case": "Location data may be collected, used and/or shared", "classification": "bad", "risk_summary": "위치정보 수집·이용·제공 사실이 자동으로 기록되어 6개월간 보관됩니다.", "quote_id": "s21"}
+- [s33] Supermatrix, Meta, Naver, Google ads
+  → {"matched_case": "This service shares your personal data with third parties that are not essential to its operation", "classification": "bad", "risk_summary": "서비스 운영에 필수적이지 않은 광고 제공업체(Meta, Naver, Google ads 등)와 개인정보가 공유됩니다.", "quote_id": "s33"}
+- [s40] IP주소, 웹브라우징, 검색항목, 쿠키 정보/태그/웹비콘, 이메일주소, 전화번호, MAC주소, 기타고유ID, 기기정보
+  → {"matched_case": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting", "classification": "bad", "risk_summary": "쿠키·웹비콘·MAC주소 등 기기 식별 정보를 통해 이용자가 추적됩니다.", "quote_id": "s40"}
 `;
 
 export const JUDGE_PROMPT = `당신은 약관 위험 조항 분석 결과를 검수하는 검수자입니다.
@@ -59,6 +63,7 @@ export interface Finding {
   classification: "blocker" | "bad" | "기타";
   risk_summary: string;
   quote: string;
+  quote_id?: string;
   quote_grounded?: boolean;
   case_match_verdict?: string;
   groundedness_verdict?: "grounded" | "notGrounded" | "notSure";
@@ -120,37 +125,13 @@ export async function chat(
   throw lastError;
 }
 
-// Strip whitespace AND punctuation/symbol variants (quote marks, dashes,
-// bullets, middle dots, brackets...) before comparing. Crawled HTML and the
-// model's re-typed quote often differ only in these characters (curly vs
-// straight quotes, "·" vs "∙" vs "‧", table-cell spacing) -- treating those
-// as mismatches was rejecting quotes that are substantively grounded. Content
-// characters (Korean/English/digits) still must match exactly and in order,
-// so this doesn't let genuinely different content through.
-function normalizeForMatch(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[\s ]+/g, "")
-    .replace(/[.,·∙‧、，。！？!?"'“”‘’`´()（）\[\]{}<>「」『』\-—–_/\\:;：；]/g, "");
-}
-
-/**
- * Upstage's dedicated groundedness-check model (solar-1-mini-groundedness-check)
- * has been removed from the API entirely (confirmed against the current API
- * reference -- no Groundedness Check endpoint is documented anymore). Falls
- * back to the deterministic approach the original pilot pipeline used:
- * a direct substring check of the quote against the source text, which is
- * 100% reproducible and costs no API call.
- */
-export async function checkGroundedness(
-  context: string,
-  answer: string,
-): Promise<"grounded" | "notGrounded" | "notSure"> {
-  const normContext = normalizeForMatch(context);
-  const normAnswer = normalizeForMatch(answer);
-  if (!normAnswer) return "notSure";
-  return normContext.includes(normAnswer) ? "grounded" : "notGrounded";
-}
+// Grounding used to be verified by a substring check of the model's re-typed
+// quote against the source text, which missed real quotes whenever the model
+// reformatted whitespace/punctuation while copying. generateFindings() now
+// has the model cite a quote_id (see rag.ts buildSpans) instead of re-typing
+// text, and the literal span text is substituted in server-side -- so a
+// finding's quote is either a verbatim source excerpt or dropped entirely;
+// there is no "notGrounded" state to detect anymore.
 
 function parseFindingsResponse(raw: string): Finding[] {
   let content = raw.trim();
@@ -186,47 +167,70 @@ function parseFindingsResponse(raw: string): Finding[] {
 function validateFindings(findings: Finding[]): Finding[] {
   return findings.filter((finding) => {
     if (!finding || typeof finding !== "object") return false;
-    if (typeof finding.matched_case !== "string" || typeof finding.risk_summary !== "string" || typeof finding.quote !== "string") {
+    if (typeof finding.matched_case !== "string" || typeof finding.risk_summary !== "string" || typeof finding.quote_id !== "string") {
       return false;
     }
     if (!["blocker", "bad", "기타"].includes(finding.classification)) return false;
-    return finding.quote.trim().length > 0;
+    return finding.quote_id.trim().length > 0;
   });
 }
 
-const FINDINGS_JSON_SCHEMA = {
-  type: "json_schema",
-  json_schema: {
-    name: "terms_findings",
-    schema: {
-      type: "object",
-      properties: {
-        findings: {
-          type: "array",
-          maxItems: 10,
-          items: {
-            type: "object",
-            properties: {
-              matched_case: { type: "string" },
-              classification: { type: "string", enum: ["blocker", "bad", "기타"] },
-              risk_summary: { type: "string" },
-              quote: { type: "string" },
+function buildFindingsSchema(spanIds: string[]) {
+  return {
+    type: "json_schema",
+    json_schema: {
+      name: "terms_findings",
+      schema: {
+        type: "object",
+        properties: {
+          findings: {
+            type: "array",
+            maxItems: 10,
+            items: {
+              type: "object",
+              properties: {
+                matched_case: { type: "string" },
+                classification: { type: "string", enum: ["blocker", "bad", "기타"] },
+                risk_summary: { type: "string" },
+                quote_id: { type: "string", enum: spanIds },
+              },
+              required: ["matched_case", "classification", "risk_summary", "quote_id"],
             },
-            required: ["matched_case", "classification", "risk_summary", "quote"],
           },
         },
+        required: ["findings"],
       },
-      required: ["findings"],
     },
-  },
-};
+  };
+}
+
+// Caps how many spans get sent to the model -- long documents can produce
+// thousands of table-row-sized spans, and the enum of valid IDs in the JSON
+// schema grows with them. 15000 chars matches the old whole-context budget.
+const MAX_SPAN_CONTEXT_CHARS = 15000;
+
+function truncateSpans(spans: Span[]): Span[] {
+  const result: Span[] = [];
+  let total = 0;
+  for (const span of spans) {
+    const cost = span.text.length + span.id.length + 3;
+    if (total + cost > MAX_SPAN_CONTEXT_CHARS) break;
+    result.push(span);
+    total += cost;
+  }
+  return result.length > 0 ? result : spans.slice(0, 1);
+}
 
 export async function generateFindings(
-  text: string,
+  spans: Span[],
   taxonomy: string,
   priorityPrompt = "",
 ): Promise<{ findings: Finding[]; usage: unknown }> {
-  const doc = text.slice(0, 15000);
+  const usableSpans = truncateSpans(spans);
+  if (usableSpans.length === 0) return { findings: [], usage: {} };
+  const spanMap = new Map(usableSpans.map((s) => [s.id, s.text]));
+  const spanIds = usableSpans.map((s) => s.id);
+  const doc = usableSpans.map((s) => `[${s.id}] ${s.text}`).join("\n");
   const system = SYSTEM_PROMPT.replace("{taxonomy}", taxonomy) + priorityPrompt;
   const messages = [
     { role: "system", content: system },
@@ -239,21 +243,24 @@ export async function generateFindings(
 
   for (const useStructuredOutput of [true, false]) {
     try {
-      const result = await chat(messages, useStructuredOutput ? { responseFormat: FINDINGS_JSON_SCHEMA } : {});
+      const result = await chat(messages, useStructuredOutput ? { responseFormat: buildFindingsSchema(spanIds) } : {});
       content = String(result.choices?.[0]?.message?.content ?? "").trim();
       usage = result.usage ?? {};
       const parsed = parseFindingsResponse(content);
-      const findings = validateFindings(parsed);
-      // Tag groundedness but don't drop notGrounded findings here -- a strict
-      // exact-substring check will legitimately miss some real quotes (line
-      // breaks, punctuation differences), and silently returning zero findings
-      // for a whole document is a worse outcome than showing an "원문 미확인"
-      // badge. The UI already surfaces this per-finding.
-      for (const finding of findings) {
-        const verdict = await checkGroundedness(text, finding.quote ?? "");
-        finding.quote_grounded = verdict === "grounded";
-        finding.groundedness_verdict = verdict;
-      }
+      // quote_id is resolved to the literal span text here -- a finding
+      // whose id doesn't resolve (only possible on the unstructured fallback
+      // pass, since the structured pass enum-constrains quote_id to real
+      // ids) is dropped rather than shown with a fabricated quote.
+      const findings = validateFindings(parsed)
+        .map((finding) => {
+          const text = spanMap.get(finding.quote_id ?? "");
+          if (!text) return null;
+          finding.quote = text;
+          finding.quote_grounded = true;
+          finding.groundedness_verdict = "grounded";
+          return finding;
+        })
+        .filter((f): f is Finding => f !== null);
       return { findings: findings.slice(0, 10), usage };
     } catch (error) {
       lastError = error;

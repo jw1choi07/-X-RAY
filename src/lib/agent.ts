@@ -1,5 +1,5 @@
 import { getChatModel, type Finding, generateFindings, judgeCaseMatch } from "./solar";
-import { buildContextText, buildDocumentElements, createRetrievalIndex, hybridSearchElements, loadCachedIndex, type DocumentElement, type RetrievalFilter } from "./rag";
+import { buildContextText, buildDocumentElements, buildSpans, createRetrievalIndex, hybridSearchElements, loadCachedIndex, type DocumentElement, type RetrievalFilter } from "./rag";
 import { selectRelevantCases } from "./tosdr";
 
 export interface AgentLoopResult {
@@ -67,7 +67,7 @@ export async function runAgentLoop(
   // instead of re-embedding the whole document on each pass. If embedding
   // fails for any reason, fall back to analyzing the raw document directly
   // rather than 500ing the whole request.
-  let finalContext: string;
+  let finalElements: DocumentElement[];
   let iterations = 0;
   try {
     // Preset documents (the ~147 users pick from a category/search) have
@@ -87,17 +87,23 @@ export async function runAgentLoop(
       if (context.length > 800) break;
     }
 
-    finalContext = buildContextText(collected.length > 0 ? collected : elements);
+    finalElements = collected.length > 0 ? collected : elements;
   } catch (e) {
     console.error("임베딩 기반 검색 실패, 원문 통짜 분석으로 폴백:", e);
-    finalContext = buildContextText(elements);
+    finalElements = elements;
   }
+  const finalContext = buildContextText(finalElements);
   // Embed the retrieved context and pull only the semantically closest ToS;DR
   // cases instead of stuffing all 79 into every prompt (metadata/embedding
   // pre-filtering, per mentor feedback on RAG structure).
   const relevantTaxonomy = await selectRelevantCases(finalContext);
+  // Split the retrieved elements into small IDed spans (table rows/lines) so
+  // generateFindings() can cite an exact span instead of re-typing a quote
+  // from memory -- see buildSpans() in rag.ts for why this makes "원문 미확인"
+  // structurally impossible instead of just less likely.
+  const spans = buildSpans(finalElements);
   const perChunkResults = await Promise.all(
-    [finalContext].map((chunk) => generateFindings(chunk, relevantTaxonomy, priorityPrompt)),
+    [spans].map((chunkSpans) => generateFindings(chunkSpans, relevantTaxonomy, priorityPrompt)),
   );
 
   const findings = dedupeFindings(perChunkResults.flatMap((r) => r.findings as Finding[])).slice(0, 10);
@@ -107,17 +113,11 @@ export async function runAgentLoop(
     return acc;
   }, {} as Record<string, number>);
 
-  // generateFindings() already tagged groundedness_verdict against this same
-  // context. Here we only run the second verification stage: does the quote
-  // actually support the matched risk classification, or did the model grab
-  // a real-but-unrelated sentence? (Originally designed in the pilot
-  // pipeline, wasn't wired into the live app until now.) Skip it for
-  // ungrounded quotes since there's nothing meaningful to validate.
+  // Every finding's quote is now a verbatim span (see generateFindings), so
+  // there's no "ungrounded" state left to skip -- this only checks whether
+  // the quote actually supports the matched risk classification, or the
+  // model grabbed a real-but-unrelated span.
   for (const finding of findings) {
-    if (finding.groundedness_verdict === "notGrounded") {
-      finding.case_match_verdict = "SKIPPED_UNGROUNDED";
-      continue;
-    }
     try {
       finding.case_match_verdict = await judgeCaseMatch(finding);
     } catch (e) {

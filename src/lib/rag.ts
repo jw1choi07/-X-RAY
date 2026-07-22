@@ -193,3 +193,58 @@ export async function hybridSearchElements(
 export function buildContextText(elements: DocumentElement[]): string {
   return elements.map((element) => element.text).join("\n\n");
 }
+
+export interface Span {
+  id: string;
+  text: string;
+}
+
+const MAX_SENTENCE_CHARS = 220;
+
+// Splits a paragraph-length line further along Korean sentence-ending
+// punctuation ("다.", "함.", "니다." + following space) so a single dense
+// paragraph doesn't become one giant span the model has to quote wholesale.
+function splitIntoSentences(line: string): string[] {
+  if (line.length <= MAX_SENTENCE_CHARS) return [line];
+  const parts = line.split(/(?<=[다함음됨]\.)\s+/);
+  return parts.flatMap((part) =>
+    part.length <= MAX_SENTENCE_CHARS
+      ? [part]
+      : Array.from({ length: Math.ceil(part.length / MAX_SENTENCE_CHARS) }, (_, i) =>
+          part.slice(i * MAX_SENTENCE_CHARS, (i + 1) * MAX_SENTENCE_CHARS),
+        ),
+  );
+}
+
+/**
+ * Splits retrieved elements into small, uniquely-IDed spans (table
+ * rows / lines / sentences) so the model can cite an exact span instead of
+ * re-typing a quote from memory. The literal span text is then substituted
+ * back in server-side (see generateFindings in solar.ts), which makes
+ * "원문 미확인" quotes structurally impossible for anything the model
+ * actually points at -- it can only ever cite spans that are verbatim
+ * substrings of the source document.
+ */
+export function buildSpans(elements: DocumentElement[]): Span[] {
+  const spans: Span[] = [];
+  let counter = 1;
+  for (const element of elements) {
+    const lines = element.text
+      .split("\n")
+      .map((l) => l.trim())
+      .filter(Boolean);
+    for (const line of lines) {
+      for (const sentence of splitIntoSentences(line)) {
+        const trimmed = sentence.trim();
+        if (trimmed.length < 8) continue; // too short to be a meaningful quote
+        spans.push({ id: `s${counter}`, text: trimmed });
+        counter += 1;
+      }
+    }
+  }
+  return spans;
+}
+
+export function buildSpanContextText(spans: Span[]): string {
+  return spans.map((span) => `[${span.id}] ${span.text}`).join("\n");
+}

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "benchmark": "tsx scripts/benchmark-models.ts"
+    "benchmark": "tsx scripts/benchmark-solar-models.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
