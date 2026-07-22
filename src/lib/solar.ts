@@ -81,7 +81,7 @@ function sleep(ms: number): Promise<void> {
 // surface as a failed analysis.
 const MAX_RETRIES = 4;
 
-async function chat(
+export async function chat(
   messages: { role: string; content: string }[],
   opts: { maxTokens?: number; model?: string; responseFormat?: Record<string, unknown> } = {},
 ) {

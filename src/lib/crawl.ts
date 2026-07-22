@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { extractDocumentMetadata, type DocumentMetadata } from "./info-extract";
+import { extractDocumentMetadata, extractMetadataFromText, type DocumentMetadata } from "./info-extract";
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -300,5 +300,10 @@ export async function fetchDocument(url: string) {
     );
   }
 
-  return { text, method, char_count: text.length, metadata: metadata ?? null };
+  // PDF 경로는 위에서 이미 Information Extraction으로 메타데이터를 채워뒀고,
+  // HTML 경로(정적/embedded/reader 어떤 방식으로 텍스트를 얻었든)는 아직 없으므로
+  // 확보된 원문 텍스트로 한 번 더 시도한다 -- 두 경로 모두 같은 "한눈에 보기" 카드로 이어짐.
+  const finalMetadata = metadata ?? (await extractMetadataFromText(text));
+
+  return { text, method, char_count: text.length, metadata: finalMetadata };
 }

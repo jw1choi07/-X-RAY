@@ -1,3 +1,5 @@
+import { chat } from "./solar";
+
 export interface DocumentMetadata {
   effective_date: string;
   company_name: string;
@@ -95,6 +97,45 @@ export async function extractDocumentMetadata(
     };
   } catch (e) {
     console.error("Information Extraction 실패, 메타데이터 없이 진행:", e);
+    return null;
+  }
+}
+
+const METADATA_TEXT_SYSTEM_PROMPT = `당신은 이용약관·개인정보처리방침 원문에서 문서 메타데이터를 추출하는 전문가입니다.
+아래 원문에서 시행일자, 사업자명, 개인정보 보관기간, 문의처, 관할 법원을 찾아 JSON으로 반환하세요.
+원문에 명시되어 있지 않은 항목은 반드시 빈 문자열로 두고, 지어내지 마세요.`;
+
+/**
+ * HTML 등 이미지/PDF가 아닌 원문 텍스트에서 같은 메타데이터를 추출합니다.
+ * Information Extraction API는 이미지·PDF 입력 전용이라 HTML에는 쓸 수 없어서,
+ * 이미 확보한 원문 텍스트를 Solar Chat + JSON 스키마(findings 추출과 동일한 방식)로
+ * 구조화 추출합니다. Upstage의 전용 IE 엔드포인트는 아니지만, 사용자에게 보이는
+ * "한눈에 보기" 결과는 PDF/HTML 문서 모두 동일하게 채워집니다.
+ */
+export async function extractMetadataFromText(text: string): Promise<DocumentMetadata | null> {
+  if (!text || text.trim().length < 200) return null;
+
+  try {
+    const result = await chat(
+      [
+        { role: "system", content: METADATA_TEXT_SYSTEM_PROMPT },
+        { role: "user", content: `다음은 약관 원문입니다:\n\n${text.slice(0, 15000)}` },
+      ],
+      { responseFormat: METADATA_SCHEMA },
+    );
+    const content = result.choices?.[0]?.message?.content;
+    if (typeof content !== "string") return null;
+    const parsed = JSON.parse(content) as Partial<DocumentMetadata>;
+
+    return {
+      effective_date: parsed.effective_date ?? "",
+      company_name: parsed.company_name ?? "",
+      data_retention_period: parsed.data_retention_period ?? "",
+      contact: parsed.contact ?? "",
+      jurisdiction: parsed.jurisdiction ?? "",
+    };
+  } catch (e) {
+    console.error("HTML 문서 메타데이터 추출(Solar Chat) 실패:", e);
     return null;
   }
 }
