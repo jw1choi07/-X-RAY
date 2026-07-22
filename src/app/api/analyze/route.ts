@@ -1,16 +1,33 @@
 import fs from "node:fs";
 import path from "node:path";
+import { auth, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { fetchDocument, CrawlBlocked } from "@/lib/crawl";
 import { analyzeDocument } from "@/lib/analyze";
 import { isUsablePresetText } from "@/lib/presets";
 import { getCollectionSchedule } from "@/lib/scheduler";
+import { isRiskFilterId, normalizeUserPrefs, type RiskFilterId } from "@/lib/user-prefs";
+
+async function loadPriorityFilters(): Promise<RiskFilterId[]> {
+  try {
+    const { userId } = await auth();
+    if (!userId) return [];
+    const client = await clerkClient();
+    const user = await client.users.getUser(userId);
+    const prefs = normalizeUserPrefs(
+      (user.privateMetadata as Record<string, unknown> | undefined)?.xrayPrefs,
+    );
+    return prefs.riskFilters.filter(isRiskFilterId);
+  } catch {
+    return [];
+  }
+}
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     let text: string;
-let meta: { char_count: number; method: string; schedule: string } | null = null;
+    let meta: { char_count: number; method: string; schedule: string } | null = null;
     if (body.presetFile) {
       if (typeof body.presetFile !== "string" || body.presetFile.includes("/") || body.presetFile.includes("\\")) {
         return NextResponse.json({ error: "존재하지 않는 프리셋입니다." }, { status: 400 });
@@ -48,8 +65,9 @@ let meta: { char_count: number; method: string; schedule: string } | null = null
       return NextResponse.json({ error: "url, presetFile, text 중 하나가 필요합니다." }, { status: 400 });
     }
 
-    const result = await analyzeDocument(text);
-    return NextResponse.json({ ...result, meta });
+    const priorityFilters = await loadPriorityFilters();
+    const result = await analyzeDocument(text, priorityFilters);
+    return NextResponse.json({ ...result, meta, priorityFilters });
   } catch (e) {
     if (e instanceof CrawlBlocked) {
       return NextResponse.json({ error: e.message }, { status: 403 });
