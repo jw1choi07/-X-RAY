@@ -1,0 +1,3062 @@
+[
+  {
+    "service": "11번가",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9361,
+    "total": 10,
+    "grounded": 1,
+    "valid": 1,
+    "totalTokens": 7399
+  },
+  {
+    "service": "B마트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11457,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 10465
+  },
+  {
+    "service": "ChatGPT_OpenAI_",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11991,
+    "total": 10,
+    "grounded": 8,
+    "valid": 8,
+    "totalTokens": 7499
+  },
+  {
+    "service": "Discord",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10156,
+    "total": 10,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 5562
+  },
+  {
+    "service": "GS25",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 13819,
+    "total": 10,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 10215
+  },
+  {
+    "service": "GS더프레시",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10626,
+    "total": 7,
+    "grounded": 5,
+    "valid": 3,
+    "totalTokens": 9823
+  },
+  {
+    "service": "Gemini",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10299,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 7241
+  },
+  {
+    "service": "KB증권",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8616,
+    "total": 10,
+    "grounded": 8,
+    "valid": 2,
+    "totalTokens": 2635
+  },
+  {
+    "service": "KG이니시스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1792,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3081
+  },
+  {
+    "service": "MS365",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10717,
+    "total": 10,
+    "grounded": 10,
+    "valid": 5,
+    "totalTokens": 6977
+  },
+  {
+    "service": "Notion",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7328,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5089
+  },
+  {
+    "service": "SSG닷컴",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7735,
+    "total": 10,
+    "grounded": 2,
+    "valid": 2,
+    "totalTokens": 9199
+  },
+  {
+    "service": "Slack",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11187,
+    "total": 7,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 7477
+  },
+  {
+    "service": "Spotify",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10980,
+    "total": 10,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 7434
+  },
+  {
+    "service": "골프존",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10001,
+    "total": 9,
+    "grounded": 8,
+    "valid": 7,
+    "totalTokens": 5901
+  },
+  {
+    "service": "교보문고",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11313,
+    "total": 10,
+    "grounded": 10,
+    "valid": 6,
+    "totalTokens": 8412
+  },
+  {
+    "service": "교보이북",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11773,
+    "total": 10,
+    "grounded": 10,
+    "valid": 7,
+    "totalTokens": 8475
+  },
+  {
+    "service": "구글",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12140,
+    "total": 10,
+    "grounded": 10,
+    "valid": 7,
+    "totalTokens": 7233
+  },
+  {
+    "service": "구글드라이브",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11335,
+    "total": 10,
+    "grounded": 10,
+    "valid": 6,
+    "totalTokens": 7315
+  },
+  {
+    "service": "그로우앤그로우",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7431,
+    "total": 9,
+    "grounded": 2,
+    "valid": 1,
+    "totalTokens": 4280
+  },
+  {
+    "service": "넷마블",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11775,
+    "total": 10,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 8615
+  },
+  {
+    "service": "넷플릭스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 6772,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 7131
+  },
+  {
+    "service": "눔",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11239,
+    "total": 10,
+    "grounded": 8,
+    "valid": 7,
+    "totalTokens": 7787
+  },
+  {
+    "service": "뉴트리원",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10451,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 5436
+  },
+  {
+    "service": "다노",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8805,
+    "total": 5,
+    "grounded": 5,
+    "valid": 4,
+    "totalTokens": 3335
+  },
+  {
+    "service": "다방",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10858,
+    "total": 10,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 5751
+  },
+  {
+    "service": "당근마켓",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12689,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 8311
+  },
+  {
+    "service": "당근페이",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 13003,
+    "total": 9,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 6246
+  },
+  {
+    "service": "더반찬",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1825,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5641
+  },
+  {
+    "service": "더존비즈온",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11127,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 7204
+  },
+  {
+    "service": "데카트론",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9536,
+    "total": 9,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 5550
+  },
+  {
+    "service": "드롭박스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12439,
+    "total": 10,
+    "grounded": 10,
+    "valid": 8,
+    "totalTokens": 5586
+  },
+  {
+    "service": "디시인사이드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10557,
+    "total": 9,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 6011
+  },
+  {
+    "service": "런드리고",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 6401,
+    "total": 5,
+    "grounded": 5,
+    "valid": 3,
+    "totalTokens": 2910
+  },
+  {
+    "service": "레진코믹스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11138,
+    "total": 10,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 6950
+  },
+  {
+    "service": "렌딧",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11794,
+    "total": 10,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 6942
+  },
+  {
+    "service": "롯데렌터카",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11099,
+    "total": 9,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 9052
+  },
+  {
+    "service": "뤼튼",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9759,
+    "total": 9,
+    "grounded": 4,
+    "valid": 2,
+    "totalTokens": 8456
+  },
+  {
+    "service": "리디북스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8697,
+    "total": 10,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 5377
+  },
+  {
+    "service": "리멤버",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12283,
+    "total": 9,
+    "grounded": 8,
+    "valid": 8,
+    "totalTokens": 8903
+  },
+  {
+    "service": "링글",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10554,
+    "total": 9,
+    "grounded": 9,
+    "valid": 3,
+    "totalTokens": 5054
+  },
+  {
+    "service": "맥도날드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11561,
+    "total": 9,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 8117
+  },
+  {
+    "service": "머스트잇",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10755,
+    "total": 10,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 7618
+  },
+  {
+    "service": "메가커피",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12500,
+    "total": 9,
+    "grounded": 9,
+    "valid": 5,
+    "totalTokens": 8546
+  },
+  {
+    "service": "메디히어",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10082,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 3186
+  },
+  {
+    "service": "멜론",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10566,
+    "total": 7,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 4787
+  },
+  {
+    "service": "문피아",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10299,
+    "total": 9,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 7023
+  },
+  {
+    "service": "미래에셋증권",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12632,
+    "total": 10,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 8740
+  },
+  {
+    "service": "미샤",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 2707,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3546
+  },
+  {
+    "service": "미소",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12487,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 6288
+  },
+  {
+    "service": "밀리의서재",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10938,
+    "total": 10,
+    "grounded": 9,
+    "valid": 4,
+    "totalTokens": 6935
+  },
+  {
+    "service": "배달의민족",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10648,
+    "total": 10,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 8883
+  },
+  {
+    "service": "부킹닷컴",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10768,
+    "total": 10,
+    "grounded": 5,
+    "valid": 5,
+    "totalTokens": 7602
+  },
+  {
+    "service": "브랜디",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11860,
+    "total": 10,
+    "grounded": 9,
+    "valid": 6,
+    "totalTokens": 8679
+  },
+  {
+    "service": "비비큐",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9730,
+    "total": 8,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 3321
+  },
+  {
+    "service": "빽다방",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8713,
+    "total": 10,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 8841
+  },
+  {
+    "service": "뽐뿌",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10432,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 6468
+  },
+  {
+    "service": "사람인",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10346,
+    "total": 10,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 9252
+  },
+  {
+    "service": "삼성화재",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9624,
+    "total": 9,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 8399
+  },
+  {
+    "service": "생활코딩",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9829,
+    "total": 9,
+    "grounded": 9,
+    "valid": 6,
+    "totalTokens": 3867
+  },
+  {
+    "service": "서울랜드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1944,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3719
+  },
+  {
+    "service": "셀잇",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9208,
+    "total": 10,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 6424
+  },
+  {
+    "service": "숨고",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8701,
+    "total": 10,
+    "grounded": 5,
+    "valid": 4,
+    "totalTokens": 8603
+  },
+  {
+    "service": "스마일게이트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7505,
+    "total": 5,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 3142
+  },
+  {
+    "service": "스윗",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11680,
+    "total": 9,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 5760
+  },
+  {
+    "service": "스티비",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11031,
+    "total": 10,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 5030
+  },
+  {
+    "service": "스파크플러스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10231,
+    "total": 9,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 8775
+  },
+  {
+    "service": "스픽",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10760,
+    "total": 10,
+    "grounded": 7,
+    "valid": 7,
+    "totalTokens": 7539
+  },
+  {
+    "service": "식신",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9616,
+    "total": 10,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 6138
+  },
+  {
+    "service": "써브웨이",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7885,
+    "total": 10,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 5829
+  },
+  {
+    "service": "쏘카",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10408,
+    "total": 9,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 3836
+  },
+  {
+    "service": "아고다",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11000,
+    "total": 9,
+    "grounded": 7,
+    "valid": 7,
+    "totalTokens": 7740
+  },
+  {
+    "service": "아모레퍼시픽몰",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8849,
+    "total": 9,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 6649
+  },
+  {
+    "service": "알라딘",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9736,
+    "total": 10,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 9431
+  },
+  {
+    "service": "알리익스프레스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9836,
+    "total": 9,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 9945
+  },
+  {
+    "service": "야나두",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11504,
+    "total": 9,
+    "grounded": 8,
+    "valid": 4,
+    "totalTokens": 5828
+  },
+  {
+    "service": "야놀자",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10128,
+    "total": 9,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 8510
+  },
+  {
+    "service": "업비트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10315,
+    "total": 10,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 5343
+  },
+  {
+    "service": "에듀스파",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9919,
+    "total": 10,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 8013
+  },
+  {
+    "service": "에뛰드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10071,
+    "total": 10,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 8193
+  },
+  {
+    "service": "에이블리",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10124,
+    "total": 8,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 9108
+  },
+  {
+    "service": "엔씨소프트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11194,
+    "total": 10,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 8530
+  },
+  {
+    "service": "엔카",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12218,
+    "total": 10,
+    "grounded": 10,
+    "valid": 3,
+    "totalTokens": 9220
+  },
+  {
+    "service": "예스24",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1793,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2873
+  },
+  {
+    "service": "오늘의집",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8908,
+    "total": 10,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 5993
+  },
+  {
+    "service": "오아시스마켓",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1937,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2907
+  },
+  {
+    "service": "옥션",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1464,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2031
+  },
+  {
+    "service": "와그",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 13074,
+    "total": 10,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 6693
+  },
+  {
+    "service": "왓챠",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8923,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 7918
+  },
+  {
+    "service": "요기요",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11266,
+    "total": 10,
+    "grounded": 9,
+    "valid": 6,
+    "totalTokens": 7280
+  },
+  {
+    "service": "웅진씽크빅",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12377,
+    "total": 9,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 9163
+  },
+  {
+    "service": "원티드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8086,
+    "total": 9,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 3823
+  },
+  {
+    "service": "유튜브_Google",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11876,
+    "total": 10,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 7375
+  },
+  {
+    "service": "윤선생",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10827,
+    "total": 9,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 4947
+  },
+  {
+    "service": "이니스프리",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1914,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3380
+  },
+  {
+    "service": "이디야",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1461,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 1986
+  },
+  {
+    "service": "이마트24",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12082,
+    "total": 10,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 8268
+  },
+  {
+    "service": "이지차저",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1674,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2476
+  },
+  {
+    "service": "인크루트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10842,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 9565
+  },
+  {
+    "service": "인프런",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9092,
+    "total": 10,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 6241
+  },
+  {
+    "service": "일룸",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 2149,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 8779
+  },
+  {
+    "service": "잔디",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10239,
+    "total": 10,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 5559
+  },
+  {
+    "service": "잡코리아",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9131,
+    "total": 9,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 9185
+  },
+  {
+    "service": "조선일보",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9710,
+    "total": 9,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 5859
+  },
+  {
+    "service": "줌ZUM",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11167,
+    "total": 8,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 3794
+  },
+  {
+    "service": "줌Zoom",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10176,
+    "total": 10,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 7631
+  },
+  {
+    "service": "중고나라",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 2039,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 4863
+  },
+  {
+    "service": "중앙일보",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1548,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2486
+  },
+  {
+    "service": "지그재그",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11455,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 6354
+  },
+  {
+    "service": "지마켓",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10947,
+    "total": 9,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 9170
+  },
+  {
+    "service": "채널톡",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8949,
+    "total": 10,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 7627
+  },
+  {
+    "service": "첫차",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10529,
+    "total": 10,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 6601
+  },
+  {
+    "service": "카카오T",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10398,
+    "total": 9,
+    "grounded": 7,
+    "valid": 7,
+    "totalTokens": 6980
+  },
+  {
+    "service": "카카오게임즈",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12698,
+    "total": 10,
+    "grounded": 9,
+    "valid": 8,
+    "totalTokens": 7562
+  },
+  {
+    "service": "카카오페이",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9524,
+    "total": 10,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 8742
+  },
+  {
+    "service": "카카오페이지",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9518,
+    "total": 9,
+    "grounded": 5,
+    "valid": 5,
+    "totalTokens": 6572
+  },
+  {
+    "service": "캐시슬라이드",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10624,
+    "total": 10,
+    "grounded": 10,
+    "valid": 5,
+    "totalTokens": 4775
+  },
+  {
+    "service": "캐시워크",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10341,
+    "total": 10,
+    "grounded": 7,
+    "valid": 7,
+    "totalTokens": 8948
+  },
+  {
+    "service": "컴투스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9650,
+    "total": 10,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 8778
+  },
+  {
+    "service": "케이뱅크",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 7653,
+    "total": 6,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 2952
+  },
+  {
+    "service": "케이카",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9622,
+    "total": 10,
+    "grounded": 5,
+    "valid": 5,
+    "totalTokens": 6801
+  },
+  {
+    "service": "코레일톡",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 13646,
+    "total": 10,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 10217
+  },
+  {
+    "service": "코파일럿",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11469,
+    "total": 10,
+    "grounded": 10,
+    "valid": 6,
+    "totalTokens": 4888
+  },
+  {
+    "service": "쿠쿠홈시스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12922,
+    "total": 10,
+    "grounded": 8,
+    "valid": 7,
+    "totalTokens": 8981
+  },
+  {
+    "service": "쿠팡",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10646,
+    "total": 10,
+    "grounded": 10,
+    "valid": 7,
+    "totalTokens": 3396
+  },
+  {
+    "service": "쿠팡이츠",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12268,
+    "total": 8,
+    "grounded": 5,
+    "valid": 5,
+    "totalTokens": 9227
+  },
+  {
+    "service": "크래프톤",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12185,
+    "total": 7,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 6858
+  },
+  {
+    "service": "크몽",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8496,
+    "total": 10,
+    "grounded": 1,
+    "valid": 1,
+    "totalTokens": 8475
+  },
+  {
+    "service": "클래스101",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 4608,
+    "total": 3,
+    "grounded": 3,
+    "valid": 0,
+    "totalTokens": 2277
+  },
+  {
+    "service": "클래스유",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11057,
+    "total": 8,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 5095
+  },
+  {
+    "service": "탈잉",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11069,
+    "total": 10,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 6659
+  },
+  {
+    "service": "테무",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11277,
+    "total": 9,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 7790
+  },
+  {
+    "service": "토니모리",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 12560,
+    "total": 10,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 6764
+  },
+  {
+    "service": "토스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10872,
+    "total": 9,
+    "grounded": 9,
+    "valid": 6,
+    "totalTokens": 8854
+  },
+  {
+    "service": "토스뱅크",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11565,
+    "total": 10,
+    "grounded": 6,
+    "valid": 6,
+    "totalTokens": 9122
+  },
+  {
+    "service": "토스페이먼츠",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11847,
+    "total": 8,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 7963
+  },
+  {
+    "service": "투썸플레이스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 6576,
+    "total": 5,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 2818
+  },
+  {
+    "service": "트로스트",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 8394,
+    "total": 10,
+    "grounded": 2,
+    "valid": 2,
+    "totalTokens": 3975
+  },
+  {
+    "service": "특허청e특허나라",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10773,
+    "total": 9,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 9310
+  },
+  {
+    "service": "티맵",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11689,
+    "total": 10,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 8545
+  },
+  {
+    "service": "틱톡",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 6511,
+    "total": 5,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 2173
+  },
+  {
+    "service": "팟빵",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11260,
+    "total": 10,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 6231
+  },
+  {
+    "service": "패널나우",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9712,
+    "total": 10,
+    "grounded": 5,
+    "valid": 4,
+    "totalTokens": 7573
+  },
+  {
+    "service": "패스트캠퍼스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10136,
+    "total": 9,
+    "grounded": 5,
+    "valid": 5,
+    "totalTokens": 7692
+  },
+  {
+    "service": "패스트파이브",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 5933,
+    "total": 4,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 2777
+  },
+  {
+    "service": "페이코",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1822,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2782
+  },
+  {
+    "service": "플로우",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10795,
+    "total": 9,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 7584
+  },
+  {
+    "service": "플리토",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9744,
+    "total": 9,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 8308
+  },
+  {
+    "service": "핀다",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 10445,
+    "total": 7,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 8140
+  },
+  {
+    "service": "한샘",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9401,
+    "total": 10,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 8707
+  },
+  {
+    "service": "헬로마켓",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 9583,
+    "total": 6,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 7029
+  },
+  {
+    "service": "현대해상",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 1737,
+    "total": 0,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5251
+  },
+  {
+    "service": "홈플러스",
+    "model": "solar-pro2",
+    "ok": true,
+    "latencyMs": 11234,
+    "total": 9,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 8809
+  },
+  {
+    "service": "11번가",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15289,
+    "total": 10,
+    "grounded": 10,
+    "valid": 3,
+    "totalTokens": 7299
+  },
+  {
+    "service": "B마트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 19580,
+    "total": 10,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 10139
+  },
+  {
+    "service": "ChatGPT_OpenAI_",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14629,
+    "total": 8,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 7284
+  },
+  {
+    "service": "Discord",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13823,
+    "total": 10,
+    "grounded": 9,
+    "valid": 3,
+    "totalTokens": 5580
+  },
+  {
+    "service": "GS25",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 17808,
+    "total": 9,
+    "grounded": 9,
+    "valid": 5,
+    "totalTokens": 9190
+  },
+  {
+    "service": "GS더프레시",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11321,
+    "total": 8,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 9103
+  },
+  {
+    "service": "Gemini",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13538,
+    "total": 10,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 7445
+  },
+  {
+    "service": "KB증권",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 7896,
+    "total": 9,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 2789
+  },
+  {
+    "service": "KG이니시스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6769,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3806
+  },
+  {
+    "service": "MS365",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8017,
+    "total": 2,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 6929
+  },
+  {
+    "service": "Notion",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12172,
+    "total": 9,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 5376
+  },
+  {
+    "service": "SSG닷컴",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 16605,
+    "total": 9,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 9621
+  },
+  {
+    "service": "Slack",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 7918,
+    "total": 1,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 6971
+  },
+  {
+    "service": "Spotify",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13580,
+    "total": 9,
+    "grounded": 7,
+    "valid": 1,
+    "totalTokens": 7371
+  },
+  {
+    "service": "골프존",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15181,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 5813
+  },
+  {
+    "service": "교보문고",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13309,
+    "total": 10,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 8414
+  },
+  {
+    "service": "교보이북",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14088,
+    "total": 9,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 8530
+  },
+  {
+    "service": "구글",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10344,
+    "total": 9,
+    "grounded": 6,
+    "valid": 2,
+    "totalTokens": 7230
+  },
+  {
+    "service": "구글드라이브",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13290,
+    "total": 9,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 7392
+  },
+  {
+    "service": "그로우앤그로우",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9211,
+    "total": 9,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 4442
+  },
+  {
+    "service": "넷마블",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15595,
+    "total": 10,
+    "grounded": 10,
+    "valid": 7,
+    "totalTokens": 8411
+  },
+  {
+    "service": "넷플릭스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14277,
+    "total": 10,
+    "grounded": 7,
+    "valid": 1,
+    "totalTokens": 7240
+  },
+  {
+    "service": "눔",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10968,
+    "total": 6,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 7716
+  },
+  {
+    "service": "뉴트리원",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8205,
+    "total": 3,
+    "grounded": 2,
+    "valid": 1,
+    "totalTokens": 5313
+  },
+  {
+    "service": "다노",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6906,
+    "total": 5,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 3262
+  },
+  {
+    "service": "다방",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10965,
+    "total": 10,
+    "grounded": 8,
+    "valid": 4,
+    "totalTokens": 5457
+  },
+  {
+    "service": "당근마켓",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13899,
+    "total": 9,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 8281
+  },
+  {
+    "service": "당근페이",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12007,
+    "total": 9,
+    "grounded": 9,
+    "valid": 5,
+    "totalTokens": 5879
+  },
+  {
+    "service": "더반찬",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8218,
+    "total": 8,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 6201
+  },
+  {
+    "service": "더존비즈온",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10564,
+    "total": 7,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 7168
+  },
+  {
+    "service": "데카트론",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11567,
+    "total": 10,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 5504
+  },
+  {
+    "service": "드롭박스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14848,
+    "total": 10,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 5495
+  },
+  {
+    "service": "디시인사이드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9823,
+    "total": 8,
+    "grounded": 8,
+    "valid": 1,
+    "totalTokens": 5922
+  },
+  {
+    "service": "런드리고",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8599,
+    "total": 6,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 2998
+  },
+  {
+    "service": "레진코믹스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12756,
+    "total": 10,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 6789
+  },
+  {
+    "service": "렌딧",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13969,
+    "total": 10,
+    "grounded": 8,
+    "valid": 8,
+    "totalTokens": 6710
+  },
+  {
+    "service": "롯데렌터카",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15399,
+    "total": 7,
+    "grounded": 4,
+    "valid": 0,
+    "totalTokens": 8640
+  },
+  {
+    "service": "뤼튼",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12139,
+    "total": 7,
+    "grounded": 4,
+    "valid": 1,
+    "totalTokens": 8406
+  },
+  {
+    "service": "리디북스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14444,
+    "total": 7,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 5750
+  },
+  {
+    "service": "리멤버",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8181,
+    "total": 4,
+    "grounded": 4,
+    "valid": 0,
+    "totalTokens": 8302
+  },
+  {
+    "service": "링글",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12294,
+    "total": 5,
+    "grounded": 4,
+    "valid": 1,
+    "totalTokens": 5253
+  },
+  {
+    "service": "맥도날드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8098,
+    "total": 6,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 7742
+  },
+  {
+    "service": "머스트잇",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9091,
+    "total": 10,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 7164
+  },
+  {
+    "service": "메가커피",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11064,
+    "total": 9,
+    "grounded": 2,
+    "valid": 1,
+    "totalTokens": 8469
+  },
+  {
+    "service": "메디히어",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9204,
+    "total": 5,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 3197
+  },
+  {
+    "service": "멜론",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11095,
+    "total": 7,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 4510
+  },
+  {
+    "service": "문피아",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11682,
+    "total": 10,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 6859
+  },
+  {
+    "service": "미래에셋증권",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13539,
+    "total": 9,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 8777
+  },
+  {
+    "service": "미샤",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8659,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 4204
+  },
+  {
+    "service": "미소",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11907,
+    "total": 10,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 6116
+  },
+  {
+    "service": "밀리의서재",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12936,
+    "total": 10,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 6903
+  },
+  {
+    "service": "배달의민족",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13832,
+    "total": 10,
+    "grounded": 6,
+    "valid": 5,
+    "totalTokens": 8831
+  },
+  {
+    "service": "부킹닷컴",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13405,
+    "total": 10,
+    "grounded": 8,
+    "valid": 4,
+    "totalTokens": 7353
+  },
+  {
+    "service": "브랜디",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9609,
+    "total": 9,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 8448
+  },
+  {
+    "service": "비비큐",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10444,
+    "total": 5,
+    "grounded": 4,
+    "valid": 1,
+    "totalTokens": 3563
+  },
+  {
+    "service": "빽다방",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10890,
+    "total": 8,
+    "grounded": 6,
+    "valid": 2,
+    "totalTokens": 8624
+  },
+  {
+    "service": "뽐뿌",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13203,
+    "total": 9,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 6351
+  },
+  {
+    "service": "사람인",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 20814,
+    "total": 10,
+    "grounded": 8,
+    "valid": 1,
+    "totalTokens": 8686
+  },
+  {
+    "service": "삼성화재",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15412,
+    "total": 8,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 8518
+  },
+  {
+    "service": "생활코딩",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10968,
+    "total": 7,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 3821
+  },
+  {
+    "service": "서울랜드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12985,
+    "total": 7,
+    "grounded": 7,
+    "valid": 1,
+    "totalTokens": 4522
+  },
+  {
+    "service": "셀잇",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12011,
+    "total": 7,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 6735
+  },
+  {
+    "service": "숨고",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15495,
+    "total": 10,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 8539
+  },
+  {
+    "service": "스마일게이트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12892,
+    "total": 7,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 3425
+  },
+  {
+    "service": "스윗",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 7373,
+    "total": 1,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5517
+  },
+  {
+    "service": "스티비",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9324,
+    "total": 8,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 4891
+  },
+  {
+    "service": "스파크플러스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10266,
+    "total": 10,
+    "grounded": 9,
+    "valid": 1,
+    "totalTokens": 8405
+  },
+  {
+    "service": "스픽",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13005,
+    "total": 9,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 7575
+  },
+  {
+    "service": "식신",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10237,
+    "total": 8,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 5998
+  },
+  {
+    "service": "써브웨이",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 18429,
+    "total": 9,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 6078
+  },
+  {
+    "service": "쏘카",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13306,
+    "total": 8,
+    "grounded": 6,
+    "valid": 3,
+    "totalTokens": 3734
+  },
+  {
+    "service": "아고다",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12619,
+    "total": 9,
+    "grounded": 5,
+    "valid": 3,
+    "totalTokens": 7650
+  },
+  {
+    "service": "아모레퍼시픽몰",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12492,
+    "total": 10,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 6619
+  },
+  {
+    "service": "알라딘",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9065,
+    "total": 8,
+    "grounded": 4,
+    "valid": 2,
+    "totalTokens": 9198
+  },
+  {
+    "service": "알리익스프레스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15957,
+    "total": 10,
+    "grounded": 10,
+    "valid": 0,
+    "totalTokens": 9565
+  },
+  {
+    "service": "야나두",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12220,
+    "total": 7,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 5785
+  },
+  {
+    "service": "야놀자",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12597,
+    "total": 10,
+    "grounded": 9,
+    "valid": 4,
+    "totalTokens": 8306
+  },
+  {
+    "service": "업비트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 7639,
+    "total": 4,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 4974
+  },
+  {
+    "service": "에듀스파",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10760,
+    "total": 10,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 8023
+  },
+  {
+    "service": "에뛰드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13500,
+    "total": 10,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 7958
+  },
+  {
+    "service": "에이블리",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11241,
+    "total": 10,
+    "grounded": 5,
+    "valid": 3,
+    "totalTokens": 8926
+  },
+  {
+    "service": "엔씨소프트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11558,
+    "total": 9,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 8340
+  },
+  {
+    "service": "엔카",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14204,
+    "total": 7,
+    "grounded": 4,
+    "valid": 2,
+    "totalTokens": 9548
+  },
+  {
+    "service": "예스24",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6858,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3486
+  },
+  {
+    "service": "오늘의집",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12277,
+    "total": 8,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 6381
+  },
+  {
+    "service": "오아시스마켓",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 5382,
+    "total": 3,
+    "grounded": 3,
+    "valid": 0,
+    "totalTokens": 3322
+  },
+  {
+    "service": "옥션",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 4805,
+    "total": 1,
+    "grounded": 1,
+    "valid": 0,
+    "totalTokens": 2346
+  },
+  {
+    "service": "와그",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11008,
+    "total": 9,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 6226
+  },
+  {
+    "service": "왓챠",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6758,
+    "total": 4,
+    "grounded": 1,
+    "valid": 0,
+    "totalTokens": 7565
+  },
+  {
+    "service": "요기요",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10331,
+    "total": 9,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 7241
+  },
+  {
+    "service": "웅진씽크빅",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10638,
+    "total": 10,
+    "grounded": 9,
+    "valid": 0,
+    "totalTokens": 8666
+  },
+  {
+    "service": "원티드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8693,
+    "total": 4,
+    "grounded": 4,
+    "valid": 2,
+    "totalTokens": 3702
+  },
+  {
+    "service": "유튜브_Google",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14780,
+    "total": 10,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 7650
+  },
+  {
+    "service": "윤선생",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11460,
+    "total": 10,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 5048
+  },
+  {
+    "service": "이니스프리",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8872,
+    "total": 10,
+    "grounded": 2,
+    "valid": 0,
+    "totalTokens": 4030
+  },
+  {
+    "service": "이디야",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9820,
+    "total": 7,
+    "grounded": 7,
+    "valid": 0,
+    "totalTokens": 2523
+  },
+  {
+    "service": "이마트24",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13801,
+    "total": 10,
+    "grounded": 6,
+    "valid": 4,
+    "totalTokens": 7850
+  },
+  {
+    "service": "이지차저",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6937,
+    "total": 4,
+    "grounded": 4,
+    "valid": 0,
+    "totalTokens": 2989
+  },
+  {
+    "service": "인크루트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9614,
+    "total": 5,
+    "grounded": 5,
+    "valid": 0,
+    "totalTokens": 9145
+  },
+  {
+    "service": "인프런",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8101,
+    "total": 5,
+    "grounded": 5,
+    "valid": 3,
+    "totalTokens": 5811
+  },
+  {
+    "service": "일룸",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10040,
+    "total": 7,
+    "grounded": 5,
+    "valid": 1,
+    "totalTokens": 9064
+  },
+  {
+    "service": "잔디",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9421,
+    "total": 8,
+    "grounded": 2,
+    "valid": 1,
+    "totalTokens": 5467
+  },
+  {
+    "service": "잡코리아",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14655,
+    "total": 8,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 9004
+  },
+  {
+    "service": "조선일보",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13346,
+    "total": 6,
+    "grounded": 4,
+    "valid": 2,
+    "totalTokens": 5787
+  },
+  {
+    "service": "줌ZUM",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11012,
+    "total": 8,
+    "grounded": 8,
+    "valid": 5,
+    "totalTokens": 3599
+  },
+  {
+    "service": "줌Zoom",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 17409,
+    "total": 3,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 7825
+  },
+  {
+    "service": "중고나라",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 5735,
+    "total": 2,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5046
+  },
+  {
+    "service": "중앙일보",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8350,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3149
+  },
+  {
+    "service": "지그재그",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13316,
+    "total": 4,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 6681
+  },
+  {
+    "service": "지마켓",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14664,
+    "total": 9,
+    "grounded": 7,
+    "valid": 5,
+    "totalTokens": 8564
+  },
+  {
+    "service": "채널톡",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14766,
+    "total": 10,
+    "grounded": 10,
+    "valid": 3,
+    "totalTokens": 7720
+  },
+  {
+    "service": "첫차",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14960,
+    "total": 9,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 6902
+  },
+  {
+    "service": "카카오T",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12861,
+    "total": 10,
+    "grounded": 8,
+    "valid": 4,
+    "totalTokens": 6977
+  },
+  {
+    "service": "카카오게임즈",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14466,
+    "total": 10,
+    "grounded": 9,
+    "valid": 7,
+    "totalTokens": 7504
+  },
+  {
+    "service": "카카오페이",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12593,
+    "total": 5,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 8619
+  },
+  {
+    "service": "카카오페이지",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12588,
+    "total": 9,
+    "grounded": 8,
+    "valid": 4,
+    "totalTokens": 6650
+  },
+  {
+    "service": "캐시슬라이드",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11919,
+    "total": 10,
+    "grounded": 8,
+    "valid": 0,
+    "totalTokens": 4437
+  },
+  {
+    "service": "캐시워크",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13997,
+    "total": 7,
+    "grounded": 7,
+    "valid": 7,
+    "totalTokens": 8768
+  },
+  {
+    "service": "컴투스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15515,
+    "total": 8,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 8770
+  },
+  {
+    "service": "케이뱅크",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 5962,
+    "total": 3,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 2729
+  },
+  {
+    "service": "케이카",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13773,
+    "total": 9,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 6801
+  },
+  {
+    "service": "코레일톡",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9349,
+    "total": 2,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 9440
+  },
+  {
+    "service": "코파일럿",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 18447,
+    "total": 10,
+    "grounded": 8,
+    "valid": 1,
+    "totalTokens": 4943
+  },
+  {
+    "service": "쿠쿠홈시스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 17286,
+    "total": 10,
+    "grounded": 3,
+    "valid": 0,
+    "totalTokens": 8385
+  },
+  {
+    "service": "쿠팡",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10576,
+    "total": 4,
+    "grounded": 4,
+    "valid": 3,
+    "totalTokens": 3392
+  },
+  {
+    "service": "쿠팡이츠",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13063,
+    "total": 8,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 8676
+  },
+  {
+    "service": "크래프톤",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10020,
+    "total": 4,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 6478
+  },
+  {
+    "service": "크몽",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9137,
+    "total": 5,
+    "grounded": 3,
+    "valid": 2,
+    "totalTokens": 8278
+  },
+  {
+    "service": "클래스101",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 3451,
+    "total": 1,
+    "grounded": 1,
+    "valid": 0,
+    "totalTokens": 2159
+  },
+  {
+    "service": "클래스유",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14831,
+    "total": 6,
+    "grounded": 4,
+    "valid": 4,
+    "totalTokens": 5158
+  },
+  {
+    "service": "탈잉",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 9760,
+    "total": 8,
+    "grounded": 7,
+    "valid": 2,
+    "totalTokens": 6411
+  },
+  {
+    "service": "테무",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 19798,
+    "total": 10,
+    "grounded": 10,
+    "valid": 6,
+    "totalTokens": 7571
+  },
+  {
+    "service": "토니모리",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 16373,
+    "total": 10,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 6123
+  },
+  {
+    "service": "토스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14809,
+    "total": 5,
+    "grounded": 3,
+    "valid": 0,
+    "totalTokens": 8859
+  },
+  {
+    "service": "토스뱅크",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13251,
+    "total": 8,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 8860
+  },
+  {
+    "service": "토스페이먼츠",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15529,
+    "total": 8,
+    "grounded": 6,
+    "valid": 2,
+    "totalTokens": 7624
+  },
+  {
+    "service": "투썸플레이스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6365,
+    "total": 3,
+    "grounded": 3,
+    "valid": 3,
+    "totalTokens": 2610
+  },
+  {
+    "service": "트로스트",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15063,
+    "total": 8,
+    "grounded": 8,
+    "valid": 0,
+    "totalTokens": 3839
+  },
+  {
+    "service": "특허청e특허나라",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 11109,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 9070
+  },
+  {
+    "service": "티맵",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13621,
+    "total": 10,
+    "grounded": 7,
+    "valid": 3,
+    "totalTokens": 8440
+  },
+  {
+    "service": "틱톡",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 10592,
+    "total": 6,
+    "grounded": 6,
+    "valid": 0,
+    "totalTokens": 2366
+  },
+  {
+    "service": "팟빵",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 14030,
+    "total": 10,
+    "grounded": 9,
+    "valid": 8,
+    "totalTokens": 5846
+  },
+  {
+    "service": "패널나우",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15305,
+    "total": 10,
+    "grounded": 10,
+    "valid": 5,
+    "totalTokens": 7298
+  },
+  {
+    "service": "패스트캠퍼스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15726,
+    "total": 8,
+    "grounded": 7,
+    "valid": 4,
+    "totalTokens": 7549
+  },
+  {
+    "service": "패스트파이브",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8528,
+    "total": 5,
+    "grounded": 5,
+    "valid": 2,
+    "totalTokens": 2731
+  },
+  {
+    "service": "페이코",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6238,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 3401
+  },
+  {
+    "service": "플로우",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13282,
+    "total": 5,
+    "grounded": 5,
+    "valid": 0,
+    "totalTokens": 7543
+  },
+  {
+    "service": "플리토",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15375,
+    "total": 9,
+    "grounded": 8,
+    "valid": 3,
+    "totalTokens": 8550
+  },
+  {
+    "service": "핀다",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 12407,
+    "total": 9,
+    "grounded": 8,
+    "valid": 6,
+    "totalTokens": 7995
+  },
+  {
+    "service": "한샘",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 13508,
+    "total": 9,
+    "grounded": 7,
+    "valid": 6,
+    "totalTokens": 8724
+  },
+  {
+    "service": "헬로마켓",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 15122,
+    "total": 9,
+    "grounded": 3,
+    "valid": 1,
+    "totalTokens": 6864
+  },
+  {
+    "service": "현대해상",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 6250,
+    "total": 10,
+    "grounded": 0,
+    "valid": 0,
+    "totalTokens": 5737
+  },
+  {
+    "service": "홈플러스",
+    "model": "solar-pro3",
+    "ok": true,
+    "latencyMs": 8996,
+    "total": 10,
+    "grounded": 6,
+    "valid": 1,
+    "totalTokens": 8417
+  }
+]
