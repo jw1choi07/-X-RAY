@@ -8,6 +8,7 @@ import { LinkSection } from "@/components/link-section";
 import { AnalysisResultsPanel, type Finding } from "@/components/analysis-results";
 import type { FeaturedSite } from "@/lib/featured-sites";
 import type { Preset } from "@/lib/presets";
+import type { DocumentMetadata } from "@/lib/info-extract";
 
 const SECTION_COUNT = 3;
 
@@ -16,7 +17,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [findings, setFindings] = useState<Finding[] | null>(null);
-  const [meta, setMeta] = useState<{ char_count: number; method: string } | null>(null);
+  const [meta, setMeta] = useState<{ char_count: number; method: string; metadata?: DocumentMetadata | null } | null>(null);
   const [activeSiteName, setActiveSiteName] = useState<string | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [activeSection, setActiveSection] = useState(0);

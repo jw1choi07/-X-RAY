@@ -6,6 +6,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { CLASSIFICATION_STYLE, VERDICT_LABEL, type Classification } from "@/lib/classification";
+import type { DocumentMetadata } from "@/lib/info-extract";
 import { AlertTriangle, Check, CheckCircle2, Copy, ShieldCheck, X } from "lucide-react";
 
 export interface Finding {
@@ -21,7 +22,7 @@ export interface Finding {
 interface AnalysisResultsProps {
   siteName: string;
   findings: Finding[] | null;
-  meta: { char_count: number; method: string } | null;
+  meta: { char_count: number; method: string; metadata?: DocumentMetadata | null } | null;
   loading: boolean;
   error: string | null;
   onClose: () => void;
@@ -129,6 +130,8 @@ export function AnalysisResultsPanel({
                 <StatTile label="기타" value={counts["기타"] ?? 0} accent="text-muted-foreground" />
               </div>
 
+              {meta?.metadata && <MetadataCard metadata={meta.metadata} />}
+
               {findings.length === 0 && (
                 <Alert>
                   <AlertDescription>탐지된 위험 조항이 없습니다.</AlertDescription>
@@ -222,6 +225,40 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
           )}
         </button>
       </div>
+    </div>
+  );
+}
+
+const METADATA_LABELS: Record<keyof DocumentMetadata, string> = {
+  effective_date: "시행일자",
+  company_name: "사업자명",
+  data_retention_period: "개인정보 보관기간",
+  contact: "문의처",
+  jurisdiction: "관할 법원",
+};
+
+function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
+  const entries = (Object.keys(METADATA_LABELS) as (keyof DocumentMetadata)[])
+    .map((key) => ({ key, label: METADATA_LABELS[key], value: metadata[key]?.trim() }))
+    .filter((entry) => entry.value);
+
+  if (entries.length === 0) return null;
+
+  return (
+    <div className="rounded-md border border-border p-4">
+      <p className="mb-2.5 font-mono text-[11px] tracking-[0.1em] text-scan uppercase">
+        한눈에 보기 · Extracted Metadata
+      </p>
+      <dl className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        {entries.map(({ key, label, value }) => (
+          <div key={key} className="min-w-0">
+            <dt className="font-mono text-[10px] text-muted-foreground/80">{label}</dt>
+            <dd className="truncate text-[13px] text-foreground" title={value}>
+              {value}
+            </dd>
+          </div>
+        ))}
+      </dl>
     </div>
   );
 }

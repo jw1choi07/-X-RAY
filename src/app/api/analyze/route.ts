@@ -7,6 +7,7 @@ import { analyzeDocument } from "@/lib/analyze";
 import { isUsablePresetText } from "@/lib/presets";
 import { getCollectionSchedule } from "@/lib/scheduler";
 import { isRiskFilterId, normalizeUserPrefs, type RiskFilterId } from "@/lib/user-prefs";
+import type { DocumentMetadata } from "@/lib/info-extract";
 
 async function loadPriorityFilters(): Promise<RiskFilterId[]> {
   try {
@@ -27,7 +28,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     let text: string;
-    let meta: { char_count: number; method: string; schedule: string } | null = null;
+    let meta: { char_count: number; method: string; schedule: string; metadata?: DocumentMetadata | null } | null = null;
     if (body.presetFile) {
       if (typeof body.presetFile !== "string" || body.presetFile.includes("/") || body.presetFile.includes("\\")) {
         return NextResponse.json({ error: "존재하지 않는 프리셋입니다." }, { status: 400 });
@@ -51,7 +52,12 @@ export async function POST(req: Request) {
       }
       const doc = await fetchDocument(body.url);
       text = doc.text;
-      meta = { char_count: doc.char_count, method: doc.method, schedule: getCollectionSchedule("government-notices") };
+      meta = {
+        char_count: doc.char_count,
+        method: doc.method,
+        schedule: getCollectionSchedule("government-notices"),
+        metadata: doc.metadata,
+      };
     } else if (body.text) {
       if (typeof body.text !== "string") {
         return NextResponse.json({ error: "텍스트 형식이 올바르지 않습니다." }, { status: 400 });

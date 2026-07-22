@@ -18,6 +18,7 @@ import {
 } from "@/lib/user-prefs";
 import { fetchUserPrefs, updateSites } from "@/lib/user-prefs-client";
 import type { Preset } from "@/lib/presets";
+import type { DocumentMetadata } from "@/lib/info-extract";
 
 function riskTone(label: SiteRiskLabel) {
   switch (label) {
@@ -48,7 +49,7 @@ export default function MySitesPage() {
 
   const [activeSite, setActiveSite] = useState<MySite | null>(null);
   const [findings, setFindings] = useState<Finding[] | null>(null);
-  const [meta, setMeta] = useState<{ char_count: number; method: string } | null>(null);
+  const [meta, setMeta] = useState<{ char_count: number; method: string; metadata?: DocumentMetadata | null } | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzeError, setAnalyzeError] = useState<string | null>(null);
 

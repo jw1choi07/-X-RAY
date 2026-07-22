@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import { extractDocumentMetadata, type DocumentMetadata } from "./info-extract";
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -207,15 +208,21 @@ async function parsePdfWithDocumentParse(pdfBuffer: ArrayBuffer, sourceUrl: stri
   return normalizeText(markdown);
 }
 
-async function fetchStatic(url: string): Promise<{ html: string; text: string }> {
+async function fetchStatic(url: string): Promise<{ html: string; text: string; metadata?: DocumentMetadata | null }> {
   const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const contentType = res.headers.get("content-type") ?? "";
   if (contentType.toLowerCase().includes("pdf") || url.toLowerCase().endsWith(".pdf")) {
     try {
       const pdfBuffer = await res.arrayBuffer();
-      const text = await parsePdfWithDocumentParse(pdfBuffer, url);
-      return { html: "", text };
+      // Document Parse(전체 텍스트화)와 Information Extraction(구조화 메타데이터)은
+      // 서로 독립된 API 호출이라 동시에 실행 -- 메타데이터 추출 실패가 본문 분석을
+      // 막지 않도록 별도 함수에서 실패를 흡수하고 null을 반환함.
+      const [text, metadata] = await Promise.all([
+        parsePdfWithDocumentParse(pdfBuffer, url),
+        extractDocumentMetadata(pdfBuffer, url),
+      ]);
+      return { html: "", text, metadata };
     } catch (e) {
       // Document Parse 실패 시 완전히 죽지 않고, 이유를 알 수 있는 placeholder로 폴백
       console.error("Document Parse 실패:", e);
@@ -259,7 +266,7 @@ export async function fetchDocument(url: string) {
     throw new CrawlBlocked(`이 사이트는 robots.txt로 자동 수집을 금지하고 있습니다: ${url}`);
   }
 
-  const { html, text: staticText } = await fetchStatic(url);
+  const { html, text: staticText, metadata } = await fetchStatic(url);
   let text = staticText;
   let method = "static";
 
@@ -293,5 +300,5 @@ export async function fetchDocument(url: string) {
     );
   }
 
-  return { text, method, char_count: text.length };
+  return { text, method, char_count: text.length, metadata: metadata ?? null };
 }
