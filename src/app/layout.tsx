@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_KR, IBM_Plex_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { shadcn } from "@clerk/ui/themes";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SideMenu } from "@/components/side-menu";
 import "./globals.css";
 
@@ -41,6 +42,9 @@ export default function RootLayout({
           {children}
         </ClerkProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }

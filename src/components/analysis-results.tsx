@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -168,6 +169,10 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
       await navigator.clipboard.writeText(f.quote);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
+      sendGAEvent("event", "finding_quote_copy", {
+        matched_case: f.matched_case || "기타",
+        classification: f.classification,
+      });
     } catch {
       // clipboard unavailable — ignore silently
     }

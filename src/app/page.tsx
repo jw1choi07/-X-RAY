@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
 import { FloatingSitesSection } from "@/components/floating-sites-section";
 import { SearchSection } from "@/components/search-section";
@@ -36,6 +37,7 @@ export default function Home() {
     setMeta(null);
     setActiveSiteName(siteName);
     setShowResults(true);
+    sendGAEvent("event", "analyze_start", { site_name: siteName, source: body.presetFile ? "preset" : "url" });
 
     try {
       const res = await fetch("/api/analyze", {
@@ -47,8 +49,14 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error ?? "분석 중 오류가 발생했습니다.");
       setFindings(data.findings);
       setMeta(data.meta);
+      sendGAEvent("event", "analyze_success", {
+        site_name: siteName,
+        doc_type: data.meta?.method ?? "unknown",
+        finding_count: data.findings?.length ?? 0,
+      });
     } catch (e) {
       setError((e as Error).message);
+      sendGAEvent("event", "analyze_error", { site_name: siteName, message: (e as Error).message });
     } finally {
       setLoading(false);
     }

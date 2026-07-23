@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { Show, SignInButton, useAuth } from "@clerk/nextjs";
 import { Filter, ListChecks, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,18 @@ export function SideMenu() {
     setOpen(false);
     setShowFilters(false);
   }, [pathname]);
+
+  // Fires once per session, only on an actual signed-out -> signed-in
+  // transition (not on page load for an already-logged-in user), so this
+  // approximates a sign-in conversion event rather than every visit.
+  const wasSignedInRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    if (!isLoaded) return;
+    if (wasSignedInRef.current === false && isSignedIn) {
+      sendGAEvent("event", "sign_in_success", {});
+    }
+    wasSignedInRef.current = isSignedIn ?? false;
+  }, [isLoaded, isSignedIn]);
 
   useEffect(() => {
     if (!open || !isSignedIn) return;
@@ -119,14 +132,21 @@ export function SideMenu() {
                 로그인 후 이용현황과 약관 필터를 사용할 수 있습니다.
               </p>
               <SignInButton mode="modal">
-                <Button type="button" className="mt-4 w-full rounded-md">
+                <Button
+                  type="button"
+                  className="mt-4 w-full rounded-md"
+                  onClick={() => sendGAEvent("event", "sign_in_click", { source: "side_menu_modal" })}
+                >
                   로그인하러 가기
                 </Button>
               </SignInButton>
               <Link
                 href="/sign-in"
                 className="mt-2 block text-center text-xs text-muted-foreground underline-offset-2 hover:underline"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  sendGAEvent("event", "sign_in_click", { source: "side_menu_page" });
+                  setOpen(false);
+                }}
               >
                 로그인 페이지로 이동
               </Link>
