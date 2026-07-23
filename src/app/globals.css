@@ -59,6 +59,7 @@
  * Amber #F59E0B · Crimson #DC2626 — risk/alert highlights only
  */
 :root {
+  color-scheme: light;
   --background: #f8fafc;
   --foreground: #18181b;
   --card: #ffffff;
@@ -100,6 +101,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --background: #09090b;
     --foreground: #fafafa;
     --card: #18181b;
@@ -150,7 +152,7 @@
       radial-gradient(ellipse 50% 40% at 100% 30%, color-mix(in srgb, var(--muted-foreground) 8%, transparent), transparent 55%),
       radial-gradient(ellipse 45% 35% at 0% 70%, color-mix(in srgb, var(--foreground) 4%, transparent), transparent 50%),
       radial-gradient(color-mix(in srgb, var(--foreground) 5.5%, transparent) 1px, transparent 1px),
-      linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
     background-size:
       auto,
       auto,
@@ -168,26 +170,26 @@
 .section-hero {
   background:
     radial-gradient(ellipse 70% 50% at 50% 35%, color-mix(in srgb, var(--foreground) 5%, transparent), transparent 70%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
 }
 
 .section-search {
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--foreground) 3%, transparent), transparent 40%),
-    linear-gradient(180deg, #f1f5f9, #f8fafc);
+    linear-gradient(180deg, var(--muted), var(--background));
 }
 
 .section-link {
   background:
     radial-gradient(ellipse 60% 45% at 50% 80%, color-mix(in srgb, var(--foreground) 5%, transparent), transparent 65%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
 }
 
 .atmosphere-panel {
   border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
   background: color-mix(in srgb, var(--card) 82%, transparent);
   box-shadow:
-    0 1px 0 color-mix(in srgb, white 55%, transparent),
+    0 1px 0 color-mix(in srgb, var(--card-foreground) 20%, transparent),
     0 18px 40px color-mix(in srgb, var(--foreground) 6%, transparent);
   backdrop-filter: blur(10px);
 }
@@ -241,14 +243,14 @@
   100% {
     transform: translateY(0px);
     box-shadow:
-      0 8px 18px color-mix(in srgb, #18181b 22%, transparent),
-      0 2px 6px color-mix(in srgb, #18181b 14%, transparent);
+      0 8px 18px color-mix(in srgb, var(--foreground) 22%, transparent),
+      0 2px 6px color-mix(in srgb, var(--foreground) 14%, transparent);
   }
   50% {
     transform: translateY(-12px);
     box-shadow:
-      0 28px 48px color-mix(in srgb, #18181b 30%, transparent),
-      0 12px 22px color-mix(in srgb, #18181b 16%, transparent);
+      0 28px 48px color-mix(in srgb, var(--foreground) 30%, transparent),
+      0 12px 22px color-mix(in srgb, var(--foreground) 16%, transparent);
   }
 }
 
@@ -264,8 +266,8 @@
   }
   .floating-card {
     box-shadow:
-      0 12px 28px color-mix(in srgb, #18181b 22%, transparent),
-      0 4px 10px color-mix(in srgb, #18181b 12%, transparent);
+      0 12px 28px color-mix(in srgb, var(--foreground) 22%, transparent),
+      0 4px 10px color-mix(in srgb, var(--foreground) 12%, transparent);
   }
 }
 
