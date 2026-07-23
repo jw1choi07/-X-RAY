@@ -1,6 +1,6 @@
 import { getChatModel, type Finding, generateFindings, judgeCaseMatch } from "./solar";
 import { buildContextText, buildDocumentElements, buildSpans, createRetrievalIndex, hybridSearchElements, loadCachedIndex, type DocumentElement, type RetrievalFilter } from "./rag";
-import { selectRelevantCases } from "./tosdr";
+import { selectRelevantCaseList, formatTaxonomy } from "./tosdr";
 
 export interface AgentLoopResult {
   findings: Finding[];
@@ -96,14 +96,16 @@ export async function runAgentLoop(
   // Embed the retrieved context and pull only the semantically closest ToS;DR
   // cases instead of stuffing all 79 into every prompt (metadata/embedding
   // pre-filtering, per mentor feedback on RAG structure).
-  const relevantTaxonomy = await selectRelevantCases(finalContext);
+  const relevantCases = await selectRelevantCaseList(finalContext);
+  const relevantTaxonomy = formatTaxonomy(relevantCases);
+  const matchedCaseTitles = relevantCases.map((c) => c.title);
   // Split the retrieved elements into small IDed spans (table rows/lines) so
   // generateFindings() can cite an exact span instead of re-typing a quote
   // from memory -- see buildSpans() in rag.ts for why this makes "원문 미확인"
   // structurally impossible instead of just less likely.
   const spans = buildSpans(finalElements);
   const perChunkResults = await Promise.all(
-    [spans].map((chunkSpans) => generateFindings(chunkSpans, relevantTaxonomy, priorityPrompt)),
+    [spans].map((chunkSpans) => generateFindings(chunkSpans, relevantTaxonomy, priorityPrompt, matchedCaseTitles)),
   );
 
   const findings = dedupeFindings(perChunkResults.flatMap((r) => r.findings as Finding[])).slice(0, 10);

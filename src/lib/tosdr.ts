@@ -33,7 +33,7 @@ function loadCaseEmbeddings(): TosdrCaseEmbedding[] {
   return embeddingCache;
 }
 
-function formatTaxonomy(cases: TosdrCase[]): string {
+export function formatTaxonomy(cases: TosdrCase[]): string {
   return cases.map((c) => `- [${c.classification}] ${c.title}: ${c.description}`).join("\n");
 }
 
@@ -45,9 +45,10 @@ export function loadRiskTaxonomy(): string {
 /**
  * Embeds the document text and returns only the topK most semantically relevant
  * ToS;DR cases (by cosine similarity against precomputed case embeddings), instead
- * of dumping all 79 cases into every prompt.
+ * of dumping all 79 cases into every prompt. Returns the case objects (not just
+ * formatted text) so callers can also constrain matched_case to an exact-title enum.
  */
-export async function selectRelevantCases(docText: string, topK = 15): Promise<string> {
+export async function selectRelevantCaseList(docText: string, topK = 15): Promise<TosdrCase[]> {
   try {
     const queryEmbedding = await embedQuery(docText.slice(0, 3000));
     const cases = loadCaseEmbeddings();
@@ -55,9 +56,13 @@ export async function selectRelevantCases(docText: string, topK = 15): Promise<s
       .map((c) => ({ case: c, score: cosineSimilarity(queryEmbedding, c.embedding) }))
       .sort((a, b) => b.score - a.score)
       .slice(0, topK);
-    return formatTaxonomy(ranked.map((r) => r.case));
+    return ranked.map((r) => r.case);
   } catch (e) {
     console.error("케이스 임베딩 검색 실패, 전체 taxonomy로 폴백:", e);
-    return loadRiskTaxonomy();
+    return loadCases();
   }
+}
+
+export async function selectRelevantCases(docText: string, topK = 15): Promise<string> {
+  return formatTaxonomy(await selectRelevantCaseList(docText, topK));
 }
