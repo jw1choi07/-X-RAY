@@ -1,10 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { FEATURED_SEARCH_ALIASES } from "@/lib/featured-sites";
+import { FEATURED_SEARCH_ALIASES, FEATURED_SITES } from "@/lib/featured-sites";
 import { CATEGORY_ORDER } from "@/lib/site-categories";
 import type { Preset } from "@/lib/presets";
 
@@ -44,7 +44,7 @@ export function findPresetByQuery(query: string, presets: Preset[]): Preset | nu
 export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
   const [query, setQuery] = useState("");
   const [noResult, setNoResult] = useState(false);
-  const [browseOpen, setBrowseOpen] = useState(false);
+  const [browseOpen, setBrowseOpen] = useState(true);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const categorized = useMemo(() => {
@@ -58,6 +58,12 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
   }, [presets]);
 
   const categoriesWithSites = CATEGORY_ORDER.filter((c) => (categorized.get(c)?.length ?? 0) > 0);
+
+  useEffect(() => {
+    if (!activeCategory && categoriesWithSites.length > 0) {
+      setActiveCategory(categoriesWithSites[0]);
+    }
+  }, [activeCategory, categoriesWithSites]);
 
   function handleSearch() {
     const match = findPresetByQuery(query, presets);
@@ -73,24 +79,33 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
     onSearchResult(preset, preset.siteName);
   }
 
-  return (
-    <section className="section-search relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6 py-16">
-      <div className="atmosphere-panel relative z-10 w-full max-w-lg rounded-2xl px-6 py-8 text-center md:px-8 md:py-10">
-        <div className="mb-2 font-mono text-[11px] tracking-[0.15em] text-scan uppercase">
-          Case Lookup
-        </div>
-        <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          검색하기
-        </h2>
-        <p className="mt-2 text-base text-muted-foreground md:text-lg">
-          이미 판독이 끝난 사이트를 검색해보세요
-        </p>
+  const quickPicks = FEATURED_SITES.slice(0, 5);
 
-        <div className="mt-7 flex gap-2">
+  return (
+    <section className="section-search relative flex min-h-[100svh] snap-start flex-col items-center justify-center overflow-hidden px-5 py-12 md:px-8">
+      <div className="atmosphere-panel relative z-10 w-full max-w-2xl rounded-2xl px-5 py-6 text-left md:px-7 md:py-7">
+        <div className="flex flex-wrap items-end justify-between gap-3 border-b border-border pb-4">
+          <div>
+            <div className="mb-1 font-mono text-[11px] tracking-[0.15em] text-muted-foreground uppercase">
+              Case Lookup
+            </div>
+            <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              검색하기
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              이미 판독이 끝난 사이트를 검색하거나 카테고리에서 고르세요
+            </p>
+          </div>
+          <p className="rounded-md border border-border bg-muted px-2.5 py-1.5 font-mono text-[11px] text-muted-foreground">
+            {presets.length}건 문서
+          </p>
+        </div>
+
+        <div className="mt-5 flex gap-2">
           <div className="relative flex-1">
             <Search className="absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
-              className="h-12 rounded-md border-border bg-background/80 pl-11 text-base shadow-sm"
+              className="h-11 rounded-md border-border bg-background pl-11 text-base shadow-sm"
               placeholder="카카오T, 멜론, 토스, 넷플릭스..."
               value={query}
               onChange={(e) => {
@@ -101,7 +116,7 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
             />
           </div>
           <Button
-            className="h-12 rounded-md px-6"
+            className="h-11 rounded-md px-5"
             disabled={!query.trim()}
             onClick={handleSearch}
           >
@@ -110,10 +125,42 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         </div>
 
         {noResult && (
-          <p className="mt-4 text-sm font-medium text-risk-blocker animate-in fade-in slide-in-from-top-1">
+          <p className="mt-3 text-sm font-medium text-risk-blocker animate-in fade-in slide-in-from-top-1">
             검색결과가 없습니다. 아래에서 링크로 직접 분석해보세요.
           </p>
         )}
+
+        <div className="mt-4">
+          <p className="mb-2 font-mono text-[10px] tracking-wide text-muted-foreground uppercase">
+            자주 찾는 서비스
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {quickPicks.map((site) => (
+              <button
+                key={site.id}
+                type="button"
+                onClick={() => {
+                  const preset = presets.find((p) => p.file === site.presetFile);
+                  if (preset) handlePresetClick(preset);
+                }}
+                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-muted"
+              >
+                {site.name}
+                <span
+                  className={`font-mono text-[10px] ${
+                    site.riskLabel === "위험"
+                      ? "text-risk-blocker"
+                      : site.riskLabel === "주의"
+                        ? "text-risk-bad"
+                        : "text-muted-foreground"
+                  }`}
+                >
+                  {site.riskLabel}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
 
         <button
           type="button"
@@ -127,19 +174,17 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         </button>
 
         {browseOpen && (
-          <div className="mt-4 max-h-[40vh] overflow-y-auto rounded-md border border-border bg-background/70 p-4 text-left shadow-sm">
-            <div className="flex flex-wrap gap-2">
+          <div className="mt-3 max-h-[38vh] overflow-y-auto rounded-md border border-border bg-background p-3 shadow-sm md:max-h-[42vh]">
+            <div className="flex flex-wrap gap-1.5">
               {categoriesWithSites.map((category) => (
                 <button
                   key={category}
                   type="button"
-                  onClick={() =>
-                    setActiveCategory((c) => (c === category ? null : category))
-                  }
-                  className={`rounded-sm border px-3 py-1 font-mono text-[11px] tracking-wide transition-colors ${
+                  onClick={() => setActiveCategory(category)}
+                  className={`rounded-sm border px-2.5 py-1 font-mono text-[11px] tracking-wide transition-colors ${
                     activeCategory === category
                       ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted-foreground hover:border-scan/50 hover:text-foreground"
+                      : "border-border text-muted-foreground hover:border-foreground/30 hover:text-foreground"
                   }`}
                 >
                   {category}
@@ -149,13 +194,13 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
             </div>
 
             {activeCategory && (
-              <div className="mt-4 flex flex-wrap gap-2 border-t border-border pt-4">
+              <div className="mt-3 flex flex-wrap gap-1.5 border-t border-border pt-3">
                 {categorized.get(activeCategory)?.map((preset) => (
                   <button
                     key={preset.file}
                     type="button"
                     onClick={() => handlePresetClick(preset)}
-                    className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-muted px-2.5 py-1 font-mono text-[11px] font-medium text-muted-foreground transition-colors hover:border-scan/50 hover:bg-scan/10 hover:text-scan"
+                    className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-muted px-2 py-1 font-mono text-[11px] font-medium text-muted-foreground transition-colors hover:border-foreground/30 hover:bg-card hover:text-foreground"
                   >
                     <PresetIcon preset={preset} />
                     {preset.siteName}
@@ -165,18 +210,11 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
             )}
           </div>
         )}
-
-        <p className="mt-4 font-mono text-[11px] text-muted-foreground/70">
-          {presets.length}건의 사전 크롤링 문서에서 검색합니다
-        </p>
       </div>
     </section>
   );
 }
 
-// Real brand favicon when we have one (see scripts/fetch-preset-logos.py);
-// falls back to an initial-letter badge for the handful of sites whose
-// favicon wasn't downloadable, rather than leaving a broken image icon.
 function PresetIcon({ preset }: { preset: Preset }) {
   const [failed, setFailed] = useState(!preset.logo);
 

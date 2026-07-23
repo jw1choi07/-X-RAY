@@ -149,13 +149,13 @@
       radial-gradient(ellipse 90% 55% at 50% -10%, color-mix(in srgb, var(--foreground) 6%, transparent), transparent 60%),
       radial-gradient(ellipse 50% 40% at 100% 30%, color-mix(in srgb, var(--muted-foreground) 8%, transparent), transparent 55%),
       radial-gradient(ellipse 45% 35% at 0% 70%, color-mix(in srgb, var(--foreground) 4%, transparent), transparent 50%),
-      radial-gradient(color-mix(in srgb, var(--foreground) 4%, transparent) 1px, transparent 1px),
+      radial-gradient(color-mix(in srgb, var(--foreground) 5.5%, transparent) 1px, transparent 1px),
       linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
     background-size:
       auto,
       auto,
       auto,
-      22px 22px,
+      14px 14px,
       auto;
     background-attachment: fixed;
   }
@@ -194,15 +194,15 @@
 
 .hero-glow {
   position: absolute;
-  inset: 18% 12% 22%;
-  border-radius: 999px;
+  inset: 4% 4% 8%;
+  border-radius: 1.5rem;
   background: radial-gradient(
     ellipse at center,
-    color-mix(in srgb, var(--foreground) 10%, transparent),
-    color-mix(in srgb, var(--muted-foreground) 6%, transparent) 45%,
-    transparent 70%
+    color-mix(in srgb, var(--foreground) 8%, transparent),
+    color-mix(in srgb, var(--muted-foreground) 5%, transparent) 45%,
+    transparent 72%
   );
-  filter: blur(18px);
+  filter: blur(14px);
   animation: glow-breathe 6s ease-in-out infinite;
   pointer-events: none;
 }
