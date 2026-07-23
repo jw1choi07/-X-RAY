@@ -15,6 +15,11 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 
 const MAX_CHUNK_CHARS = 3000;
 
+// Keep in sync by hand with CHUNK_LOGIC_VERSION in src/lib/rag.ts -- bump
+// both whenever the chunking logic below changes, so loadCachedIndex()
+// refuses stale cache files instead of silently trusting them.
+const CHUNK_LOGIC_VERSION = 1;
+
 function splitLongBlock(block) {
   if (block.length <= MAX_CHUNK_CHARS) return [block];
   const lines = block.split("\n");
@@ -81,9 +86,19 @@ console.log(`${files.length}개 프리셋 문서 처리 시작`);
 
 let done = 0;
 let failed = 0;
+function isUpToDate(outPath) {
+  if (!fs.existsSync(outPath)) return false;
+  try {
+    const parsed = JSON.parse(fs.readFileSync(outPath, "utf-8"));
+    return !Array.isArray(parsed) && parsed.version === CHUNK_LOGIC_VERSION;
+  } catch {
+    return false;
+  }
+}
+
 for (const file of files) {
   const outPath = path.join(OUT_DIR, `${file}.json`);
-  if (fs.existsSync(outPath)) { done += 1; continue; } // resumable
+  if (isUpToDate(outPath)) { done += 1; continue; } // resumable, and re-embeds stale/pre-versioning files
   try {
     const text = fs.readFileSync(path.join(TEXTS_DIR, file), "utf-8");
     const elements = buildDocumentElements(text);
@@ -99,7 +114,7 @@ for (const file of files) {
       ...el,
       embedding: embeddings[i].map((v) => Math.round(v * 1e6) / 1e6),
     }));
-    fs.writeFileSync(outPath, JSON.stringify(records));
+    fs.writeFileSync(outPath, JSON.stringify({ version: CHUNK_LOGIC_VERSION, records }));
     done += 1;
     if (done % 10 === 0) console.log(`  ${done}/${files.length}`);
   } catch (e) {

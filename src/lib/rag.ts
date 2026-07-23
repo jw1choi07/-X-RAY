@@ -48,6 +48,14 @@ function metadataMatches(record: DocumentRecord, filters: RetrievalFilter): bool
 // size and, for oversized blocks, split further along line boundaries.
 const MAX_CHUNK_CHARS = 3000;
 
+// Bump this whenever buildDocumentElements()/splitLongBlock() chunking logic
+// changes. scripts/embed-presets.mjs writes this into every cache file it
+// generates; loadCachedIndex() below refuses to trust a file whose version
+// doesn't match, instead of silently serving an index built under old
+// chunking rules. Keep the two files' copy of this constant in sync by hand
+// (embed-presets.mjs is a standalone script, not an importer of this module).
+export const CHUNK_LOGIC_VERSION = 1;
+
 function splitLongBlock(block: string): string[] {
   if (block.length <= MAX_CHUNK_CHARS) return [block];
   const lines = block.split("\n");
@@ -144,12 +152,27 @@ export async function createRetrievalIndex(
  * is a URL/pasted-text analysis) -- callers should fall back to
  * createRetrievalIndex() in that case.
  */
+interface PresetIndexCache {
+  version: number;
+  records: (DocumentElement & { embedding: number[] })[];
+}
+
 export function loadCachedIndex(presetFile: string, baseMetadata: Record<string, unknown> = {}): DocumentRecord[] | null {
   const cachePath = path.join(process.cwd(), "data", "preset-index", `${presetFile}.json`);
   if (!fs.existsSync(cachePath)) return null;
   try {
-    const cached = JSON.parse(fs.readFileSync(cachePath, "utf-8")) as (DocumentElement & { embedding: number[] })[];
-    return cached.map((el) => ({
+    const parsed = JSON.parse(fs.readFileSync(cachePath, "utf-8"));
+    // Old cache files (pre-versioning) are a bare array -- treat as version 0,
+    // which will never match CHUNK_LOGIC_VERSION and falls through to the
+    // "stale" branch below rather than being trusted as-is.
+    const cached: PresetIndexCache = Array.isArray(parsed) ? { version: 0, records: parsed } : parsed;
+    if (cached.version !== CHUNK_LOGIC_VERSION) {
+      console.error(
+        `프리셋 임베딩 캐시가 최신 청킹 로직과 버전이 달라 폴백함 (${presetFile}): cached=${cached.version} expected=${CHUNK_LOGIC_VERSION}. scripts/embed-presets.mjs 재실행 필요.`,
+      );
+      return null;
+    }
+    return cached.records.map((el) => ({
       id: el.id,
       content: el.text,
       metadata: { ...baseMetadata, ...el.metadata },

@@ -31,7 +31,15 @@ for (let i = 0; i < cases.length; i += BATCH_SIZE) {
   const texts = batch.map((c) => `${c.title}: ${c.description}`);
   const embeddings = await embedBatch(texts);
   batch.forEach((c, idx) => {
-    results.push({ id: c.id, title: c.title, description: c.description, classification: c.classification, embedding: embeddings[idx] });
+    results.push({
+      id: c.id,
+      title: c.title,
+      description: c.description,
+      classification: c.classification,
+      weight: c.weight,
+      topic_id: c.topic_id,
+      embedding: embeddings[idx],
+    });
   });
   console.log(`embedded ${results.length}/${cases.length}`);
 }

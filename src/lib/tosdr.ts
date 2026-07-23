@@ -7,6 +7,10 @@ interface TosdrCase {
   title: string;
   description: string;
   classification: string;
+  /** ToS;DR's own severity weight -- was present in the source data but previously dropped by this interface. */
+  weight: number;
+  /** ToS;DR's topic grouping id (e.g. all "data retention" cases share one topic_id) -- same as above. */
+  topic_id: number;
 }
 
 interface TosdrCaseEmbedding extends TosdrCase {
