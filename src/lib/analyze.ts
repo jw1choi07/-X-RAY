@@ -10,6 +10,7 @@ export async function analyzeDocument(
   text: string,
   priorityFilters: RiskFilterId[] = [],
   presetFile?: string,
+  locale = "ko",
 ) {
   // Presets are a fixed, known set of ~153 documents -- see
   // scripts/precompute-findings.ts, which runs the full pipeline (Solar Pro 2
@@ -34,6 +35,7 @@ export async function analyzeDocument(
     {},
     priorityPrompt,
     presetFile,
+    locale,
   );
   return {
     findings: prioritizeFindings(result.findings, priorityFilters),

@@ -1,0 +1,72 @@
+{
+  "file": "paypay_プライバシーポリシー.txt",
+  "slug": "paypay",
+  "name": "PayPay",
+  "domain": "paypay.ne.jp",
+  "findings": [
+    {
+      "matched_case": "Your personal data is used to employ targeted third-party advertising",
+      "classification": "bad",
+      "risk_summary": "ソフトバンク株式会社と共同利用される個人情報には、広告・マーケティング目的で使用されるスコア情報や推定属性情報が含まれます。",
+      "quote_id": "s6",
+      "quote": "PayPay金融グループが保有する個人情報を、ソフトバンク株式会社との間で共同利用いたします。共同利用する個人情報の項目には、当社がお客様の取引履歴や利用状況を分析・加工して算出したスコア情報、セグメント情報、および推定属性情報が含まれます。共同して利用する者の利用目的：広告、宣伝、マーケティングのため、支払能力の調査、与信判断、および与信管理のため。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "This service shares your personal data with third parties that are not essential to its operation",
+      "classification": "bad",
+      "risk_summary": "提携サービス提供のために、位置情報や端末情報など多くのパーソナルデータが第三者に提供される可能性があります。",
+      "quote_id": "s2",
+      "quote": "PayPay金融グループのアプリ内で提供される提携サービスのアプリのアカウント開設・連携、提携サービスの提供のために、お客さまの識別子、パスワード、氏名、表示名、プロフィール画像、メールアドレス、現在位置情報、端末のバッテリー情報、残高情報、電話番号、カメラの利用等のパーソナルデータを提供する場合",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "This service gives your personal data to third parties involved in its operation",
+      "classification": "bad",
+      "risk_summary": "PayPay金融グループ各社(外国企業含む)に対して、デバイス情報や取引内容などの個人情報が共同利用されます。",
+      "quote_id": "s4",
+      "quote": "PayPay金融グループが保有する個人情報を共同利用いたします。共同利用する個人情報の項目：お客さまの登録・申込情報、取引内容、サービス利用に関する情報、不正利用の類型・内容、デバイス情報（行動履歴およびその分析結果等情報を含む）。共同して利用する者の範囲：PayPay金融グループ各社（外国にある会社を含みます）。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Information is gathered about you through third parties",
+      "classification": "bad",
+      "risk_summary": "業務提携先からウェブ行動履歴やIPアドレス、クッキーなどの個人関連情報が取得される可能性があります。",
+      "quote_id": "s9",
+      "quote": "- 業務提携先から、当該業務提携先が運営するウェブページやサービス上の行動履歴、IPアドレス、クッキー、広告ID、デバイス情報などの個人関連情報の提供を受ける場合",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Your personal information is used for many different purposes",
+      "classification": "bad",
+      "risk_summary": "個人情報はサービス改善、新サービス開発、規約違反調査など多目的に利用されます。",
+      "quote_id": "s11",
+      "quote": "(3) 本サービスの改善および新サービス等を検討するため",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Your personal data may be sold or otherwise transferred as part of a bankruptcy proceeding or other type of financial transaction",
+      "classification": "bad",
+      "risk_summary": "破産や事業譲渡時に個人情報が第三者に譲渡される可能性があります(条項明記なしだが一般的なリスクとして推定)。",
+      "quote_id": "s1",
+      "quote": "(1) 他社との提携サービスの提供を目的とした場合",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "INVALID"
+    }
+  ],
+  "usage": {
+    "total_tokens": 3459
+  },
+  "char_count": 2777
+}

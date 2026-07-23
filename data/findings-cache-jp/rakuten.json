@@ -1,0 +1,102 @@
+{
+  "file": "rakuten_個人情報保護方針.txt",
+  "slug": "rakuten",
+  "name": "楽天 (Rakuten)",
+  "domain": "rakuten.co.jp",
+  "findings": [
+    {
+      "matched_case": "Your personal data is used to employ targeted third-party advertising",
+      "classification": "bad",
+      "risk_summary": "お客様の個人情報と行動履歴を紐づけ、AI分析により趣味や購買傾向を推定し、広告配信やマーケティングに利用されます。",
+      "quote_id": "s8",
+      "quote": "）とともに分析を行い、これによりお客様の趣味、嗜好、購買傾向、属性、信用度等を推定し、当該分析・推定結果に基づいたお客様に対する広告配信やマーケティング等の施策に利用する場合があります。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "This service shares your personal data with third parties that are not essential to its operation",
+      "classification": "bad",
+      "risk_summary": "楽天グループおよび第三者に対して、お客様の個人情報（加工済み）およびCookie等の情報を広告・マーケティング目的で共有されます。",
+      "quote_id": "s4",
+      "quote": "利用する個人情報：会員サービスおよび対象サービスの利用等に関する情報（保護される特性（性別等）、商業的情報（利用履歴等）、インターネットその他の電子的ネットワークにおける行動情報）（ただし、特定のお客様にご連絡できないように生年月日、電話番号、住所等を削除または加工したうえで提供します。）および情報通信端末に関する情報およびCookie等を利用して取得する情報。個人情報の利用目的：広告、宣伝、マーケティングのため、およびサービスの改善お",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Location data may be collected, used and/or shared",
+      "classification": "bad",
+      "risk_summary": "実店舗でのショッピングを含む位置情報が収集され、個人情報と紐づけられて利用される可能性があります。",
+      "quote_id": "s2",
+      "quote": "買履歴、位置情報その他の行動履歴、TV視聴関連ログ等を取得し、私たちが管理する個人情報と紐づけて利用する場合があります。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Information is gathered about you through third parties",
+      "classification": "bad",
+      "risk_summary": "第三者からCookie、モバイル広告識別子、広告配信ログ等のお客様関連情報を取得し、個人情報と紐づけます。",
+      "quote_id": "s1",
+      "quote": "私たちは、氏名等のお客様を特定する情報を保有しない第三者から、識別子や行動履歴など、お客様に関連する情報（個人関連情報）の提供を受け、当該情報を私たちが管理するお客様の個人情報と紐づけることで個人情報として取得します。具体的には、Cookie等、モバイル広告識別子、メールアドレスや電話番号（不可逆的な変換処理がなされたものを含みます。）、広告の閲覧回数等の広告配信関連ログ、ウェブサイトの閲覧履歴や検索履歴、実店舗でのショッピングを含む購",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "You may be tracked on other websites",
+      "classification": "bad",
+      "risk_summary": "ウェブサイトやアプリケーション上での行動履歴が追跡され、広告配信に利用される可能性があります。",
+      "quote_id": "s7",
+      "quote": "お客様の同意に基づき、または法令で許容されている範囲および手段で、お客様にダイレクトメール、メールマガジン等の広告を送付または表示等するため。ウェブサイトやアプリケーション上その他の広告媒体において、私たち、楽天グループ、その他第三者の商品もしくはサービスを表示し、紹介し、または広告するため。お客様に関する個人情報を、AI等を用いて、過去および現在のお客様ご自身またはお客様以外の方の個人情報、その他の情報（統計情報や推定情報を含みます。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "INVALID"
+    },
+    {
+      "matched_case": "Some personal data may be kept for business interests or legal obligations",
+      "classification": "bad",
+      "risk_summary": "サービス提供終了後も、お客様の個人情報を最大10年間保持します。",
+      "quote_id": "s14",
+      "quote": "私たちは、契約上の義務の履行を目的として、お客様へのサービスの提供、お客様との取引等が継続される限りお客様の個人情報を保持し、また、お客様へのサービスの提供やお客様との取引等が終了した後も、お客様の個人情報を10年間保持いたします。情報通信端末に関する情報およびCookie等を利用して取得する情報などの情報については、取得後最長2年間利用および保持を行います。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Many different types of personal data are collected",
+      "classification": "bad",
+      "risk_summary": "性別、年齢、生年月日、電話番号、住所、ポイント利用履歴、購買情報、決済方法等の多種多様な個人情報が収集されます。",
+      "quote_id": "s12",
+      "quote": "アカウントに付随または関連する情報としてお客様から提供される、性別、年齢、生年月日、電話番号、住所その他のお客様に関する情報。ポイント、クーポン、キャッシュバックその他のインセンティブプログラム等の会員サービスの利用に関する情報。対象サービスの利用（閲覧および書込み等の行為を含みます。）、購買、応募その他の対象サービスを通じてお客様が行った取引の遂行のための情報および当該取引に関する情報（お支払いに利用した決済方法等を含みます。）",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Your personal information is used for many different purposes",
+      "classification": "bad",
+      "risk_summary": "お客様の個人情報は広告・マーケティング、サービス改善、不正行為防止等の多目的で利用されます。",
+      "quote_id": "s5",
+      "quote": "よび研究開発のため。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "INVALID"
+    },
+    {
+      "matched_case": "This service gives your personal data to third parties involved in its operation",
+      "classification": "bad",
+      "risk_summary": "不正行為防止のため、お客様の個人情報（サービス利用履歴、支払情報等）を分析し、第三者に提供する場合があります。",
+      "quote_id": "s10",
+      "quote": "詐欺、サイバー攻撃、その他の違法または不正なおそれのある行為を防止、調査、および特定して、私たち、楽天グループまたは第三者の権利利益を保護するため。この不正行為等の防止のために、お客様に関する個人情報（サービス利用履歴や支払情報等）を分析し、当該分析・推定結果を第三者に提供する場合があります。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    }
+  ],
+  "usage": {
+    "total_tokens": 3888
+  },
+  "char_count": 3415
+}

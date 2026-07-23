@@ -60,6 +60,7 @@ export async function runAgentLoop(
   filters: RetrievalFilter = {},
   priorityPrompt = "",
   presetFile?: string,
+  locale = "ko",
 ): Promise<AgentLoopResult> {
   const elements = buildDocumentElements(sourceText, metadata);
   // Embed all elements once (real Embed 2 vectors, not the old fake
@@ -105,7 +106,7 @@ export async function runAgentLoop(
   // structurally impossible instead of just less likely.
   const spans = buildSpans(finalElements);
   const perChunkResults = await Promise.all(
-    [spans].map((chunkSpans) => generateFindings(chunkSpans, relevantTaxonomy, priorityPrompt, matchedCaseTitles)),
+    [spans].map((chunkSpans) => generateFindings(chunkSpans, relevantTaxonomy, priorityPrompt, matchedCaseTitles, locale)),
   );
 
   const findings = dedupeFindings(perChunkResults.flatMap((r) => r.findings as Finding[])).slice(0, 10);

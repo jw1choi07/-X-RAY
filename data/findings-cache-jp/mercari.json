@@ -1,0 +1,82 @@
+{
+  "file": "mercari_プライバシーポリシー.txt",
+  "slug": "mercari",
+  "name": "メルカリ (Mercari)",
+  "domain": "mercari.com",
+  "findings": [
+    {
+      "matched_case": "Many different types of personal data are collected",
+      "classification": "bad",
+      "risk_summary": "氏名、生年月日、性別、職業、住所、電話番号、メールアドレス、クレジットカード情報、銀行口座情報、趣味、家族構成、Facebook連携情報、Cookie情報、アクセスログ、端末情報、位置情報、出品・購買履歴、投稿、コメント、評価など多種多様な個人情報が収集されます。",
+      "quote_id": "s1",
+      "quote": "同社が収集する情報には、以下が含まれます。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Your personal data may be used for marketing purposes",
+      "classification": "bad",
+      "risk_summary": "収集した個人情報がマーケティング目的で利用される可能性があります。",
+      "quote_id": "s9",
+      "quote": "主な目的として「サービス提供、事務連絡、不正防止、マーケティング、サービス改善」が挙げられています。当社は取得した個人情報を、これらの目的の達成に必要な範囲で利用します。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "This service shares your personal data with third parties that are not essential to its operation",
+      "classification": "bad",
+      "risk_summary": "広告事業者などサービス運営に不可欠でない第三者に個人情報が提供される可能性があります。",
+      "quote_id": "s10",
+      "quote": "当社は、配送業者、決済代行業者、分析事業者、広告事業者への個人情報の提供を行う場合があります。これらの提供先は、それぞれの目的（配送、決済処理、利用状況分析、広告配信等）のために必要な範囲で個人情報を利用します。",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Location data may be collected, used and/or shared",
+      "classification": "bad",
+      "risk_summary": "位置情報が収集され、サービス運営に利用される可能性があります。",
+      "quote_id": "s7",
+      "quote": "- Cookie情報、アクセスログ、端末情報、位置情報",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Sensitive data is collected and shared to target advertising",
+      "classification": "blocker",
+      "risk_summary": "クレジットカード情報、銀行口座情報などの金融情報が収集され、広告事業者と共有される可能性があります。",
+      "quote_id": "s4",
+      "quote": "- クレジットカード情報および銀行口座情報",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "INVALID"
+    },
+    {
+      "matched_case": "You must provide your identifiable information",
+      "classification": "bad",
+      "risk_summary": "サービス利用に氏名、生年月日、性別、職業などの本人特定情報の提供が求められます。",
+      "quote_id": "s2",
+      "quote": "- 氏名、生年月日、性別、職業など本人を特定できる情報",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    },
+    {
+      "matched_case": "Information is gathered about you through third parties",
+      "classification": "bad",
+      "risk_summary": "Facebook連携時に第三者から登録情報が収集されます。",
+      "quote_id": "s6",
+      "quote": "- Facebook連携時の登録情報",
+      "quote_grounded": true,
+      "groundedness_verdict": "grounded",
+      "case_match_verdict": "VALID"
+    }
+  ],
+  "usage": {
+    "total_tokens": 4051
+  },
+  "char_count": 709
+}
