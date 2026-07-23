@@ -156,13 +156,7 @@ export default function MySitesPage() {
       id: crypto.randomUUID(),
       name: siteName,
       presetFile: preset.file,
-      riskLabel: featured
-        ? featured.riskLabel === "위험"
-          ? "높음"
-          : featured.riskLabel === "주의"
-            ? "보통"
-            : "낮음"
-        : "미분석",
+      riskLabel: featured?.riskLabel ?? "미분석",
       riskScore: featured?.riskScore,
       summary: featured?.summary,
       effectiveDate,

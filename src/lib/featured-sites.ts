@@ -1,3 +1,7 @@
+import type { SiteRiskLabel } from "@/lib/user-prefs";
+
+export type FeaturedRiskLabel = Exclude<SiteRiskLabel, "미분석">;
+
 export interface FeaturedSite {
   id: string;
   name: string;
@@ -6,7 +10,8 @@ export interface FeaturedSite {
   /** Real domain the site is served from -- used to fetch the actual brand favicon instead of the emoji. */
   domain: string;
   color: string;
-  riskLabel: "주의" | "위험" | "보통";
+  /** Must match overallRiskFromFindings() on the preset's findings cache. */
+  riskLabel: FeaturedRiskLabel;
   riskScore: number;
   summary: string;
   floatPosition: { top: string; left: string };
@@ -21,8 +26,8 @@ export const FEATURED_SITES: FeaturedSite[] = [
     emoji: "🚕",
     domain: "kakaomobility.com",
     color: "#FEE500",
-    riskLabel: "위험",
-    riskScore: 74,
+    riskLabel: "보통",
+    riskScore: 75,
     summary: "위치정보·제3자 제공 조항 다수",
     floatPosition: { top: "12%", left: "22%" },
     floatDelay: 0,
@@ -34,8 +39,8 @@ export const FEATURED_SITES: FeaturedSite[] = [
     emoji: "🎵",
     domain: "melon.com",
     color: "#00CD3C",
-    riskLabel: "주의",
-    riskScore: 61,
+    riskLabel: "보통",
+    riskScore: 75,
     summary: "콘텐츠 이용 제한·면책 조항 확인 필요",
     floatPosition: { top: "10%", left: "78%" },
     floatDelay: 1.2,
@@ -47,8 +52,8 @@ export const FEATURED_SITES: FeaturedSite[] = [
     emoji: "💳",
     domain: "toss.im",
     color: "#0064FF",
-    riskLabel: "위험",
-    riskScore: 78,
+    riskLabel: "보통",
+    riskScore: 75,
     summary: "금융정보 처리·약관 변경 권한 주의",
     floatPosition: { top: "58%", left: "18%" },
     floatDelay: 0.6,
@@ -60,8 +65,8 @@ export const FEATURED_SITES: FeaturedSite[] = [
     emoji: "🎬",
     domain: "netflix.com",
     color: "#E50914",
-    riskLabel: "주의",
-    riskScore: 65,
+    riskLabel: "보통",
+    riskScore: 75,
     summary: "계정 공유 제한·콘텐츠 권리 포기 조항",
     floatPosition: { top: "60%", left: "82%" },
     floatDelay: 1.8,
@@ -74,7 +79,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     domain: "spotify.com",
     color: "#1DB954",
     riskLabel: "보통",
-    riskScore: 52,
+    riskScore: 75,
     summary: "사용자 콘텐츠 권리·중재 조항 포함",
     floatPosition: { top: "34%", left: "50%" },
     floatDelay: 0.3,

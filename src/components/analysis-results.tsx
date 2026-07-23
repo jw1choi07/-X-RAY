@@ -8,6 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { CLASSIFICATION_STYLE, VERDICT_LABEL, type Classification } from "@/lib/classification";
 import type { DocumentMetadata } from "@/lib/info-extract";
+import { OVERALL_RISK_STYLE, overallRiskFromFindings } from "@/lib/user-prefs";
 import { AlertTriangle, Check, CheckCircle2, Copy, ShieldCheck, X } from "lucide-react";
 import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
 import { getTermsUpdateInfo } from "@/lib/terms-update";
@@ -59,11 +60,10 @@ export function AnalysisResultsPanel({
   const badCount = counts.bad ?? 0;
 
   const overallRisk = findings
-    ? blockerCount > 0
-      ? { level: "높음", color: "text-red-600 dark:text-red-400", ring: "ring-red-500/20", bg: "bg-red-50 dark:bg-red-950/30" }
-      : badCount > 0
-        ? { level: "보통", color: "text-orange-600 dark:text-orange-400", ring: "ring-orange-500/20", bg: "bg-orange-50 dark:bg-orange-950/30" }
-        : { level: "낮음", color: "text-zinc-600 dark:text-zinc-300", ring: "ring-zinc-500/20", bg: "bg-zinc-50 dark:bg-zinc-900/40" }
+    ? (() => {
+        const computed = overallRiskFromFindings(findings);
+        return { ...computed, ...OVERALL_RISK_STYLE[computed.riskLabel] };
+      })()
     : null;
 
   return (
@@ -121,6 +121,9 @@ export function AnalysisResultsPanel({
                       {meta && `원문 ${meta.char_count.toLocaleString()}자 분석 · `}
                       원문 근거 확인 {groundedCount}/{findings.length}
                     </p>
+                    <p className={`mt-2 font-mono text-sm font-semibold ${overallRisk.color}`}>
+                      위험도 {overallRisk.riskLabel} · {overallRisk.riskScore}
+                    </p>
                   </div>
                   {/* read stamp — the way a radiology report ends with a rubber-stamped
                       verdict, not a colored icon; the rotation reads as physically applied */}
@@ -128,12 +131,12 @@ export function AnalysisResultsPanel({
                     className={`relative flex h-16 w-16 shrink-0 -rotate-6 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-current ${overallRisk.color}`}
                   >
                     <div className="absolute inset-1 rounded-full border border-dashed border-current opacity-50" />
-                    {overallRisk.level === "낮음" ? (
+                    {overallRisk.riskLabel === "낮음" ? (
                       <ShieldCheck className="h-4 w-4" />
                     ) : (
                       <AlertTriangle className="h-4 w-4" />
                     )}
-                    <span className="font-mono text-[10px] font-black tracking-tight">{overallRisk.level}</span>
+                    <span className="font-mono text-[10px] font-black tracking-tight">{overallRisk.riskLabel}</span>
                   </div>
                 </div>
               )}

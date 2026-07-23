@@ -8,9 +8,9 @@ import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
 import type { TermsUpdateEntry } from "@/lib/terms-update";
 
 const RISK_TONE: Record<FeaturedSite["riskLabel"], string> = {
-  위험: "text-risk-blocker",
-  주의: "text-risk-bad",
-  보통: "text-risk-ok",
+  높음: "text-risk-blocker",
+  보통: "text-risk-bad",
+  낮음: "text-risk-ok",
 };
 
 interface FloatingSitesSectionProps {
@@ -155,7 +155,7 @@ function FloatingCard({
         <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/15">
           <div
             className={`h-full rounded-full transition-all duration-700 ease-out ${
-              site.riskLabel === "위험" ? "bg-risk-blocker" : site.riskLabel === "주의" ? "bg-risk-bad" : "bg-risk-ok"
+              site.riskLabel === "높음" ? "bg-risk-blocker" : site.riskLabel === "보통" ? "bg-risk-bad" : "bg-risk-ok"
             }`}
             style={{ width: `${site.riskScore}%` }}
           />

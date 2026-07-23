@@ -148,9 +148,9 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
                 {site.name}
                 <span
                   className={`font-mono text-[10px] ${
-                    site.riskLabel === "위험"
+                    site.riskLabel === "높음"
                       ? "text-risk-blocker"
-                      : site.riskLabel === "주의"
+                      : site.riskLabel === "보통"
                         ? "text-risk-bad"
                         : "text-muted-foreground"
                   }`}

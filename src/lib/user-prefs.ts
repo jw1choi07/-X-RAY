@@ -138,7 +138,7 @@ export function buildPriorityPrompt(priorityFilters: RiskFilterId[]): string {
 
 export function overallRiskFromFindings(
   findings: { classification: string }[],
-): { riskLabel: SiteRiskLabel; riskScore: number } {
+): { riskLabel: Exclude<SiteRiskLabel, "미분석">; riskScore: number } {
   const blockerCount = findings.filter((f) => f.classification === "blocker").length;
   const badCount = findings.filter((f) => f.classification === "bad").length;
   if (blockerCount > 0) {
@@ -149,3 +149,28 @@ export function overallRiskFromFindings(
   }
   return { riskLabel: "낮음", riskScore: 35 };
 }
+
+/** Shared stamp/badge styles for overall risk labels (cards + analysis panel). */
+export const OVERALL_RISK_STYLE: Record<
+  Exclude<SiteRiskLabel, "미분석">,
+  { color: string; ring: string; bg: string; bar: string }
+> = {
+  높음: {
+    color: "text-red-600 dark:text-red-400",
+    ring: "ring-red-500/20",
+    bg: "bg-red-50 dark:bg-red-950/30",
+    bar: "bg-risk-blocker",
+  },
+  보통: {
+    color: "text-orange-600 dark:text-orange-400",
+    ring: "ring-orange-500/20",
+    bg: "bg-orange-50 dark:bg-orange-950/30",
+    bar: "bg-risk-bad",
+  },
+  낮음: {
+    color: "text-zinc-600 dark:text-zinc-300",
+    ring: "ring-zinc-500/20",
+    bg: "bg-zinc-50 dark:bg-zinc-900/40",
+    bar: "bg-risk-ok",
+  },
+};
