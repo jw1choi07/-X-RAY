@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# measurement/report script output (regeneratable, not source)
+/data/*_report.json
+/data/invalid_findings_sample.json
+/data/pilot_broad_report.json
