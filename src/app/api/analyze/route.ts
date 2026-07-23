@@ -27,11 +27,16 @@ async function loadPriorityFilters(): Promise<RiskFilterId[]> {
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    let body: Record<string, unknown>;
+    try {
+      body = (await req.json()) as Record<string, unknown>;
+    } catch {
+      return NextResponse.json({ error: "잘못된 요청입니다." }, { status: 400 });
+    }
     let text: string;
     let meta: { char_count: number; method: string; schedule: string; metadata?: DocumentMetadata | null } | null = null;
-    if (body.presetFile) {
-      if (typeof body.presetFile !== "string" || body.presetFile.includes("/") || body.presetFile.includes("\\")) {
+    if (typeof body.presetFile === "string") {
+      if (body.presetFile.includes("/") || body.presetFile.includes("\\")) {
         return NextResponse.json({ error: "존재하지 않는 프리셋입니다." }, { status: 400 });
       }
       const dir = path.join(process.cwd(), "data", "texts");
@@ -61,8 +66,8 @@ export async function POST(req: Request) {
             }
           : null,
       };
-    } else if (body.url) {
-      if (typeof body.url !== "string" || body.url.length > 2048) {
+    } else if (typeof body.url === "string") {
+      if (body.url.length > 2048) {
         return NextResponse.json({ error: "올바른 URL을 입력해주세요." }, { status: 400 });
       }
       const doc = await fetchDocument(body.url);
@@ -73,10 +78,7 @@ export async function POST(req: Request) {
         schedule: getCollectionSchedule("government-notices"),
         metadata: doc.metadata,
       };
-    } else if (body.text) {
-      if (typeof body.text !== "string") {
-        return NextResponse.json({ error: "텍스트 형식이 올바르지 않습니다." }, { status: 400 });
-      }
+    } else if (typeof body.text === "string") {
       if (body.text.trim().length < 200) {
         return NextResponse.json({ error: "분석하기에는 원문이 너무 짧습니다 (최소 200자)." }, { status: 400 });
       }
@@ -87,7 +89,11 @@ export async function POST(req: Request) {
     }
 
     const priorityFilters = await loadPriorityFilters();
-    const result = await analyzeDocument(text, priorityFilters, typeof body.presetFile === "string" ? body.presetFile : undefined);
+    const result = await analyzeDocument(
+      text,
+      priorityFilters,
+      typeof body.presetFile === "string" ? body.presetFile : undefined,
+    );
 
     // 메타데이터에 시행일이 없으면 원문 휴리스틱으로 보조 추출
     if (meta && !meta.metadata?.effective_date?.trim()) {

@@ -45,7 +45,11 @@ function loadLogoManifest(): Record<string, LogoManifestEntry | null> {
   return logoManifestCache;
 }
 
+let usablePresetsCache: Preset[] | null = null;
+
 export function listUsablePresets(): Preset[] {
+  if (usablePresetsCache) return usablePresetsCache;
+
   const dir = path.join(process.cwd(), "data", "texts");
   const logoManifest = loadLogoManifest();
   const files = fs
@@ -53,7 +57,7 @@ export function listUsablePresets(): Preset[] {
     .filter((f) => f.endsWith(".txt"))
     .filter((f) => isUsablePresetText(fs.readFileSync(path.join(dir, f), "utf-8")))
     .sort();
-  return files.map((f) => {
+  usablePresetsCache = files.map((f) => {
     const nameKey = f.replace(/\.txt$/, "").replace(/_(개인정보처리방침|이용약관)$/, "");
     const siteName = nameKey.split("_")[0];
     const logoEntry = logoManifest[siteName];
@@ -65,4 +69,5 @@ export function listUsablePresets(): Preset[] {
       logo: logoEntry ? `/logos/${logoEntry.slug}.${logoEntry.ext}` : null,
     };
   });
+  return usablePresetsCache;
 }

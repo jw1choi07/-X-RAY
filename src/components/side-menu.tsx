@@ -8,6 +8,7 @@ import { Show, SignInButton, useAuth } from "@clerk/nextjs";
 import { Building2, Filter, ListChecks, Menu, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
+  EMPTY_USER_PREFS,
   RISK_FILTER_OPTIONS,
   type RiskFilterId,
   type UserPrefs,
@@ -56,17 +57,19 @@ export function SideMenu() {
   }, [open, isSignedIn]);
 
   async function toggleFilter(id: RiskFilterId) {
-    if (!prefs) return;
-    const next = prefs.riskFilters.includes(id)
-      ? prefs.riskFilters.filter((item) => item !== id)
-      : [...prefs.riskFilters, id];
-    setPrefs({ ...prefs, riskFilters: next });
+    const base = prefs ?? EMPTY_USER_PREFS;
+    const next = base.riskFilters.includes(id)
+      ? base.riskFilters.filter((item) => item !== id)
+      : [...base.riskFilters, id];
+    const optimistic = { ...base, riskFilters: next };
+    setPrefs(optimistic);
     setSaving(true);
     setError(null);
     try {
-      const saved = await updateRiskFilters(next);
+      const saved = await updateRiskFilters(next, base);
       setPrefs(saved);
     } catch (e) {
+      setPrefs(base);
       setError((e as Error).message);
     } finally {
       setSaving(false);

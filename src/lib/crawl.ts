@@ -224,9 +224,9 @@ async function fetchStatic(url: string): Promise<{ html: string; text: string; m
       ]);
       return { html: "", text, metadata };
     } catch (e) {
-      // Document Parse 실패 시 완전히 죽지 않고, 이유를 알 수 있는 placeholder로 폴백
+      // Placeholder를 반환하면 이후 길이 검사를 우회하고 LLM이 오류 문구를 분석하게 됨
       console.error("Document Parse 실패:", e);
-      return { html: "", text: `[PDF 파싱 실패: ${(e as Error).message}, 원본 URL: ${url}]` };
+      throw new Error(`PDF 문서를 읽지 못했습니다: ${(e as Error).message}`);
     }
   }
   const html = await res.text();
@@ -270,7 +270,7 @@ export async function fetchDocument(url: string) {
   let text = staticText;
   let method = "static";
 
-  if (text.length < MIN_TEXT_LENGTH && !isPdfPlaceholder(text)) {
+  if (text.length < MIN_TEXT_LENGTH) {
     const embeddedText = extractEmbeddedText(html);
     if (embeddedText.length > text.length) {
       text = embeddedText;
@@ -278,7 +278,7 @@ export async function fetchDocument(url: string) {
     }
   }
 
-  if (text.length < MIN_TEXT_LENGTH && !isPdfPlaceholder(text)) {
+  if (text.length < MIN_TEXT_LENGTH) {
     try {
       const readerText = await fetchViaReader(url);
       text = pickLongerText(text, readerText);
@@ -294,7 +294,11 @@ export async function fetchDocument(url: string) {
     }
   }
 
-  if (text.length < MIN_TEXT_LENGTH && !isPdfPlaceholder(text)) {
+  if (isPdfPlaceholder(text)) {
+    throw new Error("PDF 문서를 읽지 못했습니다. HTML 약관 페이지 URL을 입력해 주세요.");
+  }
+
+  if (text.length < MIN_TEXT_LENGTH) {
     throw new Error(
       "페이지 본문이 너무 짧습니다. JavaScript로 렌더링되는 페이지이거나, 약관 URL이 아닐 수 있습니다.",
     );

@@ -8,14 +8,24 @@ import {
   type TermsUpdateEntry,
 } from "@/lib/terms-update";
 
+const effectiveDateCache = new Map<string, string | null>();
+
 function readPresetEffectiveDate(presetFile: string): string | null {
   if (presetFile.includes("/") || presetFile.includes("\\") || presetFile.includes("..")) {
     return null;
   }
+  if (effectiveDateCache.has(presetFile)) {
+    return effectiveDateCache.get(presetFile) ?? null;
+  }
   const filePath = path.join(process.cwd(), "data", "texts", presetFile);
-  if (!fs.existsSync(filePath)) return null;
+  if (!fs.existsSync(filePath)) {
+    effectiveDateCache.set(presetFile, null);
+    return null;
+  }
   const text = fs.readFileSync(filePath, "utf-8");
-  return extractEffectiveDateFromText(text);
+  const date = extractEffectiveDateFromText(text);
+  effectiveDateCache.set(presetFile, date);
+  return date;
 }
 
 export async function GET(request: Request) {

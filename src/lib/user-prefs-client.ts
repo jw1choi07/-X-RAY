@@ -32,12 +32,19 @@ export async function saveUserPrefs(prefs: UserPrefs): Promise<UserPrefs> {
   return normalizeUserPrefs(data.prefs);
 }
 
-export async function updateRiskFilters(riskFilters: RiskFilterId[]): Promise<UserPrefs> {
-  const current = await fetchUserPrefs();
+/** Pass `base` from local state to avoid GET→PUT races that drop concurrent edits. */
+export async function updateRiskFilters(
+  riskFilters: RiskFilterId[],
+  base?: UserPrefs,
+): Promise<UserPrefs> {
+  const current = base ?? (await fetchUserPrefs());
   return saveUserPrefs({ ...current, riskFilters });
 }
 
-export async function updateSites(sites: UserPrefs["sites"]): Promise<UserPrefs> {
-  const current = await fetchUserPrefs();
+export async function updateSites(
+  sites: UserPrefs["sites"],
+  base?: UserPrefs,
+): Promise<UserPrefs> {
+  const current = base ?? (await fetchUserPrefs());
   return saveUserPrefs({ ...current, sites });
 }

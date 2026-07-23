@@ -23,14 +23,17 @@ export default function Home() {
   const [showResults, setShowResults] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
   const mainRef = useRef<HTMLElement>(null);
+  const analyzeSeqRef = useRef(0);
 
   useEffect(() => {
     fetch("/api/presets")
       .then((r) => r.json())
-      .then((d) => setPresets(d.presets ?? []));
+      .then((d) => setPresets(d.presets ?? []))
+      .catch(() => setPresets([]));
   }, []);
 
   async function runAnalyze(body: Record<string, string>, siteName: string) {
+    const seq = ++analyzeSeqRef.current;
     setLoading(true);
     setError(null);
     setFindings(null);
@@ -46,6 +49,7 @@ export default function Home() {
         body: JSON.stringify(body),
       });
       const data = await res.json();
+      if (seq !== analyzeSeqRef.current) return;
       if (!res.ok) throw new Error(data.error ?? "분석 중 오류가 발생했습니다.");
       setFindings(data.findings);
       setMeta(data.meta);
@@ -55,10 +59,11 @@ export default function Home() {
         finding_count: data.findings?.length ?? 0,
       });
     } catch (e) {
+      if (seq !== analyzeSeqRef.current) return;
       setError((e as Error).message);
       sendGAEvent("event", "analyze_error", { site_name: siteName, message: (e as Error).message });
     } finally {
-      setLoading(false);
+      if (seq === analyzeSeqRef.current) setLoading(false);
     }
   }
 

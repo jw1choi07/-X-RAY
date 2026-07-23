@@ -70,20 +70,31 @@ export function isRiskFilterId(value: unknown): value is RiskFilterId {
   );
 }
 
+const SITE_RISK_LABELS: readonly SiteRiskLabel[] = ["높음", "보통", "낮음", "미분석"];
+
+export function isSiteRiskLabel(value: unknown): value is SiteRiskLabel {
+  return typeof value === "string" && SITE_RISK_LABELS.includes(value as SiteRiskLabel);
+}
+
 export function normalizeUserPrefs(raw: unknown): UserPrefs {
   if (!raw || typeof raw !== "object") return { ...EMPTY_USER_PREFS };
 
   const data = raw as Partial<UserPrefs>;
   const sites = Array.isArray(data.sites)
-    ? data.sites.filter((site): site is MySite => {
-        return (
-          !!site &&
-          typeof site === "object" &&
-          typeof site.id === "string" &&
-          typeof site.name === "string" &&
-          typeof site.createdAt === "string"
-        );
-      })
+    ? data.sites
+        .filter((site): site is MySite => {
+          return (
+            !!site &&
+            typeof site === "object" &&
+            typeof site.id === "string" &&
+            typeof site.name === "string" &&
+            typeof site.createdAt === "string"
+          );
+        })
+        .map((site) => ({
+          ...site,
+          riskLabel: isSiteRiskLabel(site.riskLabel) ? site.riskLabel : "미분석",
+        }))
     : [];
 
   const riskFilters = Array.isArray(data.riskFilters)

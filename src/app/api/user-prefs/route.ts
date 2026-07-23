@@ -2,6 +2,7 @@ import { auth, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import {
   isRiskFilterId,
+  isSiteRiskLabel,
   normalizeUserPrefs,
   type MySite,
   type UserPrefs,
@@ -49,7 +50,7 @@ export async function PUT(request: Request) {
         name: site.name.slice(0, 80),
         url: site.url?.slice(0, 2048),
         presetFile: site.presetFile?.slice(0, 200),
-        riskLabel: site.riskLabel ?? "미분석",
+        riskLabel: isSiteRiskLabel(site.riskLabel) ? site.riskLabel : "미분석",
         riskScore: site.riskScore,
         summary: site.summary?.slice(0, 200),
         effectiveDate: site.effectiveDate?.slice(0, 32),

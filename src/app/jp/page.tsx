@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Globe2 } from "lucide-react";
@@ -27,8 +27,10 @@ export default function JapanPage() {
   const [findings, setFindings] = useState<Finding[] | null>(null);
   const [meta, setMeta] = useState<{ char_count: number; method: string } | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const analyzeSeqRef = useRef(0);
 
   async function handleSelect(slug: string, name: string) {
+    const seq = ++analyzeSeqRef.current;
     setActiveSlug(name);
     setLoading(true);
     setError(null);
@@ -40,13 +42,15 @@ export default function JapanPage() {
     try {
       const res = await fetch(`/api/jp-analyze?slug=${slug}`);
       const data = await res.json();
+      if (seq !== analyzeSeqRef.current) return;
       if (!res.ok) throw new Error(data.error ?? "分析中にエラーが発生しました。");
       setFindings(data.findings);
       setMeta(data.meta);
     } catch (e) {
+      if (seq !== analyzeSeqRef.current) return;
       setError((e as Error).message);
     } finally {
-      setLoading(false);
+      if (seq === analyzeSeqRef.current) setLoading(false);
     }
   }
 

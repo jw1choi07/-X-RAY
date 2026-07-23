@@ -53,7 +53,9 @@ export function LinkSection({ loading, onAnalyze }: LinkSectionProps) {
                 placeholder="https://example.com/terms"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && url && onAnalyze(url)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && url.trim() && !loading) onAnalyze(url);
+                }}
               />
             </div>
             <Button

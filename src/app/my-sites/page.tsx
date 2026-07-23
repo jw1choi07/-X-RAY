@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { Plus, Search, Trash2 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { AnalysisResultsPanel, type Finding } from "@/components/analysis-results";
@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { findPresetByQuery } from "@/components/search-section";
 import { FEATURED_SITES } from "@/lib/featured-sites";
 import {
+  EMPTY_USER_PREFS,
   overallRiskFromFindings,
   type MySite,
   type SiteRiskLabel,
@@ -56,11 +57,13 @@ export default function MySitesPage() {
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzeError, setAnalyzeError] = useState<string | null>(null);
   const [presetUpdates, setPresetUpdates] = useState<Record<string, TermsUpdateEntry>>({});
+  const analyzeSeqRef = useRef(0);
 
   useEffect(() => {
     fetch("/api/presets")
       .then((r) => r.json())
-      .then((d) => setPresets(d.presets ?? []));
+      .then((d) => setPresets(d.presets ?? []))
+      .catch(() => setPresets([]));
   }, []);
 
   useEffect(() => {
@@ -119,7 +122,8 @@ export default function MySitesPage() {
     setSaving(true);
     setError(null);
     try {
-      const saved = await updateSites(nextSites);
+      const base = prefs ?? EMPTY_USER_PREFS;
+      const saved = await updateSites(nextSites, base);
       setPrefs(saved);
       return saved;
     } catch (e) {
@@ -204,6 +208,7 @@ export default function MySitesPage() {
   }
 
   async function openDetail(site: MySite) {
+    const seq = ++analyzeSeqRef.current;
     setActiveSite(site);
     setFindings(null);
     setMeta(null);
@@ -229,6 +234,7 @@ export default function MySitesPage() {
         body: JSON.stringify(body),
       });
       const data = await res.json();
+      if (seq !== analyzeSeqRef.current) return;
       if (!res.ok) throw new Error(data.error ?? "분석에 실패했습니다.");
 
       const nextFindings = data.findings as Finding[];
@@ -248,11 +254,16 @@ export default function MySitesPage() {
       };
       const nextSites = sites.map((item) => (item.id === site.id ? updated : item));
       setActiveSite(updated);
-      await persistSites(nextSites);
+      try {
+        await persistSites(nextSites);
+      } catch {
+        // 분석 결과는 유지 — 저장 실패는 persistSites가 별도 error로 표시
+      }
     } catch (e) {
+      if (seq !== analyzeSeqRef.current) return;
       setAnalyzeError((e as Error).message);
     } finally {
-      setAnalyzing(false);
+      if (seq === analyzeSeqRef.current) setAnalyzing(false);
     }
   }
 

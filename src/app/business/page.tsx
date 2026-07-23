@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { sendGAEvent } from "@next/third-parties/google";
 import { FileSearch, ShieldCheck, Sparkles } from "lucide-react";
@@ -36,9 +36,11 @@ export default function BusinessPage() {
   const [findings, setFindings] = useState<Finding[] | null>(null);
   const [meta, setMeta] = useState<{ char_count: number; method: string; metadata?: DocumentMetadata | null } | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const analyzeSeqRef = useRef(0);
 
   async function handleAnalyze() {
     if (text.trim().length < MIN_CHARS) return;
+    const seq = ++analyzeSeqRef.current;
     setLoading(true);
     setError(null);
     setFindings(null);
@@ -53,15 +55,17 @@ export default function BusinessPage() {
         body: JSON.stringify({ text }),
       });
       const data = await res.json();
+      if (seq !== analyzeSeqRef.current) return;
       if (!res.ok) throw new Error(data.error ?? "분석 중 오류가 발생했습니다.");
       setFindings(data.findings);
       setMeta(data.meta);
       sendGAEvent("event", "business_analyze_success", { finding_count: data.findings?.length ?? 0 });
     } catch (e) {
+      if (seq !== analyzeSeqRef.current) return;
       setError((e as Error).message);
       sendGAEvent("event", "business_analyze_error", { message: (e as Error).message });
     } finally {
-      setLoading(false);
+      if (seq === analyzeSeqRef.current) setLoading(false);
     }
   }
 
