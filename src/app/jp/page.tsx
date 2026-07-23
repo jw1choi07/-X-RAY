@@ -58,7 +58,7 @@ export default function JapanPage() {
           href="/"
           className="font-mono text-[11px] tracking-wide text-muted-foreground uppercase transition-colors hover:text-foreground"
         >
-          ← 홈으로
+          ← ホームへ
         </Link>
 
         <div className="mt-6">
@@ -66,13 +66,13 @@ export default function JapanPage() {
             <Globe2 className="h-3.5 w-3.5" /> Localization Proof of Concept — 日本
           </p>
           <h1 className="mt-0.5 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            같은 엔진, 일본 버전
+            同じエンジン、日本版
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            153개 한국 서비스에 쓰는 것과 동일한 판독 엔진(Solar Pro 2 + ToS;DR 79종 기준 + 원문 span 앵커링
-            + 매칭 검증)으로, 일본 로컬 서비스 4곳의 실제 개인정보처리방침을 분석했습니다. 결과 요약은
-            <strong className="text-foreground"> 일본어로 직접 생성</strong>됩니다 — 번역이 아니라 파이프라인
-            자체가 다국어를 다룰 수 있다는 증거입니다.
+            148の韓国サービスに使っているものと同じ判読エンジン（Solar Pro 2 + ToS;DR 79種基準 + 原文span
+            アンカリング + マッチング検証）で、日本のローカルサービス4社の実際のプライバシーポリシーを分析しました。
+            結果の要約は<strong className="text-foreground">日本語で直接生成</strong>されます — 翻訳ではなく、
+            パイプライン自体が多言語に対応できることの証拠です。
           </p>
         </div>
 
@@ -98,8 +98,8 @@ export default function JapanPage() {
         </div>
 
         <p className="mt-8 font-mono text-[10px] tracking-wide text-muted-foreground/70">
-          * 실제 크롤링된 일본 국내용 정식 개인정보처리방침 원문 기준 분석입니다. 데모용 소규모 증거이며,
-          148개 프리셋처럼 전체 로컬라이제이션이 완료된 상태는 아닙니다.
+          * 実際にクロールした日本国内向け正式なプライバシーポリシー原文に基づく分析です。デモ用の小規模な
+          証拠であり、148のプリセットのような全面的なローカライゼーションが完了した状態ではありません。
         </p>
       </main>
 
@@ -111,6 +111,7 @@ export default function JapanPage() {
           loading={loading}
           error={error}
           onClose={() => setShowResults(false)}
+          locale="ja"
         />
       )}
     </>

@@ -23,6 +23,8 @@ export interface Finding {
   groundedness_verdict?: "grounded" | "notGrounded" | "notSure";
 }
 
+export type PanelLocale = "ko" | "ja";
+
 interface AnalysisResultsProps {
   siteName: string;
   findings: Finding[] | null;
@@ -30,13 +32,101 @@ interface AnalysisResultsProps {
   loading: boolean;
   error: string | null;
   onClose: () => void;
+  /** UI chrome language -- defaults to Korean so every existing call site is
+      unaffected. "ja" is used by /jp (see src/app/jp/page.tsx), the Japan
+      localization proof-of-concept: same component, same data shape, only
+      the fixed UI strings below change. */
+  locale?: PanelLocale;
 }
 
-const LOADING_STEPS = [
-  "약관 원문을 확보하는 중",
-  "위험 조항 79종 기준과 대조하는 중",
-  "인용문을 원문과 대조 검증하는 중",
-];
+// Everything the panel's own chrome says, independent of AI-generated
+// content (risk_summary/quote come back pre-translated from the pipeline
+// itself via the `locale` param in solar.ts -- this dict only covers the
+// static labels around them).
+const STRINGS: Record<PanelLocale, {
+  reportLabel: string;
+  close: string;
+  overallResult: string;
+  charAnalyzed: (n: string) => string;
+  groundedConfirmed: (n: number, total: number) => string;
+  riskLine: (label: string, score: number) => string;
+  riskLevel: { high: string; mid: string; low: string };
+  classLabel: { blocker: string; bad: string; other: string };
+  metadataTitle: string;
+  metadataLabels: Record<keyof DocumentMetadata, string>;
+  recentUpdate: string;
+  noFindings: string;
+  grounded: string;
+  notGrounded: string;
+  verdict: Record<string, string>;
+  copy: string;
+  copied: string;
+  footer: string;
+  loadingSteps: string[];
+}> = {
+  ko: {
+    reportLabel: "판독 보고서 · Reading Report",
+    close: "닫기",
+    overallResult: "종합 판독 결과",
+    charAnalyzed: (n) => `원문 ${n}자 분석 · `,
+    groundedConfirmed: (n, total) => `원문 근거 확인 ${n}/${total}`,
+    riskLine: (label, score) => `위험도 ${label} · ${score}`,
+    riskLevel: { high: "높음", mid: "보통", low: "낮음" },
+    classLabel: { blocker: "치명적", bad: "위험", other: "기타" },
+    metadataTitle: "한눈에 보기 · Extracted Metadata",
+    metadataLabels: {
+      effective_date: "시행일자",
+      company_name: "사업자명",
+      data_retention_period: "개인정보 보관기간",
+      contact: "문의처",
+      jurisdiction: "관할 법원",
+    },
+    recentUpdate: " · 최근 갱신",
+    noFindings: "탐지된 위험 조항이 없습니다.",
+    grounded: "원문 확인됨",
+    notGrounded: "원문 미확인",
+    verdict: { VALID: "매칭 타당", INVALID: "매칭 재검토 필요", SKIPPED_UNGROUNDED: "검증 스킵(원문 미확인)" },
+    copy: "복사",
+    copied: "복사됨",
+    footer: "판단 기준: ToS;DR(tosdr.org) bad/blocker 케이스 79종 기반 · 모든 인용문은 원문 대조 검증을 거칩니다",
+    loadingSteps: [
+      "약관 원문을 확보하는 중",
+      "위험 조항 79종 기준과 대조하는 중",
+      "인용문을 원문과 대조 검증하는 중",
+    ],
+  },
+  ja: {
+    reportLabel: "判読レポート · Reading Report",
+    close: "閉じる",
+    overallResult: "総合判読結果",
+    charAnalyzed: (n) => `原文 ${n}字分析 · `,
+    groundedConfirmed: (n, total) => `原文根拠確認 ${n}/${total}`,
+    riskLine: (label, score) => `リスク ${label} · ${score}`,
+    riskLevel: { high: "高", mid: "中", low: "低" },
+    classLabel: { blocker: "致命的", bad: "危険", other: "その他" },
+    metadataTitle: "ひと目で見る · Extracted Metadata",
+    metadataLabels: {
+      effective_date: "施行日",
+      company_name: "事業者名",
+      data_retention_period: "個人情報保管期間",
+      contact: "問い合わせ先",
+      jurisdiction: "管轄裁判所",
+    },
+    recentUpdate: " · 最近更新",
+    noFindings: "検出されたリスク条項はありません。",
+    grounded: "原文確認済み",
+    notGrounded: "原文未確認",
+    verdict: { VALID: "マッチング妥当", INVALID: "マッチング要再検討", SKIPPED_UNGROUNDED: "検証スキップ(原文未確認)" },
+    copy: "コピー",
+    copied: "コピー済み",
+    footer: "判定基準: ToS;DR(tosdr.org) bad/blockerケース79種に基づく · すべての引用文は原文照合検証を経ています",
+    loadingSteps: [
+      "利用規約原文を確保中",
+      "リスク条項79種基準と照合中",
+      "引用文を原文と照合検証中",
+    ],
+  },
+};
 
 export function AnalysisResultsPanel({
   siteName,
@@ -45,7 +135,9 @@ export function AnalysisResultsPanel({
   loading,
   error,
   onClose,
+  locale = "ko",
 }: AnalysisResultsProps) {
+  const t = STRINGS[locale];
   const counts = findings
     ? findings.reduce(
         (acc, f) => {
@@ -59,10 +151,20 @@ export function AnalysisResultsPanel({
   const blockerCount = counts.blocker ?? 0;
   const badCount = counts.bad ?? 0;
 
+  const RISK_LABEL_TEXT: Record<string, string> = {
+    높음: t.riskLevel.high,
+    보통: t.riskLevel.mid,
+    낮음: t.riskLevel.low,
+  };
+
   const overallRisk = findings
     ? (() => {
         const computed = overallRiskFromFindings(findings);
-        return { ...computed, ...OVERALL_RISK_STYLE[computed.riskLabel] };
+        return {
+          ...computed,
+          ...OVERALL_RISK_STYLE[computed.riskLabel],
+          displayLabel: RISK_LABEL_TEXT[computed.riskLabel] ?? computed.riskLabel,
+        };
       })()
     : null;
 
@@ -78,7 +180,7 @@ export function AnalysisResultsPanel({
         <div className="flex items-start justify-between border-b border-border px-6 py-5">
           <div>
             <p className="font-mono text-[11px] tracking-[0.12em] text-scan uppercase">
-              판독 보고서 · Reading Report
+              {t.reportLabel}
             </p>
             <h2 className="mt-0.5 text-2xl font-bold tracking-tight text-foreground">
               {siteName}
@@ -88,7 +190,7 @@ export function AnalysisResultsPanel({
             variant="ghost"
             size="icon"
             onClick={onClose}
-            aria-label="닫기"
+            aria-label={t.close}
             className="rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
           >
             <X className="h-5 w-5" />
@@ -96,7 +198,7 @@ export function AnalysisResultsPanel({
         </div>
 
         <div className="flex-1 overflow-y-auto px-6 py-6">
-          {loading && <LoadingState />}
+          {loading && <LoadingState steps={t.loadingSteps} />}
 
           {error && !loading && (
             <Alert variant="destructive">
@@ -115,14 +217,14 @@ export function AnalysisResultsPanel({
                 <div className={`flex items-center gap-4 rounded-md border p-4 ${overallRisk.bg}`}>
                   <div className="min-w-0 flex-1">
                     <p className="font-mono text-[11px] tracking-[0.12em] text-muted-foreground uppercase">
-                      종합 판독 결과
+                      {t.overallResult}
                     </p>
                     <p className="mt-0.5 text-xs text-muted-foreground">
-                      {meta && `원문 ${meta.char_count.toLocaleString()}자 분석 · `}
-                      원문 근거 확인 {groundedCount}/{findings.length}
+                      {meta && t.charAnalyzed(meta.char_count.toLocaleString())}
+                      {t.groundedConfirmed(groundedCount, findings.length)}
                     </p>
                     <p className={`mt-2 font-mono text-sm font-semibold ${overallRisk.color}`}>
-                      위험도 {overallRisk.riskLabel} · {overallRisk.riskScore}
+                      {t.riskLine(overallRisk.displayLabel, overallRisk.riskScore)}
                     </p>
                   </div>
                   {/* read stamp — the way a radiology report ends with a rubber-stamped
@@ -136,28 +238,28 @@ export function AnalysisResultsPanel({
                     ) : (
                       <AlertTriangle className="h-4 w-4" />
                     )}
-                    <span className="font-mono text-[10px] font-black tracking-tight">{overallRisk.riskLabel}</span>
+                    <span className="font-mono text-[10px] font-black tracking-tight">{overallRisk.displayLabel}</span>
                   </div>
                 </div>
               )}
 
               <div className="grid grid-cols-3 gap-2.5">
-                <StatTile label="치명적" value={blockerCount} accent="text-risk-blocker" />
-                <StatTile label="위험" value={badCount} accent="text-risk-bad" />
-                <StatTile label="기타" value={counts["기타"] ?? 0} accent="text-muted-foreground" />
+                <StatTile label={t.classLabel.blocker} value={blockerCount} accent="text-risk-blocker" />
+                <StatTile label={t.classLabel.bad} value={badCount} accent="text-risk-bad" />
+                <StatTile label={t.classLabel.other} value={counts["기타"] ?? 0} accent="text-muted-foreground" />
               </div>
 
-              {meta?.metadata && <MetadataCard metadata={meta.metadata} />}
+              {meta?.metadata && <MetadataCard metadata={meta.metadata} t={t} />}
 
               {findings.length === 0 && (
                 <Alert>
-                  <AlertDescription>탐지된 위험 조항이 없습니다.</AlertDescription>
+                  <AlertDescription>{t.noFindings}</AlertDescription>
                 </Alert>
               )}
 
               <div className="space-y-3">
                 {findings.map((f, i) => (
-                  <FindingCard key={i} finding={f} index={i} />
+                  <FindingCard key={i} finding={f} index={i} t={t} />
                 ))}
               </div>
             </div>
@@ -166,7 +268,7 @@ export function AnalysisResultsPanel({
 
         <div className="border-t border-border px-6 py-3">
           <p className="text-center font-mono text-[10px] text-muted-foreground/70">
-            판단 기준: ToS;DR(tosdr.org) bad/blocker 케이스 79종 기반 · 모든 인용문은 원문 대조 검증을 거칩니다
+            {t.footer}
           </p>
         </div>
       </div>
@@ -174,11 +276,15 @@ export function AnalysisResultsPanel({
   );
 }
 
-function FindingCard({ finding: f, index }: { finding: Finding; index: number }) {
+type Strings = (typeof STRINGS)[PanelLocale];
+
+function FindingCard({ finding: f, index, t }: { finding: Finding; index: number; t: Strings }) {
   const [copied, setCopied] = useState(false);
   const style = CLASSIFICATION_STYLE[f.classification] ?? CLASSIFICATION_STYLE["기타"];
   const Icon = style.icon;
-  const verdictLabel = VERDICT_LABEL[f.case_match_verdict ?? ""] ?? f.case_match_verdict;
+  const classLabel =
+    f.classification === "blocker" ? t.classLabel.blocker : f.classification === "bad" ? t.classLabel.bad : t.classLabel.other;
+  const verdictLabel = t.verdict[f.case_match_verdict ?? ""] ?? VERDICT_LABEL[f.case_match_verdict ?? ""] ?? f.case_match_verdict;
 
   async function copyQuote() {
     try {
@@ -207,7 +313,7 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
         <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
           <Badge className={`gap-1 ${style.badge}`}>
             <Icon className="h-3 w-3" />
-            {style.label}
+            {classLabel}
           </Badge>
           <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium ${style.chip}`}>
             {f.matched_case || "기타"}
@@ -232,7 +338,7 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
               ) : (
                 <AlertTriangle className="h-3 w-3 text-muted-foreground" />
               )}
-              {f.quote_grounded ? "원문 확인됨" : "원문 미확인"}
+              {f.quote_grounded ? t.grounded : t.notGrounded}
             </span>
             <span>{verdictLabel}</span>
           </div>
@@ -242,11 +348,11 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
           >
             {copied ? (
               <>
-                <Check className="h-3 w-3" /> 복사됨
+                <Check className="h-3 w-3" /> {t.copied}
               </>
             ) : (
               <>
-                <Copy className="h-3 w-3" /> 복사
+                <Copy className="h-3 w-3" /> {t.copy}
               </>
             )}
           </button>
@@ -256,17 +362,9 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
   );
 }
 
-const METADATA_LABELS: Record<keyof DocumentMetadata, string> = {
-  effective_date: "시행일자",
-  company_name: "사업자명",
-  data_retention_period: "개인정보 보관기간",
-  contact: "문의처",
-  jurisdiction: "관할 법원",
-};
-
-function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
-  const entries = (Object.keys(METADATA_LABELS) as (keyof DocumentMetadata)[])
-    .map((key) => ({ key, label: METADATA_LABELS[key], value: metadata[key]?.trim() }))
+function MetadataCard({ metadata, t }: { metadata: DocumentMetadata; t: Strings }) {
+  const entries = (Object.keys(t.metadataLabels) as (keyof DocumentMetadata)[])
+    .map((key) => ({ key, label: t.metadataLabels[key], value: metadata[key]?.trim() }))
     .filter((entry) => entry.value);
 
   if (entries.length === 0) return null;
@@ -276,14 +374,14 @@ function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
   return (
     <div className="rounded-md border border-border p-4">
       <p className="mb-2.5 font-mono text-[11px] tracking-[0.1em] text-scan uppercase">
-        한눈에 보기 · Extracted Metadata
+        {t.metadataTitle}
       </p>
       <dl className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
         {entries.map(({ key, label, value }) => (
           <div key={key} className="min-w-0">
             <dt className="font-mono text-[10px] text-muted-foreground/80">
               {label}
-              {key === "effective_date" && updateInfo?.isRecent ? " · 최근 갱신" : ""}
+              {key === "effective_date" && updateInfo?.isRecent ? t.recentUpdate : ""}
             </dt>
             <dd
               className={`truncate text-[13px] ${
@@ -309,7 +407,7 @@ function StatTile({ label, value, accent }: { label: string; value: string | num
   );
 }
 
-function LoadingState() {
+function LoadingState({ steps }: { steps: string[] }) {
   return (
     <div className="space-y-5 py-4">
       <div className="flex flex-col items-center gap-3 py-2 text-center">
@@ -320,7 +418,7 @@ function LoadingState() {
           </div>
         </div>
         <ol className="space-y-1 font-mono text-xs text-muted-foreground">
-          {LOADING_STEPS.map((step, i) => (
+          {steps.map((step, i) => (
             <li key={step} style={{ animationDelay: `${i * 1.2}s` }} className="animate-in fade-in">
               {step}...
             </li>
