@@ -52,6 +52,7 @@ export async function PUT(request: Request) {
         riskLabel: site.riskLabel ?? "미분석",
         riskScore: site.riskScore,
         summary: site.summary?.slice(0, 200),
+        effectiveDate: site.effectiveDate?.slice(0, 32),
         lastAnalyzedAt: site.lastAnalyzedAt,
         createdAt: site.createdAt,
       }),

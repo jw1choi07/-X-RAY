@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Show, SignInButton, useAuth } from "@clerk/nextjs";
-import { Filter, ListChecks, Menu, X } from "lucide-react";
+import { Filter, ListChecks, Menu, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   RISK_FILTER_OPTIONS,
@@ -124,6 +124,21 @@ export function SideMenu() {
           {!isLoaded && (
             <p className="px-2 text-sm text-muted-foreground">불러오는 중…</p>
           )}
+
+          <nav className="mb-3 flex flex-col gap-1">
+            <Link
+              href="/pricing"
+              onClick={() => setOpen(false)}
+              className={`flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors ${
+                pathname === "/pricing"
+                  ? "bg-scan/15 text-scan ring-1 ring-scan/30"
+                  : "text-scan hover:bg-scan/10"
+              }`}
+            >
+              <Sparkles className="h-4 w-4 shrink-0" />
+              유료 구독 · Pro
+            </Link>
+          </nav>
 
           <Show when="signed-out">
             <div className="mx-1 rounded-md border border-border bg-muted/40 px-4 py-5">

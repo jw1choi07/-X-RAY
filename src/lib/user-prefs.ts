@@ -15,6 +15,8 @@ export type MySite = {
   riskLabel: SiteRiskLabel;
   riskScore?: number;
   summary?: string;
+  /** 약관 시행·개정일 (YYYY-MM-DD) */
+  effectiveDate?: string;
   lastAnalyzedAt?: string;
   createdAt: string;
 };

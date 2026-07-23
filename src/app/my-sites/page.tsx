@@ -19,6 +19,9 @@ import {
 import { fetchUserPrefs, updateSites } from "@/lib/user-prefs-client";
 import type { Preset } from "@/lib/presets";
 import type { DocumentMetadata } from "@/lib/info-extract";
+import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
+import type { TermsUpdateEntry } from "@/lib/terms-update";
+import { getTermsUpdateInfo } from "@/lib/terms-update";
 
 function riskTone(label: SiteRiskLabel) {
   switch (label) {
@@ -52,12 +55,35 @@ export default function MySitesPage() {
   const [meta, setMeta] = useState<{ char_count: number; method: string; metadata?: DocumentMetadata | null } | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzeError, setAnalyzeError] = useState<string | null>(null);
+  const [presetUpdates, setPresetUpdates] = useState<Record<string, TermsUpdateEntry>>({});
 
   useEffect(() => {
     fetch("/api/presets")
       .then((r) => r.json())
       .then((d) => setPresets(d.presets ?? []));
   }, []);
+
+  useEffect(() => {
+    const files = (prefs?.sites ?? [])
+      .map((site) => site.presetFile)
+      .filter((file): file is string => Boolean(file));
+    if (files.length === 0) {
+      setPresetUpdates({});
+      return;
+    }
+    let cancelled = false;
+    fetch(`/api/terms-updates?files=${encodeURIComponent(files.join(","))}`)
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) setPresetUpdates(d.updates ?? {});
+      })
+      .catch(() => {
+        if (!cancelled) setPresetUpdates({});
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [prefs?.sites]);
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -118,6 +144,14 @@ export default function MySitesPage() {
       return;
     }
     const featured = FEATURED_SITES.find((s) => s.presetFile === preset.file);
+    let effectiveDate: string | undefined;
+    try {
+      const res = await fetch(`/api/terms-updates?files=${encodeURIComponent(preset.file)}`);
+      const data = await res.json();
+      effectiveDate = data.updates?.[preset.file]?.effectiveDate;
+    } catch {
+      // ignore — 배지는 나중에 갱신
+    }
     const nextSite: MySite = {
       id: crypto.randomUUID(),
       name: siteName,
@@ -131,6 +165,7 @@ export default function MySitesPage() {
         : "미분석",
       riskScore: featured?.riskScore,
       summary: featured?.summary,
+      effectiveDate,
       createdAt: new Date().toISOString(),
     };
     await persistSites([...sites, nextSite]);
@@ -206,11 +241,15 @@ export default function MySitesPage() {
       setFindings(nextFindings);
       setMeta(data.meta);
       const risk = overallRiskFromFindings(nextFindings);
+      const effectiveDate =
+        (data.meta?.metadata?.effective_date as string | undefined)?.trim() ||
+        site.effectiveDate;
       const updated: MySite = {
         ...site,
         riskLabel: risk.riskLabel,
         riskScore: risk.riskScore,
         summary: nextFindings[0]?.risk_summary ?? site.summary,
+        effectiveDate: getTermsUpdateInfo(effectiveDate)?.effectiveDate ?? effectiveDate,
         lastAnalyzedAt: new Date().toISOString(),
       };
       const nextSites = sites.map((item) => (item.id === site.id ? updated : item));
@@ -348,7 +387,11 @@ export default function MySitesPage() {
                   아직 추가된 사이트가 없습니다. 항목 추가 버튼으로 시작해 보세요.
                 </li>
               )}
-              {sites.map((site) => (
+              {sites.map((site) => {
+                const effectiveDate =
+                  site.effectiveDate ??
+                  (site.presetFile ? presetUpdates[site.presetFile]?.effectiveDate : undefined);
+                return (
                 <li key={site.id} className="flex items-center gap-3 py-4">
                   <button
                     type="button"
@@ -365,6 +408,7 @@ export default function MySitesPage() {
                         위험도 {site.riskLabel}
                         {typeof site.riskScore === "number" ? ` · ${site.riskScore}` : ""}
                       </span>
+                      <TermsUpdatedBadge effectiveDate={effectiveDate} />
                     </div>
                     <p className="mt-1 truncate text-sm text-muted-foreground">
                       {site.summary ?? site.url ?? site.presetFile ?? "상세 분석을 보려면 클릭하세요"}
@@ -381,7 +425,8 @@ export default function MySitesPage() {
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </>
         )}

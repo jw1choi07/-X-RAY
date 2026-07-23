@@ -8,6 +8,7 @@ import { isUsablePresetText } from "@/lib/presets";
 import { getCollectionSchedule } from "@/lib/scheduler";
 import { isRiskFilterId, normalizeUserPrefs, type RiskFilterId } from "@/lib/user-prefs";
 import type { DocumentMetadata } from "@/lib/info-extract";
+import { extractEffectiveDateFromText } from "@/lib/terms-update";
 
 async function loadPriorityFilters(): Promise<RiskFilterId[]> {
   try {
@@ -45,7 +46,21 @@ export async function POST(req: Request) {
           { status: 400 },
         );
       }
-      meta = { char_count: text.length, method: "preset", schedule: getCollectionSchedule("preset") };
+      const effectiveDate = extractEffectiveDateFromText(text);
+      meta = {
+        char_count: text.length,
+        method: "preset",
+        schedule: getCollectionSchedule("preset"),
+        metadata: effectiveDate
+          ? {
+              effective_date: effectiveDate,
+              company_name: "",
+              data_retention_period: "",
+              contact: "",
+              jurisdiction: "",
+            }
+          : null,
+      };
     } else if (body.url) {
       if (typeof body.url !== "string" || body.url.length > 2048) {
         return NextResponse.json({ error: "올바른 URL을 입력해주세요." }, { status: 400 });
@@ -73,6 +88,24 @@ export async function POST(req: Request) {
 
     const priorityFilters = await loadPriorityFilters();
     const result = await analyzeDocument(text, priorityFilters, typeof body.presetFile === "string" ? body.presetFile : undefined);
+
+    // 메타데이터에 시행일이 없으면 원문 휴리스틱으로 보조 추출
+    if (meta && !meta.metadata?.effective_date?.trim()) {
+      const fromText = extractEffectiveDateFromText(text);
+      if (fromText) {
+        meta = {
+          ...meta,
+          metadata: {
+            effective_date: fromText,
+            company_name: meta.metadata?.company_name ?? "",
+            data_retention_period: meta.metadata?.data_retention_period ?? "",
+            contact: meta.metadata?.contact ?? "",
+            jurisdiction: meta.metadata?.jurisdiction ?? "",
+          },
+        };
+      }
+    }
+
     return NextResponse.json({ ...result, meta, priorityFilters });
   } catch (e) {
     if (e instanceof CrawlBlocked) {

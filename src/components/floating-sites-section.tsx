@@ -1,9 +1,11 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FEATURED_SITES, type FeaturedSite } from "@/lib/featured-sites";
+import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
+import type { TermsUpdateEntry } from "@/lib/terms-update";
 
 const RISK_TONE: Record<FeaturedSite["riskLabel"], string> = {
   위험: "text-risk-blocker",
@@ -16,6 +18,15 @@ interface FloatingSitesSectionProps {
 }
 
 export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps) {
+  const [updates, setUpdates] = useState<Record<string, TermsUpdateEntry>>({});
+
+  useEffect(() => {
+    fetch("/api/terms-updates")
+      .then((r) => r.json())
+      .then((d) => setUpdates(d.updates ?? {}))
+      .catch(() => setUpdates({}));
+  }, []);
+
   return (
     <section className="relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6">
       {/* film-edge sprocket marks — a quiet nod to a strip of negatives, not a decorative border */}
@@ -52,6 +63,7 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
             onSelect={onSelectSite}
             className="floating-card"
             style={{ animationDelay: `${site.floatDelay}s` }}
+            effectiveDate={updates[site.presetFile]?.effectiveDate}
           />
         ))}
       </div>
@@ -68,6 +80,7 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
               left: site.floatPosition.left,
               animationDelay: `${site.floatDelay}s`,
             }}
+            effectiveDate={updates[site.presetFile]?.effectiveDate}
           />
         ))}
       </div>
@@ -85,11 +98,13 @@ function FloatingCard({
   onSelect,
   className = "",
   style,
+  effectiveDate,
 }: {
   site: FeaturedSite;
   onSelect: (site: FeaturedSite) => void;
   className?: string;
   style?: CSSProperties;
+  effectiveDate?: string;
 }) {
   return (
     <button
@@ -98,11 +113,14 @@ function FloatingCard({
       className={`group cursor-pointer rounded-2xl border border-white/10 bg-[#0d1319] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
       style={style}
     >
-      <div className="mb-2 flex items-center justify-between">
+      <div className="mb-2 flex items-center justify-between gap-2">
         <BrandMark site={site} />
-        <span className={`font-mono text-[10px] font-semibold tracking-wide uppercase ${RISK_TONE[site.riskLabel]}`}>
-          {site.riskLabel}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className={`font-mono text-[10px] font-semibold tracking-wide uppercase ${RISK_TONE[site.riskLabel]}`}>
+            {site.riskLabel}
+          </span>
+          <TermsUpdatedBadge effectiveDate={effectiveDate} />
+        </div>
       </div>
       <p className="font-semibold text-[#dfeaf0]">{site.name}</p>
       <p className="mt-1 text-xs leading-relaxed text-[#82949f]">{site.summary}</p>

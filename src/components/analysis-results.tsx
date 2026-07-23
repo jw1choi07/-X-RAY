@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { CLASSIFICATION_STYLE, VERDICT_LABEL, type Classification } from "@/lib/classification";
 import type { DocumentMetadata } from "@/lib/info-extract";
 import { AlertTriangle, Check, CheckCircle2, Copy, ShieldCheck, X } from "lucide-react";
+import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
+import { getTermsUpdateInfo } from "@/lib/terms-update";
 
 export interface Finding {
   matched_case: string;
@@ -104,6 +106,11 @@ export function AnalysisResultsPanel({
 
           {findings && !loading && (
             <div className="space-y-6">
+              <TermsUpdatedBadge
+                variant="banner"
+                effectiveDate={meta?.metadata?.effective_date}
+              />
+
               {overallRisk && (
                 <div className={`flex items-center gap-4 rounded-md border p-4 ${overallRisk.bg}`}>
                   <div className="min-w-0 flex-1">
@@ -261,6 +268,8 @@ function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
 
   if (entries.length === 0) return null;
 
+  const updateInfo = getTermsUpdateInfo(metadata.effective_date);
+
   return (
     <div className="rounded-md border border-border p-4">
       <p className="mb-2.5 font-mono text-[11px] tracking-[0.1em] text-scan uppercase">
@@ -269,8 +278,16 @@ function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
       <dl className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
         {entries.map(({ key, label, value }) => (
           <div key={key} className="min-w-0">
-            <dt className="font-mono text-[10px] text-muted-foreground/80">{label}</dt>
-            <dd className="truncate text-[13px] text-foreground" title={value}>
+            <dt className="font-mono text-[10px] text-muted-foreground/80">
+              {label}
+              {key === "effective_date" && updateInfo?.isRecent ? " · 최근 갱신" : ""}
+            </dt>
+            <dd
+              className={`truncate text-[13px] ${
+                key === "effective_date" && updateInfo?.isRecent ? "font-semibold text-scan" : "text-foreground"
+              }`}
+              title={value}
+            >
               {value}
             </dd>
           </div>
