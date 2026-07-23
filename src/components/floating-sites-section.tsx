@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { FEATURED_SITES, type FeaturedSite } from "@/lib/featured-sites";
 import { TermsUpdatedBadge } from "@/components/terms-updated-badge";
 import type { TermsUpdateEntry } from "@/lib/terms-update";
@@ -28,64 +28,84 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
   }, []);
 
   return (
-    <section className="relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6">
-      {/* film-edge sprocket marks — a quiet nod to a strip of negatives, not a decorative border */}
-      <div className="pointer-events-none absolute inset-y-0 left-3 hidden flex-col justify-evenly py-24 md:flex">
+    <section className="section-hero relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-10">
+      <div className="scan-rail hidden md:block" aria-hidden />
+
+      <div className="pointer-events-none absolute inset-y-0 left-3 hidden flex-col justify-evenly py-20 md:flex">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-2 w-2 rounded-[2px] border border-border" />
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-scan/30 bg-scan/10" />
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-y-0 right-3 hidden flex-col justify-evenly py-24 md:flex">
+      <div className="pointer-events-none absolute inset-y-0 right-3 hidden flex-col justify-evenly py-20 md:flex">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-2 w-2 rounded-[2px] border border-border" />
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-scan/30 bg-scan/10" />
         ))}
       </div>
 
-      <div className="relative z-10 mb-10 max-w-2xl text-center">
-        <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-scan/30 bg-scan/5 px-3 py-1 font-mono text-[11px] tracking-[0.1em] text-scan uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-scan" />
+      <div className="relative z-10 mb-6 max-w-2xl text-center">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-md border border-scan/35 bg-card/80 px-3 py-1 font-mono text-[11px] tracking-[0.1em] text-scan uppercase shadow-sm backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-scan" />
           Upstage Solar 판독 시스템
         </div>
-        <h2 className="text-4xl leading-[1.15] font-bold tracking-tight text-foreground md:text-5xl">
+        <h2 className="text-4xl leading-[1.12] font-bold tracking-tight text-foreground md:text-5xl">
           <span className="scan-reveal">약관, 읽지 않고도</span>
           <br className="hidden sm:block" /> 위험한 조항만 골라보세요
         </h2>
-        <p className="mt-4 text-muted-foreground">
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
           이미 분석된 주요 서비스 · 카드를 선택하면 판독 결과를 확인할 수 있어요
         </p>
+
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <ShieldCheck className="h-3 w-3 text-scan" />
+            원문 근거 검증
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <Zap className="h-3 w-3 text-scan" />
+            위험 조항 우선 표시
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <Sparkles className="h-3 w-3 text-scan" />
+            ToS;DR 79종 기준
+          </span>
+        </div>
       </div>
 
-      <div className="relative z-10 grid w-full max-w-4xl grid-cols-2 gap-3 px-2 sm:gap-4 md:hidden">
-        {FEATURED_SITES.map((site) => (
-          <FloatingCard
-            key={site.id}
-            site={site}
-            onSelect={onSelectSite}
-            className="floating-card"
-            style={{ animationDelay: `${site.floatDelay}s` }}
-            effectiveDate={updates[site.presetFile]?.effectiveDate}
-          />
-        ))}
+      <div className="relative z-10 w-full max-w-4xl">
+        <div className="hero-glow" aria-hidden />
+
+        <div className="relative grid grid-cols-2 gap-3 px-1 sm:gap-4 md:hidden">
+          {FEATURED_SITES.map((site) => (
+            <FloatingCard
+              key={site.id}
+              site={site}
+              onSelect={onSelectSite}
+              className="floating-card"
+              style={{ animationDelay: `${site.floatDelay}s` }}
+              effectiveDate={updates[site.presetFile]?.effectiveDate}
+            />
+          ))}
+        </div>
+
+        <div className="relative hidden h-[400px] md:block md:h-[440px]">
+          {FEATURED_SITES.map((site) => (
+            <FloatingCard
+              key={site.id}
+              site={site}
+              onSelect={onSelectSite}
+              className="floating-card absolute w-52"
+              style={{
+                top: site.floatPosition.top,
+                left: site.floatPosition.left,
+                animationDelay: `${site.floatDelay}s`,
+              }}
+              effectiveDate={updates[site.presetFile]?.effectiveDate}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="relative z-10 hidden h-[420px] w-full max-w-4xl md:block md:h-[480px]">
-        {FEATURED_SITES.map((site) => (
-          <FloatingCard
-            key={site.id}
-            site={site}
-            onSelect={onSelectSite}
-            className="floating-card absolute w-52"
-            style={{
-              top: site.floatPosition.top,
-              left: site.floatPosition.left,
-              animationDelay: `${site.floatDelay}s`,
-            }}
-            effectiveDate={updates[site.presetFile]?.effectiveDate}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 mt-10 flex flex-col items-center gap-1 text-muted-foreground/70">
+      <div className="relative z-10 mt-6 flex flex-col items-center gap-1 text-muted-foreground/80">
         <span className="font-mono text-[10px] tracking-[0.15em] uppercase">스크롤해서 더보기</span>
         <ChevronDown className="h-4 w-4 animate-bounce" />
       </div>
@@ -110,7 +130,7 @@ function FloatingCard({
     <button
       type="button"
       onClick={() => onSelect(site)}
-      className={`group cursor-pointer rounded-2xl border border-white/10 bg-[#0d1319] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
+      className={`group cursor-pointer rounded-2xl border border-emerald-900/20 bg-[#064e3b] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
       style={style}
     >
       <div className="mb-2 flex items-center justify-between gap-2">
@@ -122,10 +142,10 @@ function FloatingCard({
           <TermsUpdatedBadge effectiveDate={effectiveDate} />
         </div>
       </div>
-      <p className="font-semibold text-[#dfeaf0]">{site.name}</p>
-      <p className="mt-1 text-xs leading-relaxed text-[#82949f]">{site.summary}</p>
+      <p className="font-semibold text-[#ecfdf5]">{site.name}</p>
+      <p className="mt-1 text-xs leading-relaxed text-[#a7f3d0]">{site.summary}</p>
       <div className="mt-3 flex items-center gap-2">
-        <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/10">
+        <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/15">
           <div
             className={`h-full rounded-full transition-all duration-700 ease-out ${
               site.riskLabel === "위험" ? "bg-risk-blocker" : site.riskLabel === "주의" ? "bg-risk-bad" : "bg-risk-ok"
@@ -133,23 +153,20 @@ function FloatingCard({
             style={{ width: `${site.riskScore}%` }}
           />
         </div>
-        <span className="font-mono text-xs font-semibold text-[#dfeaf0]">{site.riskScore}</span>
+        <span className="font-mono text-xs font-semibold text-[#ecfdf5]">{site.riskScore}</span>
       </div>
-      <p className="mt-2 font-mono text-[10px] tracking-wide text-[#57c2dd] uppercase md:opacity-0 md:transition-opacity md:group-hover:opacity-100">
+      <p className="mt-2 font-mono text-[10px] tracking-wide text-[#6ee7b7] uppercase md:opacity-0 md:transition-opacity md:group-hover:opacity-100">
         판독지 보기 →
       </p>
     </button>
   );
 }
 
-// Real brand favicon, downloaded from the service's own domain into
-// public/logos/ (see scripts/fetch-brand-logos.sh) -- falls back to the
-// emoji if the icon fails to load, so a missing file never breaks the card.
 function BrandMark({ site }: { site: FeaturedSite }) {
   const [failed, setFailed] = useState(false);
 
   return (
-    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-lg">
+    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-lg">
       {failed ? (
         site.emoji
       ) : (

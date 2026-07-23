@@ -74,23 +74,23 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
   }
 
   return (
-    <section className="relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden bg-background px-6">
-      <div className="relative z-10 w-full max-w-lg text-center">
-        <div className="mb-3 font-mono text-[11px] tracking-[0.15em] text-scan uppercase">
+    <section className="section-search relative flex min-h-screen snap-start flex-col items-center justify-center overflow-hidden px-6 py-16">
+      <div className="atmosphere-panel relative z-10 w-full max-w-lg rounded-2xl px-6 py-8 text-center md:px-8 md:py-10">
+        <div className="mb-2 font-mono text-[11px] tracking-[0.15em] text-scan uppercase">
           Case Lookup
         </div>
-        <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+        <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           검색하기
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <p className="mt-2 text-base text-muted-foreground md:text-lg">
           이미 판독이 끝난 사이트를 검색해보세요
         </p>
 
-        <div className="mt-10 flex gap-2">
+        <div className="mt-7 flex gap-2">
           <div className="relative flex-1">
             <Search className="absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
-              className="h-12 rounded-md border-border bg-card pl-11 text-base shadow-sm"
+              className="h-12 rounded-md border-border bg-background/80 pl-11 text-base shadow-sm"
               placeholder="카카오T, 멜론, 토스, 넷플릭스..."
               value={query}
               onChange={(e) => {
@@ -118,7 +118,7 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         <button
           type="button"
           onClick={() => setBrowseOpen((v) => !v)}
-          className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
           카테고리로 찾아보기
           <ChevronDown
@@ -127,7 +127,7 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         </button>
 
         {browseOpen && (
-          <div className="mt-4 max-h-[45vh] overflow-y-auto rounded-md border border-border bg-card p-4 text-left shadow-sm">
+          <div className="mt-4 max-h-[40vh] overflow-y-auto rounded-md border border-border bg-background/70 p-4 text-left shadow-sm">
             <div className="flex flex-wrap gap-2">
               {categoriesWithSites.map((category) => (
                 <button

@@ -54,87 +54,85 @@
 }
 
 /*
- * 약관 X-ray palette — "lightbox" (light) / "film negative" (dark).
- * Radiologists read film two ways: backlit on a lightbox in a bright room,
- * or as a raw negative in a dark one. Both are real viewing modes for the
- * same subject, which is why this isn't just an inverted greyscale.
+ * 약관 X-ray palette — Dark Forest / Emerald on Soft Off-White.
+ * Main #064E3B · Primary #059669 · Accent #10B981 · Background #F9FAFB
  */
 :root {
-  --background: #eef2f5;
-  --foreground: #10161c;
+  --background: #f9fafb;
+  --foreground: #064e3b;
   --card: #ffffff;
-  --card-foreground: #10161c;
+  --card-foreground: #064e3b;
   --popover: #ffffff;
-  --popover-foreground: #10161c;
-  --primary: #10161c;
-  --primary-foreground: #eef2f5;
-  --secondary: #e1e8ed;
-  --secondary-foreground: #10161c;
-  --muted: #e1e8ed;
-  --muted-foreground: #56676f;
-  --accent: #e1e8ed;
-  --accent-foreground: #10161c;
-  --destructive: #c33a1e;
-  --border: #d3dce1;
-  --input: #d3dce1;
-  --ring: #1f6f8b;
-  --risk-blocker: #c33a1e;
-  --risk-bad: #b3760f;
-  --risk-ok: #1a7a5e;
-  --scan: #1f6f8b;
-  --chart-1: #c33a1e;
-  --chart-2: #b3760f;
-  --chart-3: #1a7a5e;
-  --chart-4: #1f6f8b;
-  --chart-5: #56676f;
+  --popover-foreground: #064e3b;
+  --primary: #059669;
+  --primary-foreground: #f9fafb;
+  --secondary: #ecfdf5;
+  --secondary-foreground: #064e3b;
+  --muted: #f0fdf4;
+  --muted-foreground: #3f6f5f;
+  --accent: #d1fae5;
+  --accent-foreground: #064e3b;
+  --destructive: #dc2626;
+  --border: #d1e7dc;
+  --input: #d1e7dc;
+  --ring: #059669;
+  --risk-blocker: #dc2626;
+  --risk-bad: #d97706;
+  --risk-ok: #059669;
+  --scan: #10b981;
+  --chart-1: #dc2626;
+  --chart-2: #d97706;
+  --chart-3: #059669;
+  --chart-4: #10b981;
+  --chart-5: #3f6f5f;
   --radius: 0.5rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #10161c;
-  --sidebar-primary: #10161c;
-  --sidebar-primary-foreground: #eef2f5;
-  --sidebar-accent: #e1e8ed;
-  --sidebar-accent-foreground: #10161c;
-  --sidebar-border: #d3dce1;
-  --sidebar-ring: #1f6f8b;
+  --sidebar-foreground: #064e3b;
+  --sidebar-primary: #059669;
+  --sidebar-primary-foreground: #f9fafb;
+  --sidebar-accent: #ecfdf5;
+  --sidebar-accent-foreground: #064e3b;
+  --sidebar-border: #d1e7dc;
+  --sidebar-ring: #059669;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0e13;
-    --foreground: #dfeaf0;
-    --card: #10161e;
-    --card-foreground: #dfeaf0;
-    --popover: #10161e;
-    --popover-foreground: #dfeaf0;
-    --primary: #dfeaf0;
-    --primary-foreground: #0a0e13;
-    --secondary: #1a222b;
-    --secondary-foreground: #dfeaf0;
-    --muted: #1a222b;
-    --muted-foreground: #82949f;
-    --accent: #1a222b;
-    --accent-foreground: #dfeaf0;
-    --destructive: #ff6a4a;
-    --border: rgba(223, 234, 240, 0.12);
-    --input: rgba(223, 234, 240, 0.16);
-    --ring: #57c2dd;
-    --risk-blocker: #ff6a4a;
-    --risk-bad: #e8a23c;
-    --risk-ok: #46d9a6;
-    --scan: #57c2dd;
-    --chart-1: #ff6a4a;
-    --chart-2: #e8a23c;
-    --chart-3: #46d9a6;
-    --chart-4: #57c2dd;
-    --chart-5: #82949f;
-    --sidebar: #10161e;
-    --sidebar-foreground: #dfeaf0;
-    --sidebar-primary: #57c2dd;
-    --sidebar-primary-foreground: #0a0e13;
-    --sidebar-accent: #1a222b;
-    --sidebar-accent-foreground: #dfeaf0;
-    --sidebar-border: rgba(223, 234, 240, 0.12);
-    --sidebar-ring: #57c2dd;
+    --background: #022c22;
+    --foreground: #ecfdf5;
+    --card: #064e3b;
+    --card-foreground: #ecfdf5;
+    --popover: #064e3b;
+    --popover-foreground: #ecfdf5;
+    --primary: #10b981;
+    --primary-foreground: #022c22;
+    --secondary: #065f46;
+    --secondary-foreground: #ecfdf5;
+    --muted: #065f46;
+    --muted-foreground: #a7f3d0;
+    --accent: #065f46;
+    --accent-foreground: #ecfdf5;
+    --destructive: #f87171;
+    --border: rgba(167, 243, 208, 0.18);
+    --input: rgba(167, 243, 208, 0.22);
+    --ring: #34d399;
+    --risk-blocker: #f87171;
+    --risk-bad: #fbbf24;
+    --risk-ok: #34d399;
+    --scan: #34d399;
+    --chart-1: #f87171;
+    --chart-2: #fbbf24;
+    --chart-3: #34d399;
+    --chart-4: #10b981;
+    --chart-5: #a7f3d0;
+    --sidebar: #064e3b;
+    --sidebar-foreground: #ecfdf5;
+    --sidebar-primary: #10b981;
+    --sidebar-primary-foreground: #022c22;
+    --sidebar-accent: #065f46;
+    --sidebar-accent-foreground: #ecfdf5;
+    --sidebar-border: rgba(167, 243, 208, 0.18);
+    --sidebar-ring: #34d399;
   }
 }
 
@@ -144,16 +142,101 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      color-mix(in srgb, var(--foreground) 3%, transparent) 0px,
-      color-mix(in srgb, var(--foreground) 3%, transparent) 1px,
-      transparent 1px,
-      transparent 3px
-    );
+    background-color: var(--background);
+    background-image:
+      radial-gradient(ellipse 90% 55% at 50% -10%, color-mix(in srgb, var(--scan) 18%, transparent), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 100% 30%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 55%),
+      radial-gradient(ellipse 45% 35% at 0% 70%, color-mix(in srgb, var(--foreground) 8%, transparent), transparent 50%),
+      radial-gradient(color-mix(in srgb, var(--foreground) 5%, transparent) 1px, transparent 1px),
+      repeating-linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--foreground) 2.5%, transparent) 0px,
+        color-mix(in srgb, var(--foreground) 2.5%, transparent) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    background-size:
+      auto,
+      auto,
+      auto,
+      22px 22px,
+      auto;
+    background-attachment: fixed;
   }
   html {
     @apply font-sans scroll-smooth;
+  }
+}
+
+/* Soft section washes — keep one composition, change air density only */
+.section-hero {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 35%, color-mix(in srgb, var(--foreground) 7%, transparent), transparent 70%),
+    linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--scan) 6%, transparent) 100%);
+}
+
+.section-search {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--primary) 5%, transparent), transparent 40%),
+    linear-gradient(180deg, color-mix(in srgb, var(--muted) 70%, transparent), color-mix(in srgb, var(--muted) 35%, transparent));
+}
+
+.section-link {
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 80%, color-mix(in srgb, var(--scan) 12%, transparent), transparent 65%),
+    linear-gradient(180deg, color-mix(in srgb, var(--secondary) 55%, transparent), transparent 55%);
+}
+
+.atmosphere-panel {
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, white 55%, transparent),
+    0 18px 40px color-mix(in srgb, var(--foreground) 6%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 18% 12% 22%;
+  border-radius: 999px;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--scan) 22%, transparent),
+    color-mix(in srgb, var(--primary) 8%, transparent) 45%,
+    transparent 70%
+  );
+  filter: blur(18px);
+  animation: glow-breathe 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.scan-rail {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in srgb, var(--scan) 35%, transparent) 20%,
+    color-mix(in srgb, var(--scan) 35%, transparent) 80%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
   }
 }
 
@@ -162,14 +245,14 @@
   100% {
     transform: translateY(0px);
     box-shadow:
-      0 6px 14px rgba(0, 0, 0, 0.28),
-      0 2px 4px rgba(0, 0, 0, 0.18);
+      0 8px 18px color-mix(in srgb, #022c22 35%, transparent),
+      0 2px 6px color-mix(in srgb, #022c22 22%, transparent);
   }
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-12px);
     box-shadow:
-      0 28px 48px rgba(0, 0, 0, 0.42),
-      0 12px 20px rgba(0, 0, 0, 0.22);
+      0 28px 48px color-mix(in srgb, #022c22 45%, transparent),
+      0 12px 22px color-mix(in srgb, #022c22 25%, transparent);
   }
 }
 
@@ -179,11 +262,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .floating-card {
+  .floating-card,
+  .hero-glow {
     animation: none;
+  }
+  .floating-card {
     box-shadow:
-      0 10px 24px rgba(0, 0, 0, 0.3),
-      0 4px 8px rgba(0, 0, 0, 0.18);
+      0 12px 28px color-mix(in srgb, #022c22 35%, transparent),
+      0 4px 10px color-mix(in srgb, #022c22 20%, transparent);
   }
 }
 
