@@ -46,7 +46,13 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
 
       <div className="relative z-10 grid w-full max-w-4xl grid-cols-2 gap-3 px-2 sm:gap-4 md:hidden">
         {FEATURED_SITES.map((site) => (
-          <FloatingCard key={site.id} site={site} onSelect={onSelectSite} />
+          <FloatingCard
+            key={site.id}
+            site={site}
+            onSelect={onSelectSite}
+            className="floating-card"
+            style={{ animationDelay: `${site.floatDelay}s` }}
+          />
         ))}
       </div>
 
@@ -89,7 +95,7 @@ function FloatingCard({
     <button
       type="button"
       onClick={() => onSelect(site)}
-      className={`group cursor-pointer border border-white/10 bg-[#0d1319] p-4 text-left shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl hover:shadow-black/30 ${className}`}
+      className={`group cursor-pointer rounded-2xl border border-white/10 bg-[#0d1319] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
       style={style}
     >
       <div className="mb-2 flex items-center justify-between">
@@ -125,7 +131,7 @@ function BrandMark({ site }: { site: FeaturedSite }) {
   const [failed, setFailed] = useState(false);
 
   return (
-    <span className="flex h-9 w-9 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-lg">
+    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-lg">
       {failed ? (
         site.emoji
       ) : (
