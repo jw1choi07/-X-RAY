@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Show, SignInButton, useAuth } from "@clerk/nextjs";
-import { Filter, ListChecks, Menu, Sparkles, X } from "lucide-react";
+import { Building2, Filter, ListChecks, Menu, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   RISK_FILTER_OPTIONS,
@@ -137,6 +137,18 @@ export function SideMenu() {
             >
               <Sparkles className="h-4 w-4 shrink-0" />
               유료 구독 · Pro
+            </Link>
+            <Link
+              href="/business"
+              onClick={() => setOpen(false)}
+              className={`flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors ${
+                pathname === "/business"
+                  ? "bg-foreground text-background"
+                  : "text-foreground hover:bg-muted"
+              }`}
+            >
+              <Building2 className="h-4 w-4 shrink-0" />
+              기업이신가요? 자사 약관 점검
             </Link>
           </nav>
 
