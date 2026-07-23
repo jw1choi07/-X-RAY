@@ -1,0 +1,599 @@
+{
+  "11번가": {
+    "ext": "ico",
+    "slug": "11ubc88uac00"
+  },
+  "B마트": {
+    "ext": "ico",
+    "slug": "bub9c8ud2b8"
+  },
+  "ChatGPT": {
+    "ext": "png",
+    "slug": "chatgpt"
+  },
+  "Discord": {
+    "ext": "png",
+    "slug": "discord"
+  },
+  "GS25": {
+    "ext": "ico",
+    "slug": "gs25"
+  },
+  "GS더프레시": {
+    "ext": "ico",
+    "slug": "gsub354ud504ub808uc2dc"
+  },
+  "Gemini": {
+    "ext": "png",
+    "slug": "gemini"
+  },
+  "KB증권": {
+    "ext": "ico",
+    "slug": "kbuc99duad8c"
+  },
+  "KG이니시스": null,
+  "MS365": {
+    "ext": "png",
+    "slug": "ms365"
+  },
+  "Notion": {
+    "ext": "png",
+    "slug": "notion"
+  },
+  "SSG닷컴": {
+    "ext": "png",
+    "slug": "ssgub2f7ucef4"
+  },
+  "Slack": {
+    "ext": "ico",
+    "slug": "slack"
+  },
+  "Spotify": {
+    "ext": "ico",
+    "slug": "spotify"
+  },
+  "골프존": {
+    "ext": "ico",
+    "slug": "uace8ud504uc874"
+  },
+  "교보문고": {
+    "ext": "png",
+    "slug": "uad50ubcf4ubb38uace0"
+  },
+  "교보이북": {
+    "ext": "png",
+    "slug": "uad50ubcf4uc774ubd81"
+  },
+  "구글": {
+    "ext": "ico",
+    "slug": "uad6cuae00"
+  },
+  "구글드라이브": {
+    "ext": "ico",
+    "slug": "uad6cuae00ub4dcub77cuc774ube0c"
+  },
+  "그로우앤그로우": {
+    "ext": "png",
+    "slug": "uadf8ub85cuc6b0uc564uadf8ub85cuc6b0"
+  },
+  "넷마블": null,
+  "넷플릭스": {
+    "ext": "ico",
+    "slug": "ub137ud50cub9aduc2a4"
+  },
+  "눔": {
+    "ext": "ico",
+    "slug": "ub214"
+  },
+  "뉴트리원": {
+    "ext": "ico",
+    "slug": "ub274ud2b8ub9acuc6d0"
+  },
+  "다노": {
+    "ext": "png",
+    "slug": "ub2e4ub178"
+  },
+  "다방": {
+    "ext": "ico",
+    "slug": "ub2e4ubc29"
+  },
+  "당근마켓": {
+    "ext": "png",
+    "slug": "ub2f9uadfcub9c8ucf13"
+  },
+  "당근페이": {
+    "ext": "ico",
+    "slug": "ub2f9uadfcud398uc774"
+  },
+  "더반찬": {
+    "ext": "ico",
+    "slug": "ub354ubc18ucc2c"
+  },
+  "더존비즈온": {
+    "ext": "ico",
+    "slug": "ub354uc874ube44uc988uc628"
+  },
+  "데카트론": {
+    "ext": "png",
+    "slug": "ub370uce74ud2b8ub860"
+  },
+  "드롭박스": {
+    "ext": "png",
+    "slug": "ub4dcub86dubc15uc2a4"
+  },
+  "디시인사이드": {
+    "ext": "png",
+    "slug": "ub514uc2dcuc778uc0acuc774ub4dc"
+  },
+  "런드리고": {
+    "ext": "ico",
+    "slug": "ub7f0ub4dcub9acuace0"
+  },
+  "레진코믹스": {
+    "ext": "png",
+    "slug": "ub808uc9c4ucf54ubbf9uc2a4"
+  },
+  "렌딧": {
+    "ext": "ico",
+    "slug": "ub80cub527"
+  },
+  "롯데렌터카": {
+    "ext": "ico",
+    "slug": "ub86fub370ub80cud130uce74"
+  },
+  "뤼튼": {
+    "ext": "png",
+    "slug": "ub93cud2bc"
+  },
+  "리디북스": {
+    "ext": "png",
+    "slug": "ub9acub514ubd81uc2a4"
+  },
+  "리멤버": {
+    "ext": "png",
+    "slug": "ub9acuba64ubc84"
+  },
+  "링글": {
+    "ext": "ico",
+    "slug": "ub9c1uae00"
+  },
+  "맥도날드": {
+    "ext": "ico",
+    "slug": "ub9e5ub3c4ub0a0ub4dc"
+  },
+  "머스트잇": {
+    "ext": "ico",
+    "slug": "uba38uc2a4ud2b8uc787"
+  },
+  "메가커피": {
+    "ext": "ico",
+    "slug": "uba54uac00ucee4ud53c"
+  },
+  "메디히어": {
+    "ext": "ico",
+    "slug": "uba54ub514ud788uc5b4"
+  },
+  "멜론": {
+    "ext": "ico",
+    "slug": "uba5cub860"
+  },
+  "문피아": {
+    "ext": "ico",
+    "slug": "ubb38ud53cuc544"
+  },
+  "미래에셋증권": null,
+  "미샤": {
+    "ext": "png",
+    "slug": "ubbf8uc0e4"
+  },
+  "미소": {
+    "ext": "ico",
+    "slug": "ubbf8uc18c"
+  },
+  "밀리의서재": {
+    "ext": "ico",
+    "slug": "ubc00ub9acuc758uc11cuc7ac"
+  },
+  "배달의민족": {
+    "ext": "ico",
+    "slug": "ubc30ub2ecuc758ubbfcuc871"
+  },
+  "부킹닷컴": {
+    "ext": "png",
+    "slug": "ubd80ud0b9ub2f7ucef4"
+  },
+  "브랜디": {
+    "ext": "ico",
+    "slug": "ube0cub79cub514"
+  },
+  "비비큐": {
+    "ext": "ico",
+    "slug": "ube44ube44ud050"
+  },
+  "빽다방": {
+    "ext": "png",
+    "slug": "ube7dub2e4ubc29"
+  },
+  "뽐뿌": {
+    "ext": "ico",
+    "slug": "ubf50ubfcc"
+  },
+  "사람인": {
+    "ext": "ico",
+    "slug": "uc0acub78cuc778"
+  },
+  "삼성화재": {
+    "ext": "png",
+    "slug": "uc0bcuc131ud654uc7ac"
+  },
+  "생활코딩": {
+    "ext": "png",
+    "slug": "uc0ddud65cucf54ub529"
+  },
+  "서울랜드": {
+    "ext": "ico",
+    "slug": "uc11cuc6b8ub79cub4dc"
+  },
+  "셀잇": {
+    "ext": "ico",
+    "slug": "uc140uc787"
+  },
+  "숨고": {
+    "ext": "ico",
+    "slug": "uc228uace0"
+  },
+  "스마일게이트": {
+    "ext": "ico",
+    "slug": "uc2a4ub9c8uc77cuac8cuc774ud2b8"
+  },
+  "스윗": {
+    "ext": "ico",
+    "slug": "uc2a4uc717"
+  },
+  "스티비": {
+    "ext": "ico",
+    "slug": "uc2a4ud2f0ube44"
+  },
+  "스파크플러스": {
+    "ext": "ico",
+    "slug": "uc2a4ud30cud06cud50cub7ecuc2a4"
+  },
+  "스픽": {
+    "ext": "png",
+    "slug": "uc2a4ud53d"
+  },
+  "식신": {
+    "ext": "ico",
+    "slug": "uc2dduc2e0"
+  },
+  "써브웨이": {
+    "ext": "ico",
+    "slug": "uc368ube0cuc6e8uc774"
+  },
+  "쏘카": {
+    "ext": "ico",
+    "slug": "uc3d8uce74"
+  },
+  "아고다": {
+    "ext": "ico",
+    "slug": "uc544uace0ub2e4"
+  },
+  "아모레퍼시픽몰": {
+    "ext": "png",
+    "slug": "uc544ubaa8ub808ud37cuc2dcud53dubab0"
+  },
+  "알라딘": {
+    "ext": "ico",
+    "slug": "uc54cub77cub518"
+  },
+  "알리익스프레스": {
+    "ext": "ico",
+    "slug": "uc54cub9acuc775uc2a4ud504ub808uc2a4"
+  },
+  "야나두": {
+    "ext": "ico",
+    "slug": "uc57cub098ub450"
+  },
+  "야놀자": {
+    "ext": "ico",
+    "slug": "uc57cub180uc790"
+  },
+  "업비트": {
+    "ext": "png",
+    "slug": "uc5c5ube44ud2b8"
+  },
+  "에듀스파": {
+    "ext": "ico",
+    "slug": "uc5d0ub4c0uc2a4ud30c"
+  },
+  "에뛰드": {
+    "ext": "ico",
+    "slug": "uc5d0ub6f0ub4dc"
+  },
+  "에이블리": {
+    "ext": "ico",
+    "slug": "uc5d0uc774ube14ub9ac"
+  },
+  "엔씨소프트": {
+    "ext": "ico",
+    "slug": "uc5d4uc528uc18cud504ud2b8"
+  },
+  "엔카": {
+    "ext": "ico",
+    "slug": "uc5d4uce74"
+  },
+  "예스24": {
+    "ext": "ico",
+    "slug": "uc608uc2a424"
+  },
+  "오늘의집": {
+    "ext": "ico",
+    "slug": "uc624ub298uc758uc9d1"
+  },
+  "오아시스마켓": {
+    "ext": "ico",
+    "slug": "uc624uc544uc2dcuc2a4ub9c8ucf13"
+  },
+  "옥션": {
+    "ext": "ico",
+    "slug": "uc625uc158"
+  },
+  "와그": {
+    "ext": "ico",
+    "slug": "uc640uadf8"
+  },
+  "왓챠": {
+    "ext": "ico",
+    "slug": "uc653ucc60"
+  },
+  "요기요": {
+    "ext": "ico",
+    "slug": "uc694uae30uc694"
+  },
+  "웅진씽크빅": {
+    "ext": "png",
+    "slug": "uc6c5uc9c4uc53dud06cube45"
+  },
+  "원티드": {
+    "ext": "ico",
+    "slug": "uc6d0ud2f0ub4dc"
+  },
+  "유튜브": {
+    "ext": "ico",
+    "slug": "uc720ud29cube0c"
+  },
+  "윤선생": {
+    "ext": "png",
+    "slug": "uc724uc120uc0dd"
+  },
+  "이니스프리": {
+    "ext": "ico",
+    "slug": "uc774ub2c8uc2a4ud504ub9ac"
+  },
+  "이디야": {
+    "ext": "ico",
+    "slug": "uc774ub514uc57c"
+  },
+  "이마트24": {
+    "ext": "ico",
+    "slug": "uc774ub9c8ud2b824"
+  },
+  "이지차저": {
+    "ext": "png",
+    "slug": "uc774uc9c0ucc28uc800"
+  },
+  "인크루트": {
+    "ext": "png",
+    "slug": "uc778ud06cub8e8ud2b8"
+  },
+  "인프런": {
+    "ext": "ico",
+    "slug": "uc778ud504ub7f0"
+  },
+  "일룸": {
+    "ext": "ico",
+    "slug": "uc77cub8f8"
+  },
+  "잔디": {
+    "ext": "ico",
+    "slug": "uc794ub514"
+  },
+  "잡코리아": {
+    "ext": "ico",
+    "slug": "uc7a1ucf54ub9acuc544"
+  },
+  "조선일보": {
+    "ext": "png",
+    "slug": "uc870uc120uc77cubcf4"
+  },
+  "줌ZUM": {
+    "ext": "ico",
+    "slug": "uc90czum"
+  },
+  "줌Zoom": {
+    "ext": "ico",
+    "slug": "uc90czoom"
+  },
+  "중고나라": {
+    "ext": "png",
+    "slug": "uc911uace0ub098ub77c"
+  },
+  "중앙일보": {
+    "ext": "ico",
+    "slug": "uc911uc559uc77cubcf4"
+  },
+  "지그재그": {
+    "ext": "ico",
+    "slug": "uc9c0uadf8uc7acuadf8"
+  },
+  "지마켓": {
+    "ext": "png",
+    "slug": "uc9c0ub9c8ucf13"
+  },
+  "채널톡": {
+    "ext": "ico",
+    "slug": "ucc44ub110ud1a1"
+  },
+  "첫차": {
+    "ext": "png",
+    "slug": "uccabucc28"
+  },
+  "카카오T": {
+    "ext": "ico",
+    "slug": "uce74uce74uc624t"
+  },
+  "카카오게임즈": {
+    "ext": "ico",
+    "slug": "uce74uce74uc624uac8cuc784uc988"
+  },
+  "카카오페이": {
+    "ext": "ico",
+    "slug": "uce74uce74uc624ud398uc774"
+  },
+  "카카오페이지": {
+    "ext": "ico",
+    "slug": "uce74uce74uc624ud398uc774uc9c0"
+  },
+  "캐시슬라이드": {
+    "ext": "ico",
+    "slug": "uce90uc2dcuc2acub77cuc774ub4dc"
+  },
+  "캐시워크": null,
+  "컴투스": {
+    "ext": "ico",
+    "slug": "ucef4ud22cuc2a4"
+  },
+  "케이뱅크": {
+    "ext": "ico",
+    "slug": "ucf00uc774ubc45ud06c"
+  },
+  "케이카": {
+    "ext": "ico",
+    "slug": "ucf00uc774uce74"
+  },
+  "코레일톡": {
+    "ext": "ico",
+    "slug": "ucf54ub808uc77cud1a1"
+  },
+  "코파일럿": {
+    "ext": "ico",
+    "slug": "ucf54ud30cuc77cub7ff"
+  },
+  "쿠쿠홈시스": {
+    "ext": "png",
+    "slug": "ucfe0ucfe0ud648uc2dcuc2a4"
+  },
+  "쿠팡": {
+    "ext": "png",
+    "slug": "ucfe0ud321"
+  },
+  "쿠팡이츠": null,
+  "크래프톤": {
+    "ext": "png",
+    "slug": "ud06cub798ud504ud1a4"
+  },
+  "크몽": {
+    "ext": "ico",
+    "slug": "ud06cubabd"
+  },
+  "클래스101": {
+    "ext": "ico",
+    "slug": "ud074ub798uc2a4101"
+  },
+  "클래스유": {
+    "ext": "ico",
+    "slug": "ud074ub798uc2a4uc720"
+  },
+  "탈잉": {
+    "ext": "png",
+    "slug": "ud0c8uc789"
+  },
+  "테무": {
+    "ext": "ico",
+    "slug": "ud14cubb34"
+  },
+  "토니모리": {
+    "ext": "ico",
+    "slug": "ud1a0ub2c8ubaa8ub9ac"
+  },
+  "토스": {
+    "ext": "ico",
+    "slug": "ud1a0uc2a4"
+  },
+  "토스뱅크": {
+    "ext": "png",
+    "slug": "ud1a0uc2a4ubc45ud06c"
+  },
+  "토스페이먼츠": {
+    "ext": "png",
+    "slug": "ud1a0uc2a4ud398uc774uba3cuce20"
+  },
+  "투썸플레이스": {
+    "ext": "png",
+    "slug": "ud22cuc378ud50cub808uc774uc2a4"
+  },
+  "트로스트": {
+    "ext": "ico",
+    "slug": "ud2b8ub85cuc2a4ud2b8"
+  },
+  "특허청e특허나라": {
+    "ext": "png",
+    "slug": "ud2b9ud5c8uccadeud2b9ud5c8ub098ub77c"
+  },
+  "티맵": {
+    "ext": "png",
+    "slug": "ud2f0ub9f5"
+  },
+  "틱톡": {
+    "ext": "ico",
+    "slug": "ud2f1ud1a1"
+  },
+  "팟빵": {
+    "ext": "ico",
+    "slug": "ud31fube75"
+  },
+  "패널나우": {
+    "ext": "ico",
+    "slug": "ud328ub110ub098uc6b0"
+  },
+  "패스트캠퍼스": {
+    "ext": "ico",
+    "slug": "ud328uc2a4ud2b8ucea0ud37cuc2a4"
+  },
+  "패스트파이브": {
+    "ext": "ico",
+    "slug": "ud328uc2a4ud2b8ud30cuc774ube0c"
+  },
+  "페이코": {
+    "ext": "ico",
+    "slug": "ud398uc774ucf54"
+  },
+  "플로우": {
+    "ext": "ico",
+    "slug": "ud50cub85cuc6b0"
+  },
+  "플리토": {
+    "ext": "ico",
+    "slug": "ud50cub9acud1a0"
+  },
+  "핀다": {
+    "ext": "png",
+    "slug": "ud540ub2e4"
+  },
+  "한샘": {
+    "ext": "ico",
+    "slug": "ud55cuc0d8"
+  },
+  "헬로마켓": {
+    "ext": "ico",
+    "slug": "ud5ecub85cub9c8ucf13"
+  },
+  "현대해상": {
+    "ext": "png",
+    "slug": "ud604ub300ud574uc0c1"
+  },
+  "홈플러스": {
+    "ext": "ico",
+    "slug": "ud648ud50cub7ecuc2a4"
+  }
+}

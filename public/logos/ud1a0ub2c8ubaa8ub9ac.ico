@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style>
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        font-weight: 400;
+        font-display: swap;
+        src: local('Pretendard Regular'), url(https://fonts.tonystreet.com/fonts/pretendard/Pretendard-Regular.woff2) format('woff2'), url(https://fonts.tonystreet.com/fonts/pretendard/Pretendard-Regular.woff) format('woff');
+    }
+
+    @font-face {
+        font-family: 'CodecCold-Bold';
+        font-weight: normal;
+        font-style: normal;
+        src: local("※"), url("https://fonts.tonystreet.com/fonts/codec-cold/Codec-Cold-Bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.tonystreet.com/fonts/codec-cold/Codec-Cold-Bold.woff") format("woff");
+    }
+
+    body {
+        margin: 0
+    }
+
+    #logo {
+        margin: 20px 0 0 20px;
+        width: 140px
+    }
+
+    #error_page {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        text-align: center
+    }
+
+    #error_page h1 {
+        font-family: "CodecCold-Bold";
+        width: 100%;
+        color: #FF158A;
+        font-size: 48px;
+        letter-spacing: 1.44px;
+        margin-bottom: 20px
+    }
+
+    #error_page p {
+        font-family: "Pretendard-Regular";
+        font-size: 16px;
+        letter-spacing: -0.64px;
+        color: #222;
+        line-height: 27.4px;
+        margin-bottom: 36px
+    }
+
+    #error_page a {
+        font-family: "Pretendard-Regular";
+        display: inline-block;
+        width: 165px;
+        height: 50px;
+        line-height: 51px;
+        border: 1px solid #120909;
+        background: #fff;
+        color: #120909;
+        letter-spacing: -0.64px;
+        text-decoration: none
+    }
+
+    @media screen and (max-device-width: 1024px) {
+        #error_page {
+            width: 100%
+        }
+
+        #error_page h1 {
+            font-size: 32px
+        }
+
+        #error_page a, #error_page p {
+            font-size: 15px;
+            letter-spacing: -0.6px;
+        }
+
+        #logo {
+            margin: 16px 0 0 16px;
+            width: 120px
+        }
+
+        #error_page a {
+            width: 150px;
+            height: 48px;
+        }
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <title>404</title>
+    <link href="/css/error.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<img id="logo" src="https://tonyproduct.s3.ap-northeast-2.amazonaws.com/IMG1705lR470449610.png"/>
+<div id="error_page">
+    <h1>404 ERROR</h1>
+    <p>
+        요청하신 페이지를 찾을 수 없습니다.<br>
+        입력하신 주소가 올바른지 다시 확인해 주세요.<br>
+        해당 페이지가 변경되었거나 삭제되었을 수 있습니다.
+    </p>
+    <a href="https://tonymoly.com" id="go_mall">홈으로 돌아가기</a>
+</div>
+</body>
+</html>

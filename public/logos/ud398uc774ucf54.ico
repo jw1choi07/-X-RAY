@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>PAYCO │ 페이코 라이프 하세요</title>
+  <meta charset="utf-8">
+
+
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+<meta name="apple-mobile-web-app-title" content="PAYCO">
+<meta name="description" content="실속있는 포인트, 편리한 결제, 간편한 금융, 안전한 전자문서함, 생활 속 어디서나 PAYCO">
+
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:site_name" property="og:site_name" content="PAYCO.COM"/>
+<meta name="og:title" property="og:title" content="PAYCO">
+<meta name="og:description" property="og:description" content="일상의 빈틈을 채우다">
+<meta name="og:keywords" property="og:keywords" content="NHN페이코, 페이코, PAYCO, 간편결제, 쿠폰, 포인트적립, 오프라인결제, 온라인결제, 바코드결제, 전자문서, 전자문서지갑, 인증서, 식권, 포인트결제, 택배, 선물하기, 멤버십, 캠퍼스, 교통카드, 포인트전환"/>
+<meta name="og:image" property="og:image" content="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/og/256x256.png" />
+<meta name="og:image:secure_url" property="og:image:secure_url" content="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/og/256x256.png" />
+<meta name="og:url" property="og:url" content="https://www.payco.com">
+<meta name="twitter:card" property="twitter:card" content="summary"/>
+<meta name="twitter:site" property="twitter:site" content="PAYCO.COM">
+<meta name="twitter:title" property="twitter:title" content="PAYCO │ 일상의 빈틈을 채우다">
+<meta name="twitter:description" property="twitter:description" content="실속 있는 포인트, 편리한 결제, 간편한 금융, 안전한 전자문서함, 생활 속 어디서나 PAYCO">
+<meta name="twitter:image" property="twitter:image" content="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/og/256x256.png"/>
+<meta name="twitter:url" property="twitter:url" content="https://www.payco.com"/>
+
+<meta name="naver-site-verification" content="af667d3b8bce4ef9d5f95040796707f2207e9bf9" />
+<link rel="canoncial" href="https://www.payco.com">
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "PAYCO",
+        "url": "http://www.payco.com",
+        "sameAs": [
+            "https://www.instagram.com/payco_official",
+            "https://www.facebook.com/PaycoT",
+            "https://play.google.com/store/apps/details?id=com.nhnent.payapp",
+            "https://apps.apple.com/kr/app/id924292102"
+        ]
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="/share/css/common.css?1784077960680">
+
+<!--[if lt IE 9]>
+<script src="/share/js/respond.min.js"></script>
+<script src="/share/js/html5shiv.js"></script>
+<![endif]-->
+<script src="/share/js/payco.common.builded.js?1784077960680"></script>
+<script src="/share/js/payco.common.jsp?1784077960680"></script>
+
+
+
+<link rel="icon" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/favicon.ico" />
+<link rel="icon" type="image/png" sized="16x16" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/favicon-16x16.png" />
+<link rel="icon" type="image/png" sized="32x32" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sized="96x96" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/favicon-96x96.png" />
+<link rel="apple-touch-icon" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-180x180.png" />
+<link rel="apple-touch-icon-precomposed" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/apple-icon-precomposed.png" />
+<link rel="icon" sizes="36x36" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-36x36.png" />
+<link rel="icon" sizes="48x48" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-48x48.png" />
+<link rel="icon" sizes="72x72" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-72x72.png" />
+<link rel="icon" sizes="96x96" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-96x96.png" />
+<link rel="icon" sizes="144x144" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-144x144.png" />
+<link rel="icon" sizes="192x192" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/android-icon-192x192.png" />
+<link rel="manifest" href="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/favicon/manifest.json" />
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144" />
+<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+<script src="/share/js/paycoScript/payco.ui.min.js?1784077960680" charset="utf-8"></script>
+  
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CG4P7PRZ4M"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CG4P7PRZ4M');
+</script>
+</head>
+
+<body class="payco_improv main_wrapper">
+  
+
+
+
+
+
+
+
+<script>
+var loggedIn = false;
+var paycoId = "";
+payco.common.printHeader.print({
+	isLogin : loggedIn
+	, paycoId : paycoId
+	, type : "main"
+});
+$(function(){
+	payco.ui.mainUI.play(loggedIn);
+});
+</script>
+<div id="content">
+    <div class="main_keyvisual">
+        <div class="kv_inner">
+            <h2 class="kv_heading">페이코 라이프</h2>
+            <p class="kv_text">실속있는 포인트, 편리한 결제, 간편한 금융.<br>생활 속 어디서나 페이코</p>
+        </div>
+        <img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/img_kv_main.png" alt="메인 이미지" class="kv_img">
+    </div>
+    <div class="main_services">
+        <div class="content_inner">
+            <div class="fp_nav abs">
+                <ul>
+                    <li class="go_serv_payment"><a href="#serv_payment">결제 서비스</a></li>
+                    <li class="go_serv_benefits"><a href="#serv_benefits">혜택 서비스</a></li>
+                    <li class="go_serv_moneytransfer"><a href="#serv_money_transfer">송금 서비스</a></li>
+                    <li class="go_serv_financial"><a href="#serv_financial">금융 서비스</a></li>
+                    <li class="go_serv_benefit"><a href="#serv_benefit">생활 서비스</a></li>
+                </ul>
+            </div>
+
+            <div id="serv_payment" class="service_info">
+                <h3 class="main_title">결제</h3>
+                <em class="sub_title">결제가 필요한 모든 순간,<br> PAYCO 하세요.</em>
+                <div class="screen_area payco_payment">
+                    <div class="serv_tab_cont active" id="payco_payment"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_01.png" alt="PAYCO 결제"></div></div>
+                    <div class="serv_tab_cont" id="payco_point"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_02.png" alt="PAYCO 포인트"></div></div>
+                    <div class="serv_tab_cont" id="qr_code"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_03-20250516.png" alt="QR코드"></div></div>
+                </div>
+                <div class="serv_tab">
+                    <ul>
+                        <li>
+                            <button type="button" data-tab_id="payco_payment" class="btn_tab active">#PAYCO 결제</button>
+                            <p class="des_title active">온라인·오프라인 구분없이!<br> PC와 모바일 어디서든 PAYCO로 안전하고 간편하게 결제하세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="payco_point" class="btn_tab">#PAYCO 포인트</button>
+                            <p class="des_title">포인트로 결제하면, 최대 10%가 다음 달 적립 포인트로 돌아옵니다.<br/> 실물카드를 신청하면 가맹점이 아니어도 결제할 수 있어요!</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="qr_code" class="btn_tab">#QR코드</button>
+                            <p class="des_title">PAYCO 결제 가능한 매장에서<br/> QR코드 스캔으로 쉽고 빠르게 결제할 수 있습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="serv_benefits" class="service_info">
+                <h3 class="main_title">혜택</h3>
+                <em class="sub_title">할인부터 적립까지, 다양한 혜택<br>쇼핑할 때 PAYCO 하세요</em>
+                <div class="screen_area payco_benefits">
+                    <div class="serv_tab_cont active" id="coupon"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_06.png" alt="쿠폰"></div></div>
+                    <div class="serv_tab_cont" id="event"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_07-20250516.png" alt="이벤트"></div></div>
+                    <div class="serv_tab_cont" id="point_accumulate"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_08.png" alt="포인트적립"></div></div>
+                    <div class="serv_tab_cont" id="shopping_accumulate"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_09.png" alt="쇼핑적립"></div></div>
+                </div>
+                <div class="serv_tab">
+                    <ul>
+                        <li>
+                            <button type="button" data-tab_id="coupon" class="btn_tab active">#쿠폰</button>
+                            <p class="des_title active">원하는 쿠폰 골라서 다운로드해 보세요. <br/> PAYCO 결제 시 추가 할인이 자동 적용됩니다.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="event" class="btn_tab">#이벤트</button>
+                            <p class="des_title">결제 이벤트부터 브랜드별 특별 행사까지! <br/> 이벤트 탭에서 다양한 혜택 소식을 확인해 보세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="point_accumulate" class="btn_tab">#포인트적립</button>
+                            <p class="des_title">누르기만 해도 포인트 적립! <br/> 꿀 정보 확인하고 포인트 챙겨가세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="shopping_accumulate" class="btn_tab">#쇼핑적립</button>
+                            <p class="des_title">같은 쇼핑도 더 알뜰하게! <br/> PAYCO 경유해서 쇼핑하고 포인트 혜택까지 챙기세요.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="serv_money_transfer" class="service_info">
+                <h3 class="main_title">송금</h3>
+                <em class="sub_title">일반 송금은 물론, 예약 송금까지 <br/> 간편하게 PAYCO하세요.</em>
+                <div class="screen_area payco_money_transfer">
+                    <div class="serv_tab_cont active" id="save_money"><div class="bg_animation" data-type="gif"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_29_1.gif" alt="송금"></div></div>
+                    <div class="serv_tab_cont" id="transfer_reminder"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_10.png" alt="예약 송금"></div></div>
+                </div>
+                <div class="serv_tab">
+                    <ul>
+                        <li>
+                            <button type="button" data-tab_id="save_money" class="btn_tab active">#송금</button>
+                            <p class="des_title active">월 최대 20회 송금 수수료 무료!<br> PAYCO에 계좌등록하고 간편 송금을 이용해 보세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="transfer_reminder" class="btn_tab">#예약 송금</button>
+                            <p class="des_title">정해진 날짜에 송금이 필요하다면 예약송금을 설정해 보세요.<br/> 설정한 날짜에 푸시와 알림으로 송금 내역을 알려드립니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="serv_financial" class="service_info">
+                <h3 class="main_title">금융</h3>
+                <em class="sub_title">내 자산에 딱 맞춘 나만의 금융상품!<br/>금융도 똑똑하게 PAYCO 하세요.</em>
+                <div class="screen_area payco_financial">
+                    <div class="serv_tab_cont active" id="use_report"><div class="bg_animation" data-type="gif"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_13.gif" alt="이용리포트"></div></div>
+                    <div class="serv_tab_cont" id="account_tracking"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_14.png" alt="금융상품몰"></div></div>
+                </div>
+                <div class="serv_tab">
+                    <ul>
+                        <li>
+                            <button type="button" data-tab_id="use_report" class="btn_tab active">#이용리포트</button>
+                            <p class="des_title active">꼼꼼하게 확인하는 내 소비 습관.<br>지난 결제 비교부터 지출처 업종 분포까지 한 눈에 확인해보세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="account_tracking" class="btn_tab">#금융상품몰</button>
+                            <p class="des_title">카드, 계좌, 투자, 대출, 보험상품을<br>한번에 둘러보고 간편하게 가입하세요.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="serv_benefit" class="service_info">
+                <h3 class="main_title">생활</h3>
+                <em class="sub_title">내 생활에 필요한 모든 서비스!<br/> PAYCO 하세요.</em>
+                <div class="screen_area payco_benefit">
+                    <div class="serv_tab_cont active" id="membership"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_18-250526.png" alt="멤버십"></div></div>
+                    <div class="serv_tab_cont" id="campus"><div class="bg_animation" data-type="png"><img src="//payco-cdn.cdn.toastoven.net/PAYCO_CONTENTS/payco/www/img/main_gif/img_service_21-1.png" alt="캠퍼스"></div></div>
+                </div>
+                <div class="serv_tab">
+                    <ul>
+                        <li>
+                            <button type="button" data-tab_id="membership" class="btn_tab active">#멤버십</button>
+                            <p class="des_title active">흩어진 멤버십을 한곳에!<br/>멤버십 포인트도 확인하고, 브랜드 혜택을 받으세요.</p>
+                        </li>
+                        <li>
+                            <button type="button" data-tab_id="campus" class="btn_tab">#캠퍼스</button>
+                            <p class="des_title">대학생을 위한 특별한 혜택!<br/>학교 소식부터 쿠폰까지 캠퍼스 혜택을 누리세요.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="qr_area">
+        <div class="content_inner">
+            <h3 class="main_title">앱 다운로드</h3>
+            <p class="blind">QR코드를 스캔해 주세요.</p>
+            <div class="qr_scan_code"><a href="#" onclick="openAppDownloadPopup(event)"  class="btn_url_download">앱 다운로드 문자로 받기</a></div>
+        </div>
+    </div>
+
+    <div class="notice_area" id="payco_lst_notice">
+        <div class="content_inner2">
+            <h2 class="tit_heading">공지사항</h2>
+            <div class="lst_notice">
+                <!-- [D] ul의 top값을 -70px씩 이동 (자동 롤링) -->
+                <ul>
+                    <li data-index="0">
+                            <a href="/cs/notice.nhn?opnLnk=5551"><span class="txt">PAYCO 개인정보처리방침 변경 안내</span></a>
+
+                        </li>
+                        <li data-index="0">
+                                <a href="/cs/notice.nhn?opnLnk=5551"><span class="txt">PAYCO 개인정보처리방침 변경 안내</span></a>
+
+                            </li>
+                        </ul>
+                <a href="/cs/notice.nhn" class="view_more">더 보기</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/share/js/main.js?20240729"></script>
+<script>
+  function openNoticeWindow() {
+    openPopup('/noti/personal-info-leakage.nhn', '', 800, 600, 'resizable=yes, scrollbars=yes');
+  }
+
+  if (false) {
+    openNoticeWindow();
+  }
+</script>
+
+<script>
+var loggedIn = false;
+
+payco.common.printFooter.print({
+    type : "main",
+    isLogin : loggedIn
+});
+</script>
+</body>
+</html>

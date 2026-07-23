@@ -5,14 +5,8 @@ import { ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FEATURED_SEARCH_ALIASES } from "@/lib/featured-sites";
-import { CATEGORY_ORDER, type SiteCategory } from "@/lib/site-categories";
-
-interface Preset {
-  file: string;
-  label: string;
-  siteName: string;
-  category: SiteCategory;
-}
+import { CATEGORY_ORDER } from "@/lib/site-categories";
+import type { Preset } from "@/lib/presets";
 
 interface SearchSectionProps {
   presets: Preset[];
@@ -161,8 +155,9 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
                     key={preset.file}
                     type="button"
                     onClick={() => handlePresetClick(preset)}
-                    className="rounded-sm bg-muted px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-scan/10 hover:text-scan"
+                    className="inline-flex items-center gap-1.5 rounded-sm bg-muted px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-scan/10 hover:text-scan"
                   >
+                    <PresetIcon preset={preset} />
                     {preset.siteName}
                   </button>
                 ))}
@@ -176,5 +171,30 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
         </p>
       </div>
     </section>
+  );
+}
+
+// Real brand favicon when we have one (see scripts/fetch-preset-logos.py);
+// falls back to an initial-letter badge for the handful of sites whose
+// favicon wasn't downloadable, rather than leaving a broken image icon.
+function PresetIcon({ preset }: { preset: Preset }) {
+  const [failed, setFailed] = useState(!preset.logo);
+
+  if (failed || !preset.logo) {
+    return (
+      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-[3px] bg-foreground/10 text-[9px] font-semibold text-muted-foreground">
+        {preset.siteName.charAt(0)}
+      </span>
+    );
+  }
+
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- tiny static favicon, not worth next/image's overhead
+    <img
+      src={preset.logo}
+      alt=""
+      className="h-4 w-4 shrink-0 rounded-[3px] object-contain"
+      onError={() => setFailed(true)}
+    />
   );
 }

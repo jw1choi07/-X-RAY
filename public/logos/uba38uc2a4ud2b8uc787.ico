@@ -1,0 +1,6 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+				<script type='text/javascript'>
+					alert('요청하신 페이지는 현재 이용할 수 없습니다.');
+					location.replace('/main/index');
+				</script>
+			

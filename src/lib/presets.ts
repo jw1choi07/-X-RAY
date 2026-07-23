@@ -24,10 +24,30 @@ export interface Preset {
   label: string;
   siteName: string;
   category: SiteCategory;
+  /** Path to the real brand favicon under /logos, or null if none was downloadable (see scripts/fetch-preset-logos.py). */
+  logo: string | null;
+}
+
+interface LogoManifestEntry {
+  slug: string;
+  ext: string;
+}
+
+let logoManifestCache: Record<string, LogoManifestEntry | null> | null = null;
+
+function loadLogoManifest(): Record<string, LogoManifestEntry | null> {
+  if (!logoManifestCache) {
+    const filePath = path.join(process.cwd(), "data", "site-logo-map.json");
+    logoManifestCache = fs.existsSync(filePath)
+      ? (JSON.parse(fs.readFileSync(filePath, "utf-8")) as Record<string, LogoManifestEntry | null>)
+      : {};
+  }
+  return logoManifestCache;
 }
 
 export function listUsablePresets(): Preset[] {
   const dir = path.join(process.cwd(), "data", "texts");
+  const logoManifest = loadLogoManifest();
   const files = fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".txt"))
@@ -36,11 +56,13 @@ export function listUsablePresets(): Preset[] {
   return files.map((f) => {
     const nameKey = f.replace(/\.txt$/, "").replace(/_(개인정보처리방침|이용약관)$/, "");
     const siteName = nameKey.split("_")[0];
+    const logoEntry = logoManifest[siteName];
     return {
       file: f,
       label: f.replace(".txt", "").replace(/_/g, " · "),
       siteName,
       category: getSiteCategory(nameKey),
+      logo: logoEntry ? `/logos/${logoEntry.slug}.${logoEntry.ext}` : null,
     };
   });
 }

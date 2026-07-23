@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FEATURED_SITES, type FeaturedSite } from "@/lib/featured-sites";
 
@@ -92,9 +93,7 @@ function FloatingCard({
       style={style}
     >
       <div className="mb-2 flex items-center justify-between">
-        <span className="flex h-9 w-9 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-lg">
-          {site.emoji}
-        </span>
+        <BrandMark site={site} />
         <span className={`font-mono text-[10px] font-semibold tracking-wide uppercase ${RISK_TONE[site.riskLabel]}`}>
           {site.riskLabel}
         </span>
@@ -116,5 +115,28 @@ function FloatingCard({
         판독지 보기 →
       </p>
     </button>
+  );
+}
+
+// Real brand favicon, downloaded from the service's own domain into
+// public/logos/ (see scripts/fetch-brand-logos.sh) -- falls back to the
+// emoji if the icon fails to load, so a missing file never breaks the card.
+function BrandMark({ site }: { site: FeaturedSite }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <span className="flex h-9 w-9 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-lg">
+      {failed ? (
+        site.emoji
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element -- tiny static favicon, not worth next/image's overhead
+        <img
+          src={`/logos/${site.id}.ico`}
+          alt={`${site.name} 로고`}
+          className="h-5 w-5 object-contain"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </span>
   );
 }

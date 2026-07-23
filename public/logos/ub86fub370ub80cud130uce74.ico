@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <title>롯데렌터카</title>
+	<script>
+	  // 화면 크기에 따라 PC 또는 모바일 리소스 로드
+	  function loadResources() {
+	    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+	    const head = document.getElementsByTagName("head")[0];
+
+	    // 공통 리소스 로드
+	    const commonFavicon = document.createElement("link");
+	    commonFavicon.rel = "shortcut icon";
+	    commonFavicon.href = isMobile
+	      ? "/lrhp/mo/images/favicon.ico"
+	      : "/lrhp/pc/images/favicon.ico";
+	    head.appendChild(commonFavicon);
+
+	    const styles = isMobile
+	      ? [
+	          "/lrhp/mo/styles/reset.css",
+	          "/lrhp/mo/styles/layout.css",
+	          "/lrhp/mo/styles/modules.css",
+	          "/lrhp/mo/styles/contents.css",
+	        ]
+	      : [
+	          "/lrhp/pc/styles/reset.css",
+	          "/lrhp/pc/styles/layout.css",
+	          "/lrhp/pc/styles/modules.css",
+	          "/lrhp/pc/styles/contents.css",
+	        ];
+
+	    styles.forEach((href) => {
+	      const link = document.createElement("link");
+	      link.rel = "stylesheet";
+	      link.href = href;
+	      head.appendChild(link);
+	    });
+
+	    const scripts = isMobile
+	      ? [
+	          "/lrhp/mo/scripts/jquery/jquery-1.9.1.min.js",
+	          "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+	          "/lrhp/mo/scripts/jquery/jquery.ui.touch-punch.min.js",
+	          "/lrhp/mo/scripts/jquery/plugins/slick.min.js",
+	          "/lrhp/mo/scripts/jquery/plugins/iscroll.min.js",
+	          "/lrhp/mo/scripts/jquery/plugins/masonry.min.js",
+	          "/lrhp/mo/scripts/MUI.js",
+	          "/lrhp/mo/scripts/common.js",
+	        ]
+	      : [
+	          "/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js",
+	          "/lrhp/pc/scripts/jquery/jquery-ui.min.js",
+	          "/lrhp/pc/scripts/jquery/plugins/slick.min.js",
+	          "/lrhp/pc/scripts/jquery/plugins/swiper.min.js",
+	          "/lrhp/pc/scripts/jquery/plugins/iscroll.min.js",
+	          "/lrhp/pc/scripts/MUI.js",
+	          "/lrhp/pc/scripts/common.js",
+	        ];
+
+	    scripts.forEach((src) => {
+	      const script = document.createElement("script");
+	      script.src = src;
+	      head.appendChild(script);
+	    });
+	  }
+
+	  // 리소스 로드 실행
+	  loadResources();
+	</script>
+    <style>
+        /* PC 전용 */
+        .pc-only {
+            display: block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        /* 모바일 전용 */
+        @media screen and (max-width: 768px) {
+            .pc-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!--container 컴포넌트-->
+<main id="wrap">
+	<div class="error-page-wrap pc-only">
+		<div class="inner">
+			<div class="error-page-logo">
+				<a href="#none"><img src="/lrhp/pc/images/common/logo-header.png" alt="LOTTE rental"></a>
+			</div>
+			<div class="error-page-cont">
+				<i class="icon error"></i>
+				<p><b>롯데렌터카 시스템 점검 안내</b></p>
+				<p><span>안녕하세요 롯데렌터카입니다.</span></p>
+				<p><span>안정적인 서비스 제공을 위해 시스템 점검이 진행 중입니다.</span></p>
+				<p><span>서비스 이용에 불편을 드려 죄송합니다.</span></p>
+				<p><span>잠시 후 다시 이용해주세요</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="error-page-wrap mobile-only">
+		<div class="error-page-inner">
+			<div class="error-page-logo">
+				<a href="#none"><i class="icon logo">롯데렌터카</i></a>
+			</div>
+			<div class="error-page-cont">
+				<i class="icon error"></i>
+				<p><b>롯데렌터카 시스템 점검 안내</b></p><br>
+				<p><span>안녕하세요 롯데렌터카입니다.</span></p>
+				<p><span>안정적인 서비스 제공을 위해 시스템 점검이 진행 중입니다.</span></p>
+				<p><span>서비스 이용에 불편을 드려 죄송합니다.</span></p>
+				<p><span>잠시 후 다시 이용해주세요</span></p>
+			</div>
+		</div>
+	</div>
+</main>
+<!--//container 컴포넌트-->
+
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="title" content="LENDIT - 은행이 안되면 그 다음은 렌딧" />
+    <meta name="description" content="기술과 금융의 만남, 고도화된 신용평가모형을 통해 낮아진 대출이자" />
+    <meta name="keywords" content="렌딧,온라인투자연계금융,온라인투자연계대출,온라인투자연계투자,은행다음렌딧" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="LENDIT" />
+    <meta name="theme-color" content="#19dec4" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#19dec4" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "LENDIT",
+            "url": "https://www.lendit.co.kr",
+            "sameAs": [
+                "https://blog.naver.com/lendit",
+                "https://www.instagram.com/lendit.kr/",
+                "https://www.youtube.com/@lendit8574"
+            ]
+        }
+    </script>
+
+    <meta data-vmid="og:title" property="og:title" content="LENDIT - 은행이 안되면 그 다음은 렌딧" />
+    <meta data-vmid="og:url" property="og:url" content="https://www.lendit.co.kr" />
+    <meta data-vmid="og:image" property="og:image" content="https://www.lendit.co.kr/common.25cafff9b637591b46f1.png" />
+    <meta data-vmid="og:description" property="og:description" content="기술과 금융의 만남, 고도화된 신용평가모형을 통해 낮아진 대출이자" />
+    <meta property="og:type" content="website" />
+
+
+    <link rel="canonical" href="https://www.lendit.co.kr/loan" />
+
+    <meta name="msapplication-config" content="none" />
+    <link rel="manifest" href="/manifest.a3fdb06af9.json" />
+    <link rel="shortcut icon" href="/favicon.7a46821316ed18f572a1.ico" />
+    <link rel="apple-touch-icon" href="/apple-icon.7972b88fe226a9a4ee2d.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.629afe9eb92cef9b0068.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.e6870e21bbac0f76d383.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.77b9131e59f634f85960.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.570d8afcea61a819a613.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.67fd0b4d071699f5d3ab.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.549e70570a7154eed982.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.23e4c172919e1abfe2f4.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.a78c1c139a3362208cc0.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.95606b88d23c7f24ca41.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.98bf2edcfc9c316fdf46.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.8959f145fbe09512092d.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.24f9380afff6e07b8958.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.e5f75f7d2560c595c243.svg" color="#17ccb4" />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700|Roboto:300,400,500,700&display=swap&subset=korean"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
+    />
+
+    <title>LENDIT</title>
+
+
+    <script src="/_cdn/legacy/js/vendor/jquery-2.1.4.min.js"></script>
+<script defer src="/runtime.js"></script><script defer src="/ui.js"></script><script defer src="/lib-vue.js"></script><script defer src="/vendor.js"></script><script defer src="/index.js"></script></head>
+
+<body ontouchstart="">
+
+<div style="opacity: 0; overflow: hidden; width: 0; height: 0; line-height: 0">
+    <!-- INVEST-153 돌핀 브라우저 autofill 버그 -->
+    <input type="text" tabindex="-1" >
+    <input type="text" tabindex="-1" >
+</div>
+
+<main id="app"></main>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"a0555c6137e34df19c44394f066994cf","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

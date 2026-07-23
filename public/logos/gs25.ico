@@ -1,0 +1,29 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="Cache-Control" content="No-Cache"/>
+	<title>Gsretail Site</title>
+	<script type="text/javascript" src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/ui.js"></script>
+    <script type="text/javascript" src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/jPushMenu.js"></script>
+	<script type="text/javascript" src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/selectbox-min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://hpimg.gsretail.com/_ui/desktop/common/css/gsretail/common.css" />
+
+</head>
+<body>
+<div id="wrap">
+	<!-- Error Wrap -->
+	<div class="error_wrap">
+		<div class="mb50">
+			<img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/error_img.gif" alt="죄송합니다. 페이지를 표시할 수 없습니다.">
+		</div>	
+			<a href="http://www.gsretail.com/"><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/error_btn.gif" alt="메인으로 돌아가기"></a>
+	</div>
+	<!-- //Error Wrap -->
+</div>
+</body>
+</html>

@@ -3,6 +3,8 @@ export interface FeaturedSite {
   name: string;
   presetFile: string;
   emoji: string;
+  /** Real domain the site is served from -- used to fetch the actual brand favicon instead of the emoji. */
+  domain: string;
   color: string;
   riskLabel: "주의" | "위험" | "보통";
   riskScore: number;
@@ -17,6 +19,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     name: "카카오T",
     presetFile: "카카오T_개인정보처리방침.txt",
     emoji: "🚕",
+    domain: "kakaomobility.com",
     color: "#FEE500",
     riskLabel: "위험",
     riskScore: 74,
@@ -29,6 +32,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     name: "멜론",
     presetFile: "멜론_개인정보처리방침.txt",
     emoji: "🎵",
+    domain: "melon.com",
     color: "#00CD3C",
     riskLabel: "주의",
     riskScore: 61,
@@ -41,6 +45,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     name: "토스",
     presetFile: "토스_개인정보처리방침.txt",
     emoji: "💳",
+    domain: "toss.im",
     color: "#0064FF",
     riskLabel: "위험",
     riskScore: 78,
@@ -53,6 +58,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     name: "넷플릭스",
     presetFile: "넷플릭스_개인정보처리방침.txt",
     emoji: "🎬",
+    domain: "netflix.com",
     color: "#E50914",
     riskLabel: "주의",
     riskScore: 65,
@@ -65,6 +71,7 @@ export const FEATURED_SITES: FeaturedSite[] = [
     name: "Spotify",
     presetFile: "Spotify_개인정보처리방침.txt",
     emoji: "🎧",
+    domain: "spotify.com",
     color: "#1DB954",
     riskLabel: "보통",
     riskScore: 52,

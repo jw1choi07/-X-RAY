@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script type="module" crossorigin src="/static/assets/js/polyfills-CYBNKK2Y.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+        
+            
+            
+            
+            <link rel="preconnect" href="https://image.homeplus.kr">
+        
+    
+
+    
+  
+  
+  
+  
+  <link rel="canonical" href="https://mfront.homeplus.co.kr" data-helmet="true">
+  <meta name="description" property="og:description" content="당일배송, 신선한 식품, 그리고 특별한 할인 혜택까지. 온라인으로 마트 장보기를 간편하게, 홈플러스와 함께하세요." data-helmet="true">
+  <meta name="keywords" content="홈플러스, 마트, 장보기, 온라인몰, 인터넷쇼핑몰, 세일, 마트직송, 할인혜택, 신선식품, 당일배송, 온라인쇼핑, 홈플러스세일, 홈플러스물가안정프로젝트, 물가안정프로젝트, AI가격혁명" data-helmet="true">
+  
+  <meta property="og:site_name" content="홈플러스" data-helmet="true">
+  <meta property="og:url" content="https://mfront.homeplus.co.kr" data-helmet="true">
+  <meta property="og:type" content="website" data-helmet="true">
+  <meta property="og:image" content="https://mfront.homeplus.co.kr/static/images/og/default.png" data-helmet="true">
+  <meta property="og:image:alt" data-helmet="true">
+  <meta property="og:image:type" content="image/png" data-helmet="true">
+  <meta property="og:image:width" content="750" data-helmet="true">
+  <meta property="og:image:height" content="750" data-helmet="true">
+  
+    <script type="application/ld+json" >{"@context": "https://schema.org","@type": "Organization","name": "홈플러스","url": "https://mfront.homeplus.co.kr","sameAs": ["https://www.instagram.com/homeplus_life/","https://m.youtube.com/channel/UCNCId5gNd21hm2nj7soxuUw","https://play.google.com/store/apps/details?id=com.socialapps.homeplus","https://apps.apple.com/kr/app/id429151787","https://m.blog.naver.com/homple","https://m.facebook.com/pg/homeplus365/posts/?ref=page_internal&mt_nav=0 "]}</script>
+  
+  
+  <title>홈플러스 :: 당일배송 온라인 마트 장보기</title>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <meta name="facebook-domain-verification" content="1cr6nvbiltg2ivfg9mo0dkvlxuhlke">
+    <meta name="naver-site-verification" content="66f9e26e4e2cdb97dcbbabea51c7b11de262dfff">
+    <meta name="google-site-verification" content="sRT5frC4joD6EuUC80y9S2it8zwy4u9cG9_zrlU6QNU">
+    <meta name="theme-color" content="#fff">
+
+    <link rel="dns-prefetch" href="https://gum.criteo.com">
+    <link rel="dns-prefetch" href="https://static.criteo.net">
+    <link rel="dns-prefetch" href="https://www.google.co.kr">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://td.doubleclick.net">
+    <link rel="dns-prefetch" href="https://stats.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://www.facebook.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://t1.kakaocdn.net">
+    <link rel="dns-prefetch" href="https://wcs.naver.net">
+    <link rel="dns-prefetch" href="https://wcs.naver.com">
+    <link rel="dns-prefetch" href="https://sync.admixer.co.kr">
+    <link rel="dns-prefetch" href="https://sdk.iad-05.braze.com">
+    <link rel="dns-prefetch" href="https://sdk.airbridge.io">
+
+    <link rel="icon" href="/static/assets/images/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/assets/images/icon_180x180.png">
+    <link rel="manifest" href="/static/manifest.json" type="application/manifest+json">
+
+    <link rel="stylesheet" href="/static/affiliate.styles.css">
+  <script type="module" crossorigin src="/static/assets/js/index-N1GLUi7K.js"></script>
+  <link rel="modulepreload" crossorigin href="/static/assets/js/vendor-Cqib3ghv.js">
+  <link rel="stylesheet" crossorigin href="/static/assets/misc/index-km94oYOT.css">
+  <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+</head>
+<body>
+<script>
+    // [추가] IE(구 IE 포함
+    (function () {
+        var ua = window.navigator.userAgent;
+        var isIE =
+            (ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1) &&
+            ua.indexOf('Edg') === -1 &&
+            ua.indexOf('Edge') === -1;
+
+        if (!isIE) return;
+
+        try {
+            if (window.self !== window.top) return;
+        } catch (e) {
+            return;
+        }
+
+        var path = location.pathname || '';
+        if (path.indexOf('/IECheck') === 0) return;
+
+        try {
+            if (sessionStorage.getItem('edgeRedirectDone') === 'Y') return;
+            sessionStorage.setItem('edgeRedirectDone', 'Y');
+        } catch (e) {}
+
+        try {
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '1000');
+            iframe.setAttribute('frameBorder', '0');
+            iframe.setAttribute('scrolling', 'no');
+            iframe.src = '/IECheck';
+            document.body.appendChild(iframe);
+        } catch (e) {}
+
+        var referURL = document.referrer || '';
+        var redirectDelay = 500;
+
+        setTimeout(function () {
+            var redirectURL = referURL !== '' ? referURL : window.location.href;
+            window.location = 'microsoft-edge:' + redirectURL;
+        }, redirectDelay);
+    })();
+</script>
+<script>
+    const globalVar = window.globalVar || {};
+
+    globalVar.getCookie = (name) => {
+        const cookieString = document.cookie;
+        const cookies = cookieString.split('; ');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i];
+            const [cookieName, cookieValue] = cookie.split('=');
+            if (cookieName === name) {
+                return cookieValue;
+            }
+        }
+        return null;
+    };
+
+
+    function fetchShinHanCard() {
+        // 스크립트 동적으로 추가
+        const scriptElement = document.createElement('script');
+        scriptElement.src = 'https://allthatcdn.aws.shinhancard.com/conts/partners/header/allthat.js';
+        scriptElement.onload = () => {
+            // DOMContentLoaded 이벤트를 수동으로 트리거
+            const domContentLoadedEvent = new Event('DOMContentLoaded');
+            document.dispatchEvent(domContentLoadedEvent);
+        };
+
+        document.head.appendChild(scriptElement);
+
+        // HTML 엘리먼트 동적으로 추가
+        const divElement = document.createElement('div');
+        divElement.id = 'allthat';
+        divElement.className = 'affiliate-header';
+
+        const reactRoot = document.getElementById('root');
+        // root 요소가 있으면 그 위에 삽입, 없으면 body 맨 끝에 삽입
+        if (reactRoot) {
+            document.body.insertBefore(divElement, reactRoot);
+        } else {
+            document.body.appendChild(divElement);
+        }
+    }
+
+
+    async function fetchBenepiaHeader() {
+        try {
+            const res = await fetch('https://mfront.homeplus.co.kr/affiliate/benepia/header.json');
+            const { data } = await res.json();
+            const sitename = data?.sitename?.trim();
+
+            if (!sitename || document.querySelector('.benepia-header-iframe')) {
+                console.warn('[Benepia] sitename 없거나 iframe 존재');
+                return;
+            }
+
+            const domain = `${sitename}.benepia.co.kr`;
+            const iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '63';
+            iframe.className = 'benepia-header-iframe';
+            iframe.frameBorder = '0';
+            iframe.scrolling = 'no';
+            iframe.style.display = 'block';
+
+            iframe.src = `/benepiaCheck?domain=${domain}`;
+            document.body.prepend(iframe);
+        } catch (err) {
+            console.error('[Benepia] 헤더 로딩 실패:', err);
+        }
+    }
+
+    function isDesktop() {
+        return !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    /**
+     * @title 제휴사 배너 삽입
+     * @description
+     * 신한카드/이지웰
+     */
+    const HplusAffiliate = () => {
+        const cookieValue = globalVar.getCookie('HplusAffiliate');
+        try {
+            const decodedValue = decodeURIComponent(cookieValue || 'null');
+            return JSON.parse(decodedValue) || { channelId: '' };
+        } catch (e) {
+            console.warn('[HplusAffiliate] cookie parse failed:', cookieValue);
+            return { channelId: '' };
+        }
+    };
+
+    // const domainType = globalVar.getCookie('domainType');
+    if (isDesktop()) {
+        const channelId = HplusAffiliate().channelId;
+        if (channelId === '1000003') {
+            fetchShinHanCard();
+        } else if (channelId === '1000047' || channelId === '1000052') {
+            fetchBenepiaHeader();
+        }
+    }
+
+    function initAffiliateUi() {
+        window.affiliate = {
+            hideButton: false,
+        };
+
+        const affiliate = HplusAffiliate();
+        if (!affiliate?.channelId) return;
+
+        window.affiliate.hideButton =
+            affiliate.channelId === '1000008' || affiliate.channelId === '1000006' ;
+    }
+
+    initAffiliateUi();
+
+</script>
+<!-- Cogbot SDK 스크립트 추가 -->
+<script src="https://v2.coginsight.net/service/sdk/1.0.0/cogbot-sdk-1.0.0.js" async></script>
+<div id="root"></div>
+<div id="modal-container"></div>
+<div id="toast-container"></div>
+
+<noscript>
+    <img src="/static/static/images/logos/default_logo.svg" alt="홈플러스">
+    <p>당일배송, 신선한 식품, 그리고 특별한 할인 혜택까지. 온라인으로 마트 장보기를 간편하게, 홈플러스와 함께하세요.</p>
+
+    <div data-nosnippet>
+        <p>홈플러스를 원활히 이용하시려면 자바스크립트를 활성화해야 합니다. 브라우저 설정에서 자바스크립트를 활성화해 주세요.</p>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=395046345174672&amp;ev=PageView&amp;noscript=1" alt="facebook-pixel-noscript">
+    </div>
+</noscript>
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="/static/assets/js/polyfills-legacy-P6qEpsYt.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="/static/assets/js/index-legacy-DgOeBiym.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>
