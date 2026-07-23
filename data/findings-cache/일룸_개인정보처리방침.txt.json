@@ -1,0 +1,1 @@
+{"version":1,"findings":[{"matched_case":"Prices and fees may be changed at any time, without notice to you","classification":"bad","risk_summary":"무이자 할부 정책이 카드사 사정에 따라 변경 또는 중단될 수 있습니다.","quote_id":"s404","quote":"- 카드사 사정에 따라 변경 또는 중단될 수 있음","quote_grounded":true,"groundedness_verdict":"grounded","case_match_verdict":"VALID"}],"usage":{"total_tokens":13196}}
