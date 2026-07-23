@@ -18,7 +18,7 @@ export function SiteHeader() {
           href="/pricing"
           className="rounded-md border border-scan/40 bg-scan/10 px-3.5 py-2 font-mono text-[11px] font-semibold tracking-wide text-scan backdrop-blur-md transition-colors hover:bg-scan/20"
         >
-          Pro · 19,000원
+          Pro · 9,900원
         </Link>
 
         <a

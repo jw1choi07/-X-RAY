@@ -3,6 +3,24 @@ import { Check, Minus, Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 
+const UNIT_PRICE = 3000;
+
+const PACKS: {
+  count: number;
+  price: number;
+  highlight?: boolean;
+}[] = [
+  { count: 1, price: 3000 },
+  { count: 3, price: 7000, highlight: true },
+  { count: 5, price: 10000 },
+];
+
+function discountPercent(count: number, price: number): number | null {
+  if (count <= 1) return null;
+  const full = UNIT_PRICE * count;
+  return Math.round(((full - price) / full) * 100);
+}
+
 const COMPARISON_ROWS: {
   feature: string;
   free: string | boolean;
@@ -26,7 +44,7 @@ const COMPARISON_ROWS: {
   {
     feature: "정교한 전체 이용약관 분석 포트폴리오",
     free: false,
-    paid: "최대 10개 사이트",
+    paid: "최대 3개 사이트",
   },
   {
     feature: "조항별·카테고리별 위험도 리포트",
@@ -36,7 +54,7 @@ const COMPARISON_ROWS: {
   {
     feature: "불리한 약관 변경 이메일 알림",
     free: false,
-    paid: "이용현황 등록 사이트 대상",
+    paid: "3개월 · 이용현황 등록 사이트",
   },
   {
     feature: "분석 결과 메일 수신",
@@ -63,6 +81,10 @@ function CellValue({ value }: { value: string | boolean }) {
   return <span className="text-sm leading-snug text-foreground">{value}</span>;
 }
 
+function formatWon(n: number) {
+  return n.toLocaleString("ko-KR");
+}
+
 export default function PricingPage() {
   return (
     <>
@@ -83,8 +105,8 @@ export default function PricingPage() {
             유료 구독
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            한 번의 결제로 최대 10개 사이트의 정교한 전체 약관 분석을 받고,
-            등록한 사이트의 약관이 불리하게 바뀌면 이메일로 알려드립니다.
+            심층 분석 3개와 불리한 약관 변경 알림 3개월이 포함된 Pro 플랜,
+            또는 필요한 만큼만 심층 분석을 개별 구매할 수 있습니다.
           </p>
         </div>
 
@@ -96,12 +118,12 @@ export default function PricingPage() {
               </p>
               <p className="mt-2 flex items-baseline gap-1">
                 <span className="text-4xl font-bold tracking-tight text-foreground">
-                  19,000
+                  9,900
                 </span>
                 <span className="text-sm text-muted-foreground">원</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                최대 10개 사이트 심층 분석 · 불리한 약관 변경 알림
+                심층 분석 3개 · 불리한 약관 변경 알림 3개월
               </p>
             </div>
             <Button
@@ -139,7 +161,7 @@ export default function PricingPage() {
                     무료
                   </th>
                   <th className="w-[28%] px-3 py-3 text-center text-xs font-semibold text-scan md:w-36">
-                    Pro · 19,000원
+                    Pro · 9,900원
                   </th>
                 </tr>
               </thead>
@@ -171,19 +193,85 @@ export default function PricingPage() {
             <li className="flex gap-2.5">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-scan" />
               <span>
-                <strong className="font-medium text-foreground">최대 10개 사이트</strong>의
-                이용약관을 조항 단위로 정교하게 분석한 포트폴리오를 제공합니다.
+                <strong className="font-medium text-foreground">심층 분석 3개</strong> —
+                선택한 사이트의 이용약관을 조항 단위로 정교하게 분석한 포트폴리오를
+                제공합니다.
               </span>
             </li>
             <li className="flex gap-2.5">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-scan" />
               <span>
-                <strong className="font-medium text-foreground">나의 이용현황</strong>에
-                등록된 사이트의 약관이 사용자에게 불리하게 변경되면, 로그인 계정 이메일로
-                알림을 보냅니다.
+                <strong className="font-medium text-foreground">알림 3개월</strong> —
+                나의 이용현황에 등록된 사이트의 약관이 사용자에게 불리하게 변경되면
+                로그인 계정 이메일로 알려드립니다.
               </span>
             </li>
           </ul>
+        </section>
+
+        <section className="mt-14">
+          <h2 className="font-mono text-[11px] tracking-[0.15em] text-muted-foreground uppercase">
+            Deep Analysis Packs
+          </h2>
+          <p className="mt-1 text-lg font-semibold text-foreground">
+            심층 분석만 개별 구매
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            알림 없이 심층 분석 크레딧만 필요할 때 선택하세요. 1개 기준가{" "}
+            {formatWon(UNIT_PRICE)}원입니다.
+          </p>
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {PACKS.map((pack) => {
+              const discount = discountPercent(pack.count, pack.price);
+              const perUnit = Math.round(pack.price / pack.count);
+              return (
+                <div
+                  key={pack.count}
+                  className={`flex flex-col rounded-md border p-5 ${
+                    pack.highlight
+                      ? "border-scan/50 bg-scan/5"
+                      : "border-border bg-card"
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
+                      {pack.count}회 분석
+                    </p>
+                    {discount != null && (
+                      <span className="rounded-sm bg-scan/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-scan">
+                        {discount}% 할인
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-3 flex items-baseline gap-1">
+                    <span className="text-2xl font-bold tracking-tight text-foreground">
+                      {formatWon(pack.price)}
+                    </span>
+                    <span className="text-sm text-muted-foreground">원</span>
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    개당 {formatWon(perUnit)}원
+                    {discount != null && (
+                      <>
+                        {" "}
+                        · 정가 {formatWon(UNIT_PRICE * pack.count)}원
+                      </>
+                    )}
+                  </p>
+                  <Button
+                    type="button"
+                    variant={pack.highlight ? "default" : "outline"}
+                    className="mt-5 w-full rounded-md"
+                    disabled
+                    title="결제 연동은 준비 중입니다"
+                  >
+                    구매하기 (준비 중)
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
         </section>
       </main>
     </>
