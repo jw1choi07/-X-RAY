@@ -42,24 +42,22 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
         ))}
       </div>
 
-      <div className="relative z-10 w-full max-w-5xl">
-        <div className="mb-4 flex flex-col gap-3 md:mb-5 md:flex-row md:items-end md:justify-between md:gap-8">
-          <div className="max-w-xl text-left">
-            <div className="mb-2 inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-1 font-mono text-[10px] tracking-[0.1em] text-muted-foreground uppercase shadow-sm">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-foreground" />
-              Upstage Solar 판독 시스템
-            </div>
-            <h2 className="text-3xl leading-[1.12] font-bold tracking-tight text-foreground sm:text-4xl md:text-[2.75rem]">
-              <span className="scan-reveal">약관, 읽지 않고도</span>
-              <br />
-              위험한 조항만 골라보세요
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground md:text-[15px]">
-              이미 분석된 주요 서비스 · 카드를 선택하면 판독 결과를 확인할 수 있어요
-            </p>
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center">
+        <div className="mb-5 max-w-2xl text-center">
+          <div className="mb-2 inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-1 font-mono text-[10px] tracking-[0.1em] text-muted-foreground uppercase shadow-sm">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-foreground" />
+            Upstage Solar 판독 시스템
           </div>
+          <h2 className="text-3xl leading-[1.12] font-bold tracking-tight text-foreground sm:text-4xl md:text-[2.75rem]">
+            <span className="scan-reveal">약관, 읽지 않고도</span>
+            <br />
+            위험한 조항만 골라보세요
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground md:text-[15px]">
+            이미 분석된 주요 서비스 · 카드를 선택하면 판독 결과를 확인할 수 있어요
+          </p>
 
-          <div className="flex flex-wrap gap-2 md:max-w-xs md:justify-end">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-2.5 py-1.5 font-mono text-[10px] text-muted-foreground shadow-sm">
               <ShieldCheck className="h-3 w-3 text-foreground" />
               원문 근거 검증
@@ -75,10 +73,10 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative w-full">
           <div className="hero-glow" aria-hidden />
 
-          <div className="relative grid grid-cols-2 gap-2.5 sm:gap-3 md:hidden">
+          <div className="relative mx-auto grid w-full max-w-lg grid-cols-2 gap-2.5 sm:gap-3 md:hidden">
             {FEATURED_SITES.map((site) => (
               <FloatingCard
                 key={site.id}
@@ -91,26 +89,30 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
             ))}
           </div>
 
-          <div className="relative hidden h-[340px] rounded-2xl border border-border/70 bg-card/40 p-3 shadow-sm backdrop-blur-[2px] md:block lg:h-[380px]">
+          <div className="relative mx-auto hidden h-[380px] w-full max-w-3xl md:block lg:h-[400px]">
             {FEATURED_SITES.map((site) => (
-              <FloatingCard
+              <div
                 key={site.id}
-                site={site}
-                onSelect={onSelectSite}
-                className="floating-card absolute w-48 lg:w-52"
+                className="absolute -translate-x-1/2"
                 style={{
                   top: site.floatPosition.top,
                   left: site.floatPosition.left,
-                  animationDelay: `${site.floatDelay}s`,
                 }}
-                effectiveDate={updates[site.presetFile]?.effectiveDate}
-              />
+              >
+                <FloatingCard
+                  site={site}
+                  onSelect={onSelectSite}
+                  className="floating-card w-48 lg:w-52"
+                  style={{ animationDelay: `${site.floatDelay}s` }}
+                  effectiveDate={updates[site.presetFile]?.effectiveDate}
+                />
+              </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="relative z-10 mt-4 flex flex-col items-center gap-0.5 text-muted-foreground/80">
+      <div className="relative z-10 mt-5 flex flex-col items-center gap-0.5 text-muted-foreground/80">
         <span className="font-mono text-[10px] tracking-[0.15em] uppercase">스크롤해서 더보기</span>
         <ChevronDown className="h-4 w-4 animate-bounce" />
       </div>
