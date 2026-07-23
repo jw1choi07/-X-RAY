@@ -54,12 +54,12 @@
 }
 
 /*
- * 약관 X-ray palette — Rich Charcoal on Clean White.
- * Main #18181B · Background #FFFFFF / #F4F4F5
+ * 약관 X-ray palette — Rich Charcoal on Slate 50.
+ * Main #18181B · Background #F8FAFC / #F1F5F9
  * Amber #F59E0B · Crimson #DC2626 — risk/alert highlights only
  */
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #18181b;
   --card: #ffffff;
   --card-foreground: #18181b;
@@ -67,34 +67,34 @@
   --popover-foreground: #18181b;
   --primary: #18181b;
   --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
+  --secondary: #f1f5f9;
   --secondary-foreground: #18181b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #f4f4f5;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
   --accent-foreground: #18181b;
   --destructive: #dc2626;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
   --ring: #18181b;
   --risk-blocker: #dc2626;
   --risk-bad: #f59e0b;
-  --risk-ok: #71717a;
+  --risk-ok: #64748b;
   /* UI accent labels stay neutral charcoal — not amber/red */
-  --scan: #52525b;
+  --scan: #64748b;
   --chart-1: #dc2626;
   --chart-2: #f59e0b;
   --chart-3: #18181b;
-  --chart-4: #71717a;
-  --chart-5: #a1a1aa;
+  --chart-4: #64748b;
+  --chart-5: #94a3b8;
   --radius: 0.5rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #18181b;
   --sidebar-primary: #18181b;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f4f4f5;
+  --sidebar-accent: #f1f5f9;
   --sidebar-accent-foreground: #18181b;
-  --sidebar-border: #e4e4e7;
+  --sidebar-border: #e2e8f0;
   --sidebar-ring: #18181b;
 }
 
@@ -150,7 +150,7 @@
       radial-gradient(ellipse 50% 40% at 100% 30%, color-mix(in srgb, var(--muted-foreground) 8%, transparent), transparent 55%),
       radial-gradient(ellipse 45% 35% at 0% 70%, color-mix(in srgb, var(--foreground) 4%, transparent), transparent 50%),
       radial-gradient(color-mix(in srgb, var(--foreground) 4%, transparent) 1px, transparent 1px),
-      linear-gradient(180deg, #ffffff 0%, #f4f4f5 100%);
+      linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
     background-size:
       auto,
       auto,
@@ -168,19 +168,19 @@
 .section-hero {
   background:
     radial-gradient(ellipse 70% 50% at 50% 35%, color-mix(in srgb, var(--foreground) 5%, transparent), transparent 70%),
-    linear-gradient(180deg, #ffffff 0%, #f4f4f5 100%);
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .section-search {
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--foreground) 3%, transparent), transparent 40%),
-    linear-gradient(180deg, #f4f4f5, #ffffff);
+    linear-gradient(180deg, #f1f5f9, #f8fafc);
 }
 
 .section-link {
   background:
     radial-gradient(ellipse 60% 45% at 50% 80%, color-mix(in srgb, var(--foreground) 5%, transparent), transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, #f4f4f5 100%);
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .atmosphere-panel {
