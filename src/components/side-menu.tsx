@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Show, SignInButton, useAuth } from "@clerk/nextjs";
-import { Building2, Filter, Globe2, ListChecks, Menu, Sparkles, X } from "lucide-react";
+import { Building2, Filter, ListChecks, Menu, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   EMPTY_USER_PREFS,
@@ -25,7 +25,9 @@ const STRINGS = {
     loading: "불러오는 중…",
     pro: "유료 구독 · Pro",
     business: "기업이신가요? 자사 약관 점검",
-    jpDemo: "일본판 보기",
+    countrySelect: "국가 선택",
+    korea: "한국",
+    japan: "일본",
     signedOutNotice: "메뉴 기능을 이용하려면 로그인이 필요합니다.\n로그인 후 이용현황과 약관 필터를 사용할 수 있습니다.",
     signInCta: "로그인하러 가기",
     signInPage: "로그인 페이지로 이동",
@@ -43,7 +45,9 @@ const STRINGS = {
     loading: "読み込み中…",
     pro: "有料プラン · Pro",
     business: "法人のお客様へ · 自社規約チェック",
-    jpDemo: "",
+    countrySelect: "国の選択",
+    korea: "韓国",
+    japan: "日本",
     signedOutNotice: "メニュー機能をご利用いただくにはログインが必要です。\nログイン後、利用状況と規約フィルターを使用できます。",
     signInCta: "ログインする",
     signInPage: "ログインページへ移動",
@@ -196,20 +200,6 @@ export function SideMenu() {
                 {t.business}
               </Link>
             )}
-            {!isJp && (
-              <Link
-                href="/jp"
-                onClick={() => setOpen(false)}
-                className={`flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors ${
-                  pathname === "/jp"
-                    ? "bg-foreground text-background"
-                    : "text-foreground hover:bg-muted"
-                }`}
-              >
-                <Globe2 className="h-4 w-4 shrink-0" />
-                {t.jpDemo}
-              </Link>
-            )}
           </nav>
 
           <Show when="signed-out">
@@ -302,6 +292,46 @@ export function SideMenu() {
               )}
             </Show>
           )}
+        </div>
+
+        <div className="border-t border-border px-4 py-4">
+          <p className="px-1 font-mono text-[11px] tracking-[0.12em] text-muted-foreground uppercase">
+            {t.countrySelect}
+          </p>
+          <div className="mt-2.5 flex gap-2">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              aria-label={t.korea}
+              aria-current={!isJp ? "page" : undefined}
+              className={`flex flex-1 flex-col items-center gap-1.5 rounded-md border px-3 py-3 transition-colors ${
+                !isJp
+                  ? "border-foreground bg-muted text-foreground"
+                  : "border-border text-muted-foreground hover:border-foreground/30 hover:bg-muted/60 hover:text-foreground"
+              }`}
+            >
+              <span className="text-2xl leading-none" aria-hidden>
+                🇰🇷
+              </span>
+              <span className="font-mono text-[11px] font-medium tracking-wide">{t.korea}</span>
+            </Link>
+            <Link
+              href="/jp"
+              onClick={() => setOpen(false)}
+              aria-label={t.japan}
+              aria-current={isJp ? "page" : undefined}
+              className={`flex flex-1 flex-col items-center gap-1.5 rounded-md border px-3 py-3 transition-colors ${
+                isJp
+                  ? "border-foreground bg-muted text-foreground"
+                  : "border-border text-muted-foreground hover:border-foreground/30 hover:bg-muted/60 hover:text-foreground"
+              }`}
+            >
+              <span className="text-2xl leading-none" aria-hidden>
+                🇯🇵
+              </span>
+              <span className="font-mono text-[11px] font-medium tracking-wide">{t.japan}</span>
+            </Link>
+          </div>
         </div>
       </aside>
     </>
