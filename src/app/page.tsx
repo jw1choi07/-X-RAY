@@ -106,7 +106,7 @@ export default function Home() {
             onClick={() => scrollToSection(i)}
             className={`h-2 w-2 rounded-full transition-all ${
               activeSection === i
-                ? "h-6 bg-scan"
+                ? "h-6 bg-foreground"
                 : "bg-border hover:bg-muted-foreground/40"
             }`}
           />

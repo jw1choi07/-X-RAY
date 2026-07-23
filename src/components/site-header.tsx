@@ -5,7 +5,7 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between py-4 pr-6 pl-16 md:pr-10 md:pl-20">
       <div className="flex items-center gap-2.5 rounded-md border border-border bg-card/90 py-1.5 pr-4 pl-2 shadow-sm backdrop-blur-md">
-        <div className="flex h-7 w-7 items-center justify-center rounded-sm border border-scan/40 bg-scan/10 font-mono text-[10px] font-semibold tracking-tight text-scan">
+        <div className="flex h-7 w-7 items-center justify-center rounded-sm border border-border bg-muted font-mono text-[10px] font-semibold tracking-tight text-foreground">
           Rx
         </div>
         <h1 className="font-mono text-xs font-semibold tracking-[0.08em] text-foreground uppercase">
@@ -16,7 +16,7 @@ export function SiteHeader() {
       <div className="flex items-center gap-3">
         <Link
           href="/pricing"
-          className="rounded-md border border-scan/40 bg-scan/10 px-3.5 py-2 font-mono text-[11px] font-semibold tracking-wide text-scan backdrop-blur-md transition-colors hover:bg-scan/20"
+          className="rounded-md border border-border bg-card px-3.5 py-2 font-mono text-[11px] font-semibold tracking-wide text-foreground backdrop-blur-md transition-colors hover:bg-muted"
         >
           Pro · 9,900원
         </Link>

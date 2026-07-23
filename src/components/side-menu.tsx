@@ -131,8 +131,8 @@ export function SideMenu() {
               onClick={() => setOpen(false)}
               className={`flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors ${
                 pathname === "/pricing"
-                  ? "bg-scan/15 text-scan ring-1 ring-scan/30"
-                  : "text-scan hover:bg-scan/10"
+                  ? "bg-foreground text-background"
+                  : "text-foreground hover:bg-muted"
               }`}
             >
               <Sparkles className="h-4 w-4 shrink-0" />

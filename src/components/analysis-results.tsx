@@ -63,7 +63,7 @@ export function AnalysisResultsPanel({
       ? { level: "높음", color: "text-red-600 dark:text-red-400", ring: "ring-red-500/20", bg: "bg-red-50 dark:bg-red-950/30" }
       : badCount > 0
         ? { level: "보통", color: "text-orange-600 dark:text-orange-400", ring: "ring-orange-500/20", bg: "bg-orange-50 dark:bg-orange-950/30" }
-        : { level: "낮음", color: "text-emerald-600 dark:text-emerald-400", ring: "ring-emerald-500/20", bg: "bg-emerald-50 dark:bg-emerald-950/30" }
+        : { level: "낮음", color: "text-zinc-600 dark:text-zinc-300", ring: "ring-zinc-500/20", bg: "bg-zinc-50 dark:bg-zinc-900/40" }
     : null;
 
   return (
@@ -284,7 +284,7 @@ function MetadataCard({ metadata }: { metadata: DocumentMetadata }) {
             </dt>
             <dd
               className={`truncate text-[13px] ${
-                key === "effective_date" && updateInfo?.isRecent ? "font-semibold text-scan" : "text-foreground"
+                key === "effective_date" && updateInfo?.isRecent ? "font-semibold text-risk-bad" : "text-foreground"
               }`}
               title={value}
             >

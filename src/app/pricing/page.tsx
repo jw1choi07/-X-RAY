@@ -66,7 +66,7 @@ const COMPARISON_ROWS: {
 function CellValue({ value }: { value: string | boolean }) {
   if (value === true) {
     return (
-      <span className="inline-flex items-center justify-center text-scan" aria-label="포함">
+      <span className="inline-flex items-center justify-center text-foreground" aria-label="포함">
         <Check className="h-4 w-4" />
       </span>
     );
@@ -110,10 +110,10 @@ export default function PricingPage() {
           </p>
         </div>
 
-        <section className="mt-8 rounded-md border border-scan/40 bg-scan/5 p-6 md:p-8">
+        <section className="mt-8 rounded-md border border-border bg-muted/60 p-6 md:p-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="font-mono text-[11px] tracking-[0.12em] text-scan uppercase">
+              <p className="font-mono text-[11px] tracking-[0.12em] text-muted-foreground uppercase">
                 X-ray Pro
               </p>
               <p className="mt-2 flex items-baseline gap-1">
@@ -160,7 +160,7 @@ export default function PricingPage() {
                   <th className="w-[22%] px-3 py-3 text-center text-xs font-medium text-muted-foreground md:w-28">
                     무료
                   </th>
-                  <th className="w-[28%] px-3 py-3 text-center text-xs font-semibold text-scan md:w-36">
+                  <th className="w-[28%] px-3 py-3 text-center text-xs font-semibold text-foreground md:w-36">
                     Pro · 9,900원
                   </th>
                 </tr>
@@ -177,7 +177,7 @@ export default function PricingPage() {
                     <td className="px-3 py-3.5 text-center">
                       <CellValue value={row.free} />
                     </td>
-                    <td className="bg-scan/[0.04] px-3 py-3.5 text-center">
+                    <td className="bg-muted/40 px-3 py-3.5 text-center">
                       <CellValue value={row.paid} />
                     </td>
                   </tr>
@@ -191,7 +191,7 @@ export default function PricingPage() {
           <h2 className="text-lg font-semibold text-foreground">Pro에 포함되는 내용</h2>
           <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
             <li className="flex gap-2.5">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-scan" />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground" />
               <span>
                 <strong className="font-medium text-foreground">심층 분석 3개</strong> —
                 선택한 사이트의 이용약관을 조항 단위로 정교하게 분석한 포트폴리오를
@@ -199,7 +199,7 @@ export default function PricingPage() {
               </span>
             </li>
             <li className="flex gap-2.5">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-scan" />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground" />
               <span>
                 <strong className="font-medium text-foreground">알림 3개월</strong> —
                 나의 이용현황에 등록된 사이트의 약관이 사용자에게 불리하게 변경되면
@@ -230,7 +230,7 @@ export default function PricingPage() {
                   key={pack.count}
                   className={`flex flex-col rounded-md border p-5 ${
                     pack.highlight
-                      ? "border-scan/50 bg-scan/5"
+                      ? "border-foreground/30 bg-muted/50"
                       : "border-border bg-card"
                   }`}
                 >
@@ -239,7 +239,7 @@ export default function PricingPage() {
                       {pack.count}회 분석
                     </p>
                     {discount != null && (
-                      <span className="rounded-sm bg-scan/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-scan">
+                      <span className="rounded-sm bg-risk-bad/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-risk-bad">
                         {discount}% 할인
                       </span>
                     )}

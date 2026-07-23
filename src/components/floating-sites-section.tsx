@@ -33,18 +33,18 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
 
       <div className="pointer-events-none absolute inset-y-0 left-3 hidden flex-col justify-evenly py-20 md:flex">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-2 w-2 rounded-[2px] border border-scan/30 bg-scan/10" />
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-border bg-muted" />
         ))}
       </div>
       <div className="pointer-events-none absolute inset-y-0 right-3 hidden flex-col justify-evenly py-20 md:flex">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-2 w-2 rounded-[2px] border border-scan/30 bg-scan/10" />
+          <div key={i} className="h-2 w-2 rounded-[2px] border border-border bg-muted" />
         ))}
       </div>
 
       <div className="relative z-10 mb-6 max-w-2xl text-center">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-md border border-scan/35 bg-card/80 px-3 py-1 font-mono text-[11px] tracking-[0.1em] text-scan uppercase shadow-sm backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-scan" />
+        <div className="mb-3 inline-flex items-center gap-2 rounded-md border border-border bg-card/90 px-3 py-1 font-mono text-[11px] tracking-[0.1em] text-muted-foreground uppercase shadow-sm backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-foreground" />
           Upstage Solar 판독 시스템
         </div>
         <h2 className="text-4xl leading-[1.12] font-bold tracking-tight text-foreground md:text-5xl">
@@ -56,16 +56,16 @@ export function FloatingSitesSection({ onSelectSite }: FloatingSitesSectionProps
         </p>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
-            <ShieldCheck className="h-3 w-3 text-scan" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/80 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <ShieldCheck className="h-3 w-3 text-foreground" />
             원문 근거 검증
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
-            <Zap className="h-3 w-3 text-scan" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/80 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <Zap className="h-3 w-3 text-foreground" />
             위험 조항 우선 표시
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
-            <Sparkles className="h-3 w-3 text-scan" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/80 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm">
+            <Sparkles className="h-3 w-3 text-foreground" />
             ToS;DR 79종 기준
           </span>
         </div>
@@ -130,7 +130,7 @@ function FloatingCard({
     <button
       type="button"
       onClick={() => onSelect(site)}
-      className={`group cursor-pointer rounded-2xl border border-emerald-900/20 bg-[#064e3b] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
+      className={`group cursor-pointer rounded-2xl border border-white/10 bg-[#18181b] p-4 text-left transition-[transform,filter] duration-300 hover:scale-[1.03] hover:brightness-110 ${className}`}
       style={style}
     >
       <div className="mb-2 flex items-center justify-between gap-2">
@@ -142,8 +142,8 @@ function FloatingCard({
           <TermsUpdatedBadge effectiveDate={effectiveDate} />
         </div>
       </div>
-      <p className="font-semibold text-[#ecfdf5]">{site.name}</p>
-      <p className="mt-1 text-xs leading-relaxed text-[#a7f3d0]">{site.summary}</p>
+      <p className="font-semibold text-[#fafafa]">{site.name}</p>
+      <p className="mt-1 text-xs leading-relaxed text-[#a1a1aa]">{site.summary}</p>
       <div className="mt-3 flex items-center gap-2">
         <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/15">
           <div
@@ -153,9 +153,9 @@ function FloatingCard({
             style={{ width: `${site.riskScore}%` }}
           />
         </div>
-        <span className="font-mono text-xs font-semibold text-[#ecfdf5]">{site.riskScore}</span>
+        <span className="font-mono text-xs font-semibold text-[#fafafa]">{site.riskScore}</span>
       </div>
-      <p className="mt-2 font-mono text-[10px] tracking-wide text-[#6ee7b7] uppercase md:opacity-0 md:transition-opacity md:group-hover:opacity-100">
+      <p className="mt-2 font-mono text-[10px] tracking-wide text-[#d4d4d8] uppercase md:opacity-0 md:transition-opacity md:group-hover:opacity-100">
         판독지 보기 →
       </p>
     </button>
