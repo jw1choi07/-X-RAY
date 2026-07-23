@@ -106,21 +106,27 @@ export function AnalysisResultsPanel({
             <div className="space-y-6">
               {overallRisk && (
                 <div className={`flex items-center gap-4 rounded-md border p-4 ${overallRisk.bg}`}>
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-border bg-card">
-                    {overallRisk.level === "낮음" ? (
-                      <ShieldCheck className={`h-5 w-5 ${overallRisk.color}`} />
-                    ) : (
-                      <AlertTriangle className={`h-5 w-5 ${overallRisk.color}`} />
-                    )}
-                  </div>
                   <div className="min-w-0 flex-1">
-                    <p className={`font-mono text-xs font-bold tracking-wide uppercase ${overallRisk.color}`}>
-                      종합 판독 · {overallRisk.level}
+                    <p className="font-mono text-[11px] tracking-[0.12em] text-muted-foreground uppercase">
+                      종합 판독 결과
                     </p>
                     <p className="mt-0.5 text-xs text-muted-foreground">
                       {meta && `원문 ${meta.char_count.toLocaleString()}자 분석 · `}
                       원문 근거 확인 {groundedCount}/{findings.length}
                     </p>
+                  </div>
+                  {/* read stamp — the way a radiology report ends with a rubber-stamped
+                      verdict, not a colored icon; the rotation reads as physically applied */}
+                  <div
+                    className={`relative flex h-16 w-16 shrink-0 -rotate-6 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-current ${overallRisk.color}`}
+                  >
+                    <div className="absolute inset-1 rounded-full border border-dashed border-current opacity-50" />
+                    {overallRisk.level === "낮음" ? (
+                      <ShieldCheck className="h-4 w-4" />
+                    ) : (
+                      <AlertTriangle className="h-4 w-4" />
+                    )}
+                    <span className="font-mono text-[10px] font-black tracking-tight">{overallRisk.level}</span>
                   </div>
                 </div>
               )}
@@ -180,55 +186,61 @@ function FindingCard({ finding: f, index }: { finding: Finding; index: number })
 
   return (
     <div
-      className="group rounded-md border border-border p-4 transition-colors hover:border-scan/40 animate-in fade-in slide-in-from-bottom-2"
+      className="group relative flex overflow-hidden rounded-md border border-border transition-colors hover:border-scan/40 animate-in fade-in slide-in-from-bottom-2"
       style={{ animationDelay: `${Math.min(index * 40, 400)}ms`, animationFillMode: "backwards" }}
     >
-      <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
-        <Badge className={`gap-1 ${style.badge}`}>
-          <Icon className="h-3 w-3" />
-          {style.label}
-        </Badge>
-        <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium ${style.chip}`}>
-          {f.matched_case || "기타"}
-        </span>
-      </div>
+      {/* classification bar — the first thing your eye should register scanning down the report,
+          before reading a word, same job as a colored tab on a physical case file */}
+      <div className={`w-1 shrink-0 ${style.bar}`} aria-hidden />
 
-      <h3 className="mb-2 text-sm leading-snug font-semibold text-foreground">
-        {f.risk_summary}
-      </h3>
-
-      <div className="relative rounded-sm bg-muted px-3 py-2 text-[13px] leading-relaxed text-muted-foreground">
-        &ldquo;
-        {f.quote_grounded ? <mark className="confirmed">{f.quote}</mark> : <span className="redacted">{f.quote}</span>}
-        &rdquo;
-      </div>
-
-      <div className="mt-2.5 flex items-center justify-between font-mono text-[10px] text-muted-foreground/80">
-        <div className="flex items-center gap-2.5">
-          <span className="inline-flex items-center gap-1">
-            {f.quote_grounded ? (
-              <CheckCircle2 className="h-3 w-3 text-risk-ok" />
-            ) : (
-              <AlertTriangle className="h-3 w-3 text-muted-foreground" />
-            )}
-            {f.quote_grounded ? "원문 확인됨" : "원문 미확인"}
+      <div className="min-w-0 flex-1 p-4">
+        <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
+          <Badge className={`gap-1 ${style.badge}`}>
+            <Icon className="h-3 w-3" />
+            {style.label}
+          </Badge>
+          <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium ${style.chip}`}>
+            {f.matched_case || "기타"}
           </span>
-          <span>{verdictLabel}</span>
         </div>
-        <button
-          onClick={copyQuote}
-          className="inline-flex items-center gap-1 rounded-sm px-1.5 py-0.5 font-medium text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:bg-muted hover:text-foreground"
-        >
-          {copied ? (
-            <>
-              <Check className="h-3 w-3" /> 복사됨
-            </>
-          ) : (
-            <>
-              <Copy className="h-3 w-3" /> 복사
-            </>
-          )}
-        </button>
+
+        <h3 className="mb-2 text-sm leading-snug font-semibold text-foreground">
+          {f.risk_summary}
+        </h3>
+
+        <div className="relative rounded-sm bg-muted px-3 py-2 text-[13px] leading-relaxed text-muted-foreground">
+          &ldquo;
+          {f.quote_grounded ? <mark className="confirmed">{f.quote}</mark> : <span className="redacted">{f.quote}</span>}
+          &rdquo;
+        </div>
+
+        <div className="mt-2.5 flex items-center justify-between font-mono text-[10px] text-muted-foreground/80">
+          <div className="flex items-center gap-2.5">
+            <span className="inline-flex items-center gap-1">
+              {f.quote_grounded ? (
+                <CheckCircle2 className="h-3 w-3 text-risk-ok" />
+              ) : (
+                <AlertTriangle className="h-3 w-3 text-muted-foreground" />
+              )}
+              {f.quote_grounded ? "원문 확인됨" : "원문 미확인"}
+            </span>
+            <span>{verdictLabel}</span>
+          </div>
+          <button
+            onClick={copyQuote}
+            className="inline-flex items-center gap-1 rounded-sm px-1.5 py-0.5 font-medium text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:bg-muted hover:text-foreground"
+          >
+            {copied ? (
+              <>
+                <Check className="h-3 w-3" /> 복사됨
+              </>
+            ) : (
+              <>
+                <Copy className="h-3 w-3" /> 복사
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

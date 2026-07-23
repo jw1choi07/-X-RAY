@@ -155,7 +155,7 @@ export function SearchSection({ presets, onSearchResult }: SearchSectionProps) {
                     key={preset.file}
                     type="button"
                     onClick={() => handlePresetClick(preset)}
-                    className="inline-flex items-center gap-1.5 rounded-sm bg-muted px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-scan/10 hover:text-scan"
+                    className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-muted px-2.5 py-1 font-mono text-[11px] font-medium text-muted-foreground transition-colors hover:border-scan/50 hover:bg-scan/10 hover:text-scan"
                   >
                     <PresetIcon preset={preset} />
                     {preset.siteName}
